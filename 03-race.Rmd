@@ -1,1 +1,3 @@
-# Trabajando sobre un pequenho ejemplo. 
+# Capitulo 2
+
+Trabajando sobre un pequenho ejemplo. 
