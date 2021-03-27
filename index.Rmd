@@ -6,7 +6,3 @@ site: bookdown::bookdown_site
 ---
 
 # Presentacion
-
-Aqui tengo pensado escribir mi proximo en libro sobre analisis de datos
-en psicologia utilizando el lenguaje de programacion de R.
-
