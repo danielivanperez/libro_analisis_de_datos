@@ -1,2 +1,4 @@
-# The pool of tears
+# Introduccion 
+
+Por que utilizar R en psicologia?
 
