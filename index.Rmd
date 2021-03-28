@@ -1,8 +1,12 @@
 --- 
-title: "ANALISIS DE DATOS EN PSICOLOGIA USANDO R"
+title: "Introduccion al Analsis de Datos en Psicologia usando R"
 author: "Daniel Perez Zapata"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 ---
 
 # Presentacion
+
+Bienvenidos a "Analisis de datos en psicologia usando R". Cualquiera sea la razon 
+por la que hayas llegado a este libro, eso significa que estas interesado en saber mas 
+sobre como realizar analisis de datos utilizando el lenguaje de programacion R. 
