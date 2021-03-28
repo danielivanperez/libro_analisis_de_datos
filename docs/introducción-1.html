@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Introducción al Análisis de Datos en Psicología usando R</title>
-  <meta name="description" content="Introducción al Análisis de Datos en Psicología usando R" />
+  <title>Capítulo 2 Introducción | Introducción al Análisis de Datos en Psicología usando R</title>
+  <meta name="description" content="Capítulo 2 Introducción | Introducción al Análisis de Datos en Psicología usando R" />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Introducción al Análisis de Datos en Psicología usando R" />
+  <meta property="og:title" content="Capítulo 2 Introducción | Introducción al Análisis de Datos en Psicología usando R" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Introducción al Análisis de Datos en Psicología usando R" />
+  <meta name="twitter:title" content="Capítulo 2 Introducción | Introducción al Análisis de Datos en Psicología usando R" />
   
   
   
@@ -31,7 +31,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
+<link rel="prev" href="index.html"/>
 <link rel="next" href="lo-básico.html"/>
 <script src="libs/header-attrs-2.7/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
@@ -71,8 +71,9 @@
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introducción</a></li>
-<li class="chapter" data-level="2" data-path="lo-básico.html"><a href="lo-básico.html"><i class="fa fa-check"></i><b>2</b> Lo Básico</a></li>
-<li class="chapter" data-level="3" data-path="librerias.html"><a href="librerias.html"><i class="fa fa-check"></i><b>3</b> Librerias</a></li>
+<li class="chapter" data-level="2" data-path="introducción-1.html"><a href="introducción-1.html"><i class="fa fa-check"></i><b>2</b> Introducción</a></li>
+<li class="chapter" data-level="3" data-path="lo-básico.html"><a href="lo-básico.html"><i class="fa fa-check"></i><b>3</b> Lo Básico</a></li>
+<li class="chapter" data-level="4" data-path="librerias.html"><a href="librerias.html"><i class="fa fa-check"></i><b>4</b> Librerias</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 </ul>
@@ -92,13 +93,8 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Introducción al Análisis de Datos en Psicología usando R</h1>
-<p class="author"><em>Daniel Pérez Zapata</em></p>
-<p class="date"><em>2021-03-28</em></p>
-</div>
-<div id="introducción" class="section level1" number="1">
-<h1><span class="header-section-number">Capítulo  1</span> Introducción</h1>
+<div id="introducción-1" class="section level1" number="2">
+<h1><span class="header-section-number">Capítulo  2</span> Introducción</h1>
 <p>Bienvenidas y bienvenidos a <em>Introducción al Análisis de Datos en Psicología usando R</em>. Este curso tiene como principal objetivo desarrollar habilidades básicas para realizar análisis de datos en psicología (o en cualquier otra disciplina aplicando la misma lógica general) usando el lenguaje de programación R. Primero que todo, me gustaría decir que para usar esta herramienta no hace falta ser un experto en programación, poseer conocimientos superlativos y una memoria sinigual para aprender todas las funcionalidades en R. Para eso existen las opciones de ayuda en R y el vasto universo de contenidos que habita en <em>google</em>. Mucho mejor es utilizar nuestros recursos cognitivos en conceptualizar adecuadamente nuestros problemas de investigación y de resolver dichos desafíos flexiblemente a través de R. Puedo dar fe de todo esto porque lo he leído en diferentes libros, blogs, lo he visto en un amplio número de videos en internet, he asistido a cursos presenciales y online de R, he conversado con colegas y amigos, pero, principalmente, porque yo mismo tengo este perfil (si tu lector ya tienes habilidades de programación y conocimiento estadístico, ¡mejor aún!).</p>
 <p>Comencé a aprender sobre ciencia de datos utilizando R y Python (otro popular lenguaje de programación que, entre muchas cosas, sirve para el análisis de datos), hace prácticamente dos años. Obviamente, lo sigo aprendiendo día a día porque ambos lenguajes son universos inagotables y con fronteras en continua expansión gracias a sus mismos usuarios. Como la gran mayoría de personas que empiezan el camino del análisis de datos usando lenguajes de programación, en un comienzo estaba absolutamente perdido, no entendía por donde tenía que comenzar, o por qué tenia que aprender un montón de términos como <em>programación orientada a objetos</em>, <em>atributos</em>, <em>funciones</em>, etc. Ustedes se pueden imaginar lo desorientado y abrumado que me sentía sin conocimiento alguno de programación. Mirando en retrospectiva, este recurso online hubiera sido bastante útil para mi yo del pasado, considerando sobretodo mi formación y conocimientos en psicología. Para los no psicólogos, en casi todos los programas de estudios de pregrado y postgrado en psicología, no se contempla el aprendizaje de lenguajes de programación para el análisis de datos. De este modo, me parece que un libro de fácil lectura sobre R, basado en casos, problemas y/o investigaciones psicológicas, que entregue herramientas básicas para comenzar a ensuciarse las manos con el análisis de datos, es una muy buena idea y una excelente forma de invertir nuestro tiempo 🤓.</p>
 <p>Sin embargo, antes de seguir adelante, quizás la primera pregunta que deberíamos responder es: ¿por qué debería aprender a programar en R? No es una pregunta fácil de contestar, pero trataré de responderla tomando en cuenta lo que dicen algunos textos especializados sobre el tema y también a partir de mi propia experiencia. Probablemente, las razones más comunes y poderosas son porque R es gratis y de acceso abierto. Gratis es un concepto bastante auto explicativo y no es necesario ahondar en él (solo mencionar que R seguirá siendo gratis <em>per saecula saeculorum</em>, es decir, para siempre). Acceso abierto o de código abierto es algo menos obvio, pero tampoco difícil de entender. Simplemente significa que cualquier persona en el mundo puede contribuir a su desarrollo. Contrasta con lenguajes cerrados (comúnmente de uso comercial como <em>Windows</em> de Microsoft) en los cuales las personas no pueden libremente acceder al código base y de este modo contribuir a su desarrollo.</p>
@@ -114,8 +110,8 @@
           </div>
         </div>
       </div>
-
-<a href="lo-básico.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="lo-básico.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
