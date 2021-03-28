@@ -5,6 +5,8 @@ date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 ---
 
-# Presentación 
+# Introducción 
 
-Hola me gustaría darte la bienvenida a este libro. 
+Bienvenidos a "Análisis de datos en psicología usando R". Cualquiera sea la razón 
+por la que hayas llegado a este libro, eso significa que estas interesado en saber mas 
+sobre como realizar análisis de datos utilizando el lenguaje de programación R.

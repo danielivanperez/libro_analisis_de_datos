@@ -1,7 +1,6 @@
-# Introducción 
+# Lo Básico 
 
-Bienvenidos a "Análisis de datos en psicología usando R". Cualquiera sea la razón 
-por la que hayas llegado a este libro, eso significa que estas interesado en saber mas 
-sobre como realizar análisis de datos utilizando el lenguaje de programación R.
+Para tener una mejor idea de lo sencillo que es utilizar R, utilizaremos un pequeño 
+ejemplo basado en una base de datos real en psicología. 
 
 
