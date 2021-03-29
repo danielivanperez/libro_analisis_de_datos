@@ -1,3 +1,2 @@
-introducción
 lo-básico
 librerias
