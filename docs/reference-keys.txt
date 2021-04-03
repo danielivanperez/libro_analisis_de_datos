@@ -1,5 +1,7 @@
 aplicando-r-al-análisis-de-datos
 qué-es-r-instalando-r-y-rstudio
+definiendo-r
+instalando-r
 r-para-windows
 r-para-mac
 r-para-linux
