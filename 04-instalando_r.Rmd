@@ -1,0 +1,17 @@
+# Instalando R
+
+Primero que todo, necesitamos instalar R en nuestro computador. Para esto debemos ir a la siguiente website: 
+```{block, type='FOO'}
+http://cran.r-project.org/
+```
+
+
+En la parte superior, aparecerá un cuadro con tres opciones diferentes de descarga según el sistema operativo que use tu computador (i.e., Windows, OS X o Linux). Dale clic a la opción que corresponda a tu caso. 
+
+## R para Windows
+
+A pesar de que la página de R no es particularmente “estética”, puedes fácilmente visualizar y clicar la opción de descarga para Windows (“Download R for Windows”). Una vez hayas seleccionado este enlace, dale clic a “install R for the first time”. Esto te llevará finalmente a la página de descarga donde tiene que clicar el enlace que dice [“Download R 4.0.5 for Windows (85 megabytes, 32/64 bit)”](https://learningstatisticswithr.com/book/){target="_blank"} (o cual sea la versión que veas al momento de descargar R). Esto iniciará la descarga de un archivo, el cual tardará unos pocos minutos dependiendo de tu conexión. Ya descargado, haz doble clic para instalarlo y responde apropiadamente las preguntas que haga Windows para su instalación y ubicación. Seguir las opciones por defecto por lo general es una buena idea. Ahora ya teniendo instalado R en tu computador, puedes ir al menú de inicio e iniciarlo.
+
+## R para Mac
+
+## R para Linux
