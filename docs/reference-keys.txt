@@ -1,1 +1,1 @@
-r-aplicado-al-análisis-de-datos
+aplicando-r-al-análisis-de-datos-un-ejemplo
