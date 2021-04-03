@@ -1,4 +1,4 @@
-r-en-acción-analizando-un-caso
+r-en-acción-analizando-un-ejemplo
 qué-es-r-instalando-r-y-rstudio
 definiendo-r
 instalando-r
