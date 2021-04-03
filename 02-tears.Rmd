@@ -1,4 +1,4 @@
-# Lo Básico 
+# R Aplicado al Análisis de Datos
 
 Para tener una mejor idea de lo sencillo que es utilizar R, utilizaremos un pequeño 
 ejemplo basado en una base de datos real en psicología. 
