@@ -1,7 +1,8 @@
 # Instalando R
 
 Primero que todo, necesitamos instalar R en nuestro computador. Para esto debemos ir a la siguiente website: 
-```{block, type='FOO'}
+
+```{block}
 http://cran.r-project.org/
 ```
 
