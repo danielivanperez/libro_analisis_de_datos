@@ -1,4 +1,4 @@
-# Instalando R y RStudio
+# ¿Qué es R? Instalando R y RStudio
 
 Primero que todo, necesitamos instalar R en nuestro computador. Para esto debemos ir a la siguiente website: 
 
