@@ -1,5 +1,5 @@
 aplicando-r-al-análisis-de-datos
-instalando-r
+instalando-r-y-rstudio
 r-para-windows
 r-para-mac
 r-para-linux
