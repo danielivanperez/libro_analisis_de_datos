@@ -1,4 +1,4 @@
-aplicando-r-al-análisis-de-datos
+r-en-acción-analizando-un-caso
 qué-es-r-instalando-r-y-rstudio
 definiendo-r
 instalando-r
