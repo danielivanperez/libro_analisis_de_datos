@@ -6,5 +6,7 @@ view: https://github.com/danielivanperez/libro_analisis_de_datos/blob/master/%s
 language:
   ui:
     chapter_name: "Capítulo  "
-    
+html_document:
+    includes:
+      in_header: header.html
     

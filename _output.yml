@@ -5,9 +5,6 @@ bookdown::gitbook:
       in_header: header.html
   config:
     search: yes
-    #info: no
-    #sharing: 
-      #github: no
     toc:
       before: |
         <li><a href="./">ANALISIS DE DATOS EN PSICOLOGIA USANDO R</a></li>
