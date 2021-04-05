@@ -4,7 +4,12 @@ author: "Daniel Pérez Zapata"
 date: "`r Sys.Date()`"
 output: pdf_document
 site: bookdown::bookdown_site
+html_document:
+    includes:
+      in_header: header.html
 ---
+
+<link rel="icon" href="simp_dan"/>
 
 # Presentación y Licencia {-}
 
