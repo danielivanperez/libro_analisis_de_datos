@@ -13,4 +13,3 @@ r-para-mac
 r-para-linux
 comandos-básicos-en-r
 análisis-de-datos-con-tidyverse
-anexo-1-más-comandos-básicos
