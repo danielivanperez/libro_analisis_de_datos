@@ -2,6 +2,7 @@
 title: "Introducción al Análisis de Datos en Psicología usando R"
 author: "Daniel Pérez Zapata"
 date: "`r Sys.Date()`"
+cover-image: "simp_dan.png"
 output: pdf_document
 site: bookdown::bookdown_site
 favicon: "images/simp_dan.ico"
