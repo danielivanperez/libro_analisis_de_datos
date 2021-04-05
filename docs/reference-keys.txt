@@ -1,6 +1,9 @@
 presentación
 licencia
 introducción
+por-qué-aprender-a-programar-en-r-para-el-análisis-de-datos
+obstáculos-en-el-aprendizaje-de-r
+consideraciones-finales
 r-en-acción-analizando-un-ejemplo
 qué-es-r-instalando-r-y-rstudio
 definiendo-r
