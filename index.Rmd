@@ -3,7 +3,7 @@ title: "Introducción al Análisis de Datos en Psicología usando R"
 author: "Daniel Pérez Zapata"
 date: "`r Sys.Date()`"
 cover-image: "simp_dan.png"
-description: "Este curso tiene como principal objetivo enseñar el lenguaje de programación R desde cero para realizar análisis de datos cuantitativos en las ciencias psicológicas."
+description: "Este curso tiene como objetivo enseñar R para análisis de datos en psicología."
 output: pdf_document
 site: bookdown::bookdown_site
 favicon: "images/simp_dan.ico"
