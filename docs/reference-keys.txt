@@ -1,7 +1,7 @@
 presentación
 licencia
 introducción
-por-qué-programar-en-r-para-el-análisis-de-datos
+por-qué-programar-en-r
 obstáculos-en-el-aprendizaje-de-r
 consideraciones-finales
 r-en-acción-analizando-un-ejemplo
