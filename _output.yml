@@ -1,5 +1,8 @@
 bookdown::gitbook:
   css: style.css
+  html_document:
+    includes:
+      in_header: header.html
   config:
     search: yes
     #info: no
