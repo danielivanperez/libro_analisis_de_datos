@@ -25,3 +25,9 @@ Este curso tiene como principal objetivo enseñar el lenguaje de programación R
 &nbsp;  
 
 Este recurso se encuentra en desarrollo, por lo que si encuentras algún problema o error y te gustaría informármelo, envíame un correo a daniel.perez.zapata[at]gmail.com. 
+
+```{js, echo = FALSE}
+title=document.getElementById('header');
+title.innerHTML = '<img src="/Users/danielperez/Desktop/book/libro_analisis_de_datos/images/rsz_1simp_dan.png" alt="Test Image">' + title.innerHTML
+```
+
