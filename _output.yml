@@ -1,5 +1,10 @@
 bookdown::gitbook:
   css: style.css
+  edit : null
+  download: null
+  fontsettings:
+      theme: sepia
+      family: sans
   config:
     search: yes
     toc:
