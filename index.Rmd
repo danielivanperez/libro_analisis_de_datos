@@ -28,6 +28,6 @@ Este recurso se encuentra en desarrollo, por lo que si encuentras algún problem
 
 ```{js, echo = FALSE}
 title=document.getElementById('header');
-title.innerHTML = '<img src="/Users/danielperez/Desktop/book/libro_analisis_de_datos/images/dani_r.png" alt="Test Image">' + title.innerHTML
+title.innerHTML = '<img src="/Users/danielperez/Desktop/book/libro_analisis_de_datos/images/rsz_dani_r.png" alt="Test Image">' + title.innerHTML
 ```
 
