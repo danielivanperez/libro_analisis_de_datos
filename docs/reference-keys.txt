@@ -11,5 +11,6 @@ instalando-r
 r-para-windows
 r-para-mac
 r-para-linux
+instalando-rstudio
 comandos-básicos-en-r
 análisis-de-datos-con-tidyverse
