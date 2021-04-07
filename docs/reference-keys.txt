@@ -13,4 +13,4 @@ r-para-mac
 r-para-linux
 instalando-rstudio
 comandos-básicos-en-r
-análisis-de-datos-con-tidyverse
+tidyverse-la-libreria-del-análisis-de-datos
