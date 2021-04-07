@@ -26,4 +26,8 @@ A pesar de que la página de R no es particularmente “estética”, puedes fá
 
 ### R para Mac
 
+Si tienes un ordenador Mac, dale clic al enlace correspondiente a Mac OS X. Esto te llevará a una página donde aparece la opción “R for Mac OS X”. Bajo el subtítulo “Latest release:”, encontrarás un enlace con la versión que necesitas (al momento de escribir este texto, yo vi el siguiente link: “R-4.0.5.pkg (notarized and signed)”). Como resultado tu empezaras a descargar el instalador que en mi caso decía “R-4.0.5.pkg”. Sigue el proceso normal de instalación de Mac para instalar R. 
+
 ### R para Linux
+Para este caso, debo decir que nunca he instalado un programa en Linux, por lo que no soy de mucha ayuda aquí (sorry guys!) y voy a dar una explicación que he encontrado en la web. Deberías darle clic en el enlace “Download R for Linux”. En esa página, tu encontrarás directorios para Debian, Red Hat, Suse y Ubuntu cada una con sus respectivas instrucciones. Una vez que tengas instalado R, puedes correrlo desde la línea de comando tan solo escribiendo `R`. 
+
