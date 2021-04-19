@@ -12,9 +12,10 @@ Ahora bien, este simple ejemplo nos servirá para explicar algunas cosas muy sim
 
 En la tabla 1, puedes encontrar un resumen de algunas operaciones matemáticas básicas en R. 
 
-                                        
+```{=html}    
                               <center> <h1>Tabla 1 </h1> </center>
-                                      
+```
+              
 | Operación      | Símbolo u operador | Ejemplo  | Resultado |
 |:----------------:|:------------------:|:--------:|:---------:|
 |      Suma      |          +         |  `3 + 6` |    `9`    |
