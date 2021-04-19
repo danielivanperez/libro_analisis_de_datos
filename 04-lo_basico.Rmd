@@ -1,11 +1,9 @@
 # Comandos Básicos en R
 
-Una de las primeras cosas que podemos hacer para comenzar a familiarizarnos con R es usarla como si fuera una simple calculadora. De esta manera, escribiremos los primeros comandos o instrucciones y obtendremos resultados conocidos a partir de nuestra experiencia con cálculos matemáticos adquiridos durante nuestra educación primaria. Nada intimidante la verdad. Podemos escribir `2 + 5` y luego apretar “*enter*”. Cuando escribimos `2 + 5` lo que hicimos fue escribir un **comando** y R ejecutará dicho comando. Lo que tu vas a ver en la pantalla corresponde a: 
+Una de las primeras cosas que podemos hacer para comenzar a familiarizarnos con R es usarla como si fuera una simple calculadora. De esta manera, escribiremos los primeros comandos o instrucciones y obtendremos resultados conocidos a partir de nuestra experiencia con cálculos matemáticos adquiridos durante nuestra educación primaria. Nada intimidante la verdad. En la consola de R, podemos escribir `2 + 5` y luego apretar “*enter*”. Cuando escribimos `2 + 5` lo que hicimos fue escribir un **comando** y R ejecutará dicho comando. Lo que tu vas a ver en la pantalla corresponde a: 
 
 ```{r class.source="bg-danger", class.output="bg-warning"}
 2 + 5
 ```
 
-Ahora bien, este simple ejemplo nos servirá para explicar algunas cosas muy simples de R. 
-
-
+Ahora bien, este simple ejemplo nos servirá para explicar algunas cosas muy simples de R. El primer bloque de arriba (es decir, `2 + 5`) corresponde al comando o instrucciones escritas y el bloque de abajo es el *output* o salida de R, el cual nos muestra el resultado de la suma. En este bloque, aparece dos *hashtags* o “*signos gatos*” (como le decimos en Chile), al lado `[1] ` el cual señala el número del output producido por R (y que nosotros no escribimos) y al lado, finalmente, aparece el resultado de la sumatoria `7`.  
