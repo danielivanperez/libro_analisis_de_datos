@@ -12,15 +12,15 @@ Ahora bien, este simple ejemplo nos servirá para explicar algunas cosas muy sim
 
 En la tabla 1, puedes encontrar un resumen de algunas operaciones matemáticas básicas en R. 
 
-                              Tabla 1
+                                  Tabla 1
 
 | Operación      | Símbolo u operador | Ejemplo  | Resultado |
 |----------------|:------------------:|:--------:|:---------:|
-| Suma           |          +         |  `3 + 6` |    `9`    |
-| Resta          |          -         |  `6 - 2` |    `4`    |
+|      Suma      |          +         |  `3 + 6` |    `9`    |
+|      Resta     |          -         |  `6 - 2` |    `4`    |
 | Multiplicación |          *         |  `5 * 8` |    `40`   |
-| División       |          /         | `21 / 7` |    `3`    |
-| Potencia       |          ^         |  `2 ^ 6` |    `64`   |
+|    División    |          /         | `21 / 7` |    `3`    |
+|    Potencia    |          ^         |  `2 ^ 6` |    `64`   |
 
 ## Errores de Escritura o *typos* en R
 
