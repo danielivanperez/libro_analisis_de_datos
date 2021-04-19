@@ -15,7 +15,7 @@ En la tabla 1, puedes encontrar un resumen de algunas operaciones matemáticas b
                                        Tabla 1
 
 | Operación      | Símbolo u operador | Ejemplo  | Resultado |
-|----------------|:------------------:|:--------:|:---------:|
+|:----------------:|:------------------:|:--------:|:---------:|
 |      Suma      |          +         |  `3 + 6` |    `9`    |
 |      Resta     |          -         |  `6 - 2` |    `4`    |
 | Multiplicación |          *         |  `5 * 8` |    `40`   |
