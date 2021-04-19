@@ -1,0 +1,16 @@
+presentación
+licencia
+introducción
+por-qué-programar-en-r
+obstáculos-en-el-aprendizaje-de-r
+consideraciones-finales
+r-en-acción-analizando-un-ejemplo
+qué-es-r-instalando-r-y-rstudio
+definiendo-r
+instalando-r
+r-para-windows
+r-para-mac
+r-para-linux
+instalando-rstudio
+comandos-básicos-en-r
+tidyverse-librería-de-análisis-de-datos
