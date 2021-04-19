@@ -2,10 +2,7 @@
 
 Una de las primeras cosas que podemos hacer para comenzar a familiarizarnos con R es usarla como si fuera una simple calculadora. De esta manera, escribiremos los primeros comandos o instrucciones y obtendremos resultados conocidos a partir de nuestra experiencia con cálculos matemáticos adquiridos durante nuestra educación primaria. Nada intimidante la verdad. Podemos escribir `2 + 5` y luego apretar “*enter*”. Cuando escribimos `2 + 5` lo que hicimos fue escribir un comando y R ejecutará dicho comando. Lo que tu vas a ver en la pantalla corresponde a: 
 
----
-title: Change the chunk style
-output: html_document
----
+
 
 When you subset a data frame, it does not necessarily return
 a data frame. For example, if you subset two columns, you get
