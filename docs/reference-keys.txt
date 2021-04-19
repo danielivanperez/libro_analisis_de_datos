@@ -13,4 +13,5 @@ r-para-mac
 r-para-linux
 instalando-rstudio
 comandos-básicos-en-r
+r-como-una-simple-calculadora
 tidyverse-librería-de-análisis-de-datos
