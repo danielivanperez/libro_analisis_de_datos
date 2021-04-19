@@ -13,7 +13,7 @@ Ahora bien, este simple ejemplo nos servirá para explicar algunas cosas muy sim
 En la tabla 1, puedes encontrar un resumen de algunas operaciones matemáticas básicas en R. 
 
 ```{=html}    
-                              <center> <h2>Tabla 1 </h2> </center>
+                              <center> <h3>Tabla 1 </h3> </center>
 ```
               
 | Operación      | Símbolo u operador | Ejemplo  | Resultado |
