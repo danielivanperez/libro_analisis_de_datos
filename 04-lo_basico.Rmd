@@ -8,7 +8,19 @@ Una de las primeras cosas que podemos hacer para comenzar a familiarizarnos con 
 2 + 5
 ```
 
-Ahora bien, este simple ejemplo nos servirá para explicar algunas cosas muy simples de R. El primer bloque de arriba (es decir, `2 + 5`) corresponde al comando o instrucciones que escribimos y el bloque de abajo es el *output* o salida de R, el cual nos muestra el resultado de la suma. En este bloque, aparecen dos *hashtags* o “*signos gatos*” (como le decimos en Chile), al lado `[1] `, el cual señala el número del output producido por R (y que por cierto nosotros no escribimos, sino fue producido por R) y al lado, finalmente, aparece el resultado de la sumatoria, es decir, `7`. *So far, so good!* (¡hasta ahora todo bien!).   
+Ahora bien, este simple ejemplo nos servirá para explicar algunas cosas muy simples de R. El primer bloque de arriba (es decir, `2 + 5`) corresponde al comando o instrucciones que escribimos y el bloque de abajo es el *output* o salida de R, el cual nos muestra el resultado de la suma. En este bloque, aparecen dos *hashtags* o “*signos gatos*” (como le decimos en Chile), al lado `[1] `, el cual señala el número del output producido por R (y que por cierto nosotros no escribimos, sino fue producido por R) y al lado, finalmente, aparece el resultado de la sumatoria, es decir, `7`. *So far, so good!* (¡hasta ahora todo bien!).
+
+En la tabla 1, puedes encontrar un resumen de algunas operaciones matemáticas básicas en R. 
+
+                              Tabla 1
+
+| Operación      | Símbolo u operador | Ejemplo  | Resultado |
+|----------------|:------------------:|:--------:|:---------:|
+| Suma           |          +         |  `3 + 6` |    `9`    |
+| Resta          |          -         |  `6 - 2` |    `4`    |
+| Multiplicación |          *         |  `5 * 8` |    `40`   |
+| División       |          /         | `21 / 7` |    `3`    |
+| Potencia       |          ^         |  `2 ^ 6` |    `64`   |
 
 ## Errores de Escritura o *typos* en R
 
