@@ -183,12 +183,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="comandos-básicos-en-r" class="section level1" number="4">
 <h1><span class="header-section-number">Capítulo  4</span> Comandos Básicos en R</h1>
 <p>Una de las primeras cosas que podemos hacer para comenzar a familiarizarnos con R es usarla como si fuera una simple calculadora. De esta manera, escribiremos los primeros comandos o instrucciones y obtendremos resultados conocidos a partir de nuestra experiencia con cálculos matemáticos adquiridos durante nuestra educación primaria. Nada intimidante la verdad. Podemos escribir <code>2 + 5</code> y luego apretar “<em>enter</em>”. Cuando escribimos <code>2 + 5</code> lo que hicimos fue escribir un comando y R ejecutará dicho comando. Lo que tu vas a ver en la pantalla corresponde a:</p>
-<p>When you subset a data frame, it does not necessarily return
-a data frame. For example, if you subset two columns, you get
-a data frame, but when you try to subset one column, you get
-a vector:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r bg-danger"><code class="sourceCode r"><span id="cb1-1"><a href="comandos-básicos-en-r.html#cb1-1" aria-hidden="true" tabindex="-1"></a>mtcars[<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>, <span class="st">&quot;mpg&quot;</span>]</span></code></pre></div>
-<pre class="bg-warning"><code>## [1] 21.0 21.0 22.8 21.4 18.7</code></pre>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r bg-danger"><code class="sourceCode r"><span id="cb1-1"><a href="comandos-básicos-en-r.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span> <span class="sc">+</span> <span class="dv">5</span></span></code></pre></div>
+<pre class="bg-warning"><code>## [1] 7</code></pre>
 <p>To make sure that we always get a data frame, we have to use
 the argument <code>drop = FALSE</code>. Now we use the chunk option
 <code>class.source = "bg-success"</code>.</p>
