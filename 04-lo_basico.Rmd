@@ -78,7 +78,7 @@ En estos tres ejemplos, podemos ver la versatilidad y sencillez de R para ejecut
   <img width="280" height="200" src="monkey.gif">
 </p>
 <p align="center">
-Imagen 2. Usuario inicial de R imaginando las posibilidades.
+Figura 2. Usuario inicial de R imaginando las posibilidades.
 </p>
 ```
 

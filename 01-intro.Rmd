@@ -16,7 +16,7 @@ Antes de seguir adelante, quizás la primera pregunta que deberíamos responder 
   <img width="280" height="200" src="mundo_mejor.jpg">
 </p>
 <p align="center">
-Imagen 1. Ilustración de la comunidad de R interactuando en el mundo virtual.
+Figura 1. Ilustración de la comunidad de R interactuando en el mundo virtual.
 </p>
 ```
 
