@@ -54,6 +54,13 @@ Para crear una variable, debemos utilizar el operador de asignación `<-`. Veamo
 ```{r class.source="bg-danger", class.output="bg-warning"}
 mi_edad <- 35
 ```
+Arriba he creado una variable que tiene por nombre o etiqueta `mi_edad` (lado izquierdo del comando) y he asignado un valor numérico a esta variable (`35`) a través del operador de asignación `<-`. Ahora, si escribo y ejecuto la variable `mi_edad`, veamos lo que pasa.
+
+```{r class.source="bg-danger", class.output="bg-warning"}
+mi_edad
+```
+R ha impreso el valor `35`, el cual corresponde a la operación realizada más arriba. 
+
 
 
 ## Errores de Escritura o *typos* en R
