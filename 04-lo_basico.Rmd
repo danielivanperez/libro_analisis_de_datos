@@ -24,7 +24,7 @@ En la tabla 1, puedes encontrar un resumen de algunas operaciones matemáticas b
 |    División    |          /         | `21 / 7` |    `3`    |
 |    Potencia    |          ^         |  `2 ^ 6` |    `64`   |
 
-## Orden de las Operaciones Matemáticas en R
+## Orden de Operaciones Matemáticas en R
 
 Habiendo presentado brevemente los símbolos matemáticos en R, cuando nos enfrentamos a situaciones donde debemos escribir diferentes cálculos, el orden de ejecución de dichas operaciones sigue el mismo orden que aprendimos durante nuestro tiempo escolar: se realiza primero lo que está dentro del paréntesis, luego potencias, para después seguir con divisiones y multiplicaciones, para finalmente terminar con sumas y restas. Abajo encontrarán tres breves ejemplos en R que ilustran estos principios. 
 
@@ -36,13 +36,12 @@ En el caso de arriba, el número `5` es multiplicado con el número `12` y luego
 ```{r class.source="bg-danger", class.output="bg-warning"}
 (5 + 5) * 12 
 ```
-En este bloque primero se suman los dos nuumeros que están al interior del paréntesis (es decir `5 + 5 = 10`) y luego el resultado se multiplica con `12` para obtener `120`.  
+En este bloque, primero se suman los dos números que están al interior del paréntesis (es decir, `5 + 5 = 10`) y luego el resultado se multiplica con `12` para obtener `120`.  
 
 ```{r class.source="bg-danger", class.output="bg-warning"}
 (2  ^ 3 ) / 2 
 ```
-Al igual que el ejemplo de arriba, la operación que está dentro del paréntesis es lo que se ejecuta en primer lugar (es decir, la potencia = `2 × 2 × 2 = 8`), cuyo resultado después será dividido por `2`, lo que equivale a `4`.
-
+Al igual que el ejemplo de arriba, la operación que está dentro del paréntesis es lo que se ejecuta en primer lugar (es decir, la potencia = `2 × 2 × 2 = 8`), cuyo resultado después será dividido por `2`, lo que equivale a `4`. 
 
 ## Errores de Escritura o *typos* en R
 
