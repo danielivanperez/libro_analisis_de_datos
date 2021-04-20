@@ -43,6 +43,11 @@ En este bloque, primero se suman los dos números que están al interior del par
 ```
 Al igual que el ejemplo de arriba, la operación que está dentro del paréntesis es lo que se ejecuta en primer lugar (es decir, la potencia = `2 × 2 × 2 = 8`), cuyo resultado después será dividido por `2`, lo que equivale a `4`. 
 
+## Variables en R
+
+Una de las principales ventajas de usar R es que podemos crear variables con el fin de almacenar información en ellas. Una manera bastante simple de entender el rol de las variables en R es que nosotros asignamos una etiqueta o un nombre a un conjunto de información determinada. La gracia de R en este caso es bastante grande: para realizar análisis de datos se necesita poder usar variables y R nos permite hacerlo de manera bastante sencilla. 
+
+
 ## Errores de Escritura o *typos* en R
 
 Para interactuar con R, nuestras instrucciones deben ser claras y precisas. De este modo, R podrá realizar exactamente lo que nosotros le pidamos. Sin embargo, si no somos lo suficientemente claros y precisos, R no hará lo que le pidamos y nos dará algún mensaje de error de algún tipo. Y aceptémoslo, más temprano que tarde cometeremos un error de escritura en R, el cual será el inicio de muchos errores en el camino que emprendamos en el análisis de datos a través del uso de R. 

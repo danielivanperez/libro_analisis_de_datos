@@ -15,5 +15,6 @@ instalando-rstudio
 comandos-básicos-en-r
 r-como-una-simple-calculadora
 orden-de-operaciones-matemáticas-en-r
+variables-en-r
 errores-de-escritura-o-typos-en-r
 tidyverse-librería-de-análisis-de-datos
