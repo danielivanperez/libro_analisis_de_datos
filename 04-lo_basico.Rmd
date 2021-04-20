@@ -31,12 +31,18 @@ Habiendo presentado brevemente los símbolos matemáticos en R, cuando nos enfre
 ```{r class.source="bg-danger", class.output="bg-warning"}
 5 + 5 * 12 
 ```
+En el caso de arriba, el número `5` es multiplicado con el número `12` y luego al final se le suma el número `5` para obtener el resultado de `65`. 
+
 ```{r class.source="bg-danger", class.output="bg-warning"}
 (5 + 5) * 12 
 ```
+En este bloque primero se suman los dos nuumeros que están al interior del paréntesis (es decir `5 + 5 = 10`) y luego el resultado se multiplica con `12` para obtener `120`.  
+
 ```{r class.source="bg-danger", class.output="bg-warning"}
 (2  ^ 3 ) / 2 
 ```
+Al igual que el ejemplo de arriba, la operación que está dentro del paréntesis es lo que se ejecuta en primer lugar (es decir, la potencia = `2 × 2 × 2 = 8`), cuyo resultado después será dividido por `2`, lo que equivale a `4`.
+
 
 ## Errores de Escritura o *typos* en R
 

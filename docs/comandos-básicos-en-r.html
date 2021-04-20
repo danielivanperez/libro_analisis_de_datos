@@ -243,10 +243,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Habiendo presentado brevemente los símbolos matemáticos en R, cuando nos enfrentamos a situaciones donde debemos escribir diferentes cálculos, el orden de ejecución de dichas operaciones sigue el mismo orden que aprendimos durante nuestro tiempo escolar: se realiza primero lo que está dentro del paréntesis, luego potencias, para después seguir con divisiones y multiplicaciones, para finalmente terminar con sumas y restas. Abajo encontrarán tres breves ejemplos en R que ilustran estos principios.</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r bg-danger"><code class="sourceCode r"><span id="cb3-1"><a href="comandos-básicos-en-r.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="dv">5</span> <span class="sc">+</span> <span class="dv">5</span> <span class="sc">*</span> <span class="dv">12</span> </span></code></pre></div>
 <pre class="bg-warning"><code>## [1] 65</code></pre>
+<p>En el caso de arriba, el número <code>5</code> es multiplicado con el número <code>12</code> y luego al final se le suma el número <code>5</code> para obtener el resultado de <code>65</code>.</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r bg-danger"><code class="sourceCode r"><span id="cb5-1"><a href="comandos-básicos-en-r.html#cb5-1" aria-hidden="true" tabindex="-1"></a>(<span class="dv">5</span> <span class="sc">+</span> <span class="dv">5</span>) <span class="sc">*</span> <span class="dv">12</span> </span></code></pre></div>
 <pre class="bg-warning"><code>## [1] 120</code></pre>
+<p>En este bloque primero se suman los dos nuumeros que están al interior del paréntesis (es decir <code>5 + 5 = 10</code>) y luego el resultado se multiplica con <code>12</code> para obtener <code>120</code>.</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode r bg-danger"><code class="sourceCode r"><span id="cb7-1"><a href="comandos-básicos-en-r.html#cb7-1" aria-hidden="true" tabindex="-1"></a>(<span class="dv">2</span>  <span class="sc">^</span> <span class="dv">3</span> ) <span class="sc">/</span> <span class="dv">2</span> </span></code></pre></div>
 <pre class="bg-warning"><code>## [1] 4</code></pre>
+<p>Al igual que el ejemplo de arriba, la operación que está dentro del paréntesis es lo que se ejecuta en primer lugar (es decir, la potencia = <code>2 × 2 × 2 = 8</code>), cuyo resultado después será dividido por <code>2</code>, lo que equivale a <code>4</code>.</p>
 </div>
 <div id="errores-de-escritura-o-typos-en-r" class="section level2" number="4.3">
 <h2><span class="header-section-number">4.3</span> Errores de Escritura o <em>typos</em> en R</h2>
