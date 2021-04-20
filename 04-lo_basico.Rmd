@@ -71,7 +71,7 @@ mi_edad / 5
 ```{r class.source="bg-danger", class.output="bg-warning"}
 mi_edad ^  5
 ```
-En estos tres ejemplos, podemos ver la versatilidad y sencillez de R para ejecutar operaciones matemáticas sobre una variable arbitraria. 
+En estos tres ejemplos, podemos ver la versatilidad y sencillez de R para ejecutar operaciones matemáticas sobre una variable arbitraria. ¡Imaginen las posibilidades que nos ofrece R para interactuar de diferntes maneras con set de datos! 
 
 ## Errores de Escritura o *typos* en R
 
