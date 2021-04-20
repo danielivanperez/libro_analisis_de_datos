@@ -59,9 +59,19 @@ Arriba he creado una variable que tiene por nombre o etiqueta `mi_edad` (lado iz
 ```{r class.source="bg-danger", class.output="bg-warning"}
 mi_edad
 ```
-R ha impreso el valor `35`, el cual corresponde a la operación realizada más arriba. 
+R ha impreso el valor `35`, el cual corresponde a la operación realizada más arriba. Ahora imaginemos que deseo realizar algunas operaciones matemáticas con la variable `mi_edad`: 
 
+```{r class.source="bg-danger", class.output="bg-warning"}
+mi_edad * 5
+```
+```{r class.source="bg-danger", class.output="bg-warning"}
+mi_edad / 5
+```
 
+```{r class.source="bg-danger", class.output="bg-warning"}
+mi_edad ^  5
+```
+En estos tres ejemplos, podemos ver la versatilidad y sencillez de R para ejecutar operaciones matemáticas sobre una variable arbitraria. 
 
 ## Errores de Escritura o *typos* en R
 
