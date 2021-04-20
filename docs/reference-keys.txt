@@ -14,5 +14,6 @@ r-para-linux
 instalando-rstudio
 comandos-básicos-en-r
 r-como-una-simple-calculadora
+orden-de-las-operaciones-matemáticas-en-r
 errores-de-escritura-o-typos-en-r
 tidyverse-librería-de-análisis-de-datos

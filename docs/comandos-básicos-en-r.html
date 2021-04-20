@@ -24,7 +24,7 @@
 <meta name="author" content="Daniel Pérez Zapata" />
 
 
-<meta name="date" content="2021-04-19" />
+<meta name="date" content="2021-04-20" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -160,7 +160,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4" data-path="comandos-básicos-en-r.html"><a href="comandos-básicos-en-r.html"><i class="fa fa-check"></i><b>4</b> Comandos Básicos en R</a>
 <ul>
 <li class="chapter" data-level="4.1" data-path="comandos-básicos-en-r.html"><a href="comandos-básicos-en-r.html#r-como-una-simple-calculadora"><i class="fa fa-check"></i><b>4.1</b> R como una Simple Calculadora</a></li>
-<li class="chapter" data-level="4.2" data-path="comandos-básicos-en-r.html"><a href="comandos-básicos-en-r.html#errores-de-escritura-o-typos-en-r"><i class="fa fa-check"></i><b>4.2</b> Errores de Escritura o <em>typos</em> en R</a></li>
+<li class="chapter" data-level="4.2" data-path="comandos-básicos-en-r.html"><a href="comandos-básicos-en-r.html#orden-de-las-operaciones-matemáticas-en-r"><i class="fa fa-check"></i><b>4.2</b> Orden de las Operaciones Matemáticas en R</a></li>
+<li class="chapter" data-level="4.3" data-path="comandos-básicos-en-r.html"><a href="comandos-básicos-en-r.html#errores-de-escritura-o-typos-en-r"><i class="fa fa-check"></i><b>4.3</b> Errores de Escritura o <em>typos</em> en R</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="tidyverse-librería-de-análisis-de-datos.html"><a href="tidyverse-librería-de-análisis-de-datos.html"><i class="fa fa-check"></i><b>5</b> Tidyverse: Librería de Análisis de Datos</a></li>
 <li class="chapter" data-level="" data-path="anexo-1-más-comandos-básicos.html"><a href="anexo-1-más-comandos-básicos.html"><i class="fa fa-check"></i>Anexo 1: Más Comandos Básicos</a></li>
@@ -237,8 +238,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tbody>
 </table>
 </div>
-<div id="errores-de-escritura-o-typos-en-r" class="section level2" number="4.2">
-<h2><span class="header-section-number">4.2</span> Errores de Escritura o <em>typos</em> en R</h2>
+<div id="orden-de-las-operaciones-matemáticas-en-r" class="section level2" number="4.2">
+<h2><span class="header-section-number">4.2</span> Orden de las Operaciones Matemáticas en R</h2>
+<p>Habiendo presentado brevemente los símbolos matemáticos en R, cuando nos enfrentamos a situaciones donde debemos escribir diferentes cálculos, el orden de ejecución de dichas operaciones sigue el mismo orden que aprendimos durante nuestro tiempo escolar: se realiza primero lo que está dentro del paréntesis, luego potencias, para después seguir con divisiones y multiplicaciones, para finalmente terminar con sumas y restas. Abajo encontrarán tres breves ejemplos en R que ilustran estos principios.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r bg-danger"><code class="sourceCode r"><span id="cb3-1"><a href="comandos-básicos-en-r.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="dv">5</span> <span class="sc">+</span> <span class="dv">5</span> <span class="sc">*</span> <span class="dv">12</span> </span></code></pre></div>
+<pre class="bg-warning"><code>## [1] 65</code></pre>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r bg-danger"><code class="sourceCode r"><span id="cb5-1"><a href="comandos-básicos-en-r.html#cb5-1" aria-hidden="true" tabindex="-1"></a>(<span class="dv">5</span> <span class="sc">+</span> <span class="dv">5</span>) <span class="sc">*</span> <span class="dv">12</span> </span></code></pre></div>
+<pre class="bg-warning"><code>## [1] 120</code></pre>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r bg-danger"><code class="sourceCode r"><span id="cb7-1"><a href="comandos-básicos-en-r.html#cb7-1" aria-hidden="true" tabindex="-1"></a>(<span class="dv">2</span>  <span class="sc">^</span> <span class="dv">3</span> ) <span class="sc">/</span> <span class="dv">2</span> </span></code></pre></div>
+<pre class="bg-warning"><code>## [1] 4</code></pre>
+</div>
+<div id="errores-de-escritura-o-typos-en-r" class="section level2" number="4.3">
+<h2><span class="header-section-number">4.3</span> Errores de Escritura o <em>typos</em> en R</h2>
 <p>Para interactuar con R, nuestras instrucciones deben ser claras y precisas. De este modo, R podrá realizar exactamente lo que nosotros le pidamos. Sin embargo, si no somos lo suficientemente claros y precisos, R no hará lo que le pidamos y nos dará algún mensaje de error de algún tipo. Y aceptémoslo, más temprano que tarde cometeremos un error de escritura en R, el cual será el inicio de muchos errores en el camino que emprendamos en el análisis de datos a través del uso de R.</p>
 
 </div>
