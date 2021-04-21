@@ -124,4 +124,5 @@ A continuación, mencionaré algunas convenciones o recomendaciones informales q
 
 ## Errores de Escritura o *typos* en R
 
-Para interactuar con R, nuestras instrucciones deben ser claras y precisas. De este modo, R podrá realizar exactamente lo que nosotros le pidamos. Sin embargo, si no somos lo suficientemente claros y precisos, R no hará lo que le pidamos y nos dará algún mensaje de error de algún tipo. Y aceptémoslo, más temprano que tarde cometeremos un error de escritura en R, el cual será el inicio de muchos errores en el camino que emprendamos en el análisis de datos a través del uso de R. 
+Para interactuar con R, nuestras instrucciones y nombres de variables deben ser claras y precisas. De este modo, R podrá realizar exactamente lo que nosotros le pidamos. Sin embargo, si no somos lo suficientemente claros y precisos, R no hará lo que le pidamos y nos dará algún mensaje de error de algún tipo. Y aceptémoslo, más temprano que tarde cometeremos un error de escritura en R, el cual será el inicio de muchos errores en el camino que emprendamos en el análisis de datos a través del uso de R. Este es solo un recordatorio amigable que no debemos sentirnos mal cuando cometamos un error en R. Esto también es una señal de que estamos avanzando y aprendiendo. 
+
