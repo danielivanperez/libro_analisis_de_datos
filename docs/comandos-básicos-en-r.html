@@ -168,6 +168,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.3.3" data-path="comandos-básicos-en-r.html"><a href="comandos-básicos-en-r.html#convenciones-informales-para-nombrar-variables"><i class="fa fa-check"></i><b>4.3.3</b> Convenciones Informales para Nombrar Variables</a></li>
 </ul></li>
 <li class="chapter" data-level="4.4" data-path="comandos-básicos-en-r.html"><a href="comandos-básicos-en-r.html#errores-de-escritura-o-typos-en-r"><i class="fa fa-check"></i><b>4.4</b> Errores de Escritura o <em>typos</em> en R</a></li>
+<li class="chapter" data-level="4.5" data-path="comandos-básicos-en-r.html"><a href="comandos-básicos-en-r.html#funciones-en-r"><i class="fa fa-check"></i><b>4.5</b> Funciones en R</a>
+<ul>
+<li class="chapter" data-level="4.5.1" data-path="comandos-básicos-en-r.html"><a href="comandos-básicos-en-r.html#argumentos-nombres-y-valores-por-defecto-en-las-funciones"><i class="fa fa-check"></i><b>4.5.1</b> Argumentos, Nombres y Valores por Defecto en las Funciones</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="tidyverse-librería-de-análisis-de-datos.html"><a href="tidyverse-librería-de-análisis-de-datos.html"><i class="fa fa-check"></i><b>5</b> Tidyverse: Librería de Análisis de Datos</a></li>
 <li class="chapter" data-level="" data-path="anexo-1-más-comandos-básicos.html"><a href="anexo-1-más-comandos-básicos.html"><i class="fa fa-check"></i>Anexo 1: Más Comandos Básicos</a></li>
@@ -314,7 +318,17 @@ Figura 2. Usuario inicial de R imaginando las posibilidades.
 <div id="errores-de-escritura-o-typos-en-r" class="section level2" number="4.4">
 <h2><span class="header-section-number">4.4</span> Errores de Escritura o <em>typos</em> en R</h2>
 <p>Para interactuar con R, nuestras instrucciones y nombres de variables deben ser claras y precisas. De este modo, R podrá realizar exactamente lo que nosotros le pidamos. Sin embargo, si no somos lo suficientemente claros y precisos, R no hará lo que le pidamos y nos dará algún mensaje de error de algún tipo. Y aceptémoslo, más temprano que tarde cometeremos un error de escritura en R, el cual será el inicio de muchos errores en el camino que emprendamos en el análisis de datos a través del uso de R. Este es solo un recordatorio amigable que no debemos sentirnos mal cuando cometamos un error en R. Esto también es una señal de que estamos avanzando y aprendiendo.</p>
+</div>
+<div id="funciones-en-r" class="section level2" number="4.5">
+<h2><span class="header-section-number">4.5</span> Funciones en R</h2>
+<p>Uno de los elementos más útiles en R al realizar análisis de datos es la utilización de funciones. En esta subsección, revisaremos algunos elementos básicos de las funciones y más adelante veremos cómo podemos empezar a definir funciones. En el inicio del capítulo 3 vimos un ejemplo de función aplicada a una variable (es decir, <code>sqrt(x)</code>). En ese ejemplo, usamos una de las funciones bases de R para obtener la raíz cuadrada de 16 que estaba almacenada en <code>x</code>. Obviamente, podemos obtener el mismo resultado aplicando dicha función a la siguiente expresión numérica:</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r bg-danger"><code class="sourceCode r"><span id="cb25-1"><a href="comandos-básicos-en-r.html#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrt</span>(<span class="dv">16</span>)</span></code></pre></div>
+<pre class="bg-warning"><code>## [1] 4</code></pre>
+<p>En vez de estar escribiendo una fórmula matemática en R para la raíz cuadrada, podemos usar esta función para obtener nuestro resultado a un valor determinado (ya sea un número o una variable). Ahora, aprovecharemos de explicar algunos términos técnicos para este caso. Usualmente, cuando aplicamos una función en R, decimos que <em>llamaremos</em> (<em>calling</em>) dicha función y todos aquellos valores que escribamos dentro de la función (es decir, dentro del paréntesis), son referidos como <em>argumentos</em> (<em>arguments</em>). Y la respuesta es sí, podemos escribir más de un argumento en una función.</p>
+<div id="argumentos-nombres-y-valores-por-defecto-en-las-funciones" class="section level3" number="4.5.1">
+<h3><span class="header-section-number">4.5.1</span> Argumentos, Nombres y Valores por Defecto en las Funciones</h3>
 
+</div>
 </div>
 </div>
             </section>

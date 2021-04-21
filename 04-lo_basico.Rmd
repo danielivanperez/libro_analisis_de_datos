@@ -126,3 +126,15 @@ A continuación, mencionaré algunas convenciones o recomendaciones informales q
 
 Para interactuar con R, nuestras instrucciones y nombres de variables deben ser claras y precisas. De este modo, R podrá realizar exactamente lo que nosotros le pidamos. Sin embargo, si no somos lo suficientemente claros y precisos, R no hará lo que le pidamos y nos dará algún mensaje de error de algún tipo. Y aceptémoslo, más temprano que tarde cometeremos un error de escritura en R, el cual será el inicio de muchos errores en el camino que emprendamos en el análisis de datos a través del uso de R. Este es solo un recordatorio amigable que no debemos sentirnos mal cuando cometamos un error en R. Esto también es una señal de que estamos avanzando y aprendiendo. 
 
+## Funciones en R 
+
+Uno de los elementos más útiles en R al realizar análisis de datos es la utilización de funciones. En esta subsección, revisaremos algunos elementos básicos de las funciones y más adelante veremos cómo podemos empezar a definir funciones. En el inicio del capítulo 3 vimos un ejemplo de función aplicada a una variable (es decir, `sqrt(x)`).  En ese ejemplo, usamos una de las funciones bases de R para obtener la raíz cuadrada de 16 que estaba almacenada en `x`. Obviamente, podemos obtener el mismo resultado aplicando dicha función a la siguiente expresión numérica:
+
+```{r class.source="bg-danger", class.output="bg-warning"}
+sqrt(16)
+```
+En vez de estar escribiendo una fórmula matemática en R para la raíz cuadrada, podemos usar esta función para obtener nuestro resultado a un valor determinado (ya sea un número o una variable). Ahora, aprovecharemos de explicar algunos términos técnicos para este caso. Usualmente, cuando aplicamos una función en R, decimos que *llamaremos* (*calling*) dicha función y todos aquellos valores que escribamos dentro de la función (es decir, dentro del paréntesis), son referidos como *argumentos* (*arguments*). Y la respuesta es sí, podemos escribir más de un argumento en una función. 
+
+### Argumentos, Nombres y Valores por Defecto en las Funciones
+
+

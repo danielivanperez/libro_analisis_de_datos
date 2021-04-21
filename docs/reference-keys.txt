@@ -20,4 +20,6 @@ construyendo-variables-en-r
 reglas-para-nombrar-variables
 convenciones-informales-para-nombrar-variables
 errores-de-escritura-o-typos-en-r
+funciones-en-r
+argumentos-nombres-y-valores-por-defecto-en-las-funciones
 tidyverse-librería-de-análisis-de-datos
