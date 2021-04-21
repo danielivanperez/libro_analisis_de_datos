@@ -164,6 +164,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.3" data-path="comandos-básicos-en-r.html"><a href="comandos-básicos-en-r.html#variables-en-r"><i class="fa fa-check"></i><b>4.3</b> Variables en R</a>
 <ul>
 <li class="chapter" data-level="4.3.1" data-path="comandos-básicos-en-r.html"><a href="comandos-básicos-en-r.html#construyendo-variables-en-r"><i class="fa fa-check"></i><b>4.3.1</b> Construyendo Variables en R</a></li>
+<li class="chapter" data-level="4.3.2" data-path="comandos-básicos-en-r.html"><a href="comandos-básicos-en-r.html#reglas-para-nombrar-variables"><i class="fa fa-check"></i><b>4.3.2</b> Reglas para Nombrar Variables</a></li>
 </ul></li>
 <li class="chapter" data-level="4.4" data-path="comandos-básicos-en-r.html"><a href="comandos-básicos-en-r.html#errores-de-escritura-o-typos-en-r"><i class="fa fa-check"></i><b>4.4</b> Errores de Escritura o <em>typos</em> en R</a></li>
 </ul></li>
@@ -288,6 +289,16 @@ Figura 2. Usuario inicial de R imaginando las posibilidades.
 <div class="sourceCode" id="cb23"><pre class="sourceCode r bg-danger"><code class="sourceCode r"><span id="cb23-1"><a href="comandos-básicos-en-r.html#cb23-1" aria-hidden="true" tabindex="-1"></a>mi_sueldo_al_mes <span class="sc">+</span> mi_edad <span class="sc">/</span> <span class="dv">10</span></span></code></pre></div>
 <pre class="bg-warning"><code>## [1] 2003.5</code></pre>
 <p>Con estos sencillos ejemplos, podemos comenzar a apreciar cómo en R creamos variables (u objetos), asignándole valores numéricos con los cuales jugar y combinar para empezar a realizar análisis de datos.</p>
+</div>
+<div id="reglas-para-nombrar-variables" class="section level3" number="4.3.2">
+<h3><span class="header-section-number">4.3.2</span> Reglas para Nombrar Variables</h3>
+<p>R tiene posee algunas reglas generales para etiquetar o nombrar variables. A continuación, las listaré con el fin de comentarlas solo un poco porque son bastante auto explicativas.</p>
+<ul>
+<li><p>Los nombres de variables usan caracteres en minúsculas y mayúsculas (R reconoce estas diferencias al momento de escribir sus variables). Se pueden incluir números en el nombre de variables, también puntos <code>.</code> o guion bajo <code>_</code> . Un nombre de variable valido es <code>item_empatia_1</code> o también <code>ítem.empatía.2</code>. El segundo ejemplo incorpora tildes, los cuales son asignados correctamente en R, aunque debemos tener cuidado que al usar tildes, debemos utilizarlas siempre para nuestro trabajo posterior. Sino, R nos dará un error.</p></li>
+<li><p>Los nombres de las variables no deben incluir espacios. <code>mi edad</code> no es un nombre válido; en cambio, <code>mi.edad</code> o <code>mi_edad</code> lo son.</p></li>
+<li><p>Los nombres deben empezar con una letra o con punto, pero no pueden empezar con guión bajo o con número. Por lo tanto, <code>_mi_edad</code>, <code>35_mi_edad</code>, son ejemplos inválidos en R.</p></li>
+<li><p>No podemos nombrar a nuestras variables con los nombres reservados en R. Los nombres reservados de R son nombres especiales que R utiliza para realizar ciertas operaciones y que debe restringir para que no haya problemas cuando se les requiera. Los nombres reservados son: <code>if</code>, <code>else</code>, <code>repeat</code>, <code>while</code>, <code>function</code>, <code>for</code>, <code>in</code>, <code>next</code>, <code>break</code>, <code>TRUE</code>, <code>FALSE</code>, <code>NULL</code>, <code>Inf</code>, <code>NaN</code>, <code>NA</code>, <code>NA_integer_</code>, <code>NA_real_</code>, <code>NA_complex</code> y <code>NA_character_</code>. Les recomendaría que no inviertan su tiempo en memorizarlas (de hecho, yo casi no me las sé y tuve que mirar un documento para escribirlas aquí).</p></li>
+</ul>
 </div>
 </div>
 <div id="errores-de-escritura-o-typos-en-r" class="section level2" number="4.4">

@@ -99,6 +99,19 @@ mi_sueldo_al_mes + mi_edad / 10
 
 
 Con estos sencillos ejemplos, podemos comenzar a apreciar cómo en R creamos variables (u objetos), asignándole valores numéricos con los cuales jugar y combinar para empezar a realizar análisis de datos. 
+
+### Reglas para Nombrar Variables
+
+R tiene posee algunas reglas generales para etiquetar o nombrar variables. A continuación, las listaré con el fin de comentarlas solo un poco porque son bastante auto explicativas. 
+
+* Los nombres de variables usan caracteres en minúsculas y mayúsculas (R reconoce estas diferencias al momento de escribir sus variables). Se pueden incluir números en el nombre de variables, también puntos `.` o guion bajo `_` . Un nombre de variable valido es `item_empatia_1` o también `ítem.empatía.2`. El segundo ejemplo incorpora tildes, los cuales son asignados correctamente en R, aunque debemos tener cuidado que al usar tildes, debemos utilizarlas siempre para nuestro trabajo posterior. Sino, R nos dará un error. 
+
+* Los nombres de las variables no deben incluir espacios. `mi edad` no es un nombre válido; en cambio, `mi.edad` o `mi_edad` lo son.  
+
+* Los nombres deben empezar con una letra o con punto, pero no pueden empezar con guión bajo o con número. Por lo tanto, `_mi_edad`, `35_mi_edad`, son ejemplos inválidos en R. 
+
+* No podemos nombrar a nuestras variables con los nombres reservados en R. Los nombres reservados de R son nombres especiales que R utiliza para realizar ciertas operaciones y que debe restringir para que no haya problemas cuando se les requiera. Los nombres reservados son: `if`, `else`, `repeat`, `while`, `function`, `for`, `in`, `next`, `break`, `TRUE`, `FALSE`, `NULL`, `Inf`, `NaN`, `NA`, `NA_integer_`, `NA_real_`, `NA_complex` y `NA_character_`. Les recomendaría que no inviertan su tiempo en memorizarlas (de hecho, yo casi no me las sé y tuve que mirar un documento para escribirlas aquí). 
+
  
 ## Errores de Escritura o *typos* en R
 
