@@ -110,7 +110,16 @@ R tiene posee algunas reglas generales para etiquetar o nombrar variables. A con
 
 * Los nombres deben empezar con una letra o con punto, pero no pueden empezar con guión bajo o con número. Por lo tanto, `_mi_edad`, `35_mi_edad`, son ejemplos inválidos en R. 
 
-* No podemos nombrar a nuestras variables con los nombres reservados en R. Los nombres reservados de R son nombres especiales que R utiliza para realizar ciertas operaciones y que debe restringir para que no haya problemas cuando se les requiera. Los nombres reservados son: `if`, `else`, `repeat`, `while`, `function`, `for`, `in`, `next`, `break`, `TRUE`, `FALSE`, `NULL`, `Inf`, `NaN`, `NA`, `NA_integer_`, `NA_real_`, `NA_complex` y `NA_character_`. Les recomendaría que no inviertan su tiempo en memorizarlas (de hecho, yo casi no me las sé y tuve que mirar un documento para escribirlas aquí). 
+* No podemos nombrar a nuestras variables con los nombres reservados en R. Los nombres reservados de R son nombres especiales que R utiliza para realizar ciertas operaciones y que debe restringir para que no haya problemas cuando se les requiera. Los nombres reservados son: `if`, `else`, `repeat`, `while`, `function`, `for`, `in`, `next`, `break`, `TRUE`, `FALSE`, `NULL`, `Inf`, `NaN`, `NA`, `NA_integer_`, `NA_real_`, `NA_complex_` y `NA_character_`. Les recomendaría que no inviertan su tiempo en memorizarlas (de hecho, yo casi no me las sé y tuve que mirar un documento para escribirlas aquí). 
+
+### Convenciones Informales para Nombrar Variables
+
+A continuación, mencionaré algunas convenciones o recomendaciones informales que se tienden a utilizar en los nombres de variables en R. Si bien, obviamente, no es obligatoria seguirlas, es una buena práctica cumplir con ellas, sobretodo, si luego tu código será compartido con otras personas dentro de un flujo de trabajo. 
+
+* Usar nombres informativos. Por ejemplo, buenos ejemplos podrían ser `edad` o `educacion` y malos ejemplos podrían ser `variable_1` o `nueva_variable` debido a que sus nombres no nos dicen nada acerca de qué se tratan dichas variables. 
+
+* Usar nombres breves o cortos. Escribir nombres largos de variables es una “lata” y, probablemente, una pérdida de tiempo cuando estemos concentrados en realizar nuestros análisis de datos. Un ejemplo de un nombre de variable muy largo sería `edad_de_los_participantes`. Sin embargo, es difícil mantener un buen equilibrio en construir nombres informativos y significativos, sin que sean demasiado largos. Cuando llegue el momento, uno deberá tomar ciertas decisiones al respecto. 
+
 
  
 ## Errores de Escritura o *typos* en R

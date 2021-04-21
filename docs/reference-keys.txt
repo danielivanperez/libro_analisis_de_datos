@@ -18,5 +18,6 @@ orden-de-operaciones-matemáticas-en-r
 variables-en-r
 construyendo-variables-en-r
 reglas-para-nombrar-variables
+convenciones-informales-para-nombrar-variables
 errores-de-escritura-o-typos-en-r
 tidyverse-librería-de-análisis-de-datos
