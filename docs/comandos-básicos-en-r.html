@@ -262,7 +262,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h3><span class="header-section-number">4.3.1</span> Construyendo Variables en R</h3>
 <p>Para crear una variable, debemos utilizar el operador de asignación <code>&lt;-</code>. Veamos un ejemplo.</p>
 <div class="sourceCode" id="cb9"><pre class="sourceCode r bg-danger"><code class="sourceCode r"><span id="cb9-1"><a href="comandos-básicos-en-r.html#cb9-1" aria-hidden="true" tabindex="-1"></a>mi_edad <span class="ot">&lt;-</span> <span class="dv">35</span></span></code></pre></div>
-<p>Arriba he creado una variable que tiene por nombre o etiqueta <code>mi_edad</code> (lado izquierdo del comando) y he asignado un valor numérico a esta variable (<code>35</code>) a través del operador de asignación <code>&lt;-</code>. Ahora, si escribo y ejecuto la variable <code>mi_edad</code>, veamos lo que pasa.</p>
+<p>Arriba he creado una variable que tiene por nombre o etiqueta <code>mi_edad</code> (lado izquierdo del comando) y he asignado un valor numérico a esta variable (<code>35</code>, el cual está en el lado derecho) a través del operador de asignación <code>&lt;-</code>. Ahora, si escribo y ejecuto la variable <code>mi_edad</code>, veamos lo que pasa.</p>
 <div class="sourceCode" id="cb10"><pre class="sourceCode r bg-danger"><code class="sourceCode r"><span id="cb10-1"><a href="comandos-básicos-en-r.html#cb10-1" aria-hidden="true" tabindex="-1"></a>mi_edad</span></code></pre></div>
 <pre class="bg-warning"><code>## [1] 35</code></pre>
 <p>R ha impreso el valor <code>35</code>, el cual corresponde a la operación realizada más arriba. Ahora imaginemos que deseo realizar algunas operaciones matemáticas con la variable <code>mi_edad</code>:</p>
@@ -279,6 +279,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p align="center">
 Figura 2. Usuario inicial de R imaginando las posibilidades.
 </p>
+<p>Incluso podemos crear nuevas variables y aplicar operaciones matemáticas entre ellas. Veamos los siguientes ejemplos.</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r bg-danger"><code class="sourceCode r"><span id="cb18-1"><a href="comandos-básicos-en-r.html#cb18-1" aria-hidden="true" tabindex="-1"></a>mi_sueldo_al_mes <span class="ot">&lt;-</span> <span class="dv">2000</span></span></code></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r bg-danger"><code class="sourceCode r"><span id="cb19-1"><a href="comandos-básicos-en-r.html#cb19-1" aria-hidden="true" tabindex="-1"></a>mi_sueldo_al_mes </span></code></pre></div>
+<pre class="bg-warning"><code>## [1] 2000</code></pre>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r bg-danger"><code class="sourceCode r"><span id="cb21-1"><a href="comandos-básicos-en-r.html#cb21-1" aria-hidden="true" tabindex="-1"></a>mi_sueldo_al_mes <span class="sc">*</span> mi_edad</span></code></pre></div>
+<pre class="bg-warning"><code>## [1] 70000</code></pre>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r bg-danger"><code class="sourceCode r"><span id="cb23-1"><a href="comandos-básicos-en-r.html#cb23-1" aria-hidden="true" tabindex="-1"></a>mi_sueldo_al_mes <span class="sc">+</span> mi_edad <span class="sc">/</span> <span class="dv">10</span></span></code></pre></div>
+<pre class="bg-warning"><code>## [1] 2003.5</code></pre>
+<p>Con estos sencillos ejemplos, podemos comenzar a apreciar cómo en R creamos variables (u objetos), asignándole valores numéricos con los cuales podemos comenzar a jugar y combinar para empezar a realizar análisis de datos.</p>
 </div>
 </div>
 <div id="errores-de-escritura-o-typos-en-r" class="section level2" number="4.4">

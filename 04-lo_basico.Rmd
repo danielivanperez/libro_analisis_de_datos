@@ -54,8 +54,7 @@ Para crear una variable, debemos utilizar el operador de asignación `<-`. Veamo
 ```{r class.source="bg-danger", class.output="bg-warning"}
 mi_edad <- 35
 ```
-Arriba he creado una variable que tiene por nombre o etiqueta `mi_edad` (lado izquierdo del comando) y he asignado un valor numérico a esta variable (`35`) a través del operador de asignación `<-`. Ahora, si escribo y ejecuto la variable `mi_edad`, veamos lo que pasa.
-
+Arriba he creado una variable que tiene por nombre o etiqueta `mi_edad` (lado izquierdo del comando) y he asignado un valor numérico a esta variable (`35`, el cual está en el lado derecho) a través del operador de asignación `<-`. Ahora, si escribo y ejecuto la variable `mi_edad`, veamos lo que pasa.
 ```{r class.source="bg-danger", class.output="bg-warning"}
 mi_edad
 ```
@@ -71,7 +70,7 @@ mi_edad / 5
 ```{r class.source="bg-danger", class.output="bg-warning"}
 mi_edad ^  5
 ```
-En estos tres ejemplos, podemos ver la versatilidad y sencillez de R para ejecutar operaciones matemáticas sobre una variable arbitraria. ¡Imaginen las posibilidades que nos ofrece R para interactuar de diferentes maneras con set de datos! 
+En estos tres ejemplos, podemos ver la versatilidad y sencillez de R para ejecutar operaciones matemáticas sobre una variable arbitraria. ¡Imaginen las posibilidades que nos ofrece R para interactuar de diferentes maneras con set de datos!
 
 ```{=html}
 <p align="center">
@@ -82,6 +81,25 @@ Figura 2. Usuario inicial de R imaginando las posibilidades.
 </p>
 ```
 
+Incluso podemos crear nuevas variables y aplicar operaciones matemáticas entre ellas. Veamos los siguientes ejemplos. 
+
+```{r class.source="bg-danger", class.output="bg-warning"}
+mi_sueldo_al_mes <- 2000
+```
+```{r class.source="bg-danger", class.output="bg-warning"}
+mi_sueldo_al_mes 
+```
+
+```{r class.source="bg-danger", class.output="bg-warning"}
+mi_sueldo_al_mes * mi_edad
+```
+```{r class.source="bg-danger", class.output="bg-warning"}
+mi_sueldo_al_mes + mi_edad / 10
+```
+
+
+Con estos sencillos ejemplos, podemos comenzar a apreciar cómo en R creamos variables (u objetos), asignándole valores numéricos con los cuales podemos comenzar a jugar y combinar para empezar a realizar análisis de datos. 
+ 
 ## Errores de Escritura o *typos* en R
 
 Para interactuar con R, nuestras instrucciones deben ser claras y precisas. De este modo, R podrá realizar exactamente lo que nosotros le pidamos. Sin embargo, si no somos lo suficientemente claros y precisos, R no hará lo que le pidamos y nos dará algún mensaje de error de algún tipo. Y aceptémoslo, más temprano que tarde cometeremos un error de escritura en R, el cual será el inicio de muchos errores en el camino que emprendamos en el análisis de datos a través del uso de R. 
