@@ -120,8 +120,8 @@ A continuación, mencionaré algunas convenciones o recomendaciones informales q
 
 * Usar nombres breves o cortos. Escribir nombres largos de variables es una “lata” y, probablemente, una pérdida de tiempo cuando estemos concentrados en realizar nuestros análisis de datos. Un ejemplo de un nombre de variable muy largo sería `edad_de_los_participantes`. Sin embargo, es difícil mantener un buen equilibrio en construir nombres informativos y significativos, sin que sean demasiado largos. Cuando llegue el momento, uno deberá tomar ciertas decisiones al respecto. 
 
+* Ser consistente en la manera de nombrar variables. Como vimos arriba, podemos nombrar las variables con guión bajo o con puntos, cualquiera de las dos maneras está bien, pero lo más relevante es usar solo uno de ellos cuando se estén asignados el nombre a las variables en nuestro estudio. Otras personas prefieren usar mayúsculas evitando el uso de otros símbolos como por ejemplo `EdadNiños`. Por lo tanto, el mensaje central es ser consistente.
 
- 
 ## Errores de Escritura o *typos* en R
 
 Para interactuar con R, nuestras instrucciones deben ser claras y precisas. De este modo, R podrá realizar exactamente lo que nosotros le pidamos. Sin embargo, si no somos lo suficientemente claros y precisos, R no hará lo que le pidamos y nos dará algún mensaje de error de algún tipo. Y aceptémoslo, más temprano que tarde cometeremos un error de escritura en R, el cual será el inicio de muchos errores en el camino que emprendamos en el análisis de datos a través del uso de R. 
