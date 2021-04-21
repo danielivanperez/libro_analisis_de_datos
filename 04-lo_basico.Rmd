@@ -98,7 +98,7 @@ mi_sueldo_al_mes + mi_edad / 10
 ```
 
 
-Con estos sencillos ejemplos, podemos comenzar a apreciar cómo en R creamos variables (u objetos), asignándole valores numéricos con los cuales podemos comenzar a jugar y combinar para empezar a realizar análisis de datos. 
+Con estos sencillos ejemplos, podemos comenzar a apreciar cómo en R creamos variables (u objetos), asignándole valores numéricos con los cuales jugar y combinar para empezar a realizar análisis de datos. 
  
 ## Errores de Escritura o *typos* en R
 
