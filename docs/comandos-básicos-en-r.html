@@ -331,6 +331,13 @@ Figura 2. Usuario inicial de R imaginando las posibilidades.
 <p>En vez de estar escribiendo una fórmula matemática en R para la raíz cuadrada, podemos usar esta función para obtener nuestro resultado a un valor determinado (ya sea un número o una variable como en los ejemplos de arriba). Ahora, aprovecharemos de explicar algunos términos técnicos para este caso. Usualmente, cuando aplicamos una función en R, decimos que <em>llamaremos</em> (<em>calling</em>) dicha función y todos aquellos valores que escribamos dentro de la función (es decir, dentro del paréntesis), son referidos como <em>argumentos</em> (<em>arguments</em>). Y la respuesta es sí, podemos escribir más de un argumento en una función.</p>
 <div id="argumentos-nombres-y-valores-por-defecto-en-las-funciones" class="section level3" number="4.5.1">
 <h3><span class="header-section-number">4.5.1</span> Argumentos, Nombres y Valores por Defecto en las Funciones</h3>
+<p>Arriba ya adelantamos que al interior de las funciones se pueden escribir argumentos y voy a recalcar el plural aquí. Dentro del paréntesis de las funciones, se pueden distinguir el <em>nombre de los argumentos</em> y sus <em>valores por defecto</em>. Para explicar estos conceptos, introduciremos una nueva función <code>round()</code>, la cual tiene por objetivo redondear un valor hacia el número entero más cercano. Veamos un ejemplo con el famoso número pi:</p>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r bg-danger"><code class="sourceCode r"><span id="cb29-1"><a href="comandos-básicos-en-r.html#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(<span class="fl">3.141592</span>)</span></code></pre></div>
+<pre class="bg-warning"><code>## [1] 3</code></pre>
+<p>En este ejemplo, podemos claramente darnos cuenta que el número aproximado corresponde al 3 (y no al 4 que está mucho más lejos en la recta numérica). Ahora supongamos que queremos redondear nuestro número a 2 dígitos. Para esto, podemos escribir:</p>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r bg-danger"><code class="sourceCode r"><span id="cb31-1"><a href="comandos-básicos-en-r.html#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(<span class="fl">3.141592</span>, <span class="dv">2</span>)</span></code></pre></div>
+<pre class="bg-warning"><code>## [1] 3.14</code></pre>
+<p>En esta expresión, tenemos 2 argumentos al interior de la función round: el primer argumento que corresponde al valor a ser redondeado (es decir, 3.141592) y el segundo argumento es el nuumero de decimales a aproximar (es decir, 2) y, ambos, están separados por una coma.</p>
 
 </div>
 </div>

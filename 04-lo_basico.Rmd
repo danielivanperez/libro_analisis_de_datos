@@ -145,4 +145,17 @@ En vez de estar escribiendo una fórmula matemática en R para la raíz cuadrada
 
 ### Argumentos, Nombres y Valores por Defecto en las Funciones
 
+Arriba ya adelantamos que al interior de las funciones se pueden escribir argumentos y voy a recalcar el plural aquí. Dentro del paréntesis de las funciones, se pueden distinguir el *nombre de los argumentos* y sus *valores por defecto*. Para explicar estos conceptos, introduciremos una nueva función `round()`, la cual tiene por objetivo redondear un valor hacia el número entero más cercano. Veamos un ejemplo con el famoso número pi: 
+
+```{r class.source="bg-danger", class.output="bg-warning"}
+round(3.141592)
+```
+
+En este ejemplo, podemos claramente darnos cuenta que el número aproximado corresponde al 3 (y no al 4 que está mucho más lejos en la recta numérica). Ahora supongamos que queremos redondear nuestro número a 2 dígitos. Para esto, podemos escribir: 
+
+```{r class.source="bg-danger", class.output="bg-warning"}
+round(3.141592, 2)
+```
+En esta expresión, tenemos 2 argumentos al interior de la función round: el primer argumento que corresponde al valor a ser redondeado (es decir, 3.141592) y el segundo argumento es el nuumero de decimales a aproximar (es decir, 2) y, ambos, están separados por una coma.
+
 
