@@ -1,7 +1,5 @@
 # Comandos Básicos en R
 
-Para estructurar los contenidos de este capítulo, me he basado en el libro *Learning Statistics with R* escrito por Danielle Navarro. 
-
 ## R como una Simple Calculadora^[ Para estructurar los contenidos de este capítulo, me he basado en el libro *Learning Statistics with R* escrito por Danielle Navarro.]
 
 Una de las primeras cosas que podemos hacer para comenzar a familiarizarnos con R es usarla como si fuera una simple calculadora. De esta manera, escribiremos los primeros comandos o instrucciones y obtendremos resultados conocidos a partir de nuestra experiencia con cálculos matemáticos adquiridos durante nuestra educación primaria. Nada intimidante la verdad. En la consola de R, podemos escribir `2 + 5` y luego apretar “*enter*”. Cuando escribimos `2 + 5` lo que hicimos fue escribir un **comando** y R ejecutará dicho comando. Lo que tu vas a ver en la consola de R corresponde a: 
