@@ -143,7 +143,7 @@ sqrt(x)
 En vez de estar escribiendo una fórmula matemática en R para la raíz cuadrada, podemos usar esta función para obtener nuestro resultado a un valor determinado (ya sea un número o una variable como en los ejemplos de arriba). Ahora, aprovecharemos de explicar algunos términos técnicos para este caso. Usualmente, cuando aplicamos una función en R, decimos que *llamaremos* (*calling*) dicha función y todos aquellos valores que escribamos dentro de la función (es decir, dentro del paréntesis), son referidos como *argumentos* (*arguments*). Y la respuesta es sí, podemos escribir más de un argumento en una función. 
 
 
-### Argumentos, Nombres y Valores por Defecto en las Funciones
+### Argumentos, sus Nombres y Valores por Defecto en las Funciones
 
 Arriba ya adelantamos que al interior de las funciones se pueden escribir argumentos y voy a recalcar el plural aquí. Dentro del paréntesis de las funciones, se pueden distinguir el *nombre de los argumentos* y sus *valores por defecto*. Para explicar estos conceptos, introduciremos una nueva función `round()`, la cual tiene por objetivo redondear un valor hacia el número entero más cercano. Veamos un ejemplo con el famoso número pi: 
 
@@ -156,6 +156,8 @@ En este ejemplo, podemos claramente darnos cuenta que el número aproximado corr
 ```{r class.source="bg-danger", class.output="bg-warning"}
 round(3.141592, 2)
 ```
-En esta expresión, tenemos 2 argumentos al interior de la función round: el primer argumento que corresponde al valor a ser redondeado (es decir, 3.141592) y el segundo argumento es el nuumero de decimales a aproximar (es decir, 2) y, ambos, están separados por una coma.
+En esta expresión, tenemos 2 argumentos al interior de la función round: el primer argumento que corresponde al valor a ser redondeado (es decir, 3.141592) y el segundo argumento es el número de decimales a aproximar (es decir, 2) y, ambos, están separados por una coma. Si notaron sagazmente, cuando escribimos `round(3.141592)` en el primer caso, no hubo un segundo argumento en la función, por lo que R asumió el argumento por defecto (al no estar escrito, asumió que estábamos buscando redondear al valor entero más cercano sin decimales, así que allí fue completado con un número 0 por R). Sin embargo, en el segundo caso, nosotros escribimos explícitamente un argumento (es decir, `2`) en la segunda posición de la función. Sin embargo, si queremos estar seguros de pasar el valor correcto al argumento de la función round, podemos escribir el nombre del argumento. Esto quedará mucho más claro en el siguiente ejemplo:
 
-
+```{r class.source="bg-danger", class.output="bg-warning"}
+round(x = 3.141592, digits = 2)
+```
