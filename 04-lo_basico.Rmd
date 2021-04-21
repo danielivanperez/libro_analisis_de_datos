@@ -41,7 +41,7 @@ En este bloque, primero se suman los dos números que están al interior del par
 ```{r class.source="bg-danger", class.output="bg-warning"}
 (2  ^ 3 ) / 2 
 ```
-Al igual que el ejemplo de arriba, la operación que está dentro del paréntesis es lo que se ejecuta en primer lugar (es decir, la potencia = `2 × 2 × 2 = 8`), cuyo resultado después será dividido por `2`, lo que equivale a `4`. 
+Al igual que el ejemplo de arriba, la operación que está dentro del paréntesis es lo que se ejecuta en primer lugar (es decir, la potencia de 2 elevada al cubo  = `2 × 2 × 2 = 8`), cuyo resultado después será dividido por `2`, lo que equivale a `4`. 
 
 ## Variables en R
 
