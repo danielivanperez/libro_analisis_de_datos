@@ -159,3 +159,9 @@ En esta expresión, tenemos 2 argumentos al interior de la función `round`: el 
 ```{r class.source="bg-danger", class.output="bg-warning"}
 round(x = 3.141592, digits = 2)
 ```
+
+De esta manera, no cabe ningún tipo de ambigüedades para los valores utilizados. Al mismo tiempo, al usar esta forma de pasar los argumentos al interior de la función, da lo mismo la posición de los nombres de los argumentos: obtendremos el mismo resultado, como lo muestra el siguiente ejemplo:
+
+```{r class.source="bg-danger", class.output="bg-warning"}
+round(digits = 2, x = 3.141592)
+```
