@@ -11,7 +11,13 @@ dataset <- read.csv("https://raw.githubusercontent.com/danielivanperez/dataset_e
 
 names(dataset)
 ```
-Una de las funciones más útiles de R es poder observar un conjunto acotado de filas, observaciones o, en nuestro caso participantes, de la base de datos con la cual se trabaja. Para esto, vamos a usar la función `head()`. Al ejecutar esta función, R nos muestra las primeras 6 filas de la base de datos. 
+
+Para saber el tamaño de nuestra base de datos, podemos utilizar la función `dim()`, la cual nos entrega el numero de filas y columnas respectivamente. Apliquemos dicha función a la base de datos recién cargada. 
+
+```{r}
+dim(dataset)
+```
+La salida nos dice que hay 137 filas (participantes en nuestro caso) y 24 columnas (o variables). Adicionalmente, una de las funciones más útiles de R es poder observar un conjunto acotado de filas, observaciones o, en nuestro caso participantes, de la base de datos con la cual se trabaja. Para esto, vamos a usar la función `head()`. Al ejecutar esta función, R nos muestra las primeras 6 filas de la base de datos. 
 
 ```{r}
 head(dataset)
