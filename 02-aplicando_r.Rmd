@@ -25,10 +25,12 @@ head(dataset$calificacion_1)
 La salida de R nos muestra las primeras 6 filas de la `variable calificacion_1`. Para mencionar otra forma útil de selección de columnas que usaremos más abajo, está elegir un rango de columnas como por ejemplo: 
 
 ```{r}
-dataset[5:9] 
+head(dataset[5:9]) 
 ```
 
-Podemos inferir del código que R le asigna un numero a cada una de las columnas de la base de datos y lo que le estamos solicitado al interior del paréntesis cuadrado es que seleccione desde la columna 5 hasta la columna 9 y nos muestre sólo éstas. Volviendo al caso que estábamos desarrollando anteriormente, como podemos ver en las primeras 6 filas de la `variable calificacion_1`, los participantes de este estudio (estudiantes de psicología de una universidad pública de Chile), escribieron sus calificaciones para un curso determinado. Podemos apreciar que ellos escribieron sus respuestas de diferentes formas. Escribiendo solo la calificación como en el primer caso, o incluso escribiendo el nombre del curso de manera completa y luego la calificación, en algunos casos con un `.` como en fila [1], con una `,` como en la fila [3] o simplemente sin punto ni coma como en la fila [6]. Esto constituiría un primer problema para el analista de datos debido a que no tenemos los valores ordenados y formateados de manera estándar (por ejemplo, tener solo números dos números separados por un `.`) al interior de la variable. Justamente en este tipo de situaciones es cuando R muestra todo su poder. 
+Podemos inferir del código escrito arriba que R le asigna un número a cada una de las columnas de la base de datos y lo que le estamos solicitado al interior del paréntesis cuadrado es que seleccione desde la columna 5 hasta la columna 9 y nos muestre sólo éstas. De este modo, muestras los valores para las variables `calificacion_1` hasta `calificacion_5`.
+
+Volviendo al caso que estábamos desarrollando anteriormente, como podemos ver en las primeras 6 filas de la variable `calificacion_1`, los participantes de este estudio (estudiantes de psicología de una universidad pública de Chile), escribieron sus calificaciones para un curso determinado. Podemos apreciar que ellos escribieron sus respuestas de diferentes formas. Escribiendo solo la calificación como en el primer caso, o incluso escribiendo el nombre del curso de manera completa y luego la calificación, en algunos casos con un `.` como en fila [1], con una `,` como en la fila [3] o simplemente sin punto ni coma como en la fila [6]. Esto constituiría un primer problema para el analista de datos debido a que no tenemos los valores ordenados y formateados de manera estándar (por ejemplo, tener solo números dos números separados por un `.`) al interior de la variable. Justamente en este tipo de situaciones es cuando R muestra todo su poder. 
 
 ```{r}
 dataset[5:9] <- lapply(dataset[5:9], as.character) # primero tuve que transformar los datos a caracteres
