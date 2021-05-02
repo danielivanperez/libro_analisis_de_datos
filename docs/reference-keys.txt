@@ -5,6 +5,7 @@ por-qué-programar-en-r
 obstáculos-en-el-aprendizaje-de-r
 consideraciones-finales
 r-en-acción-analizando-un-ejemplo
+cargando-una-base-de-datos-desde-la-web-y-otras-funcionalidades
 qué-es-r-instalando-r-y-rstudio
 definiendo-r
 instalando-r

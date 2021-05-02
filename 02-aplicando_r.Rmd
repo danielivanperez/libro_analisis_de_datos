@@ -2,6 +2,8 @@
 
 R es una herramienta de análisis muy poderosa. El propósito de este capítulo es principalmente mostrar qué cosas puede hacer R. Si bien se explican los objetivos del análisis de datos para cada celda junto con el código utilizado, la idea principal es ilustrar algunas de sus funcionalidades y no explicar el código de forma extensa. Para eso, está el resto del libro. 
 
+## Cargando una Base de Datos desde la Web y otras Funcionalidades
+
 Entonces, lo primero que vamos a hacer es cargar la base de datos para ejecutar nuestros ejemplos. Para esto, vamos a darle un nombre o etiqueta a nuestra base de datos `dataset`, luego utilizaremos el *operador de asignación* `<-` y al lado derecho usaremos la función `read.csv()` de R, el cual permite leer la base de datos llamada `emociones_academicas.csv`. Nótese que la base de datos esta alojada en una pagina web y no en nuestro computador personal. Esto ya en sí mismo muestra su poder sobre otras *software* tales como SPSS. Inmediatamente abajo del código de la base de datos, utilizaremos la función `names` para observar el nombre de las variables contenidas en la base de datos y su número, el cual se encuentra impreso justo debajo de la celda.  
  
 ```{r}
