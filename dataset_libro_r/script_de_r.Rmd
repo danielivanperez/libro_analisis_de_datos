@@ -1,0 +1,94 @@
+---
+title: "Haciendo analisis de datos con R"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+```{r}
+dataset <- read.csv("emociones_academicas.csv")
+head(dataset, 5)
+names(dataset)
+```
+```{r}
+dataset
+```
+
+```{r}
+#sel <- grepl("calificacion_",names(dataset))
+dataset$calificacion_1 <- gsub("[^0-9]", "", dataset$calificacion_1)
+dataset$calificacion_2 <- gsub("[^0-9]", "", dataset$calificacion_2)
+dataset$calificacion_3 <- gsub("[^0-9]", "", dataset$calificacion_3)
+dataset$calificacion_4 <- gsub("[^0-9]", "", dataset$calificacion_4)
+dataset$calificacion_5 <- gsub("[^0-9]", "", dataset$calificacion_5)
+```
+
+```{r}
+dataset
+```
+
+```{r}
+dataset$calificacion_1 <- sub("(?<=^.)", "\\.", dataset$calificacion_1 , perl=TRUE)
+dataset$calificacion_2 <- sub("(?<=^.)", "\\.", dataset$calificacion_2 , perl=TRUE)
+dataset$calificacion_3 <- sub("(?<=^.)", "\\.", dataset$calificacion_3 , perl=TRUE)
+dataset$calificacion_4 <- sub("(?<=^.)", "\\.", dataset$calificacion_4 , perl=TRUE)
+dataset$calificacion_5 <- sub("(?<=^.)", "\\.", dataset$calificacion_5 , perl=TRUE)
+```
+
+```{r}
+#dataset[5:9] <- lapply(dataset[5:9], as.character) # primero tuve que transformar los datos a caracteres
+dataset[5:9] <- lapply(dataset[5:9], as.numeric) # luego a numericos
+#dataset
+#write.csv(dataset,"emociones_academicas_ejemplo.csv")
+```
+
+```{r}
+dataset
+```
+
+```{r}
+dataset$promedio <- rowMeans(dataset[,5:9], na.rm=TRUE)
+```
+
+```{r}
+dataset$emociones_positivas <- rowMeans(dataset[,c("emo_aca_1","emo_aca_3","emo_aca_5","emo_aca_7", "emo_aca_9","emo_aca_11")], na.rm=TRUE)
+
+dataset$emociones_negativas <- rowMeans(dataset[,c("emo_aca_2","emo_aca_4","emo_aca_6","emo_aca_8", "emo_aca_10","emo_aca_12")], na.rm=TRUE)
+```
+
+```{r}
+barplot(table(dataset$emociones_positivas)) #both columns need to be integer
+```
+
+
+```{r}
+plot(dataset$emociones_positivas, dataset$promedio) #both columns need to be integer
+```
+
+```{r}
+require(stats)
+
+reg<-lm(dataset$promedio ~ dataset$emociones_positivas, data = dataset)
+
+plot(dataset$emociones_positivas, dataset$promedio)
+
+abline(reg, col = "green")
+
+reg
+```
+
+```{r}
+require(stats)
+
+reg_1<-lm(dataset$promedio ~ dataset$emociones_negativas, data = dataset)
+
+plot(dataset$emociones_negativas, dataset$promedio)
+
+abline(reg_1, col = "red")
+
+reg_1
+```

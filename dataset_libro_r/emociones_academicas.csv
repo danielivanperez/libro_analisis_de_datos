@@ -1,0 +1,138 @@
+participante,edad,sexo,Nivel,calificacion_1,calificacion_2,calificacion_3,calificacion_4,calificacion_5,promedio,emo_aca_1,emo_aca_2,emo_aca_3,emo_aca_4,emo_aca_5,emo_aca_6,emo_aca_7,emo_aca_8,emo_aca_9,emo_aca_10,emo_aca_11,emo_aca_12
+1,19,Femenino,201,4.8,3.4,4.6,3.8,3.6,,4,2,3,2,3,2,4,2,3,2,3,3
+2,20,Femenino,201,Psicología del desarrollo infanto juvenil 4.7 ,Psicología Comunitaria 4.0,Teoría Psicoanalítica 3.2,Teorías cognitivas 3.2,Metodologías de investigación en psicología 3.3,,4,1,3,3,4,1,2,3,4,1,3,4
+3,20,Femenino,201,"Desarrollo infanto-juvenil 3,9","Teorias cognitivas 4,9","Metodologia de investigacion  4,8 ","Psicología comunitaria 4,1",Teoria psicoanalitica no,,4,3,3,4,3,3,4,2,3,4,3,3
+4,20,Femenino,201,Metodologia de la investigación en psicología 38,Teoria del desarrollo infanto juvenil 53,Teorias cognitivas 48,Psicología  comunitaria 33,Psicoanalítica 38,,3,3,2,3,2,4,3,3,3,2,3,4
+5,24,Femenino,302,Psicología educacional 5.0,Tecnicas proyectivas 6.5,Gestion de personas y desarrollo organizacional 6.3,Construcción de pruebas e instrumentos de evaluación 5.6,psicopatologia infanto juvenil 5.0,,3,1,4,4,4,1,4,1,4,2,4,4
+6,19,Femenino,201,neuropsicología 37,metodología de la investigacion en psicologia 30,infanto juvenil 47,psicología comunitaria 52,psicoanalisis 37,,3,1,3,4,4,1,3,2,3,1,2,5
+7,27,Femenino,201,Neuropsicología 5.5,Metodologías de Investigación en Psicología 3.5,Psicología del Desarrollo Infanto Juvenil 5.8,Psicología Comunitaria 3.9,Teoría Psicoanalítica 4.0,,5,1,4,2,4,1,4,1,4,1,4,2
+8,21,Femenino,202,Teorias humanistas 1.0,Teorias Sistemicas 5.7,Neuropsicologia 3.2,Analisis Cuantitativo 4.0,Teoria Psicoanalitica 3.5,,3,2,2,5,3,2,2,2,3,3,3,4
+9,23,Femenino,301,Teorías cognitivas 34,Psicología del desarrollo adulto -inserte adulto mayor 53,Mediación comunitaria 68,Psicología comunitaria 42,Bases biológicas de la conducta humana 38,,2,1,2,4,4,1,5,3,3,2,2,5
+10,20,Femenino,301,Electivo General 6.2,Análisis cuantitativo 4.0,Psicología organizacional 4.2,Evaluación psicométrica,Psicopatología infanto-juvenil,,3,2,3,4,3,2,3,2,3,4,3,4
+11,20,Masculino,301,"Teorías cognitiva  3,6","Psicopatologia infantil 4,3","Tecnicas Psicometricas 6,0","Ingles 5,9","Psicologia organización 6,5",,4,1,3,4,3,3,2,3,2,3,2,3
+12,22,Masculino,201,Metodología de la investigación en psicología  64,Infanto juvenil 57,Psicología comunitaria 51,Inglés 67,Taller de desarrollo personal 67,,4,3,4,2,3,3,4,3,4,2,4,5
+13,20,Femenino,201,"Desarrollo infanto juvenil 5,6","Neuropsicologia 3,8","Metodologia de la Investigacion en Psicologia 3,8","Psicologia comunitaria 3,4","Psicoanalitica 2,5",,4,1,4,4,3,3,3,1,2,1,1,1
+14,20,Femenino,201,Neuropsicologia 34,Psicología comunitaria 40,Psicología analítica 30 ,Ingles 53,Infanto juvenil 53,,4,2,3,3,3,1,3,2,3,2,2,3
+15,20,Femenino,301,"Teorías Cognitivas 3,8",Análisis Cualitativo 4.4,"Psicopatología  Infanto-Juvenil 5,6","Evaluación psicométrica 6,5","Psicología Organizacional y del Trabajo 5,6",,4,2,3,4,4,2,4,3,4,2,2,3
+16,20,Femenino,301,Teoría humanista,Taller desarrollo personal 3,Teoría cognitiva,Psicometria,Psicopatologia infanto juvenil,,3,1,3,3,3,1,3,2,3,2,2,3
+17,23,Femenino,301,Teorias cognitivas 30,Psicopatologia infanto juvenil 34,Psicologia Organizacional 52,Analisis cualitativo 38,Evaluacion psicometrica 55,,3,4,2,5,2,4,3,4,3,3,2,5
+18,21,Masculino,201,"Neuropsicologia 2,7","Psicoanálisis 3,6","Infanto juvenil 3,9","Psicología comunitaria 3,0","Metodología de la investigación 2,7",,4,1,2,1,3,1,2,1,3,1,3,5
+19,20,Femenino,201,Metodología 4.4,Desarrollo infanto juvenil 4.3,Teorias Cognitivas 4.3,Psicologìa Comunitaria 6.0,Psicoanalitica 4.0,,3,3,3,5,5,3,5,3,3,3,2,5
+20,21,Femenino,301,Teorías cognitivas 33,Análisis cualitativo 43,Psicopatología infantil- juvenil 26,Evaluación psicometrica 50 ,Psicología organizacional y del trabajo 53,,3,1,3,4,4,1,4,1,3,1,4,4
+21,20,Femenino,301,"Teorías cognitivas 5,4","Evaluación psicométrica 5,5","Psicología organización y del trabajo 4,2","Psicopatologia infanto-juvenil 4,1","Electivo general I 6,2",,3,1,3,2,4,2,3,1,2,2,4,3
+22,23,Femenino,201,Neuropsicología 54,Metodología de la investigación 45,Psicología comunitaria 45,Infanto juvenil 40,Inglés 42,,5,2,4,3,4,2,3,1,4,1,4,3
+23,20,Femenino,301,Análisis cuantitativo 38,Psicopatología 34,Organizacional 48 ,Electivo 68 ,Cognitiva 38 ,,3,2,3,2,3,2,3,2,3,1,3,3
+24,22,Femenino,301,"teorias cognitivas 2,8","teorias de la personalidad 3,7","análisis cuantitativo 4,8 ","psicopatologia del infantojuvenil 3,0","psicología organizacional 3,9",,3,2,2,4,2,1,3,4,2,3,4,4
+25,24,Masculino,301,No,No,No,No,No,,4,1,3,2,4,1,4,1,3,1,3,3
+26,21,Femenino,201,NEUROPSICOLOGIA  5.7,MET. DE INVESTIGACION EN PSIGIA 3.2,PS. DE DESARROLLO INFANTO-JUVENIL 4.5,PS. COMUNITARIA 3.6,TEORIA PSICOANALITICA 5.0,,4,1,4,1,4,2,3,2,4,1,5,3
+27,21,Femenino,301,Análisis Cualitativo 5.6,Teoría Humanista 5.3,Teoria cognitiva 3.9,Psicopatología infanto Juvenil 3.7,Electivo General 6.7,,3,2,3,3,2,2,2,3,3,2,3,4
+28,19,Femenino,201,Psicoanalítica 61,Psicología comunitaria 42,Metodología 51,Inglés 50,Desarrollo infanto-juvenil 33,,4,1,3,3,4,1,4,1,3,2,5,2
+29,19,Femenino,201,Teorias psicoanaliticas 31,psicologia social 46,metodologias de investigacion en psicologia 23,ingles 65,teoria del desarrollo infanto juvenil 43,,5,1,3,3,4,1,5,1,4,1,3,3
+30,24,Femenino,302,Técnicas Proyectivas 7.0,Psicopatología del adulto/adultomayor 4.9,Ética profesional 4.4,Gestión de personas 4.7,Construcción y evaluación de proyectos -,,3,1,2,3,2,1,3,1,3,1,2,4
+31,19,Femenino,201,"METODOLOGÍAS DE INVESTIGACIÓN EN PSICOLOGÍA 5,9","PSICOLOGÍA DEL DESARROLLO INFANTO-JUVENIL 6,3","PSICOLOGÍA COMUNITARIA 5,3","TEORÍA PSICOANALÍTICA 4,2","TEORÍAS COGNITIVAS  4,4",,4,1,3,2,3,1,3,3,4,1,3,2
+32,21,Femenino,201,METODOLOGÍAS DE INVESTIGACIÓN EN PSICOLOGÍA 5.0,PSICOLOGÍA DEL DESARROLLO INFANTO-JUVENIL 6.2,PSICOLOGÍA COMUNITARIA 4.0,TEORÍA PSICOANALÍTICA 5.4,TEORÍAS COGNITIVAS 4.4,,4,3,3,4,4,4,3,3,3,3,2,4
+33,20,Masculino,102,"NEUROPSICOLOGÍA (3,2)",TEORÍAS DEL APRENDIZAJE Y LA CONDUCTA (3.4),METODOLOGÍAS DE INVESTIGACIÓN EN PSICOLOGÍA (2.8),"PSICOLOGÍA DEL DESARROLLO INFANTO-JUVENIL (4,0)","TEORÍA PSICOANALÍTICA (2,6)",,2,4,2,5,5,4,2,3,2,4,2,4
+34,19,Femenino,201,"Metodologías de investigación en psicología 4,2","Psicología del desarrollo infanto-juvenil 3,3 ","Psicología comunitaria 4,2","Teoría psicoanalítica 3,2","Teorías cognitivas 3,8",,4,2,3,2,3,1,4,2,3,1,3,4
+35,39,Femenino,201,"Teorias Cognitivas 3,0","Metodología de la Inv. en Psico. 4,1","Psico. Desarrollo Infanto Juvenil 3,6","Psicología Comunitaria 4,1","Teoría Psicoanalítica 3,8",,5,1,3,3,4,1,3,1,3,1,4,3
+36,21,Masculino,302,psicopatologia del adulto 44,gestion de personal 44,etica profecional 61,tecnicas proyectivas 57,proyecto social (no calificado),,3,1,3,2,3,1,3,2,3,1,1,3
+37,19,Femenino,201,Neuropsicologia 39,Psicologia comunitaria 39,Métodolologia 28,Infanto juvenil 48,Psicoanalisis,,4,1,4,3,4,1,3,1,4,2,3,3
+38,21,Femenino,201,"Teoría infanto juvenil  5,2","Comunitaria 4,5","Inglés 5,6","Teorías cognitivas 4,0","Teoría del Psicoanálisis 5,7",,2,2,2,4,3,2,3,3,3,4,4,3
+39,20,Femenino,201,Metodologías de investigación en psicología 3.1,Psicología del desarrollo infanto-juvenil 3.9,Psicología comunitaria 3.3,Teoría psicoanalítica 3.3,Teorías cognitivas 3.4,,2,2,2,5,1,3,1,5,2,4,1,5
+40,21,Femenino,301,psicopatologia infanto-juvenil 4.0,teorias cognitivas 4.0,"taller de desarrollo personal 3, 4.0",analisis cualitativo 4.0,"electivo general 1, 4.0",,4,1,4,1,3,1,3,1,4,1,3,1
+41,39,Masculino,402,NO,NO,NO,NO,NO,,4,1,3,4,4,2,3,2,4,5,3,5
+42,33,Femenino,201,Metodo,Infanto juvenil,Cognitiva,Taller,Ingles,,3,1,3,4,3,1,3,1,3,1,2,2
+43,22,Masculino,301,ELECTIVO GENERAL I 6.2,TALLER DE DESARROLLO PERSONAL III 0.0,PSICOLOGÍA ORGANIZACIONAL Y DEL TRABAJO 4.1,PSICOPATOLOGÍA INFANTO-JUVENIL 3.1,PSICOLOGÍA DE LA PERSONALIDAD 2.1,,3,2,1,2,2,4,1,4,2,3,4,4
+44,20,Femenino,201,Metodologia de investigacion en psicologia 33,Psicologia del desarrollo infanto juvenil  35,Psicologia comunitaria 39,Teorias cognitivas 33,ingle 36 ,,4,2,3,4,3,2,2,2,3,1,3,2
+45,21,Femenino,201,inglés 70,psicología del desarrollo infanto-juvenil 41,neuropsicología 39,psicología comunitaria 38,metodologías de  investigación en psicología 30,,4,2,4,4,4,1,4,3,2,2,3,5
+46,22,Masculino,201,Metodologia de investigacion en Psicologia 3.5,Teoria del desarrollo infanto-juvenil 5.2,Teorias Cognitivas 4.4,Psicologia Comunitaria 4.3,Teoria psicoanalitica 3.4,,4,2,3,3,3,2,3,3,4,2,3,3
+47,23,Femenino,302,Gestion de personas  5.4,Psicologia educacional,Psicopatologia infantil 3.5 ,Construccion de pruebas ,Tecnicas proyectivas 5.0,,4,1,4,4,3,1,4,2,5,1,3,3
+48,20,Femenino,301,"Teorias cognitivas 4,8","Analisis cualitativo 3,8","Psicopatologia infanto-juvenil 4,4","Evaluacion Psicometrica 6,0","Psicologia organizacional y del trabajo 5,1",,3,1,3,4,3,1,3,1,4,1,3,2
+49,21,Masculino,201,"metodología de la investigación en psicología 1,0","neuropsicología 4,5","psicología del desarrollo infanto-juvenil 3,5","psicología comunitaria 3,1","teoría psicoanalítica 3,3",,3,3,2,2,3,2,3,3,3,3,3,4
+50,33,Femenino,201,Neuropsicología 30,Taller desarrollo personal 60,Teorías del aprendizaje y la conducta 43,Psicoanalítica 47,Metodologías de la investigación en psicología 20,,4,1,4,2,4,1,4,1,4,1,3,4
+51,22,Masculino,201,Psicologia de desarrollo infanto juvenil,Metodologia de la investigacion ,Neuropsicologia,Ingles 3,Teoria psicanalitica,,4,2,3,3,3,3,4,2,4,1,3,3
+52,29,Masculino,302,Psicopatologia infanto juvenil 48,const. de pruebas 47,psi.educacional 40,gestion de personas 47,taller 00,,5,1,4,3,4,1,4,1,4,1,2,1
+53,20,Femenino,201,psicoanalisis 45,teorias cognitivas 48,metodologia en investigacion en psicologia 54 ,psicologia comunitaria 59,psicologia desarrollo infanto juvenil 61,,5,1,5,2,4,1,4,1,5,1,4,2
+54,20,Femenino,201,Ingles 1 = 6.0,Neuropsicologia = 6.0,Teoria del aprendizaje = 5.5,Metodologia de investigacion = 5.5,Psicologia del desarrollo infanto juvenel = 6.0,,3,2,3,2,3,2,4,3,4,3,3,3
+55,20,Femenino,201,Teorías cognitivas 36,Teoría psicoanalítica 37,Metodologías de investigación en psicología- 29,psicología comunitaria- 41,ingles 50,,5,1,3,4,4,2,4,2,3,1,3,4
+56,20,Femenino,201,Desarrollo infanto juvenil 41,Psicología comunitaria 53,Teorías Psicoanaliticas 40,Metodología de la investigación en psicología 60,Teorías cognitivas 40,,3,2,3,2,3,2,3,2,3,2,3,3
+57,24,Masculino,201,"Metodologías de investigación en psicología 1,8","Psicología del desarrollo infanto-juvenil 5,6","Psicología comunitaria 3,8","Teoría psicoanalítica 2,8","Teorías cognitivas 4,3",,3,2,4,1,3,3,3,2,2,2,3,3
+58,20,Femenino,201,Bases biológicas de la conducta humana 2.0,Teorías cognitivas 2.8,Psicologia comunitaria 3.4,Psicologia del desarrollo infantil juvenil 3.7,Metodologías de investigación en psicologia 1.8,,3,3,4,5,2,3,3,3,3,3,3,3
+59,22,Femenino,302,Gestión de personas 5.0,"P. educacional 4,4","Técnicas proyectivas 5,0","Psicopatología adulto mayor 5,3",electivo general ,,3,2,3,3,2,2,2,2,3,2,3,4
+60,19,Femenino,201,"Metodologia de la investigacion en psicologia 2,3"," Psicologia del Desarrollo infanto juvenil 4,0","Psicologia comunitaria 5,5","Teoria psicoanalitica 4,2","Teoria cognitiva 4,0",,3,3,3,5,3,2,3,3,3,4,2,5
+61,20,Femenino,101,Psicología general 4.1,Bases biologicas de la conducta humana 1.2,Ingles 4.7,Taller de ingles 4.0,Teoria de la comunicación 3.3,,3,1,3,3,3,1,3,3,3,1,3,3
+62,18,Femenino,101,Psicología General 3.4,Bases biológicas 2.0,Ingles 5.3,Teoría de la comunicación 4.5,Epistemología de las ciencias sociales 3.0,,2,4,4,5,3,4,3,5,3,4,2,3
+63,18,Femenino,101,"Bases biológicas , ?","Teoría de la comunicación humana, ?","Psicología general, ?","Socioantropologia, ?","Epistemología de las ciencias sociales, ?",,4,2,3,4,4,2,3,1,4,1,4,2
+64,23,Femenino,101,Psicología general 59,Socioantropología 58,Bases biologicas 22,Ingles 60,Epistemología ,,4,1,3,4,4,2,3,3,3,2,2,4
+65,19,Femenino,101,PSICOLOGÍA GENERAL 4.0,SOCIOANTROPOLOGÍA 6.1,TEORÍA DE LA COMUNICACIÓN 3.1,INGLES 6.8,BASES BIOLÓGICAS 2.0,,4,1,3,3,3,1,2,3,3,2,3,3
+66,20,Masculino,101,Psicologia general 1,Bases biologicas,Socioantropologia,Ingles 1,Epistemologia de las ciencias,,5,1,4,3,4,1,4,1,4,2,3,2
+67,18,Femenino,101,"Psicologia General, 5.9",Epistemologia 4.0,Teoria de la comunicación humana 5.3,Socio antropología 5.8,Bases biologicas 2.5,,5,1,4,1,4,1,5,1,4,1,4,2
+68,19,Masculino,101,Psicologia general 60,Epistemologia 58,Bases biológicas 54,Teoria de la comunicación 53,Talle e ingles 61,,5,2,4,2,4,1,4,1,4,1,4,3
+69,24,Femenino,101,Bases biologicas,Psicologia general ,Epistemologia de las ciencias ,Socioantropologia,Ingles,,4,1,3,4,3,1,5,3,4,1,3,4
+70,19,Femenino,101,Psícologia general 4.2,Bases biologicas 4.6,Epistemologia 4.9,Teoria de la comunicación 5.9,Socioantropologia 6.0,,5,1,4,4,4,1,4,1,4,1,4,2
+71,19,Femenino,101,"Teorías de la comunicación 5,2","epistemología de las ciencias 3,5","socio antropología 6,0","Ingles 5,3","psicología generál 4,9",,4,1,4,2,4,1,5,1,4,1,4,4
+72,18,Masculino,101,"Bases Biológicas 2,6","Socio-Antropología 6,0","Epistemología 3,9","Psicología General 6,5","Teoría de la comunicación 3,9",,5,1,4,2,3,1,3,1,4,1,5,2
+73,18,Femenino,101,Psicología 6.5,Epistemología 6.7,Socioantropología 7.0,Bases biologicas de la conducta humana 6.9,Teoría de la comunicación 6.9,,4,2,4,3,3,3,4,2,4,2,2,4
+74,18,Femenino,101,epistemologia 48,bases biológicas 25,sicologia general 39,ingles 42,teoria de la comunicación 36,,5,1,4,3,4,1,4,3,4,1,4,3
+75,18,Femenino,101,Psicología general 5.9,Socio antropología 5.8,Bases biologicas 2.5,Teoría de la Comunicación 5.3,Epistemologia 4.0,,5,1,4,1,4,1,4,1,4,1,3,2
+76,19,Masculino,101,"Psicología General 6,3","Epistemología 2,7","Teoría de la comunicación 5,0","Socio antropología 5,5","Taller Inglés 4,8",,4,2,3,4,4,2,4,2,2,2,4,3
+77,18,Femenino,101,"Bases Biologicas 1,8","Teoria de la comunicacion humana 6,0 ","Psicologia General 4,5 ","Socio-antropologia 3,6","Taller de desarrollo personal I 7,0 ",,3,2,3,5,2,2,3,4,2,4,2,5
+78,19,Femenino,101,"Psicolología general 6,3","Teoria de la comunicación 6,5","Socioantropologia 5,3","Inglés 7,0","Taller de desarrollo personal 7,0",,4,2,3,4,3,2,3,2,3,3,2,3
+79,18,Masculino,101,Psicología General 6.1,Bases Biológicas 3.3,Socio-Antropología 4.7,Epistemología 5.0,Teoría de la comunicación 7.0,,4,1,3,3,2,1,3,1,2,3,2,3
+80,18,Femenino,101,EPISTEMOLOGIA DE LAS CIENCIAS  3.0,BASES BIOLOGICAS DE LA CONDUCTA HUMANA   1.4,SOCIO- ANTROPOLOGÍA  6.0,PSICOLOGIA GENERAL  4.7,TEORIA DE LA COMUNICACIÓN HUMANA 3.7,,4,1,3,2,3,1,3,1,3,1,2,3
+81,18,Masculino,101,Psicología general,Epistemología,Bases biológicas de la conducta humana,Taller de desarrollo personal,Ingles 1,,4,1,4,2,4,1,4,1,5,1,5,4
+82,19,Femenino,101,Psicologia general 6.1,Epistemologia de las ciencias sociales 4.5,Socioantropologia 5.7,Bases biológicas de la conducta humana 1.8,Taller de desarrollo personal 7.0,,4,1,3,2,3,2,3,1,4,1,5,4
+83,18,Masculino,101,TALLER DE DESARROLLO PERSONAL I 7.0,TEORIA DE LA COMUNICACIÓN HUMANA 6.0,INGLES I 7.0,PSICOLOGIA GENERAL 5.2,SOCIO- ANTROPOLOGÍA 5.3,,3,1,1,2,3,1,4,3,3,3,3,5
+84,19,Femenino,101,"Inglés 1, 60","Teoría de la comunicación humana, 65","Bases biológicas de la conducta humana, 47","psicología general, 54 ","Epistemología, 46",,4,1,2,4,4,1,4,1,4,1,3,4
+85,18,Femenino,101,Epistemologia=51,SOCIO- ANTROPOLOGÍA=7.0,PSICOLOGIA GENERAL=4.0,TEORIA DE LA COMUNICACIÓN HUMANA= 4.5,INGLES I=5.0,,3,1,3,3,3,1,4,1,4,3,2,3
+86,21,Femenino,101,Psicologia general 43,Epistemologia 39,socioantropologia 60,Ingles 62,Bases biologicas de la conducta humana 65,,5,1,5,2,4,1,4,1,5,1,4,1
+87,19,Femenino,101,"psicología general 5,4",socio antropología 6.3,"ingles 4,8","taller ingles 5,6","epistemológia 2,8",,4,1,3,1,3,1,3,2,3,1,3,3
+88,19,Femenino,101,psicologia general 52,epistemologia 52,teoria de la comunicacion 50,taller de desarrollo personal 70,bases biologicas 36,,4,2,4,4,4,3,4,3,4,2,4,4
+89,19,Masculino,101,"Bases biologicas 2,5","Teoria de la comunicacion humana 5,5","Epistemologia 3,3","Psicologia general 4,7","Ingles 7,0",,4,1,4,2,4,1,3,1,4,1,4,2
+90,19,Femenino,101,pscicologia general 37,"socioantropologia 4,7","teoria de la comunicacion 4,5","bases biologicas 2,5","espistemologia 3,2",,5,1,3,4,4,1,5,1,3,3,3,3
+91,19,Masculino,101,Bases biológicas 39,Psicología general 40,Inglés 57,Epistemologia 57,Socio antropología 57,,4,1,4,2,4,1,3,1,3,1,3,1
+92,19,Masculino,101,bases biologicas 38,psologia general 43,ingles 55,no,no,,2,1,4,3,4,2,4,2,4,1,3,2
+93,20,Femenino,101,Epistemologia de las ciencias 4.2,Bases Biologica De la conducta humana 3.2,Teoria de la comunicacion humana 4.8,Psicologia general 5.5,SocioAntropologia 6.0,,3,2,1,4,2,2,4,2,3,5,3,4
+94,19,Femenino,101,epistemologia de las ciencias 38,psicologia general 37,teoria de la comunicacion 36,bases biologicas 19,ingles 59,,4,3,3,4,3,2,2,2,3,3,2,4
+95,22,Femenino,101,"Epistemologia de las ciencias 6,0","Bases Biológicas de la conducta humana 4,8","Socio antropología 6,0","Psicologia general 6,3","Teoría de la Comunicación humana 7,0",,3,3,3,1,3,1,3,1,3,1,4,3
+96,18,Femenino,101,Teoría de la comunicación 3.7,Psicología general 4.7,Epistemologia de las ciencias sociales 4.2,Socio antropología 6.5,Bases biológicas 1.5,,5,1,3,1,3,1,1,1,5,2,2,4
+97,25,Femenino,101,"Epistemología de las ciencias 4,5","BASES BIOLOGICAS DE LA CONDUCTA HUMANA 5,3","SOCIO- ANTROPOLOGÍA 6,2","PSICOLOGIA GENERAL 6,3","TEORIA DE LA COMUNICACIÓN HUMANA 3,6",,4,1,4,1,4,1,4,1,4,1,3,3
+98,18,Masculino,101,"Psicologia general 4,7","Bases biologicas 4,2","Teoria de la comunicacion 5,5","Epistemologica 5,2","Socioantropologia 5,5",,4,1,4,3,4,1,5,1,5,1,4,2
+99,19,Masculino,101,"Bases biologicas 1,3","psicologia general 3,7","socio-antropologia 5,0","teoria de la comunicacion 3,9","epistemologia de las ciencias 2,5",,4,2,3,3,4,2,3,2,5,1,4,5
+100,21,Masculino,101,teoria de la comunicacion 54,epistemologia 41,psicologia general 43,"ingles 1 , 54",socioantropologia 63,,4,2,4,2,5,1,4,1,4,1,4,2
+101,18,Masculino,101,Psicología general 4.9,Epistemología de las ciencias 3.7,Bases Biologicas 3.2,Socio-antropología 6.5,Teoría de la comunicacion 3.1,,4,3,3,3,4,2,4,2,4,3,3,3
+102,19,Femenino,101,Teoria de la comunicacion 4.7,"Psicologia general 4,5","socio-antropologia 5,2","ingles 7,0","Bases biologicas de la conducta humana 2,3",,4,1,4,3,3,1,4,1,5,2,4,2
+103,20,Femenino,101,Teoría de la comunicación 65,Bases biológicas de la conducta humana 26,Psicología general 39,Epistemologia de las ciencias 40,Socioantropologia 57,,4,2,4,4,3,1,4,2,4,1,4,4
+104,21,Femenino,101,Bases biológica 2.7,Psicología General 3.9,Teoría de la comunicación 4.0,Ingles 4.4,Taller de desarrollo 5.5,,3,1,3,1,3,1,3,1,3,1,3,5
+105,19,Masculino,101,"Psicología General 3,4","Epistemologia 3,7","Teoria De La Comunicacion 4,3","Bases Biologicas 3,0","Socio Antropologia 6,0",,3,2,2,3,2,2,3,3,3,2,2,3
+106,19,Masculino,101,Socionantropologia 58,Teoria de la comunicacion 55,Bases Biologicas 30,Psicologia general 56,Epistemologia 45,,4,1,4,4,4,1,5,2,4,2,3,3
+107,18,Masculino,102,epistemologia de las ciencias 3.4,bases biologicas de la conducta humana 2.5,socio antropologia 5.2,psicologia general 2.4,teoria de la comunicacion humana 5.5,,3,1,2,2,3,1,2,4,3,1,2,5
+108,19,Femenino,101,Bases biológicas 2.2,"Psicología General 4,0","Epistemología 4,7","Socio antropología 6,1","Teoría de la comunicación 5,5",,4,1,4,3,4,1,5,1,5,1,4,3
+109,20,Femenino,101,EPISTOMOLOGIA 34,PSICOLOGIA 58,BASES BIOLOGICAS 14,TEORIA DE LA COMUNICACION 37,TALLER DEL DESARROLLO 70,,3,1,4,4,4,1,4,1,2,3,4,3
+110,18,Femenino,101,Teoria de la comunicacion humana 6.1,Bases Biologicas 4.6,Sicologia general 6.3,epistemologia de las ciencias 5.0,taller de desaollo personal 7.0,,5,1,3,2,3,1,4,1,3,1,2,4
+111,18,Masculino,101,"Psicología general 6,3","Epistemologia 4,7","Teoría de la comunicación 3,9","Bases biológicas 5,4","Socio antropología 5,7",,5,1,4,1,3,1,3,1,4,1,3,5
+112,18,Masculino,101,Bases biológicas de la conducta humana,Epistemologia de las ciencias sociales,Socioantropologia,Psicologia general,Teoria de la comunicacion,,4,3,3,5,3,3,3,3,2,2,2,4
+113,24,Femenino,101,Asignatura 1 Bases biológicas 2.2,Asignatura 2 epistemologia 38,Asignatura 3 teoría de la comunicación 37,Asignatura 4 taller de desarrollo personal 70,Asignatura 5 inglés 70,,2,3,3,2,3,3,3,2,3,3,2,4
+114,22,Masculino,101,"Psicología General 5,7","Epistemología 4,3","Teorías de la comunicación humana 6,5","Socioantropología 5,7","Bases biológicas del comportamiento 4,3",,5,1,4,2,5,1,4,1,5,1,4,2
+115,24,Masculino,101,Psicología general 66,Teoría de la comunicación 56,Taller desarrollo personal 60,Inglés 70,Ingles taller 70,,4,1,4,2,4,2,4,1,4,2,3,4
+116,19,Masculino,101,Epistemología de las ciencias 4.0,Bases biológicas de la conducta humana 2.5,Socioantropología 5.8,Psicología General 5.9,Teoría de la comunicación 4.7,,4,3,4,4,3,2,3,2,4,4,2,4
+117,21,Femenino,101,psicología general 3.1,bases biológicas 1.3 ,Teorías de la comunicación 6.5,no,no,,3,1,3,2,3,2,3,3,3,2,3,4
+118,18,Masculino,101,"EPISTEMOLOGIA DE LAS CIENCIAS 4,3",BASES BIOLOGICAS DE LA CONDUCTA HUMANA 3.0,SOCIO- ANTROPOLOGÍA 4.6,PSICOLOGIA GENERAL3.4,"TEORIA DE LA COMUNICACIÓN HUMANA 5,4",,4,5,2,5,2,5,4,3,3,3,2,5
+119,22,Femenino,201,Teoria del aprendizaje 52,Bases biologicas 40,Ingles III 56,Infanto juvenil 40,No,,4,2,4,4,4,1,4,1,3,1,4,4
+120,21,Femenino,102,Bases biologica de la conducta humana 51,Metodologias de investigacion en psicologia 41,psicologia del desarrollo infanto juvenil 54,Psicologia comunitaria 50,teoria psicoanalitica 46,,3,2,3,2,3,1,3,2,4,2,4,2
+121,20,Femenino,102,Taller desarrollo personal II 6.8,Ingles III 4.9,Teoría Psicoanalítica 4.0 ,Psicología del desarrollo infanto-juvenil 4.8 ,Teoría del aprendizaje y la conducta 4.8,,4,1,3,3,4,1,3,1,5,1,3,3
+122,19,Femenino,202,"psicoanalisis 4,4","psicologia desarrollo infanto juvenil 4,8","bases biologicas 4,0","metodologia de la investigacion 4,4 ","taller de desarrollo personal II 6,7",,4,1,3,5,3,1,4,1,4,3,3,5
+123,20,Masculino,202,Psicologia comunitaria 43,Psicologia del desarollo infanto-juvenil 5,metodologia de investigacion en psicologia 43,Teoria psicoanalitica 44,ingles iii 52,,4,2,3,4,3,2,3,3,4,1,2,2
+124,20,Femenino,302,Análisis Cualitativo,Psicopatología infanto-juvenil,Problemáticas psicosociales complejas,Evaluación Psicométrica,Psicología organizacional y del trabajo,,2,1,2,1,2,1,1,1,3,1,3,2
+125,20,Femenino,302,"Análisis Cualitativo 4,8","Psicopatología Infanto-juvenil 4,5","Problematicas psicosociales complejas 4,8","Evaluación psicométrica 6,0","Ps. Organizacional y del trabajo 5,8 ",,4,1,4,3,3,2,3,3,3,1,4,3
+126,21,Femenino,302,"Análisis cualitativo: 5,2","Psicopatología  Infanto Juvenil: 4,9","Problemáticas psicosociales: 5,2","Evaluación psicometrica: 5,4","Psicología organizacional: 5,4",,3,2,3,1,3,1,4,2,2,1,4,2
+127,21,Femenino,302,"Análisis Cualitativo 4,6","Psicopatología Infanto-Juvenil 4,6","Problemáticas Psicosociales Complejas 5,3","Evaluación Psicométrica 6,0","Psicología Organizacional y del Trabajo 5,6 ",,3,2,2,2,2,2,2,2,3,2,3,3
+128,20,Femenino,302,Análisis cuantitativo 4.3,Psicopatología infanto-juvenil 4.2,Evaluación psicométrica 5.2,Psicología organizacional y del trabajo 4.6,Electivo general 6.2,,2,1,3,2,2,2,2,2,2,1,2,3
+129,23,Femenino,302,Analisis Cualitativo 48,Psicopatologia Infanto Juvenil 40,Problematicas Psicosociales Complejas 49,Evaluacion Psicometrica 58,Psicologia Organizacional y del Trabajo 57,,4,1,4,2,3,2,3,3,3,3,4,3
+130,20,Masculino,302,"Analisis cualitativo 5,3","Psicopatología infanto-juvenil 4,5","Problemáticas psicosociales complejas 5,0","Evaluación psicométrica 5,8","Psicología organizacional y del trabajo 6,0",,3,3,2,4,3,2,3,2,2,2,2,4
+131,20,Femenino,302,Análisis cualitativo 5.4,Psicopatología infanto-juvenil 5.0,Problemáticas psicosociales complejas 6.1,Evaluación psicométrica 5.9,Psicología organizacional 5.3,,4,1,3,1,3,2,2,4,4,1,5,4
+132,20,Masculino,302,teorias cognitivas 41,análisis cualitativo 44,psicopatología infanto juvenil 44,evaluación psicométrica  54 ,psicologia organizacional 59,,3,2,3,3,3,2,3,3,3,1,3,3
+133,20,Femenino,301,Psicopatologia infanto juvenil,Mediación comunitaria,Psicologia laboral,Taller de desarrollo personal,Problemáticas psicosociales complejas,,3,2,3,2,3,2,3,2,3,1,3,4
+134,20,Femenino,202,no,no,no,No,NO,,4,4,3,2,5,1,4,3,3,1,3,4
+135,23,Femenino,202,desarrollo infanto juvenil . 5.4,taller desarrollo personal . 7.0,bases biologicas . 4.9,psicologia comunitaria . 4.9,ingles . 5.0,,4,2,4,4,4,2,3,2,4,2,4,3
+136,24,Femenino,302,ANÁLISIS CUALITATIVO 5.4,PSICOPATOLOGÍA INFANTO-JUVENIL 4.5,PROBLEMÁTICAS PSICOSOCIALES COMPLEJAS 5.3,EVALUACIÓN PSICOMÉTRICA 6.5,PSICOLOGÍA ORGANIZACIONAL Y DEL TRABAJO 6.2,,4,1,2,2,2,1,2,3,3,1,3,5
+137,21,Femenino,202,bases biologicas 42,ingles III 46,Teorias cognitivas 41,psicología comunitaria 47,PSICOLOGÍA DEL DESARROLLO INFANTO-JUVENIL 45,,4,1,4,2,4,1,3,2,3,1,3,3

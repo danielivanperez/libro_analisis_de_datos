@@ -1,6 +1,106 @@
 # R en Acción: Analizando un Ejemplo
 
-Para tener una mejor idea de lo sencillo que es utilizar R, utilizaremos un pequeño 
-ejemplo basado en una base de datos real en psicología. 
+R es una herramienta de análisis muy poderosa. El propósito de este capítulo es principalmente mostrar qué cosas puede hacer R. Si bien se explican los objetivos del análisis de datos para cada celda junto con el código utilizado, la idea principal es ilustrar algunas de sus funcionalidades y no explicar el código de forma extensa. Para eso, esta el resto del libro. 
+
+Entonces, lo primero que vamos a hacer es cargar la base de datos para ejecutar nuestros ejemplos. Para esto, vamos a darle un nombre o etiqueta a nuestra base de datos `dataset`, luego utilizaremos el *operador de asignación* `<-` y al lado derecho usaremos la función `read.csv()` de R, el cual permite leer la base de datos llamada `emociones_academicas.csv`. Nótese que la base de datos esta alojada en una pagina web y no en nuestro computador personal. Esto ya en sí mismo muestra su poder sobre otras *software* tales como SPSS. Inmediatamente abajo del código de la base de datos, utilizaremos la función `names` para observar el nombre de las variables contenidas en la base de datos y su numero, el cual se encuentra impreso justo debajo de la celda.  
+
+```{r}
+dataset <- read.csv("https://raw.githubusercontent.com/danielivanperez/dataset_ejemplo_libro_r/main/emociones_academicas.csv")
+
+names(dataset)
+```
+Una de las funciones más útiles de R es poder observar un conjunto acotado de filas, observaciones o, en nuestro caso participantes, de la base de datos con la cual se trabaja. Para esto, vamos a usar la función `head()`. Al ejecutar esta función, R nos muestra las primeras 6 filas de la base de datos. 
+
+```{r}
+head(dataset)
+```
+El código de arriba nos muestra las respuestas de los primeros 6 sujetos de nuestra base de datos. Podemos fácilmente ver que la salida o *output* que nos da R es relativamente extensa. Sería muy ineficiente siempre estar imprimiendo bases de datos de forma completa. Por esta razón, es mucho mejor trabajar viendo un número limitado de variables al mismo tiempo. Empecemos con el caso más simple de explorar solo una variable. A continuación, vamos a mostrar como utilizar el símbolo dólar `$`, el cual nos permite seleccionar una columna o variable de la base de datos. Para proseguir con el ejemplo, nos centraremos en la variable `calificacion_1`. De este modo, primero escribimos el nombre de la base de datos, seguido del signo dólar y, luego, seleccionar o escribir el nombre de la variables deseada. 
+
+```{r}
+head(dataset$calificacion_1)
+```
+Como podemos ver en las primeras 6 filas de la `variable calificacion_1`, los participantes de este estudio (estudiantes de psicología de una universidad pública de Chile), escribieron sus calificaciones para un curso determinado. Podemos apreciar que ellos escribieron sus respuestas de diferentes formas. Escribiendo solo la calificación como en el primer caso, o incluso escribiendo el nombre del curso de manera completa y luego la calificación, en algunos casos con un `.` como en fila [2], con una `,` como en la fila [3] o simplemente sin punto ni coma como en la fila [4]. Esto constituiría un primer problema para el analista de datos debido a que no tenemos los valores ordenados y formateados de manera estándar (por ejemplo, tener solo números dos números separados por un `.`) al interior de la variable. Justamente en este tipo de situaciones es cuando R muestra todo su poder. 
+
+Como en cada respuesta o celda de la columna tenemos una combinación de texto y números, voy a proceder a aplicar una función en R para que transforme todo lo que haya en sus celdas en un tipo de formato llamado `character` o carácter, el cual se refiere a que la información es simplemente texto (en R hay diferentes tipos de datos como los numéricos o *numeric*). Esto lo hago principalmente para proceder de manera ordenada y evitar posible errores en el futuro.  
+
+```{r}
+dataset[5:9] <- lapply(dataset[5:9], as.character) # primero tuve que transformar los datos a caracteres
+```
+
+```{r}
+#sel <- grepl("calificacion_",names(dataset))
+dataset$calificacion_1 <- gsub("[^0-9]", "", dataset$calificacion_1)
+dataset$calificacion_2 <- gsub("[^0-9]", "", dataset$calificacion_2)
+dataset$calificacion_3 <- gsub("[^0-9]", "", dataset$calificacion_3)
+dataset$calificacion_4 <- gsub("[^0-9]", "", dataset$calificacion_4)
+dataset$calificacion_5 <- gsub("[^0-9]", "", dataset$calificacion_5)
+```
+
+```{r}
+dataset[5:9] <- lapply(dataset[5:9], as.character) # primero tuve que transformar los datos a caracteres
+```
+
+```{r}
+dataset$calificacion_1 <- sub("(?<=^.)", "\\.", dataset$calificacion_1 , perl=TRUE)
+dataset$calificacion_2 <- sub("(?<=^.)", "\\.", dataset$calificacion_2 , perl=TRUE)
+dataset$calificacion_3 <- sub("(?<=^.)", "\\.", dataset$calificacion_3 , perl=TRUE)
+dataset$calificacion_4 <- sub("(?<=^.)", "\\.", dataset$calificacion_4 , perl=TRUE)
+dataset$calificacion_5 <- sub("(?<=^.)", "\\.", dataset$calificacion_5 , perl=TRUE)
+```
+
+```{r}
+head(dataset$calificacion_1,10)
+```
+
+```{r}
+dataset[5:9] <- lapply(dataset[5:9], as.numeric) # luego a numericos
+head(dataset,10)
+#write.csv(dataset,"emociones_academicas_ejemplo.csv")
+```
+
+
+```{r}
+dataset$promedio <- rowMeans(dataset[,5:9], na.rm=TRUE)
+```
+
+```{r}
+dataset$emociones_positivas <- rowMeans(dataset[,c("emo_aca_1","emo_aca_3","emo_aca_5","emo_aca_7", "emo_aca_9","emo_aca_11")], na.rm=TRUE)
+
+dataset$emociones_negativas <- rowMeans(dataset[,c("emo_aca_2","emo_aca_4","emo_aca_6","emo_aca_8", "emo_aca_10","emo_aca_12")], na.rm=TRUE)
+```
+
+```{r}
+barplot(table(dataset$emociones_positivas)) #both columns need to be integer
+```
+
+
+```{r}
+plot(dataset$emociones_positivas, dataset$promedio) #both columns need to be integer
+```
+
+```{r}
+require(stats)
+
+reg<-lm(dataset$promedio ~ dataset$emociones_positivas, data = dataset)
+
+plot(dataset$emociones_positivas, dataset$promedio)
+
+abline(reg, col = "green")
+
+reg
+```
+
+```{r}
+require(stats)
+
+reg_1<-lm(dataset$promedio ~ dataset$emociones_negativas, data = dataset)
+
+plot(dataset$emociones_negativas, dataset$promedio)
+
+abline(reg_1, col = "red")
+
+reg_1
+```
+ 
 
 
