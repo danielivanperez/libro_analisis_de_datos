@@ -12,7 +12,7 @@ dataset <- read.csv("https://raw.githubusercontent.com/danielivanperez/dataset_e
 names(dataset)
 ```
 
-Para saber el tamaño de nuestra base de datos, podemos utilizar la función `dim()`, la cual nos entrega el numero de filas y columnas respectivamente. Apliquemos dicha función a la base de datos recién cargada. 
+Para saber el tamaño de nuestra base de datos, podemos utilizar la función `dim()`, la cual nos entrega el número de filas y columnas respectivamente. Apliquemos dicha función a la base de datos recién cargada. 
 
 ```{r}
 dim(dataset)
