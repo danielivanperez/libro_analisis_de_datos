@@ -17,7 +17,7 @@ Para saber el tamaño de nuestra base de datos, podemos utilizar la función `di
 ```{r}
 dim(dataset)
 ```
-La salida nos dice que hay 137 filas (participantes en nuestro caso) y 24 columnas (o variables). Adicionalmente, una de las funciones más útiles de R es poder observar un conjunto acotado de filas, observaciones o, en nuestro caso participantes, de la base de datos con la cual se trabaja. Para esto, vamos a usar la función `head()`. Al ejecutar esta función, R nos muestra las primeras 6 filas de la base de datos. 
+La salida nos dice que hay 137 filas (participantes en nuestro caso) y 22 columnas (o variables). Adicionalmente, una de las funciones más útiles de R es poder observar un conjunto acotado de filas, observaciones o, en nuestro caso participantes, de la base de datos con la cual se trabaja. Para esto, vamos a usar la función `head()`. Al ejecutar esta función, R nos muestra las primeras 6 filas de la base de datos. 
 
 ```{r}
 head(dataset)
