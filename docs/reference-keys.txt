@@ -5,7 +5,11 @@ por-qué-programar-en-r
 obstáculos-en-el-aprendizaje-de-r
 consideraciones-finales
 r-en-acción-analizando-un-ejemplo
-cargando-una-base-de-datos-desde-la-web-y-otras-funcionalidades
+cargando-una-base-de-datos-desde-la-web
+seleccionando-columnas-en-una-base-de-datos
+limpiando-valores-en-una-base-de-datos
+tipo-de-datos-numéricos-y-creación-de-variables-a-partir-de-otras
+graficando-datos
 qué-es-r-instalando-r-y-rstudio
 definiendo-r
 instalando-r

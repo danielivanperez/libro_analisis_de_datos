@@ -2,7 +2,7 @@
 
 R es una herramienta de análisis muy poderosa. El propósito de este capítulo es principalmente mostrar qué cosas puede hacer R. Si bien se explican los objetivos del análisis de datos para cada celda junto con el código utilizado, la idea principal es ilustrar algunas de sus funcionalidades y no explicar el código de forma extensa. Para eso, está el resto del libro. 
 
-## Cargando una Base de Datos desde la Web y otras Funcionalidades
+## Cargando una Base de Datos desde la Web
 
 Brevemente, la base de datos contiene datos sociodemográficos, calificaciones de cinco cursos y respuestas a preguntas sobre emociones en el contexto académico de 137 estudiantes de psicología de una universidad pública chilena. Entonces, lo primero que vamos a hacer es cargar la base de datos para ejecutar nuestros ejemplos. Para esto, vamos a darle un nombre o etiqueta a nuestra base de datos `dataset`, luego utilizaremos el *operador de asignación* `<-` y al lado derecho usaremos la función `read.csv()` de R, el cual permite leer la base de datos llamada `emociones_academicas.csv`. Nótese que la base de datos está alojada en una página web y no en nuestro computador personal. Esto ya en sí mismo muestra su poder sobre otras *software* tales como SPSS. Inmediatamente abajo del código de la base de datos, utilizaremos la función `names` para observar el nombre de las variables contenidas en la base de datos y su número, el cual se encuentra impreso justo debajo de la celda. 
  
@@ -16,6 +16,9 @@ Una de las funciones más útiles de R es poder observar un conjunto acotado de 
 ```{r}
 head(dataset)
 ```
+
+## Seleccionando Columnas en una Base de Datos
+
 El código de arriba nos muestra las respuestas de los primeros 6 sujetos de nuestra base de datos. Podemos fácilmente ver que la salida o *output* que nos da R es relativamente extensa. Sería muy ineficiente siempre estar imprimiendo bases de datos de forma completa. Por esta razón, es mucho mejor trabajar viendo un número limitado de variables al mismo tiempo. Empecemos con el caso más simple de explorar solo una variable. A continuación, vamos a mostrar como utilizar el símbolo dólar `$`, el cual nos permite seleccionar una columna o variable de la base de datos. Para proseguir con el ejemplo, nos centraremos en la variable `calificacion_1`. De este modo, primero escribimos el nombre de la base de datos, seguido del signo dólar y, luego, seleccionar o escribir el nombre de la variables deseada. 
 
 ```{r}
@@ -29,6 +32,8 @@ head(dataset[5:9])
 ```
 
 Podemos inferir del código escrito arriba que R le asigna un número a cada una de las columnas de la base de datos y lo que le estamos solicitado al interior del paréntesis cuadrado es que seleccione desde la columna 5 hasta la columna 9 y nos muestre sólo éstas. De este modo, muestras los valores para las variables `calificacion_1` hasta `calificacion_5`.
+
+## Limpiando Valores en una Base de Datos
 
 Volviendo al caso que estábamos desarrollando anteriormente, como podemos ver en las primeras 6 filas de la variable ` calificacion_1`, los participantes de este estudio escribieron sus calificaciones para un curso determinado. Podemos apreciar que ellos escribieron sus respuestas de diferentes formas. Escribiendo solo la calificación como en el primer caso, o incluso escribiendo el nombre del curso de manera completa y luego la calificación, en algunos casos con un `.` como en fila [1], con una `,` como en la fila [3] o simplemente sin punto ni coma como en la fila [6]. Esto constituiría un primer problema para el analista de datos debido a que no tenemos los valores ordenados y formateados de manera estándar (por ejemplo, tener solo números dos números separados por un `.`) al interior de la variable. Justamente en este tipo de situaciones es cuando R muestra todo su poder. 
 
@@ -61,9 +66,7 @@ dataset$calificacion_5 <- sub("(?<=^.)", "\\.", dataset$calificacion_5 , perl=TR
 head(dataset$calificacion_1,10)
 ```
 
-```{r}
-tail(dataset)
-```
+## Tipo de Datos Numéricos y Creación de Variables a partir de Otras
 
 ```{r}
 dataset[5:9] <- lapply(dataset[5:9], as.numeric) # luego a numericos
@@ -81,6 +84,8 @@ dataset$emociones_positivas <- rowMeans(dataset[,c("emo_aca_1","emo_aca_3","emo_
 
 dataset$emociones_negativas <- rowMeans(dataset[,c("emo_aca_2","emo_aca_4","emo_aca_6","emo_aca_8", "emo_aca_10","emo_aca_12")], na.rm=TRUE)
 ```
+
+## Graficando Datos 
 
 ```{r}
 barplot(table(dataset$emociones_positivas)) #both columns need to be integer

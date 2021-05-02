@@ -147,7 +147,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="2" data-path="r-en-acción-analizando-un-ejemplo.html"><a href="r-en-acción-analizando-un-ejemplo.html"><i class="fa fa-check"></i><b>2</b> R en Acción: Analizando un Ejemplo</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="r-en-acción-analizando-un-ejemplo.html"><a href="r-en-acción-analizando-un-ejemplo.html#cargando-una-base-de-datos-desde-la-web-y-otras-funcionalidades"><i class="fa fa-check"></i><b>2.1</b> Cargando una Base de Datos desde la Web y otras Funcionalidades</a></li>
+<li class="chapter" data-level="2.1" data-path="r-en-acción-analizando-un-ejemplo.html"><a href="r-en-acción-analizando-un-ejemplo.html#cargando-una-base-de-datos-desde-la-web"><i class="fa fa-check"></i><b>2.1</b> Cargando una Base de Datos desde la Web</a></li>
+<li class="chapter" data-level="2.2" data-path="r-en-acción-analizando-un-ejemplo.html"><a href="r-en-acción-analizando-un-ejemplo.html#seleccionando-columnas-en-una-base-de-datos"><i class="fa fa-check"></i><b>2.2</b> Seleccionando Columnas en una Base de Datos</a></li>
+<li class="chapter" data-level="2.3" data-path="r-en-acción-analizando-un-ejemplo.html"><a href="r-en-acción-analizando-un-ejemplo.html#limpiando-valores-en-una-base-de-datos"><i class="fa fa-check"></i><b>2.3</b> Limpiando Valores en una Base de Datos</a></li>
+<li class="chapter" data-level="2.4" data-path="r-en-acción-analizando-un-ejemplo.html"><a href="r-en-acción-analizando-un-ejemplo.html#tipo-de-datos-numéricos-y-creación-de-variables-a-partir-de-otras"><i class="fa fa-check"></i><b>2.4</b> Tipo de Datos Numéricos y Creación de Variables a partir de Otras</a></li>
+<li class="chapter" data-level="2.5" data-path="r-en-acción-analizando-un-ejemplo.html"><a href="r-en-acción-analizando-un-ejemplo.html#graficando-datos"><i class="fa fa-check"></i><b>2.5</b> Graficando Datos</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="qué-es-r-instalando-r-y-rstudio.html"><a href="qué-es-r-instalando-r-y-rstudio.html"><i class="fa fa-check"></i><b>3</b> ¿Qué es R? Instalando R y RStudio</a>
 <ul>
@@ -201,8 +205,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="r-en-acción-analizando-un-ejemplo" class="section level1" number="2">
 <h1><span class="header-section-number">Capítulo  2</span> R en Acción: Analizando un Ejemplo</h1>
 <p>R es una herramienta de análisis muy poderosa. El propósito de este capítulo es principalmente mostrar qué cosas puede hacer R. Si bien se explican los objetivos del análisis de datos para cada celda junto con el código utilizado, la idea principal es ilustrar algunas de sus funcionalidades y no explicar el código de forma extensa. Para eso, está el resto del libro.</p>
-<div id="cargando-una-base-de-datos-desde-la-web-y-otras-funcionalidades" class="section level2" number="2.1">
-<h2><span class="header-section-number">2.1</span> Cargando una Base de Datos desde la Web y otras Funcionalidades</h2>
+<div id="cargando-una-base-de-datos-desde-la-web" class="section level2" number="2.1">
+<h2><span class="header-section-number">2.1</span> Cargando una Base de Datos desde la Web</h2>
 <p>Brevemente, la base de datos contiene datos sociodemográficos, calificaciones de cinco cursos y respuestas a preguntas sobre emociones en el contexto académico de 137 estudiantes de psicología de una universidad pública chilena. Entonces, lo primero que vamos a hacer es cargar la base de datos para ejecutar nuestros ejemplos. Para esto, vamos a darle un nombre o etiqueta a nuestra base de datos <code>dataset</code>, luego utilizaremos el <em>operador de asignación</em> <code>&lt;-</code> y al lado derecho usaremos la función <code>read.csv()</code> de R, el cual permite leer la base de datos llamada <code>emociones_academicas.csv</code>. Nótese que la base de datos está alojada en una página web y no en nuestro computador personal. Esto ya en sí mismo muestra su poder sobre otras <em>software</em> tales como SPSS. Inmediatamente abajo del código de la base de datos, utilizaremos la función <code>names</code> para observar el nombre de las variables contenidas en la base de datos y su número, el cual se encuentra impreso justo debajo de la celda.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="r-en-acción-analizando-un-ejemplo.html#cb1-1" aria-hidden="true" tabindex="-1"></a>dataset <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;https://raw.githubusercontent.com/danielivanperez/dataset_ejemplo_libro_r/main/emociones_academicas.csv&quot;</span>)</span>
 <span id="cb1-2"><a href="r-en-acción-analizando-un-ejemplo.html#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -249,6 +253,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## 4         2         4         3         3         3          2          3          4
 ## 5         4         1         4         1         4          2          4          4
 ## 6         4         1         3         2         3          1          2          5</code></pre>
+</div>
+<div id="seleccionando-columnas-en-una-base-de-datos" class="section level2" number="2.2">
+<h2><span class="header-section-number">2.2</span> Seleccionando Columnas en una Base de Datos</h2>
 <p>El código de arriba nos muestra las respuestas de los primeros 6 sujetos de nuestra base de datos. Podemos fácilmente ver que la salida o <em>output</em> que nos da R es relativamente extensa. Sería muy ineficiente siempre estar imprimiendo bases de datos de forma completa. Por esta razón, es mucho mejor trabajar viendo un número limitado de variables al mismo tiempo. Empecemos con el caso más simple de explorar solo una variable. A continuación, vamos a mostrar como utilizar el símbolo dólar <code>$</code>, el cual nos permite seleccionar una columna o variable de la base de datos. Para proseguir con el ejemplo, nos centraremos en la variable <code>calificacion_1</code>. De este modo, primero escribimos el nombre de la base de datos, seguido del signo dólar y, luego, seleccionar o escribir el nombre de la variables deseada.</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="r-en-acción-analizando-un-ejemplo.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(dataset<span class="sc">$</span>calificacion_1)</span></code></pre></div>
 <pre><code>## [1] &quot;4.8&quot;                                              &quot;Psicología del desarrollo infanto juvenil 4.7 &quot;  
@@ -285,6 +292,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## 5              psicopatologia infanto juvenil 5.0
 ## 6                                psicoanalisis 37</code></pre>
 <p>Podemos inferir del código escrito arriba que R le asigna un número a cada una de las columnas de la base de datos y lo que le estamos solicitado al interior del paréntesis cuadrado es que seleccione desde la columna 5 hasta la columna 9 y nos muestre sólo éstas. De este modo, muestras los valores para las variables <code>calificacion_1</code> hasta <code>calificacion_5</code>.</p>
+</div>
+<div id="limpiando-valores-en-una-base-de-datos" class="section level2" number="2.3">
+<h2><span class="header-section-number">2.3</span> Limpiando Valores en una Base de Datos</h2>
 <p>Volviendo al caso que estábamos desarrollando anteriormente, como podemos ver en las primeras 6 filas de la variable <code>calificacion_1</code>, los participantes de este estudio escribieron sus calificaciones para un curso determinado. Podemos apreciar que ellos escribieron sus respuestas de diferentes formas. Escribiendo solo la calificación como en el primer caso, o incluso escribiendo el nombre del curso de manera completa y luego la calificación, en algunos casos con un <code>.</code> como en fila [1], con una <code>,</code> como en la fila [3] o simplemente sin punto ni coma como en la fila [6]. Esto constituiría un primer problema para el analista de datos debido a que no tenemos los valores ordenados y formateados de manera estándar (por ejemplo, tener solo números dos números separados por un <code>.</code>) al interior de la variable. Justamente en este tipo de situaciones es cuando R muestra todo su poder.</p>
 <div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="r-en-acción-analizando-un-ejemplo.html#cb9-1" aria-hidden="true" tabindex="-1"></a>dataset[<span class="dv">5</span><span class="sc">:</span><span class="dv">9</span>] <span class="ot">&lt;-</span> <span class="fu">lapply</span>(dataset[<span class="dv">5</span><span class="sc">:</span><span class="dv">9</span>], as.character) <span class="co"># primero tuve que transformar los datos a caracteres</span></span></code></pre></div>
 <div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="r-en-acción-analizando-un-ejemplo.html#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co">#sel &lt;- grepl(&quot;calificacion_&quot;,names(dataset))</span></span>
@@ -301,30 +311,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb12-5"><a href="r-en-acción-analizando-un-ejemplo.html#cb12-5" aria-hidden="true" tabindex="-1"></a>dataset<span class="sc">$</span>calificacion_5 <span class="ot">&lt;-</span> <span class="fu">sub</span>(<span class="st">&quot;(?&lt;=^.)&quot;</span>, <span class="st">&quot;</span><span class="sc">\\</span><span class="st">.&quot;</span>, dataset<span class="sc">$</span>calificacion_5 , <span class="at">perl=</span><span class="cn">TRUE</span>)</span></code></pre></div>
 <div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="r-en-acción-analizando-un-ejemplo.html#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(dataset<span class="sc">$</span>calificacion_1,<span class="dv">10</span>)</span></code></pre></div>
 <pre><code>##  [1] &quot;4.8&quot; &quot;4.7&quot; &quot;3.9&quot; &quot;3.8&quot; &quot;5.0&quot; &quot;3.7&quot; &quot;5.5&quot; &quot;1.0&quot; &quot;3.4&quot; &quot;6.2&quot;</code></pre>
-<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="r-en-acción-analizando-un-ejemplo.html#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tail</span>(dataset)</span></code></pre></div>
-<pre><code>##     participante edad      sexo Nivel calificacion_1 calificacion_2 calificacion_3 calificacion_4
-## 132          132   20 Masculino   302            4.1            4.4            4.4            5.4
-## 133          133   20  Femenino   301                                                            
-## 134          134   20  Femenino   202                                                            
-## 135          135   23  Femenino   202            5.4            7.0            4.9            4.9
-## 136          136   24  Femenino   302            5.4            4.5            5.3            6.5
-## 137          137   21  Femenino   202            4.2            4.6            4.1            4.7
-##     calificacion_5 promedio emo_aca_1 emo_aca_2 emo_aca_3 emo_aca_4 emo_aca_5 emo_aca_6 emo_aca_7
-## 132            5.9       NA         3         2         3         3         3         2         3
-## 133                      NA         3         2         3         2         3         2         3
-## 134                      NA         4         4         3         2         5         1         4
-## 135            5.0       NA         4         2         4         4         4         2         3
-## 136            6.2       NA         4         1         2         2         2         1         2
-## 137            4.5       NA         4         1         4         2         4         1         3
-##     emo_aca_8 emo_aca_9 emo_aca_10 emo_aca_11 emo_aca_12
-## 132         3         3          1          3          3
-## 133         2         3          1          3          4
-## 134         3         3          1          3          4
-## 135         2         4          2          4          3
-## 136         3         3          1          3          5
-## 137         2         3          1          3          3</code></pre>
-<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="r-en-acción-analizando-un-ejemplo.html#cb17-1" aria-hidden="true" tabindex="-1"></a>dataset[<span class="dv">5</span><span class="sc">:</span><span class="dv">9</span>] <span class="ot">&lt;-</span> <span class="fu">lapply</span>(dataset[<span class="dv">5</span><span class="sc">:</span><span class="dv">9</span>], as.numeric) <span class="co"># luego a numericos</span></span>
-<span id="cb17-2"><a href="r-en-acción-analizando-un-ejemplo.html#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(dataset,<span class="dv">10</span>)</span></code></pre></div>
+</div>
+<div id="tipo-de-datos-numéricos-y-creación-de-variables-a-partir-de-otras" class="section level2" number="2.4">
+<h2><span class="header-section-number">2.4</span> Tipo de Datos Numéricos y Creación de Variables a partir de Otras</h2>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="r-en-acción-analizando-un-ejemplo.html#cb15-1" aria-hidden="true" tabindex="-1"></a>dataset[<span class="dv">5</span><span class="sc">:</span><span class="dv">9</span>] <span class="ot">&lt;-</span> <span class="fu">lapply</span>(dataset[<span class="dv">5</span><span class="sc">:</span><span class="dv">9</span>], as.numeric) <span class="co"># luego a numericos</span></span>
+<span id="cb15-2"><a href="r-en-acción-analizando-un-ejemplo.html#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(dataset,<span class="dv">10</span>)</span></code></pre></div>
 <pre><code>##    participante edad     sexo Nivel calificacion_1 calificacion_2 calificacion_3 calificacion_4
 ## 1             1   19 Femenino   201            4.8            3.4            4.6            3.8
 ## 2             2   20 Femenino   201            4.7            4.0            3.2            3.2
@@ -358,24 +349,27 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## 8          2         3          3          3          4
 ## 9          3         3          2          2          5
 ## 10         2         3          4          3          4</code></pre>
-<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="r-en-acción-analizando-un-ejemplo.html#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co">#write.csv(dataset,&quot;emociones_academicas_ejemplo.csv&quot;)</span></span></code></pre></div>
-<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="r-en-acción-analizando-un-ejemplo.html#cb20-1" aria-hidden="true" tabindex="-1"></a>dataset<span class="sc">$</span>promedio <span class="ot">&lt;-</span> <span class="fu">rowMeans</span>(dataset[,<span class="dv">5</span><span class="sc">:</span><span class="dv">9</span>], <span class="at">na.rm=</span><span class="cn">TRUE</span>)</span></code></pre></div>
-<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="r-en-acción-analizando-un-ejemplo.html#cb21-1" aria-hidden="true" tabindex="-1"></a>dataset<span class="sc">$</span>emociones_positivas <span class="ot">&lt;-</span> <span class="fu">rowMeans</span>(dataset[,<span class="fu">c</span>(<span class="st">&quot;emo_aca_1&quot;</span>,<span class="st">&quot;emo_aca_3&quot;</span>,<span class="st">&quot;emo_aca_5&quot;</span>,<span class="st">&quot;emo_aca_7&quot;</span>, <span class="st">&quot;emo_aca_9&quot;</span>,<span class="st">&quot;emo_aca_11&quot;</span>)], <span class="at">na.rm=</span><span class="cn">TRUE</span>)</span>
-<span id="cb21-2"><a href="r-en-acción-analizando-un-ejemplo.html#cb21-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-3"><a href="r-en-acción-analizando-un-ejemplo.html#cb21-3" aria-hidden="true" tabindex="-1"></a>dataset<span class="sc">$</span>emociones_negativas <span class="ot">&lt;-</span> <span class="fu">rowMeans</span>(dataset[,<span class="fu">c</span>(<span class="st">&quot;emo_aca_2&quot;</span>,<span class="st">&quot;emo_aca_4&quot;</span>,<span class="st">&quot;emo_aca_6&quot;</span>,<span class="st">&quot;emo_aca_8&quot;</span>, <span class="st">&quot;emo_aca_10&quot;</span>,<span class="st">&quot;emo_aca_12&quot;</span>)], <span class="at">na.rm=</span><span class="cn">TRUE</span>)</span></code></pre></div>
-<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="r-en-acción-analizando-un-ejemplo.html#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(<span class="fu">table</span>(dataset<span class="sc">$</span>emociones_positivas)) <span class="co">#both columns need to be integer</span></span></code></pre></div>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
-<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="r-en-acción-analizando-un-ejemplo.html#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(dataset<span class="sc">$</span>emociones_positivas, dataset<span class="sc">$</span>promedio) <span class="co">#both columns need to be integer</span></span></code></pre></div>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-18-1.png" width="672" /></p>
-<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="r-en-acción-analizando-un-ejemplo.html#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(stats)</span>
-<span id="cb24-2"><a href="r-en-acción-analizando-un-ejemplo.html#cb24-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-3"><a href="r-en-acción-analizando-un-ejemplo.html#cb24-3" aria-hidden="true" tabindex="-1"></a>reg<span class="ot">&lt;-</span><span class="fu">lm</span>(dataset<span class="sc">$</span>promedio <span class="sc">~</span> dataset<span class="sc">$</span>emociones_positivas, <span class="at">data =</span> dataset)</span>
-<span id="cb24-4"><a href="r-en-acción-analizando-un-ejemplo.html#cb24-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-5"><a href="r-en-acción-analizando-un-ejemplo.html#cb24-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(dataset<span class="sc">$</span>emociones_positivas, dataset<span class="sc">$</span>promedio)</span>
-<span id="cb24-6"><a href="r-en-acción-analizando-un-ejemplo.html#cb24-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-7"><a href="r-en-acción-analizando-un-ejemplo.html#cb24-7" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(reg, <span class="at">col =</span> <span class="st">&quot;green&quot;</span>)</span></code></pre></div>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-19-1.png" width="672" /></p>
-<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="r-en-acción-analizando-un-ejemplo.html#cb25-1" aria-hidden="true" tabindex="-1"></a>reg</span></code></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="r-en-acción-analizando-un-ejemplo.html#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co">#write.csv(dataset,&quot;emociones_academicas_ejemplo.csv&quot;)</span></span></code></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="r-en-acción-analizando-un-ejemplo.html#cb18-1" aria-hidden="true" tabindex="-1"></a>dataset<span class="sc">$</span>promedio <span class="ot">&lt;-</span> <span class="fu">rowMeans</span>(dataset[,<span class="dv">5</span><span class="sc">:</span><span class="dv">9</span>], <span class="at">na.rm=</span><span class="cn">TRUE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="r-en-acción-analizando-un-ejemplo.html#cb19-1" aria-hidden="true" tabindex="-1"></a>dataset<span class="sc">$</span>emociones_positivas <span class="ot">&lt;-</span> <span class="fu">rowMeans</span>(dataset[,<span class="fu">c</span>(<span class="st">&quot;emo_aca_1&quot;</span>,<span class="st">&quot;emo_aca_3&quot;</span>,<span class="st">&quot;emo_aca_5&quot;</span>,<span class="st">&quot;emo_aca_7&quot;</span>, <span class="st">&quot;emo_aca_9&quot;</span>,<span class="st">&quot;emo_aca_11&quot;</span>)], <span class="at">na.rm=</span><span class="cn">TRUE</span>)</span>
+<span id="cb19-2"><a href="r-en-acción-analizando-un-ejemplo.html#cb19-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-3"><a href="r-en-acción-analizando-un-ejemplo.html#cb19-3" aria-hidden="true" tabindex="-1"></a>dataset<span class="sc">$</span>emociones_negativas <span class="ot">&lt;-</span> <span class="fu">rowMeans</span>(dataset[,<span class="fu">c</span>(<span class="st">&quot;emo_aca_2&quot;</span>,<span class="st">&quot;emo_aca_4&quot;</span>,<span class="st">&quot;emo_aca_6&quot;</span>,<span class="st">&quot;emo_aca_8&quot;</span>, <span class="st">&quot;emo_aca_10&quot;</span>,<span class="st">&quot;emo_aca_12&quot;</span>)], <span class="at">na.rm=</span><span class="cn">TRUE</span>)</span></code></pre></div>
+</div>
+<div id="graficando-datos" class="section level2" number="2.5">
+<h2><span class="header-section-number">2.5</span> Graficando Datos</h2>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="r-en-acción-analizando-un-ejemplo.html#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(<span class="fu">table</span>(dataset<span class="sc">$</span>emociones_positivas)) <span class="co">#both columns need to be integer</span></span></code></pre></div>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="r-en-acción-analizando-un-ejemplo.html#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(dataset<span class="sc">$</span>emociones_positivas, dataset<span class="sc">$</span>promedio) <span class="co">#both columns need to be integer</span></span></code></pre></div>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="r-en-acción-analizando-un-ejemplo.html#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(stats)</span>
+<span id="cb22-2"><a href="r-en-acción-analizando-un-ejemplo.html#cb22-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-3"><a href="r-en-acción-analizando-un-ejemplo.html#cb22-3" aria-hidden="true" tabindex="-1"></a>reg<span class="ot">&lt;-</span><span class="fu">lm</span>(dataset<span class="sc">$</span>promedio <span class="sc">~</span> dataset<span class="sc">$</span>emociones_positivas, <span class="at">data =</span> dataset)</span>
+<span id="cb22-4"><a href="r-en-acción-analizando-un-ejemplo.html#cb22-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-5"><a href="r-en-acción-analizando-un-ejemplo.html#cb22-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(dataset<span class="sc">$</span>emociones_positivas, dataset<span class="sc">$</span>promedio)</span>
+<span id="cb22-6"><a href="r-en-acción-analizando-un-ejemplo.html#cb22-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-7"><a href="r-en-acción-analizando-un-ejemplo.html#cb22-7" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(reg, <span class="at">col =</span> <span class="st">&quot;green&quot;</span>)</span></code></pre></div>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-16-1.png" width="672" /></p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="r-en-acción-analizando-un-ejemplo.html#cb23-1" aria-hidden="true" tabindex="-1"></a>reg</span></code></pre></div>
 <pre><code>## 
 ## Call:
 ## lm(formula = dataset$promedio ~ dataset$emociones_positivas, 
@@ -384,15 +378,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## Coefficients:
 ##                 (Intercept)  dataset$emociones_positivas  
 ##                      3.8581                       0.1914</code></pre>
-<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="r-en-acción-analizando-un-ejemplo.html#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(stats)</span>
-<span id="cb27-2"><a href="r-en-acción-analizando-un-ejemplo.html#cb27-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-3"><a href="r-en-acción-analizando-un-ejemplo.html#cb27-3" aria-hidden="true" tabindex="-1"></a>reg_1<span class="ot">&lt;-</span><span class="fu">lm</span>(dataset<span class="sc">$</span>promedio <span class="sc">~</span> dataset<span class="sc">$</span>emociones_negativas, <span class="at">data =</span> dataset)</span>
-<span id="cb27-4"><a href="r-en-acción-analizando-un-ejemplo.html#cb27-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-5"><a href="r-en-acción-analizando-un-ejemplo.html#cb27-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(dataset<span class="sc">$</span>emociones_negativas, dataset<span class="sc">$</span>promedio)</span>
-<span id="cb27-6"><a href="r-en-acción-analizando-un-ejemplo.html#cb27-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-7"><a href="r-en-acción-analizando-un-ejemplo.html#cb27-7" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(reg_1, <span class="at">col =</span> <span class="st">&quot;red&quot;</span>)</span></code></pre></div>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-20-1.png" width="672" /></p>
-<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="r-en-acción-analizando-un-ejemplo.html#cb28-1" aria-hidden="true" tabindex="-1"></a>reg_1</span></code></pre></div>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="r-en-acción-analizando-un-ejemplo.html#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(stats)</span>
+<span id="cb25-2"><a href="r-en-acción-analizando-un-ejemplo.html#cb25-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-3"><a href="r-en-acción-analizando-un-ejemplo.html#cb25-3" aria-hidden="true" tabindex="-1"></a>reg_1<span class="ot">&lt;-</span><span class="fu">lm</span>(dataset<span class="sc">$</span>promedio <span class="sc">~</span> dataset<span class="sc">$</span>emociones_negativas, <span class="at">data =</span> dataset)</span>
+<span id="cb25-4"><a href="r-en-acción-analizando-un-ejemplo.html#cb25-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-5"><a href="r-en-acción-analizando-un-ejemplo.html#cb25-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(dataset<span class="sc">$</span>emociones_negativas, dataset<span class="sc">$</span>promedio)</span>
+<span id="cb25-6"><a href="r-en-acción-analizando-un-ejemplo.html#cb25-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-7"><a href="r-en-acción-analizando-un-ejemplo.html#cb25-7" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(reg_1, <span class="at">col =</span> <span class="st">&quot;red&quot;</span>)</span></code></pre></div>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="r-en-acción-analizando-un-ejemplo.html#cb26-1" aria-hidden="true" tabindex="-1"></a>reg_1</span></code></pre></div>
 <pre><code>## 
 ## Call:
 ## lm(formula = dataset$promedio ~ dataset$emociones_negativas, 
