@@ -108,10 +108,13 @@ summary(dataset$calificacion_1)
 
 La salida de R muestra siete valores: el puntaje mínimo, el puntaje del primer cuartil, la mediana, la media aritmética, el puntaje del tercer cuartil, el puntaje máximo de la columna y el número de celdas con valores perdidos o NA’s (o *Not Available*).  
 
-## Creación de Variables a partir de Otras
+## Creación de Variables a partir de otras Columnas
+
+Ahora que ya tenemos las columnas de las calificaciones formateadas apropiadamente, vamos a calcular el promedio de las calificaciones. Para esto, vamos a utilizar la función `rowMeans()` y dentro del paréntesis, escribiremos el set de columnas a utilizar, en nuestro caso, las cinco calificaciones que están contenidas en las columnas 5 a 9. Finalmente, esta nueva columna será agregada a la base de datos bajo el nombre `promedio`.
 
 ```{r}
 dataset$promedio <- rowMeans(dataset[,5:9], na.rm=TRUE)
+head(dataset$promedio) # codigo para ver las primeras 6 calificaciones. 
 ```
 
 ```{r}
