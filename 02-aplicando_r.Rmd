@@ -100,7 +100,14 @@ Ahora apliquemos nuevamente la función de media aritmética a la variable `cali
 ```{r}
 mean(dataset$calificacion_1, na.rm = TRUE)
 ``` 
-Al fin hemos obtenido el valor promedio para esa columna el cual corresponde a 4.38176. Esto quiere decir que los valores de las columnas están listas para ser analizadas cuantitativamente.  
+Al fin hemos obtenido el valor promedio para esa columna el cual corresponde a 4.38176. Esto quiere decir que los valores de las columnas están listos para ser analizados cuantitativamente. Antes de pasar a la siguiente sección, me gustaría presentar la función  `sum()` o *summary*, la cual es una de las funciones más frecuentes de R y, básicamente, nos entrega un resumen general de las variables descriptivas de una variable cuantitativa. Para ilustrarla, apliquemos dicha función a la columna `calificacion_1`:
+
+```{r}
+summary(dataset$calificacion_1)
+```
+
+La salida de R muestra siete valores: el puntaje mínimo, el puntaje del primer cuartil, la mediana, la media aritmética, el puntaje del tercer cuartil y el número de celdas con valores perdidos o NA’s (o *Not Available*).
+
 
 ## Creación de Variables a partir de Otras
 
