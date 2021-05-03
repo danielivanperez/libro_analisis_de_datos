@@ -1,4 +1,4 @@
-# R en Acción: Analizando un Ejemplo
+# R en Acción: Analizando un Estudio Empírico Real
 
 R es una herramienta de análisis muy poderosa. El propósito de este capítulo es principalmente mostrar algunas de las cosas que puede hacer R, especialmente cómo cargar un base de datos desde una pagina web, describir algunas funciones básicas, cómo limpiar una base de datos (esto es particularmente crítico ya que se estima que el 80% del tiempo dedicado al análisis de datos es para limpiar y producir una base de datos que sea analizable) y cómo graficar. Si bien explico los objetivos del análisis de datos para cada parte junto con el código utilizado, la idea principal es ilustrar algunas de sus funcionalidades y no explicar el código de forma extensa. Para eso, está el resto de las secciones del libro. 
 
@@ -120,7 +120,7 @@ A diferencia de la variable `promedio` para las calificaciones de los estudiante
 
                                            Tabla 1
 | Numero |                  Reactivo a contestar                 | Nombre en la Base de Datos |
-|--------|:-----------------------------------------------------:|:--------------------------:|
+|--------| ----------------------------------------------------- |:--------------------------:|
 |    1   | Cuando estoy en clases, me siento a gusto.            |          emo_aca_1         |
 |    2   | Cuando estoy en clases, me siento enojado.            |          emo_aca_2         |
 |    3   | Cuando estoy en clases, me siento con energía.        |          emo_aca_3         |
@@ -134,7 +134,18 @@ A diferencia de la variable `promedio` para las calificaciones de los estudiante
 |   11   | Cuando estoy en clases, me siento relajado.           |         emo_aca_11         |
 |   12   | Cuando estoy en clases, me siento cansado.            |         emo_aca_12         |
 
-Con el fin de mantener la simplicidad de los ejemplos y centrarnos en el uso de R para el análisis de datos, procederemos a construir las variables a partir de las sumatorias de los valores por filas, sin explorar sus valores de confiabilidad, que sería un paso necesario en este caso. 
+Con el fin de mantener la claridad de los ejemplos y centrarnos en el uso de R para el análisis de datos, procederemos simplemente a construir las variables a partir de las sumatorias de los valores por filas. ^[(Si estuviéramos siguiendo los pasos tradicionales en el análisis de datos, probablemente antes de realizar la sumatoria de las columnas, en esta etapa deberíamos ejecutar un análisis de confiabilidad para determinar su consistencia interna.]
+  
+Lo que haremos a continuación es construir dos variables: `emociones_positivas` y `emociones_negativas`. Como podemos observar en la tabla 1, las emociones positivas están dispuestas en los reactivos impares y las emociones negativas están en los reactivos pares, por lo que no podemos simplemente seleccionar un rango continuo de columnas para crear estas nuevas variables. 
+
+En este caso, introduciremos una nueva forma de seleccionar variables. Usaremos como siempre el nombre de la base de datos `dataset` y los paréntesis cuadrados `[]` para seleccionar las filas y el nombre o etiqueta de todas las variables deseadas entre comillas. Vamos a ejecutar este comando en la consola para examinar el resultado y explicarlo a continuación. 
+
+```{r}
+head(dataset[ , c("emo_aca_1","emo_aca_3","emo_aca_5","emo_aca_7","emo_aca_9","emo_aca_11")])
+```
+
+
+
 
 ```{r}
 dataset$emociones_positivas <- rowMeans(dataset[,c("emo_aca_1","emo_aca_3","emo_aca_5","emo_aca_7", "emo_aca_9","emo_aca_11")], na.rm=TRUE)

@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Capítulo 2 R en Acción: Analizando un Estudio Empírico Real | Introducción al Análisis de Datos en Psicología usando R</title>
+  <meta name="description" content="Este curso tiene como objetivo enseñar R para análisis de datos en psicología." />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Capítulo 2 R en Acción: Analizando un Estudio Empírico Real | Introducción al Análisis de Datos en Psicología usando R" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:image" content="simp_dan.png" />
+  <meta property="og:description" content="Este curso tiene como objetivo enseñar R para análisis de datos en psicología." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Capítulo 2 R en Acción: Analizando un Estudio Empírico Real | Introducción al Análisis de Datos en Psicología usando R" />
+  
+  <meta name="twitter:description" content="Este curso tiene como objetivo enseñar R para análisis de datos en psicología." />
+  <meta name="twitter:image" content="simp_dan.png" />
+
+<meta name="author" content="Daniel Pérez Zapata" />
+
+
+<meta name="date" content="2021-05-03" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  <link rel="shortcut icon" href="images/simp_dan.ico" type="image/x-icon" />
+<link rel="prev" href="introducción.html"/>
+<link rel="next" href="qué-es-r-instalando-r-y-rstudio.html"/>
+<script src="libs/header-attrs-2.7/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">ANALISIS DE DATOS EN PSICOLOGIA USANDO R</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Presentación y Licencia</a>
+<ul>
+<li class="chapter" data-level="0.1" data-path="index.html"><a href="index.html#presentación"><i class="fa fa-check"></i><b>0.1</b> Presentación</a></li>
+<li class="chapter" data-level="0.2" data-path="index.html"><a href="index.html#licencia"><i class="fa fa-check"></i><b>0.2</b> Licencia</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="introducción.html"><a href="introducción.html"><i class="fa fa-check"></i><b>1</b> Introducción</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="introducción.html"><a href="introducción.html#por-qué-programar-en-r"><i class="fa fa-check"></i><b>1.1</b> ¿Por qué Programar en R?</a></li>
+<li class="chapter" data-level="1.2" data-path="introducción.html"><a href="introducción.html#obstáculos-en-el-aprendizaje-de-r"><i class="fa fa-check"></i><b>1.2</b> Obstáculos en el Aprendizaje de R</a></li>
+<li class="chapter" data-level="1.3" data-path="introducción.html"><a href="introducción.html#consideraciones-finales"><i class="fa fa-check"></i><b>1.3</b> Consideraciones Finales</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="r-en-acción-analizando-un-estudio-empírico-real.html"><a href="r-en-acción-analizando-un-estudio-empírico-real.html"><i class="fa fa-check"></i><b>2</b> R en Acción: Analizando un Estudio Empírico Real</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="r-en-acción-analizando-un-estudio-empírico-real.html"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cargando-una-base-de-datos-desde-la-web"><i class="fa fa-check"></i><b>2.1</b> Cargando una Base de Datos desde la Web</a></li>
+<li class="chapter" data-level="2.2" data-path="r-en-acción-analizando-un-estudio-empírico-real.html"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#seleccionando-columnas-en-una-base-de-datos"><i class="fa fa-check"></i><b>2.2</b> Seleccionando Columnas en una Base de Datos</a></li>
+<li class="chapter" data-level="2.3" data-path="r-en-acción-analizando-un-estudio-empírico-real.html"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#limpiando-valores-en-una-base-de-datos"><i class="fa fa-check"></i><b>2.3</b> Limpiando Valores en una Base de Datos</a></li>
+<li class="chapter" data-level="2.4" data-path="r-en-acción-analizando-un-estudio-empírico-real.html"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#creación-de-variables-a-partir-de-otras-columnas"><i class="fa fa-check"></i><b>2.4</b> Creación de Variables a partir de otras Columnas</a></li>
+<li class="chapter" data-level="2.5" data-path="r-en-acción-analizando-un-estudio-empírico-real.html"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#graficando-datos"><i class="fa fa-check"></i><b>2.5</b> Graficando Datos</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="qué-es-r-instalando-r-y-rstudio.html"><a href="qué-es-r-instalando-r-y-rstudio.html"><i class="fa fa-check"></i><b>3</b> ¿Qué es R? Instalando R y RStudio</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="qué-es-r-instalando-r-y-rstudio.html"><a href="qué-es-r-instalando-r-y-rstudio.html#definiendo-r"><i class="fa fa-check"></i><b>3.1</b> Definiendo R</a></li>
+<li class="chapter" data-level="3.2" data-path="qué-es-r-instalando-r-y-rstudio.html"><a href="qué-es-r-instalando-r-y-rstudio.html#instalando-r"><i class="fa fa-check"></i><b>3.2</b> Instalando R</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="qué-es-r-instalando-r-y-rstudio.html"><a href="qué-es-r-instalando-r-y-rstudio.html#r-para-windows"><i class="fa fa-check"></i><b>3.2.1</b> R para Windows</a></li>
+<li class="chapter" data-level="3.2.2" data-path="qué-es-r-instalando-r-y-rstudio.html"><a href="qué-es-r-instalando-r-y-rstudio.html#r-para-mac"><i class="fa fa-check"></i><b>3.2.2</b> R para Mac</a></li>
+<li class="chapter" data-level="3.2.3" data-path="qué-es-r-instalando-r-y-rstudio.html"><a href="qué-es-r-instalando-r-y-rstudio.html#r-para-linux"><i class="fa fa-check"></i><b>3.2.3</b> R para Linux</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="qué-es-r-instalando-r-y-rstudio.html"><a href="qué-es-r-instalando-r-y-rstudio.html#instalando-rstudio"><i class="fa fa-check"></i><b>3.3</b> Instalando RStudio</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="comandos-básicos-en-r.html"><a href="comandos-básicos-en-r.html"><i class="fa fa-check"></i><b>4</b> Comandos Básicos en R</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="comandos-básicos-en-r.html"><a href="comandos-básicos-en-r.html#r-como-una-simple-calculadora"><i class="fa fa-check"></i><b>4.1</b> R como una Simple Calculadora</a></li>
+<li class="chapter" data-level="4.2" data-path="comandos-básicos-en-r.html"><a href="comandos-básicos-en-r.html#orden-de-operaciones-matemáticas-en-r"><i class="fa fa-check"></i><b>4.2</b> Orden de Operaciones Matemáticas en R</a></li>
+<li class="chapter" data-level="4.3" data-path="comandos-básicos-en-r.html"><a href="comandos-básicos-en-r.html#variables-en-r"><i class="fa fa-check"></i><b>4.3</b> Variables en R</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="comandos-básicos-en-r.html"><a href="comandos-básicos-en-r.html#construyendo-variables-en-r"><i class="fa fa-check"></i><b>4.3.1</b> Construyendo Variables en R</a></li>
+<li class="chapter" data-level="4.3.2" data-path="comandos-básicos-en-r.html"><a href="comandos-básicos-en-r.html#reglas-para-nombrar-variables"><i class="fa fa-check"></i><b>4.3.2</b> Reglas para Nombrar Variables</a></li>
+<li class="chapter" data-level="4.3.3" data-path="comandos-básicos-en-r.html"><a href="comandos-básicos-en-r.html#convenciones-informales-para-nombrar-variables"><i class="fa fa-check"></i><b>4.3.3</b> Convenciones Informales para Nombrar Variables</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="comandos-básicos-en-r.html"><a href="comandos-básicos-en-r.html#errores-de-escritura-o-typos-en-r"><i class="fa fa-check"></i><b>4.4</b> Errores de Escritura o <em>typos</em> en R</a></li>
+<li class="chapter" data-level="4.5" data-path="comandos-básicos-en-r.html"><a href="comandos-básicos-en-r.html#funciones-en-r"><i class="fa fa-check"></i><b>4.5</b> Funciones en R</a>
+<ul>
+<li class="chapter" data-level="4.5.1" data-path="comandos-básicos-en-r.html"><a href="comandos-básicos-en-r.html#argumentos-sus-nombres-y-valores-por-defecto-en-las-funciones"><i class="fa fa-check"></i><b>4.5.1</b> Argumentos, sus Nombres y Valores por Defecto en las Funciones</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="tidyverse-librería-de-análisis-de-datos.html"><a href="tidyverse-librería-de-análisis-de-datos.html"><i class="fa fa-check"></i><b>5</b> Tidyverse: Librería de Análisis de Datos</a></li>
+<li class="chapter" data-level="" data-path="anexo-1-más-comandos-básicos.html"><a href="anexo-1-más-comandos-básicos.html"><i class="fa fa-check"></i>Anexo 1: Más Comandos Básicos</a></li>
+<li class="chapter" data-level="" data-path="breve-biografía.html"><a href="breve-biografía.html"><i class="fa fa-check"></i>Breve Biografía</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Introducción al Análisis de Datos en Psicología usando R</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="r-en-acción-analizando-un-estudio-empírico-real" class="section level1" number="2">
+<h1><span class="header-section-number">Capítulo  2</span> R en Acción: Analizando un Estudio Empírico Real</h1>
+<p>R es una herramienta de análisis muy poderosa. El propósito de este capítulo es principalmente mostrar algunas de las cosas que puede hacer R, especialmente cómo cargar un base de datos desde una pagina web, describir algunas funciones básicas, cómo limpiar una base de datos (esto es particularmente crítico ya que se estima que el 80% del tiempo dedicado al análisis de datos es para limpiar y producir una base de datos que sea analizable) y cómo graficar. Si bien explico los objetivos del análisis de datos para cada parte junto con el código utilizado, la idea principal es ilustrar algunas de sus funcionalidades y no explicar el código de forma extensa. Para eso, está el resto de las secciones del libro.</p>
+<div id="cargando-una-base-de-datos-desde-la-web" class="section level2" number="2.1">
+<h2><span class="header-section-number">2.1</span> Cargando una Base de Datos desde la Web</h2>
+<p>Primero que todo, un breve resumen de la base de datos que utilizaremos en este capítulo. La base contiene datos sociodemográficos, calificaciones de cinco cursos y respuestas a preguntas sobre emociones en el contexto académico de 137 estudiantes de psicología de una universidad pública chilena. De este modo, lo que vamos a hacer es cargar la base de datos para ejecutar nuestros ejemplos. Para esto, vamos a darle un nombre o etiqueta a nuestra base de datos <code>dataset</code>, luego utilizaremos el <em>operador de asignación</em> <code>&lt;-</code> y al lado derecho usaremos la función <code>read.csv()</code> de R, el cual permite leer la base de datos llamada <code>emociones_academicas.csv</code>. Si deseas ejecutar el código contenido en este ejemplo, primero debes tener instalado en tu computador el lenguaje de programación R y RStudio (Para más información ir al capítulo 3, donde están las instrucciones paso a paso de cómo hacer esto). Volviendo al archivo csv, nótese que la base de datos está alojada en una página web y no en nuestro computador personal. Esto ya en sí mismo muestra una de las ventajas de R por sobre otros <em>software</em> de análisis de datos tales como SPSS. Inmediatamente abajo del código para cargar la base de datos, utilizaremos la función <code>names</code> para observar el nombre de las variables contenidas en la base de datos, el cual se encuentra impreso justo debajo de la celda.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb1-1" aria-hidden="true" tabindex="-1"></a>dataset <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;https://raw.githubusercontent.com/danielivanperez/dataset_ejemplo_libro_r/main/emociones_academicas.csv&quot;</span>)</span>
+<span id="cb1-2"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(dataset)</span></code></pre></div>
+<pre><code>##  [1] &quot;participante&quot;   &quot;edad&quot;           &quot;sexo&quot;           &quot;Nivel&quot;          &quot;calificacion_1&quot;
+##  [6] &quot;calificacion_2&quot; &quot;calificacion_3&quot; &quot;calificacion_4&quot; &quot;calificacion_5&quot; &quot;promedio&quot;      
+## [11] &quot;emo_aca_1&quot;      &quot;emo_aca_2&quot;      &quot;emo_aca_3&quot;      &quot;emo_aca_4&quot;      &quot;emo_aca_5&quot;     
+## [16] &quot;emo_aca_6&quot;      &quot;emo_aca_7&quot;      &quot;emo_aca_8&quot;      &quot;emo_aca_9&quot;      &quot;emo_aca_10&quot;    
+## [21] &quot;emo_aca_11&quot;     &quot;emo_aca_12&quot;</code></pre>
+<p>Para saber el tamaño de nuestra base de datos, podemos utilizar la función <code>dim()</code>, la cual nos entrega el número de filas y columnas respectivamente. Apliquemos dicha función a la base de datos recién cargada.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(dataset)</span></code></pre></div>
+<pre><code>## [1] 137  22</code></pre>
+<p>La salida nos dice que hay 137 filas (participantes en nuestro caso) y 22 columnas (o variables). Adicionalmente, una de las funciones más útiles de R es poder observar un conjunto acotado de filas, observaciones o, en nuestro caso participantes, de la base de datos a analizar. Para esto, vamos a usar la función <code>head()</code>. Al ejecutar esta función, R nos muestra las primeras 6 filas de la base de datos.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(dataset)</span></code></pre></div>
+<pre><code>##   participante edad     sexo Nivel                                   calificacion_1
+## 1            1   19 Femenino   201                                              4.8
+## 2            2   20 Femenino   201   Psicología del desarrollo infanto juvenil 4.7 
+## 3            3   20 Femenino   201                   Desarrollo infanto-juvenil 3,9
+## 4            4   20 Femenino   201 Metodologia de la investigación en psicología 38
+## 5            5   24 Femenino   302                       Psicología educacional 5.0
+## 6            6   19 Femenino   201                               neuropsicología 37
+##                                     calificacion_2                                      calificacion_3
+## 1                                              3.4                                                 4.6
+## 2                       Psicología Comunitaria 4.0                           Teoría Psicoanalítica 3.2
+## 3                           Teorias cognitivas 4,9                  Metodologia de investigacion  4,8 
+## 4         Teoria del desarrollo infanto juvenil 53                               Teorias cognitivas 48
+## 5                         Tecnicas proyectivas 6.5 Gestion de personas y desarrollo organizacional 6.3
+## 6 metodología de la investigacion en psicologia 30                                  infanto juvenil 47
+##                                             calificacion_4
+## 1                                                      3.8
+## 2                                   Teorías cognitivas 3.2
+## 3                               Psicología comunitaria 4,1
+## 4                               Psicología  comunitaria 33
+## 5 Construcción de pruebas e instrumentos de evaluación 5.6
+## 6                                psicología comunitaria 52
+##                                    calificacion_5 promedio emo_aca_1 emo_aca_2 emo_aca_3 emo_aca_4
+## 1                                             3.6       NA         4         2         3         2
+## 2 Metodologías de investigación en psicología 3.3       NA         4         1         3         3
+## 3                        Teoria psicoanalitica no       NA         4         3         3         4
+## 4                               Psicoanalítica 38       NA         3         3         2         3
+## 5              psicopatologia infanto juvenil 5.0       NA         3         1         4         4
+## 6                                psicoanalisis 37       NA         3         1         3         4
+##   emo_aca_5 emo_aca_6 emo_aca_7 emo_aca_8 emo_aca_9 emo_aca_10 emo_aca_11 emo_aca_12
+## 1         3         2         4         2         3          2          3          3
+## 2         4         1         2         3         4          1          3          4
+## 3         3         3         4         2         3          4          3          3
+## 4         2         4         3         3         3          2          3          4
+## 5         4         1         4         1         4          2          4          4
+## 6         4         1         3         2         3          1          2          5</code></pre>
+</div>
+<div id="seleccionando-columnas-en-una-base-de-datos" class="section level2" number="2.2">
+<h2><span class="header-section-number">2.2</span> Seleccionando Columnas en una Base de Datos</h2>
+<p>El código de arriba nos muestra las respuestas de los primeros 6 sujetos de nuestra base de datos. Podemos fácilmente ver que la salida o <em>output</em> que nos da R es relativamente extensa. Sería muy ineficiente siempre estar imprimiendo bases de datos de forma completa. Por esta razón, es mucho mejor trabajar viendo un número limitado de variables al mismo tiempo. Empecemos con el caso más simple de explorar solo una variable. A continuación, vamos a mostrar cómo utilizar el símbolo dólar <code>$</code>, el cual nos permite seleccionar una columna o variable de la base de datos. Para proseguir con el ejemplo, nos centraremos en la variable <code>calificacion_1</code>. De este modo, primero escribimos el nombre de la base de datos, seguido del signo dólar y, luego, seleccionar o escribir el nombre de la variables deseada (nótese que seguimos utilizando la función <code>head()</code> con el objetivo de tener solo 6 filas en la salida de R).</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(dataset<span class="sc">$</span>calificacion_1)</span></code></pre></div>
+<pre><code>## [1] &quot;4.8&quot;                                              &quot;Psicología del desarrollo infanto juvenil 4.7 &quot;  
+## [3] &quot;Desarrollo infanto-juvenil 3,9&quot;                   &quot;Metodologia de la investigación en psicología 38&quot;
+## [5] &quot;Psicología educacional 5.0&quot;                       &quot;neuropsicología 37&quot;</code></pre>
+<p>La salida de R nos muestra las primeras 6 filas de la <code>variable calificacion_1</code>. Para mencionar otra forma útil de selección de columnas que usaremos más abajo, está elegir un rango de columnas como por ejemplo:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(dataset[<span class="dv">5</span><span class="sc">:</span><span class="dv">9</span>]) </span></code></pre></div>
+<pre><code>##                                     calificacion_1                                   calificacion_2
+## 1                                              4.8                                              3.4
+## 2   Psicología del desarrollo infanto juvenil 4.7                        Psicología Comunitaria 4.0
+## 3                   Desarrollo infanto-juvenil 3,9                           Teorias cognitivas 4,9
+## 4 Metodologia de la investigación en psicología 38         Teoria del desarrollo infanto juvenil 53
+## 5                       Psicología educacional 5.0                         Tecnicas proyectivas 6.5
+## 6                               neuropsicología 37 metodología de la investigacion en psicologia 30
+##                                        calificacion_3
+## 1                                                 4.6
+## 2                           Teoría Psicoanalítica 3.2
+## 3                  Metodologia de investigacion  4,8 
+## 4                               Teorias cognitivas 48
+## 5 Gestion de personas y desarrollo organizacional 6.3
+## 6                                  infanto juvenil 47
+##                                             calificacion_4
+## 1                                                      3.8
+## 2                                   Teorías cognitivas 3.2
+## 3                               Psicología comunitaria 4,1
+## 4                               Psicología  comunitaria 33
+## 5 Construcción de pruebas e instrumentos de evaluación 5.6
+## 6                                psicología comunitaria 52
+##                                    calificacion_5
+## 1                                             3.6
+## 2 Metodologías de investigación en psicología 3.3
+## 3                        Teoria psicoanalitica no
+## 4                               Psicoanalítica 38
+## 5              psicopatologia infanto juvenil 5.0
+## 6                                psicoanalisis 37</code></pre>
+<p>Podemos inferir del código escrito arriba que R le asigna un número a cada una de las columnas de la base de datos empezando desde 1. Al interior del paréntesis cuadrado, le pedimos a R que seleccione desde la columna 5 hasta la columna 9 y que nos muestre sólo estas columnas o variables. De este modo, R muestra los valores desde la variable <code>calificacion_1</code> hasta <code>calificacion_5</code>.</p>
+</div>
+<div id="limpiando-valores-en-una-base-de-datos" class="section level2" number="2.3">
+<h2><span class="header-section-number">2.3</span> Limpiando Valores en una Base de Datos</h2>
+<p>Volviendo al caso, como podemos ver en las primeras 6 filas de la variable <code>calificacion_1</code>, a los participantes se les pidió escribir sus calificaciones para un curso determinado. Podemos observar que ellos escribieron sus respuestas de diferentes formas. Por ejemplo, escribiendo solo la calificación como en el primer caso, o incluso escribiendo el nombre del curso de manera completa y luego la calificación, en otros casos con un <code>.</code> como en la fila [1], con una <code>,</code> como en la fila [3] o simplemente sin punto ni coma como en la fila [6]. Esto constituiría un primer problema para el analista de datos debido a que no tenemos los valores ordenados y formateados de manera estándar (por ejemplo, tener solo números dos números separados por un <code>.</code>) al interior de la variable. Justamente en este tipo de situaciones es cuando R muestra todo su poder y utilidad.</p>
+<p>Como en cada respuesta o celda de la columna tenemos una combinación de texto y números, voy a aplicar una función en R para que transforme todo lo que haya en sus celdas a un tipo de formato llamado <code>character</code> o carácter, el cual se refiere a que la información dentro de cada celda es simplemente texto (en R hay diferentes tipos de datos como los numéricos o <code>numeric</code>). Esto lo hago principalmente para proceder de manera ordenada y evitar posibles errores en el futuro al ejecutar código.</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb11-1" aria-hidden="true" tabindex="-1"></a>dataset[<span class="dv">5</span><span class="sc">:</span><span class="dv">9</span>] <span class="ot">&lt;-</span> <span class="fu">lapply</span>(dataset[<span class="dv">5</span><span class="sc">:</span><span class="dv">9</span>], as.character) <span class="co"># transformar los datos a caracteres</span></span></code></pre></div>
+<p>De forma muy resumida, el código de arriba lo que hizo fue aplicar una función que transforma el tipo de datos de cada celda a caracteres a un set de columnas definida desde <code>[5:9]</code> (es decir, desde <code>calificacion_1</code> a <code>calificacion_5</code>) de la base de datos <code>dataset</code>. Nótese que en la segunda parte del código hay un signo hashtag <code>#</code>, el cual le dice a R que todo lo que está después de dicho símbolo no debe ser ejecutado. El <code>#</code> lo usamos cuando queremos escribir comentarios junto al código para describir qué fue lo que hicimos como una ayuda de memoria (luego de un par de días, semanas o meses, esto será de mucha ayuda) o para explicarle a alguien cada paso del código.</p>
+<p>Ahora bien, lo que haremos a continuación es eliminar todo lo que no sea números (letras, puntuaciones, etc.) para las variables <code>calificacion_1</code> a <code>calificacion_5</code> y, obviamente, dejar solo números o calificaciones en las celdas. Para esto, utilizaremos el código que está abajo, el cual es aplicado a cada una de las calificaciones existentes en la base de datos con el fin de hacer más comprensible el ejemplo.</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb12-1" aria-hidden="true" tabindex="-1"></a>dataset<span class="sc">$</span>calificacion_1 <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">&quot;[^0-9]&quot;</span>, <span class="st">&quot;&quot;</span>, dataset<span class="sc">$</span>calificacion_1)</span>
+<span id="cb12-2"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb12-2" aria-hidden="true" tabindex="-1"></a>dataset<span class="sc">$</span>calificacion_2 <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">&quot;[^0-9]&quot;</span>, <span class="st">&quot;&quot;</span>, dataset<span class="sc">$</span>calificacion_2)</span>
+<span id="cb12-3"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb12-3" aria-hidden="true" tabindex="-1"></a>dataset<span class="sc">$</span>calificacion_3 <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">&quot;[^0-9]&quot;</span>, <span class="st">&quot;&quot;</span>, dataset<span class="sc">$</span>calificacion_3)</span>
+<span id="cb12-4"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb12-4" aria-hidden="true" tabindex="-1"></a>dataset<span class="sc">$</span>calificacion_4 <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">&quot;[^0-9]&quot;</span>, <span class="st">&quot;&quot;</span>, dataset<span class="sc">$</span>calificacion_4)</span>
+<span id="cb12-5"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb12-5" aria-hidden="true" tabindex="-1"></a>dataset<span class="sc">$</span>calificacion_5 <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">&quot;[^0-9]&quot;</span>, <span class="st">&quot;&quot;</span>, dataset<span class="sc">$</span>calificacion_5)</span></code></pre></div>
+<p>Si ejecutamos los nuevos valores contenidos en las columnas 5 a 9, observaremos que solo hay números en las celdas.</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(dataset[<span class="dv">5</span><span class="sc">:</span><span class="dv">9</span>])</span></code></pre></div>
+<pre><code>##   calificacion_1 calificacion_2 calificacion_3 calificacion_4 calificacion_5
+## 1             48             34             46             38             36
+## 2             47             40             32             32             33
+## 3             39             49             48             41               
+## 4             38             53             48             33             38
+## 5             50             65             63             56             50
+## 6             37             30             47             52             37</code></pre>
+<p>En esta etapa, los valores ya empiezan a estar mucho más ordenados y cada vez están más cerca del formato final que deseamos para ejecutar algunos análisis de datos de utilidad. Sin embargo, todavía tenemos, al menos, dos problemas. El primero es que las calificaciones deberían tener un punto <code>.</code> entremedio de ambos números y, en segundo lugar, que no debemos olvidar que el contenido de las celdas está almacenado como caracteres y no como números. Es muy importante que nuestras variables sean leídas por R como variables numéricas para proceder con la aplicación de funciones cuantitativas. Por ejemplo, si las variables están formateadas como caracteres y queremos aplicar la función de media aritmética, R imprimirá un mensaje de error.</p>
+<p>De este modo, lo primero que haremos es resolver el problema del punto entre ambos números. Para esto, usaremos el código que esta abajo. Nótese que cada función se ha aplicado a cada una de las cinco variables por separado con el fin de que el ejemplo sea más entendible.</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb15-1" aria-hidden="true" tabindex="-1"></a>dataset<span class="sc">$</span>calificacion_1 <span class="ot">&lt;-</span> <span class="fu">sub</span>(<span class="st">&quot;(?&lt;=^.)&quot;</span>, <span class="st">&quot;</span><span class="sc">\\</span><span class="st">.&quot;</span>, dataset<span class="sc">$</span>calificacion_1 , <span class="at">perl=</span><span class="cn">TRUE</span>)</span>
+<span id="cb15-2"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb15-2" aria-hidden="true" tabindex="-1"></a>dataset<span class="sc">$</span>calificacion_2 <span class="ot">&lt;-</span> <span class="fu">sub</span>(<span class="st">&quot;(?&lt;=^.)&quot;</span>, <span class="st">&quot;</span><span class="sc">\\</span><span class="st">.&quot;</span>, dataset<span class="sc">$</span>calificacion_2 , <span class="at">perl=</span><span class="cn">TRUE</span>)</span>
+<span id="cb15-3"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb15-3" aria-hidden="true" tabindex="-1"></a>dataset<span class="sc">$</span>calificacion_3 <span class="ot">&lt;-</span> <span class="fu">sub</span>(<span class="st">&quot;(?&lt;=^.)&quot;</span>, <span class="st">&quot;</span><span class="sc">\\</span><span class="st">.&quot;</span>, dataset<span class="sc">$</span>calificacion_3 , <span class="at">perl=</span><span class="cn">TRUE</span>)</span>
+<span id="cb15-4"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb15-4" aria-hidden="true" tabindex="-1"></a>dataset<span class="sc">$</span>calificacion_4 <span class="ot">&lt;-</span> <span class="fu">sub</span>(<span class="st">&quot;(?&lt;=^.)&quot;</span>, <span class="st">&quot;</span><span class="sc">\\</span><span class="st">.&quot;</span>, dataset<span class="sc">$</span>calificacion_4 , <span class="at">perl=</span><span class="cn">TRUE</span>)</span>
+<span id="cb15-5"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb15-5" aria-hidden="true" tabindex="-1"></a>dataset<span class="sc">$</span>calificacion_5 <span class="ot">&lt;-</span> <span class="fu">sub</span>(<span class="st">&quot;(?&lt;=^.)&quot;</span>, <span class="st">&quot;</span><span class="sc">\\</span><span class="st">.&quot;</span>, dataset<span class="sc">$</span>calificacion_5 , <span class="at">perl=</span><span class="cn">TRUE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(dataset[<span class="dv">5</span><span class="sc">:</span><span class="dv">9</span>])</span></code></pre></div>
+<pre><code>##   calificacion_1 calificacion_2 calificacion_3 calificacion_4 calificacion_5
+## 1            4.8            3.4            4.6            3.8            3.6
+## 2            4.7            4.0            3.2            3.2            3.3
+## 3            3.9            4.9            4.8            4.1               
+## 4            3.8            5.3            4.8            3.3            3.8
+## 5            5.0            6.5            6.3            5.6            5.0
+## 6            3.7            3.0            4.7            5.2            3.7</code></pre>
+<p>Genial, ahora cada una de las calificaciones tiene un punto que separa ambos valores. Solo con algunas líneas de código nos hemos ahorrado, por ejemplo, hacer este procedimiento de forma manual. Es decir, escribiendo un punto para cada valor en las celdas de las variables multiplicado por 137 participantes. Probablemente esto nos hubiera dejado de muy mal humor y habiendo gastado mucho tiempo y con posibles errores en nuestra base de datos 🥲.</p>
+<p>Pero aún queda un problema más por resolver: cambiar el contenido de la celda de carácter a número. Para ilustrar de forma más clara el problema, imaginemos que queremos saber la media aritmética de la variable <code>calificacion_1</code>:</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(dataset<span class="sc">$</span>calificacion_1, <span class="at">na.rm =</span> <span class="cn">TRUE</span>) <span class="co"># na.rm = True descarta las celdas sin valores </span></span></code></pre></div>
+<pre><code>## Warning in mean.default(dataset$calificacion_1, na.rm = TRUE): argument is not numeric or logical:
+## returning NA</code></pre>
+<pre><code>## [1] NA</code></pre>
+<p>El mensaje de error dice lo siguiente: “argument is not numeric or logical: returning NA[1] NA”. Básicamente lo que está sucediendo aquí es que R no puede aplicar una operación matemática a texto o caracteres. Para solucionar esto, solo debemos ejecutar el siguiente código que transformará el texto a números.</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb21-1" aria-hidden="true" tabindex="-1"></a>dataset[<span class="dv">5</span><span class="sc">:</span><span class="dv">9</span>] <span class="ot">&lt;-</span> <span class="fu">lapply</span>(dataset[<span class="dv">5</span><span class="sc">:</span><span class="dv">9</span>], as.numeric) <span class="co"># Convertir columnas de 5 a 9 a numeros</span></span></code></pre></div>
+<p>Ahora apliquemos nuevamente la función de media aritmética a la variable <code>calificacion_1</code> y veamos qué sucede:</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(dataset<span class="sc">$</span>calificacion_1, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
+<pre><code>## [1] 4.38176</code></pre>
+<p>Al fin hemos obtenido el valor promedio para esa columna el cual corresponde a 4.38176. Esto quiere decir que los valores de las columnas están listos para ser analizados cuantitativamente. Antes de pasar a la siguiente sección, me gustaría presentar la función <code>sum()</code> o <em>summary</em>, la cual es una de las funciones más frecuentes de R y, básicamente, nos entrega un resumen general de las variables descriptivas de una variable cuantitativa. Para ilustrarla, apliquemos dicha función a la columna <code>calificacion_1</code>:</p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(dataset<span class="sc">$</span>calificacion_1)</span></code></pre></div>
+<pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA&#39;s 
+##   1.000   3.400   4.400   4.382   5.400   7.000      12</code></pre>
+<p>La salida de R muestra siete valores: el puntaje mínimo, el puntaje del primer cuartil, la mediana, la media aritmética, el puntaje del tercer cuartil, el puntaje máximo de la columna y el número de celdas con valores perdidos o NA’s (o <em>Not Available</em>).</p>
+</div>
+<div id="creación-de-variables-a-partir-de-otras-columnas" class="section level2" number="2.4">
+<h2><span class="header-section-number">2.4</span> Creación de Variables a partir de otras Columnas</h2>
+<p>Ahora que ya tenemos las columnas de las calificaciones formateadas apropiadamente, vamos a calcular el promedio de las calificaciones. Para esto, vamos a utilizar la función <code>rowMeans()</code> y dentro del paréntesis, escribiremos el set de columnas a utilizar, en nuestro caso, las cinco calificaciones que están contenidas en las columnas 5 a 9. Finalmente, esta nueva columna será agregada a la base de datos bajo el nombre <code>promedio</code>.</p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb26-1" aria-hidden="true" tabindex="-1"></a>dataset<span class="sc">$</span>promedio <span class="ot">&lt;-</span> <span class="fu">rowMeans</span>(dataset[,<span class="dv">5</span><span class="sc">:</span><span class="dv">9</span>], <span class="at">na.rm=</span><span class="cn">TRUE</span>)</span>
+<span id="cb26-2"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(dataset<span class="sc">$</span>promedio) <span class="co"># codigo para ver las primeras 6 calificaciones. </span></span></code></pre></div>
+<pre><code>## [1] 4.040 3.680 4.425 4.200 5.680 4.060</code></pre>
+<p>A diferencia de la variable <code>promedio</code> para las calificaciones de los estudiantes, ahora nos centraremos en un constructo llamado “emociones académicas”, la cual se enfoca en consultar a los estudiantes por una variedad de emociones, tanto positivas como negativas, que son sentidas particularmente cuando los estudiantes están en clases. Los 12 ítems son resumidos en la Tabla 1.</p>
+<pre><code>                                       Tabla 1</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th>Numero</th>
+<th>Reactivo a contestar</th>
+<th align="center">Nombre en la Base de Datos</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Cuando estoy en clases, me siento a gusto.</td>
+<td align="center">emo_aca_1</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Cuando estoy en clases, me siento enojado.</td>
+<td align="center">emo_aca_2</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Cuando estoy en clases, me siento con energía.</td>
+<td align="center">emo_aca_3</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Cuando estoy en clases, me siento ansioso (nervioso).</td>
+<td align="center">emo_aca_4</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>Cuando estoy en clases, me siento entusiasmado.</td>
+<td align="center">emo_aca_5</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>Cuando estoy en clases, me siento molesto.</td>
+<td align="center">emo_aca_6</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>Cuando estoy en clases, me siento inspirado.</td>
+<td align="center">emo_aca_7</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>Cuando estoy en clases, me siento desalentado.</td>
+<td align="center">emo_aca_8</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>Cuando estoy en clases, me siento satisfecho.</td>
+<td align="center">emo_aca_9</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td>Cuando estoy en clases, me siento triste.</td>
+<td align="center">emo_aca_10</td>
+</tr>
+<tr class="odd">
+<td>11</td>
+<td>Cuando estoy en clases, me siento relajado.</td>
+<td align="center">emo_aca_11</td>
+</tr>
+<tr class="even">
+<td>12</td>
+<td>Cuando estoy en clases, me siento cansado.</td>
+<td align="center">emo_aca_12</td>
+</tr>
+</tbody>
+</table>
+<p>Con el fin de mantener la claridad de los ejemplos y centrarnos en el uso de R para el análisis de datos, procederemos simplemente a construir las variables a partir de las sumatorias de los valores por filas. <a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></p>
+<p>Lo que haremos a continuación es construir dos variables: <code>emociones_positivas</code> y <code>emociones_negativas</code>. Como podemos observar en la tabla 1, las emociones positivas están dispuestas en los reactivos impares y las emociones negativas están en los reactivos pares, por lo que no podemos simplemente seleccionar un rango continuo de columnas para crear estas nuevas variables.</p>
+<p>En este caso, introduciremos una nueva forma de seleccionar variables. Usaremos como siempre el nombre de la base de datos <code>dataset</code> y los paréntesis cuadrados <code>[]</code> para seleccionar las filas y el nombre o etiqueta de todas las variables deseadas entre comillas. Vamos a ejecutar este comando en la consola para examinar el resultado y explicarlo a continuación.</p>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(dataset[ , <span class="fu">c</span>(<span class="st">&quot;emo_aca_1&quot;</span>,<span class="st">&quot;emo_aca_3&quot;</span>,<span class="st">&quot;emo_aca_5&quot;</span>,<span class="st">&quot;emo_aca_7&quot;</span>,<span class="st">&quot;emo_aca_9&quot;</span>,<span class="st">&quot;emo_aca_11&quot;</span>)])</span></code></pre></div>
+<pre><code>##   emo_aca_1 emo_aca_3 emo_aca_5 emo_aca_7 emo_aca_9 emo_aca_11
+## 1         4         3         3         4         3          3
+## 2         4         3         4         2         4          3
+## 3         4         3         3         4         3          3
+## 4         3         2         2         3         3          3
+## 5         3         4         4         4         4          4
+## 6         3         3         4         3         3          2</code></pre>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb31-1" aria-hidden="true" tabindex="-1"></a>dataset<span class="sc">$</span>emociones_positivas <span class="ot">&lt;-</span> <span class="fu">rowMeans</span>(dataset[,<span class="fu">c</span>(<span class="st">&quot;emo_aca_1&quot;</span>,<span class="st">&quot;emo_aca_3&quot;</span>,<span class="st">&quot;emo_aca_5&quot;</span>,<span class="st">&quot;emo_aca_7&quot;</span>, <span class="st">&quot;emo_aca_9&quot;</span>,<span class="st">&quot;emo_aca_11&quot;</span>)], <span class="at">na.rm=</span><span class="cn">TRUE</span>)</span>
+<span id="cb31-2"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb31-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-3"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb31-3" aria-hidden="true" tabindex="-1"></a>dataset<span class="sc">$</span>emociones_negativas <span class="ot">&lt;-</span> <span class="fu">rowMeans</span>(dataset[,<span class="fu">c</span>(<span class="st">&quot;emo_aca_2&quot;</span>,<span class="st">&quot;emo_aca_4&quot;</span>,<span class="st">&quot;emo_aca_6&quot;</span>,<span class="st">&quot;emo_aca_8&quot;</span>, <span class="st">&quot;emo_aca_10&quot;</span>,<span class="st">&quot;emo_aca_12&quot;</span>)], <span class="at">na.rm=</span><span class="cn">TRUE</span>)</span></code></pre></div>
+</div>
+<div id="graficando-datos" class="section level2" number="2.5">
+<h2><span class="header-section-number">2.5</span> Graficando Datos</h2>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(<span class="fu">table</span>(dataset<span class="sc">$</span>emociones_positivas)) <span class="co">#both columns need to be integer</span></span></code></pre></div>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-21-1.png" width="672" /></p>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(dataset<span class="sc">$</span>emociones_positivas, dataset<span class="sc">$</span>promedio) <span class="co">#both columns need to be integer</span></span></code></pre></div>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-22-1.png" width="672" /></p>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(stats)</span>
+<span id="cb34-2"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb34-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-3"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb34-3" aria-hidden="true" tabindex="-1"></a>reg<span class="ot">&lt;-</span><span class="fu">lm</span>(dataset<span class="sc">$</span>promedio <span class="sc">~</span> dataset<span class="sc">$</span>emociones_positivas, <span class="at">data =</span> dataset)</span>
+<span id="cb34-4"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb34-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-5"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb34-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(dataset<span class="sc">$</span>emociones_positivas, dataset<span class="sc">$</span>promedio)</span>
+<span id="cb34-6"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb34-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-7"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb34-7" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(reg, <span class="at">col =</span> <span class="st">&quot;green&quot;</span>)</span></code></pre></div>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-23-1.png" width="672" /></p>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb35-1" aria-hidden="true" tabindex="-1"></a>reg</span></code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = dataset$promedio ~ dataset$emociones_positivas, 
+##     data = dataset)
+## 
+## Coefficients:
+##                 (Intercept)  dataset$emociones_positivas  
+##                      3.8581                       0.1914</code></pre>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(stats)</span>
+<span id="cb37-2"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb37-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-3"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb37-3" aria-hidden="true" tabindex="-1"></a>reg_1<span class="ot">&lt;-</span><span class="fu">lm</span>(dataset<span class="sc">$</span>promedio <span class="sc">~</span> dataset<span class="sc">$</span>emociones_negativas, <span class="at">data =</span> dataset)</span>
+<span id="cb37-4"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb37-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-5"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb37-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(dataset<span class="sc">$</span>emociones_negativas, dataset<span class="sc">$</span>promedio)</span>
+<span id="cb37-6"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb37-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-7"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb37-7" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(reg_1, <span class="at">col =</span> <span class="st">&quot;red&quot;</span>)</span></code></pre></div>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-24-1.png" width="672" /></p>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb38-1" aria-hidden="true" tabindex="-1"></a>reg_1</span></code></pre></div>
+<pre><code>## 
+## Call:
+## lm(formula = dataset$promedio ~ dataset$emociones_negativas, 
+##     data = dataset)
+## 
+## Coefficients:
+##                 (Intercept)  dataset$emociones_negativas  
+##                       4.828                       -0.148</code></pre>
+
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="1">
+<li id="fn1"><p>(Si estuviéramos siguiendo los pasos tradicionales en el análisis de datos, probablemente antes de realizar la sumatoria de las columnas, en esta etapa deberíamos ejecutar un análisis de confiabilidad para determinar su consistencia interna.<a href="r-en-acción-analizando-un-estudio-empírico-real.html#fnref1" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="introducción.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="qué-es-r-instalando-r-y-rstudio.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/danielivanperez/libro_analisis_de_datos/edit/master/02-aplicando_r.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": "https://github.com/danielivanperez/libro_analisis_de_datos/blob/master/02-aplicando_r.Rmd",
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+},
+"search": true
+});
+});
+</script>
+
+</body>
+
+</html>
