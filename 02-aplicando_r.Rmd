@@ -1,6 +1,6 @@
 # R en Acción: Analizando un Ejemplo
 
-R es una herramienta de análisis muy poderosa. El propósito de este capítulo es principalmente mostrar algunas de las cosas que puede hacer R. Si bien explico los objetivos del análisis de datos para cada parte junto con el código utilizado, la idea principal es ilustrar algunas de sus funcionalidades y no explicar el código de forma extensa. Para eso, está el resto de las secciones del libro.
+R es una herramienta de análisis muy poderosa. El propósito de este capítulo es principalmente mostrar algunas de las cosas que puede hacer R, especialmente cómo cargar un base de datos desde una pagina web, describir algunas funciones básicas, cómo limpiar una base de datos (esto es particularmente crítico ya que se estima que el 80% del tiempo dedicado al análisis de datos es para limpiar y producir una base de datos que sea analizable) y cómo graficar. Si bien explico los objetivos del análisis de datos para cada parte junto con el código utilizado, la idea principal es ilustrar algunas de sus funcionalidades y no explicar el código de forma extensa. Para eso, está el resto de las secciones del libro. 
 
 ## Cargando una Base de Datos desde la Web
 
@@ -50,7 +50,7 @@ dataset[5:9] <- lapply(dataset[5:9], as.character) # transformar los datos a car
 
 De forma muy resumida, el código de arriba lo que hizo fue aplicar una función que transforma el tipo de datos de cada celda a caracteres a un set de columnas definida desde `[5:9]` (es decir, desde `calificacion_1` a ` calificacion_5`) de la base de datos `dataset`. Nótese que en la segunda parte del código hay un signo hashtag `#`, el cual le dice a R que todo lo que está después de dicho símbolo no debe ser ejecutado. El `#` lo usamos cuando queremos escribir comentarios junto al código para describir qué fue lo que hicimos como una ayuda de memoria (luego de un par de días, semanas o meses, esto será de mucha ayuda) o para explicarle a alguien cada paso del código.  
 
-Ahora bien, lo que haremos a continuación es eliminar todo lo que no sea números (letras, puntuaciones, etc.) para las variables `calificacion_1` a ` calificacion_5` y, obviamente, dejar solo números o calificaciones en las celdas. Para esto, utilizaremos el código que está abajo, el cual es aplicado a cada una de las calificaciones existentes en la base de datos con el fin de. hacer más comprensible el ejemplo.
+Ahora bien, lo que haremos a continuación es eliminar todo lo que no sea números (letras, puntuaciones, etc.) para las variables `calificacion_1` a ` calificacion_5` y, obviamente, dejar solo números o calificaciones en las celdas. Para esto, utilizaremos el código que está abajo, el cual es aplicado a cada una de las calificaciones existentes en la base de datos con el fin de hacer más comprensible el ejemplo.
 
 ```{r}
 dataset$calificacion_1 <- gsub("[^0-9]", "", dataset$calificacion_1)
