@@ -355,7 +355,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb26-1" aria-hidden="true" tabindex="-1"></a>dataset<span class="sc">$</span>promedio <span class="ot">&lt;-</span> <span class="fu">rowMeans</span>(dataset[,<span class="dv">5</span><span class="sc">:</span><span class="dv">9</span>], <span class="at">na.rm=</span><span class="cn">TRUE</span>)</span>
 <span id="cb26-2"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(dataset<span class="sc">$</span>promedio) <span class="co"># codigo para ver las primeras 6 calificaciones. </span></span></code></pre></div>
 <pre><code>## [1] 4.040 3.680 4.425 4.200 5.680 4.060</code></pre>
-<p>A diferencia de la variable <code>promedio</code> para las calificaciones de los estudiantes, ahora nos centraremos en un constructo llamado “emociones académicas”, la cual se enfoca en consultar a los estudiantes por una variedad de emociones, tanto positivas como negativas, que son sentidas particularmente cuando los estudiantes están en clases. Los 12 ítems son resumidos en la Tabla 1.</p>
+<p>A diferencia de la variable <code>promedio</code> para las calificaciones de los estudiantes, ahora nos centraremos en un constructo llamado “emociones académicas”, la cual se enfoca en consultar a los estudiantes por una variedad de emociones tanto positivas como negativas que son sentidas en una variedad de situaciones académicas. Las respuestas posibles están dispuestas en una escala Likert donde el valor mínimo es 1(“nunca”) y el valor máximo es 5 (“siempre”). Los 12 ítems son resumidos en la Tabla 1.</p>
 <pre><code>                                       Tabla 1</code></pre>
 <table>
 <thead>
@@ -446,9 +446,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="graficando-datos" class="section level2" number="2.5">
 <h2><span class="header-section-number">2.5</span> Graficando Datos</h2>
 <div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(<span class="fu">table</span>(dataset<span class="sc">$</span>emociones_positivas)) <span class="co">#both columns need to be integer</span></span></code></pre></div>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-21-1.png" width="672" /></p>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-19-1.png" width="672" /></p>
 <div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(dataset<span class="sc">$</span>emociones_positivas, dataset<span class="sc">$</span>promedio) <span class="co">#both columns need to be integer</span></span></code></pre></div>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-22-1.png" width="672" /></p>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-20-1.png" width="672" /></p>
 <div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(stats)</span>
 <span id="cb34-2"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb34-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb34-3"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb34-3" aria-hidden="true" tabindex="-1"></a>reg<span class="ot">&lt;-</span><span class="fu">lm</span>(dataset<span class="sc">$</span>promedio <span class="sc">~</span> dataset<span class="sc">$</span>emociones_positivas, <span class="at">data =</span> dataset)</span>
@@ -456,7 +456,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb34-5"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb34-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(dataset<span class="sc">$</span>emociones_positivas, dataset<span class="sc">$</span>promedio)</span>
 <span id="cb34-6"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb34-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb34-7"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb34-7" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(reg, <span class="at">col =</span> <span class="st">&quot;green&quot;</span>)</span></code></pre></div>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-23-1.png" width="672" /></p>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-21-1.png" width="672" /></p>
 <div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb35-1" aria-hidden="true" tabindex="-1"></a>reg</span></code></pre></div>
 <pre><code>## 
 ## Call:
@@ -473,7 +473,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb37-5"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb37-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(dataset<span class="sc">$</span>emociones_negativas, dataset<span class="sc">$</span>promedio)</span>
 <span id="cb37-6"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb37-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb37-7"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb37-7" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(reg_1, <span class="at">col =</span> <span class="st">&quot;red&quot;</span>)</span></code></pre></div>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-24-1.png" width="672" /></p>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-22-1.png" width="672" /></p>
 <div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb38-1" aria-hidden="true" tabindex="-1"></a>reg_1</span></code></pre></div>
 <pre><code>## 
 ## Call:
