@@ -48,10 +48,11 @@ Como en cada respuesta o celda de la columna tenemos una combinación de texto y
 dataset[5:9] <- lapply(dataset[5:9], as.character) # transformar los datos a caracteres
 ```
 
-De forma muy resumida, el código de arriba lo que hizo fue aplicar una función que transforme el tipo de datos de cada celda a caracteres a un set de columnas definida desde `[5:9]` (es decir, desde `calificacion_1` a ` calificacion_5`) de la base de datos `dataset`. Nótese que en la segunda parte del código hay un signo hashtag `#`, el cual le dice a R que todo lo que está después de dicho símbolo no debe ser ejecutado. 
+De forma muy resumida, el código de arriba lo que hizo fue aplicar una función que transforma el tipo de datos de cada celda a caracteres a un set de columnas definida desde `[5:9]` (es decir, desde `calificacion_1` a ` calificacion_5`) de la base de datos `dataset`. Nótese que en la segunda parte del código hay un signo hashtag `#`, el cual le dice a R que todo lo que está después de dicho símbolo no debe ser ejecutado. El `#` lo usamos cuando queremos escribir comentarios junto al código para describir qué fue lo que hicimos como una ayuda de memoria (luego de un par de días, semanas o meses, esto será de mucha ayuda) o para explicarle a alguien cada paso del código.  
+
+Ahora bien, lo que haremos a continuación es eliminar todo lo que no sea números (letras, puntuaciones, etc.) para las variables `calificacion_1` a ` calificacion_5` y, obviamente, dejar solo números o calificaciones en las celdas. Para esto, utilizaremos el código que está abajo, el cual es aplicado a cada una de las calificaciones existentes en la base de datos con el fin de. hacer más comprensible el ejemplo.
 
 ```{r}
-#sel <- grepl("calificacion_",names(dataset))
 dataset$calificacion_1 <- gsub("[^0-9]", "", dataset$calificacion_1)
 dataset$calificacion_2 <- gsub("[^0-9]", "", dataset$calificacion_2)
 dataset$calificacion_3 <- gsub("[^0-9]", "", dataset$calificacion_3)
@@ -59,10 +60,12 @@ dataset$calificacion_4 <- gsub("[^0-9]", "", dataset$calificacion_4)
 dataset$calificacion_5 <- gsub("[^0-9]", "", dataset$calificacion_5)
 ```
 
+Si ejecutamos los nuevos valores contenidos en las columnas 5 a 9, observaremos que solo hay números en las celdas. 
+
 ```{r}
-head(dataset$calificacion_1)
-#dataset[5:9] <- lapply(dataset[5:9], as.character) # primero tuve que transformar los datos a caracteres
+head(dataset[5:9])
 ```
+En esta etapa, los valores ya empiezan a estar mucho más ordenados y cada vez están más cerca del formato final que deseamos para ejecutar algunos análisis de datos de utilidad. Sin embargo, todavía tenemos, al menos, dos problemas. El primero es que las calificaciones deberían tener un punto `.` entremedio de ambos números y, en segundo lugar, que no debemos olvidar que el contenido de las celdas está almacenado como caracteres y no como números. Es muy importante que nuestras variables sean leídas por R como variables numéricas para proceder con la aplicación de funciones cuantitativas. Por ejemplo, si las variables están formateadas como caracteres y queremos aplicar la función de media aritmética, R imprimirá un mensaje de error. De este modo, lo primero que haremos es resolver el problema del punto entre ambos números. Para esto, usaremos el código que esta abajo. Nótese que cada función se ha aplicado a cada una de las cinco variables por separado con el fin de que el ejemplo sea más entendible. 
 
 ```{r}
 dataset$calificacion_1 <- sub("(?<=^.)", "\\.", dataset$calificacion_1 , perl=TRUE)
@@ -73,17 +76,28 @@ dataset$calificacion_5 <- sub("(?<=^.)", "\\.", dataset$calificacion_5 , perl=TR
 ```
 
 ```{r}
-head(dataset$calificacion_1,10)
+head(dataset[5:9])
 ```
-
-## Tipo de Datos Numéricos y Creación de Variables a partir de Otras
+Genial, ahora cada una de las calificaciones tiene un punto que separa ambos valores. Pero aún queda un problema más por resolver: cambiar el contenido de la celda de carácter a número. Para ilustrar de forma más clara el problema, imaginemos que queremos saber la media aritmética de la variable `calificacion_1`: 
 
 ```{r}
-dataset[5:9] <- lapply(dataset[5:9], as.numeric) # luego a numericos
-head(dataset,10)
-#write.csv(dataset,"emociones_academicas_ejemplo.csv")
+mean(dataset$calificacion_1, na.rm = TRUE) # na.rm = True descarta las celdas sin valores 
+```
+El mensaje de error dice lo siguiente: “argument is not numeric or logical: returning NA[1] NA”. Básicamente lo que está sucediendo aquí es que R no puede aplicar una operación matemática a texto o caracteres. Para solucionar esto, solo debemos ejecutar el siguiente código que transformará el texto a números. 
+
+
+```{r}
+dataset[5:9] <- lapply(dataset[5:9], as.numeric) # Convertir columnas de 5 a 9 a numeros
 ```
 
+Ahora apliquemos nuevamente la función de media aritmética a la variable `calificacion_1` y veamos qué sucede:
+
+```{r}
+mean(dataset$calificacion_1, na.rm = TRUE)
+``` 
+Al fin hemos obtenido el valor promedio para esa columna el cual corresponde a 4.38176. Esto quiere decir que los valores de las columnas están listas para ser analizadas cuantitativamente.  
+
+## Creación de Variables a partir de Otras
 
 ```{r}
 dataset$promedio <- rowMeans(dataset[,5:9], na.rm=TRUE)
