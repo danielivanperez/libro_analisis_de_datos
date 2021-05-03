@@ -116,6 +116,25 @@ Ahora que ya tenemos las columnas de las calificaciones formateadas apropiadamen
 dataset$promedio <- rowMeans(dataset[,5:9], na.rm=TRUE)
 head(dataset$promedio) # codigo para ver las primeras 6 calificaciones. 
 ```
+A diferencia de la variable `promedio` para las calificaciones de los estudiantes, ahora nos centraremos en un constructo llamado “emociones académicas”, la cual se enfoca en consultar a los estudiantes por una variedad de emociones, tanto positivas como negativas, que son sentidas particularmente cuando los estudiantes están en clases. Los 12 ítems son resumidos en la Tabla 1. 
+
+                                           Tabla 1
+| Numero |                  Reactivo a contestar                 | Nombre en la Base de Datos |
+|--------|:-----------------------------------------------------:|:--------------------------:|
+|    1   | Cuando estoy en clases, me siento a gusto.            |          emo_aca_1         |
+|    2   | Cuando estoy en clases, me siento enojado.            |          emo_aca_2         |
+|    3   | Cuando estoy en clases, me siento con energía.        |          emo_aca_3         |
+|    4   | Cuando estoy en clases, me siento ansioso (nervioso). |          emo_aca_4         |
+|    5   | Cuando estoy en clases, me siento entusiasmado.       |          emo_aca_5         |
+|    6   | Cuando estoy en clases, me siento molesto.            |          emo_aca_6         |
+|    7   | Cuando estoy en clases, me siento inspirado.          |          emo_aca_7         |
+|    8   | Cuando estoy en clases, me siento desalentado.        |          emo_aca_8         |
+|    9   | Cuando estoy en clases, me siento satisfecho.         |          emo_aca_9         |
+|   10   | Cuando estoy en clases, me siento triste.             |         emo_aca_10         |
+|   11   | Cuando estoy en clases, me siento relajado.           |         emo_aca_11         |
+|   12   | Cuando estoy en clases, me siento cansado.            |         emo_aca_12         |
+
+Con el fin de mantener la simplicidad de los ejemplos y centrarnos en el uso de R para el análisis de datos, procederemos a construir las variables a partir de las sumatorias de los valores por filas, sin explorar sus valores de confiabilidad, que sería un paso necesario en este caso. 
 
 ```{r}
 dataset$emociones_positivas <- rowMeans(dataset[,c("emo_aca_1","emo_aca_3","emo_aca_5","emo_aca_7", "emo_aca_9","emo_aca_11")], na.rm=TRUE)

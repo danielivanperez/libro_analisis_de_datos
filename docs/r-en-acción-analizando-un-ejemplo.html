@@ -355,25 +355,99 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="r-en-acción-analizando-un-ejemplo.html#cb26-1" aria-hidden="true" tabindex="-1"></a>dataset<span class="sc">$</span>promedio <span class="ot">&lt;-</span> <span class="fu">rowMeans</span>(dataset[,<span class="dv">5</span><span class="sc">:</span><span class="dv">9</span>], <span class="at">na.rm=</span><span class="cn">TRUE</span>)</span>
 <span id="cb26-2"><a href="r-en-acción-analizando-un-ejemplo.html#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(dataset<span class="sc">$</span>promedio) <span class="co"># codigo para ver las primeras 6 calificaciones. </span></span></code></pre></div>
 <pre><code>## [1] 4.040 3.680 4.425 4.200 5.680 4.060</code></pre>
-<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="r-en-acción-analizando-un-ejemplo.html#cb28-1" aria-hidden="true" tabindex="-1"></a>dataset<span class="sc">$</span>emociones_positivas <span class="ot">&lt;-</span> <span class="fu">rowMeans</span>(dataset[,<span class="fu">c</span>(<span class="st">&quot;emo_aca_1&quot;</span>,<span class="st">&quot;emo_aca_3&quot;</span>,<span class="st">&quot;emo_aca_5&quot;</span>,<span class="st">&quot;emo_aca_7&quot;</span>, <span class="st">&quot;emo_aca_9&quot;</span>,<span class="st">&quot;emo_aca_11&quot;</span>)], <span class="at">na.rm=</span><span class="cn">TRUE</span>)</span>
-<span id="cb28-2"><a href="r-en-acción-analizando-un-ejemplo.html#cb28-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-3"><a href="r-en-acción-analizando-un-ejemplo.html#cb28-3" aria-hidden="true" tabindex="-1"></a>dataset<span class="sc">$</span>emociones_negativas <span class="ot">&lt;-</span> <span class="fu">rowMeans</span>(dataset[,<span class="fu">c</span>(<span class="st">&quot;emo_aca_2&quot;</span>,<span class="st">&quot;emo_aca_4&quot;</span>,<span class="st">&quot;emo_aca_6&quot;</span>,<span class="st">&quot;emo_aca_8&quot;</span>, <span class="st">&quot;emo_aca_10&quot;</span>,<span class="st">&quot;emo_aca_12&quot;</span>)], <span class="at">na.rm=</span><span class="cn">TRUE</span>)</span></code></pre></div>
+<p>A diferencia de la variable <code>promedio</code> para las calificaciones de los estudiantes, ahora nos centraremos en un constructo llamado “emociones académicas”, la cual se enfoca en consultar a los estudiantes por una variedad de emociones, tanto positivas como negativas, que son sentidas particularmente cuando los estudiantes están en clases. Los 12 ítems son resumidos en la Tabla 1.</p>
+<pre><code>                                       Tabla 1</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th>Numero</th>
+<th align="center">Reactivo a contestar</th>
+<th align="center">Nombre en la Base de Datos</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td align="center">Cuando estoy en clases, me siento a gusto.</td>
+<td align="center">emo_aca_1</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td align="center">Cuando estoy en clases, me siento enojado.</td>
+<td align="center">emo_aca_2</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td align="center">Cuando estoy en clases, me siento con energía.</td>
+<td align="center">emo_aca_3</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td align="center">Cuando estoy en clases, me siento ansioso (nervioso).</td>
+<td align="center">emo_aca_4</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td align="center">Cuando estoy en clases, me siento entusiasmado.</td>
+<td align="center">emo_aca_5</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td align="center">Cuando estoy en clases, me siento molesto.</td>
+<td align="center">emo_aca_6</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td align="center">Cuando estoy en clases, me siento inspirado.</td>
+<td align="center">emo_aca_7</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td align="center">Cuando estoy en clases, me siento desalentado.</td>
+<td align="center">emo_aca_8</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td align="center">Cuando estoy en clases, me siento satisfecho.</td>
+<td align="center">emo_aca_9</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td align="center">Cuando estoy en clases, me siento triste.</td>
+<td align="center">emo_aca_10</td>
+</tr>
+<tr class="odd">
+<td>11</td>
+<td align="center">Cuando estoy en clases, me siento relajado.</td>
+<td align="center">emo_aca_11</td>
+</tr>
+<tr class="even">
+<td>12</td>
+<td align="center">Cuando estoy en clases, me siento cansado.</td>
+<td align="center">emo_aca_12</td>
+</tr>
+</tbody>
+</table>
+<p>Con el fin de mantener la simplicidad de los ejemplos y centrarnos en el uso de R para el análisis de datos, procederemos a construir las variables a partir de las sumatorias de los valores por filas, sin explorar sus valores de confiabilidad, que sería un paso necesario en este caso.</p>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="r-en-acción-analizando-un-ejemplo.html#cb29-1" aria-hidden="true" tabindex="-1"></a>dataset<span class="sc">$</span>emociones_positivas <span class="ot">&lt;-</span> <span class="fu">rowMeans</span>(dataset[,<span class="fu">c</span>(<span class="st">&quot;emo_aca_1&quot;</span>,<span class="st">&quot;emo_aca_3&quot;</span>,<span class="st">&quot;emo_aca_5&quot;</span>,<span class="st">&quot;emo_aca_7&quot;</span>, <span class="st">&quot;emo_aca_9&quot;</span>,<span class="st">&quot;emo_aca_11&quot;</span>)], <span class="at">na.rm=</span><span class="cn">TRUE</span>)</span>
+<span id="cb29-2"><a href="r-en-acción-analizando-un-ejemplo.html#cb29-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-3"><a href="r-en-acción-analizando-un-ejemplo.html#cb29-3" aria-hidden="true" tabindex="-1"></a>dataset<span class="sc">$</span>emociones_negativas <span class="ot">&lt;-</span> <span class="fu">rowMeans</span>(dataset[,<span class="fu">c</span>(<span class="st">&quot;emo_aca_2&quot;</span>,<span class="st">&quot;emo_aca_4&quot;</span>,<span class="st">&quot;emo_aca_6&quot;</span>,<span class="st">&quot;emo_aca_8&quot;</span>, <span class="st">&quot;emo_aca_10&quot;</span>,<span class="st">&quot;emo_aca_12&quot;</span>)], <span class="at">na.rm=</span><span class="cn">TRUE</span>)</span></code></pre></div>
 </div>
 <div id="graficando-datos" class="section level2" number="2.5">
 <h2><span class="header-section-number">2.5</span> Graficando Datos</h2>
-<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="r-en-acción-analizando-un-ejemplo.html#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(<span class="fu">table</span>(dataset<span class="sc">$</span>emociones_positivas)) <span class="co">#both columns need to be integer</span></span></code></pre></div>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-23-1.png" width="672" /></p>
-<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="r-en-acción-analizando-un-ejemplo.html#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(dataset<span class="sc">$</span>emociones_positivas, dataset<span class="sc">$</span>promedio) <span class="co">#both columns need to be integer</span></span></code></pre></div>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-24-1.png" width="672" /></p>
-<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="r-en-acción-analizando-un-ejemplo.html#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(stats)</span>
-<span id="cb31-2"><a href="r-en-acción-analizando-un-ejemplo.html#cb31-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-3"><a href="r-en-acción-analizando-un-ejemplo.html#cb31-3" aria-hidden="true" tabindex="-1"></a>reg<span class="ot">&lt;-</span><span class="fu">lm</span>(dataset<span class="sc">$</span>promedio <span class="sc">~</span> dataset<span class="sc">$</span>emociones_positivas, <span class="at">data =</span> dataset)</span>
-<span id="cb31-4"><a href="r-en-acción-analizando-un-ejemplo.html#cb31-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-5"><a href="r-en-acción-analizando-un-ejemplo.html#cb31-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(dataset<span class="sc">$</span>emociones_positivas, dataset<span class="sc">$</span>promedio)</span>
-<span id="cb31-6"><a href="r-en-acción-analizando-un-ejemplo.html#cb31-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-7"><a href="r-en-acción-analizando-un-ejemplo.html#cb31-7" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(reg, <span class="at">col =</span> <span class="st">&quot;green&quot;</span>)</span></code></pre></div>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-25-1.png" width="672" /></p>
-<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="r-en-acción-analizando-un-ejemplo.html#cb32-1" aria-hidden="true" tabindex="-1"></a>reg</span></code></pre></div>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="r-en-acción-analizando-un-ejemplo.html#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(<span class="fu">table</span>(dataset<span class="sc">$</span>emociones_positivas)) <span class="co">#both columns need to be integer</span></span></code></pre></div>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-18-1.png" width="672" /></p>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="r-en-acción-analizando-un-ejemplo.html#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(dataset<span class="sc">$</span>emociones_positivas, dataset<span class="sc">$</span>promedio) <span class="co">#both columns need to be integer</span></span></code></pre></div>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-19-1.png" width="672" /></p>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="r-en-acción-analizando-un-ejemplo.html#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(stats)</span>
+<span id="cb32-2"><a href="r-en-acción-analizando-un-ejemplo.html#cb32-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-3"><a href="r-en-acción-analizando-un-ejemplo.html#cb32-3" aria-hidden="true" tabindex="-1"></a>reg<span class="ot">&lt;-</span><span class="fu">lm</span>(dataset<span class="sc">$</span>promedio <span class="sc">~</span> dataset<span class="sc">$</span>emociones_positivas, <span class="at">data =</span> dataset)</span>
+<span id="cb32-4"><a href="r-en-acción-analizando-un-ejemplo.html#cb32-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-5"><a href="r-en-acción-analizando-un-ejemplo.html#cb32-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(dataset<span class="sc">$</span>emociones_positivas, dataset<span class="sc">$</span>promedio)</span>
+<span id="cb32-6"><a href="r-en-acción-analizando-un-ejemplo.html#cb32-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-7"><a href="r-en-acción-analizando-un-ejemplo.html#cb32-7" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(reg, <span class="at">col =</span> <span class="st">&quot;green&quot;</span>)</span></code></pre></div>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-20-1.png" width="672" /></p>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="r-en-acción-analizando-un-ejemplo.html#cb33-1" aria-hidden="true" tabindex="-1"></a>reg</span></code></pre></div>
 <pre><code>## 
 ## Call:
 ## lm(formula = dataset$promedio ~ dataset$emociones_positivas, 
@@ -382,15 +456,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## Coefficients:
 ##                 (Intercept)  dataset$emociones_positivas  
 ##                      3.8581                       0.1914</code></pre>
-<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="r-en-acción-analizando-un-ejemplo.html#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(stats)</span>
-<span id="cb34-2"><a href="r-en-acción-analizando-un-ejemplo.html#cb34-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb34-3"><a href="r-en-acción-analizando-un-ejemplo.html#cb34-3" aria-hidden="true" tabindex="-1"></a>reg_1<span class="ot">&lt;-</span><span class="fu">lm</span>(dataset<span class="sc">$</span>promedio <span class="sc">~</span> dataset<span class="sc">$</span>emociones_negativas, <span class="at">data =</span> dataset)</span>
-<span id="cb34-4"><a href="r-en-acción-analizando-un-ejemplo.html#cb34-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb34-5"><a href="r-en-acción-analizando-un-ejemplo.html#cb34-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(dataset<span class="sc">$</span>emociones_negativas, dataset<span class="sc">$</span>promedio)</span>
-<span id="cb34-6"><a href="r-en-acción-analizando-un-ejemplo.html#cb34-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb34-7"><a href="r-en-acción-analizando-un-ejemplo.html#cb34-7" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(reg_1, <span class="at">col =</span> <span class="st">&quot;red&quot;</span>)</span></code></pre></div>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-26-1.png" width="672" /></p>
-<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="r-en-acción-analizando-un-ejemplo.html#cb35-1" aria-hidden="true" tabindex="-1"></a>reg_1</span></code></pre></div>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="r-en-acción-analizando-un-ejemplo.html#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(stats)</span>
+<span id="cb35-2"><a href="r-en-acción-analizando-un-ejemplo.html#cb35-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-3"><a href="r-en-acción-analizando-un-ejemplo.html#cb35-3" aria-hidden="true" tabindex="-1"></a>reg_1<span class="ot">&lt;-</span><span class="fu">lm</span>(dataset<span class="sc">$</span>promedio <span class="sc">~</span> dataset<span class="sc">$</span>emociones_negativas, <span class="at">data =</span> dataset)</span>
+<span id="cb35-4"><a href="r-en-acción-analizando-un-ejemplo.html#cb35-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-5"><a href="r-en-acción-analizando-un-ejemplo.html#cb35-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(dataset<span class="sc">$</span>emociones_negativas, dataset<span class="sc">$</span>promedio)</span>
+<span id="cb35-6"><a href="r-en-acción-analizando-un-ejemplo.html#cb35-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-7"><a href="r-en-acción-analizando-un-ejemplo.html#cb35-7" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(reg_1, <span class="at">col =</span> <span class="st">&quot;red&quot;</span>)</span></code></pre></div>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-21-1.png" width="672" /></p>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="r-en-acción-analizando-un-ejemplo.html#cb36-1" aria-hidden="true" tabindex="-1"></a>reg_1</span></code></pre></div>
 <pre><code>## 
 ## Call:
 ## lm(formula = dataset$promedio ~ dataset$emociones_negativas, 
