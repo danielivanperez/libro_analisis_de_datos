@@ -65,7 +65,9 @@ Si ejecutamos los nuevos valores contenidos en las columnas 5 a 9, observaremos 
 ```{r}
 head(dataset[5:9])
 ```
-En esta etapa, los valores ya empiezan a estar mucho más ordenados y cada vez están más cerca del formato final que deseamos para ejecutar algunos análisis de datos de utilidad. Sin embargo, todavía tenemos, al menos, dos problemas. El primero es que las calificaciones deberían tener un punto `.` entremedio de ambos números y, en segundo lugar, que no debemos olvidar que el contenido de las celdas está almacenado como caracteres y no como números. Es muy importante que nuestras variables sean leídas por R como variables numéricas para proceder con la aplicación de funciones cuantitativas. Por ejemplo, si las variables están formateadas como caracteres y queremos aplicar la función de media aritmética, R imprimirá un mensaje de error. De este modo, lo primero que haremos es resolver el problema del punto entre ambos números. Para esto, usaremos el código que esta abajo. Nótese que cada función se ha aplicado a cada una de las cinco variables por separado con el fin de que el ejemplo sea más entendible. 
+En esta etapa, los valores ya empiezan a estar mucho más ordenados y cada vez están más cerca del formato final que deseamos para ejecutar algunos análisis de datos de utilidad. Sin embargo, todavía tenemos, al menos, dos problemas. El primero es que las calificaciones deberían tener un punto `.` entremedio de ambos números y, en segundo lugar, que no debemos olvidar que el contenido de las celdas está almacenado como caracteres y no como números. Es muy importante que nuestras variables sean leídas por R como variables numéricas para proceder con la aplicación de funciones cuantitativas. Por ejemplo, si las variables están formateadas como caracteres y queremos aplicar la función de media aritmética, R imprimirá un mensaje de error. 
+
+De este modo, lo primero que haremos es resolver el problema del punto entre ambos números. Para esto, usaremos el código que esta abajo. Nótese que cada función se ha aplicado a cada una de las cinco variables por separado con el fin de que el ejemplo sea más entendible. 
 
 ```{r}
 dataset$calificacion_1 <- sub("(?<=^.)", "\\.", dataset$calificacion_1 , perl=TRUE)
@@ -78,7 +80,10 @@ dataset$calificacion_5 <- sub("(?<=^.)", "\\.", dataset$calificacion_5 , perl=TR
 ```{r}
 head(dataset[5:9])
 ```
-Genial, ahora cada una de las calificaciones tiene un punto que separa ambos valores. Pero aún queda un problema más por resolver: cambiar el contenido de la celda de carácter a número. Para ilustrar de forma más clara el problema, imaginemos que queremos saber la media aritmética de la variable `calificacion_1`: 
+Genial, ahora cada una de las calificaciones tiene un punto que separa ambos valores. Solo con algunas líneas de código nos hemos ahorrado, por ejemplo, hacer este procedimiento de forma manual. Es decir, escribiendo un punto para cada valor en las celdas de las variables multiplicado por 137 participantes. Probablemente esto nos hubiera dejado de muy mal humor y habiendo gastado mucho tiempo y con posibles errores en nuestra base de datos 🥲.
+
+Pero aún queda un problema más por resolver: cambiar el contenido de la celda de carácter a número. Para ilustrar de forma más clara el problema, imaginemos que queremos saber la media aritmética de la variable `calificacion_1`:
+
 
 ```{r}
 mean(dataset$calificacion_1, na.rm = TRUE) # na.rm = True descarta las celdas sin valores 
