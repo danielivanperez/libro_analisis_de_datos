@@ -1,10 +1,10 @@
 # R en Acción: Analizando un Ejemplo
 
-R es una herramienta de análisis muy poderosa. El propósito de este capítulo es principalmente mostrar qué cosas puede hacer R. Si bien se explican los objetivos del análisis de datos para cada celda junto con el código utilizado, la idea principal es ilustrar algunas de sus funcionalidades y no explicar el código de forma extensa. Para eso, está el resto del libro. 
+R es una herramienta de análisis muy poderosa. El propósito de este capítulo es principalmente mostrar algunas de las cosas que puede hacer R. Si bien explico los objetivos del análisis de datos para cada parte junto con el código utilizado, la idea principal es ilustrar algunas de sus funcionalidades y no explicar el código de forma extensa. Para eso, está el resto de las secciones del libro.
 
 ## Cargando una Base de Datos desde la Web
 
-Brevemente, la base de datos que utilizaremos en este capítulo contiene datos sociodemográficos, calificaciones de cinco cursos y respuestas a preguntas sobre emociones en el contexto académico de 137 estudiantes de psicología de una universidad pública chilena. Entonces, lo primero que vamos a hacer es cargar la base de datos para ejecutar nuestros ejemplos. Para esto, vamos a darle un nombre o etiqueta a nuestra base de datos `dataset`, luego utilizaremos el *operador de asignación* `<-` y al lado derecho usaremos la función `read.csv()` de R, el cual permite leer la base de datos llamada `emociones_academicas.csv`. Nótese que la base de datos está alojada en una página web y no en nuestro computador personal. Esto ya en sí mismo muestra su poder sobre otras *software* tales como SPSS. Inmediatamente abajo del código de la base de datos, utilizaremos la función `names` para observar el nombre de las variables contenidas en la base de datos y su número, el cual se encuentra impreso justo debajo de la celda.  
+Primero que todo, un breve resumen de la base de datos que utilizaremos en este capítulo. La base contiene datos sociodemográficos, calificaciones de cinco cursos y respuestas a preguntas sobre emociones en el contexto académico de 137 estudiantes de psicología de una universidad pública chilena. De este modo, lo que vamos a hacer es cargar la base de datos para ejecutar nuestros ejemplos. Para esto, vamos a darle un nombre o etiqueta a nuestra base de datos `dataset`, luego utilizaremos el *operador de asignación* `<-` y al lado derecho usaremos la función `read.csv()` de R, el cual permite leer la base de datos llamada `emociones_academicas.csv`. Si deseas ejecutar el código contenido en este ejemplo, primero debes tener instalado en tu computador el lenguaje de programación R y RStudio (Para más información ir al capítulo 3, donde están las instrucciones paso a paso de cómo hacer esto). Volviendo al archivo csv, nótese que la base de datos está alojada en una página web y no en nuestro computador personal. Esto ya en sí mismo muestra una de las ventajas de R por sobre otros *software* de análisis de datos tales como SPSS. Inmediatamente abajo del código para cargar la base de datos, utilizaremos la función `names` para observar el nombre de las variables contenidas en la base de datos, el cual se encuentra impreso justo debajo de la celda.    
  
 ```{r}
 dataset <- read.csv("https://raw.githubusercontent.com/danielivanperez/dataset_ejemplo_libro_r/main/emociones_academicas.csv")
@@ -17,7 +17,7 @@ Para saber el tamaño de nuestra base de datos, podemos utilizar la función `di
 ```{r}
 dim(dataset)
 ```
-La salida nos dice que hay 137 filas (participantes en nuestro caso) y 22 columnas (o variables). Adicionalmente, una de las funciones más útiles de R es poder observar un conjunto acotado de filas, observaciones o, en nuestro caso participantes, de la base de datos con la cual se trabaja. Para esto, vamos a usar la función `head()`. Al ejecutar esta función, R nos muestra las primeras 6 filas de la base de datos. 
+La salida nos dice que hay 137 filas (participantes en nuestro caso) y 22 columnas (o variables). Adicionalmente, una de las funciones más útiles de R es poder observar un conjunto acotado de filas, observaciones o, en nuestro caso participantes, de la base de datos a analizar. Para esto, vamos a usar la función `head()`. Al ejecutar esta función, R nos muestra las primeras 6 filas de la base de datos. 
 
 ```{r}
 head(dataset)
@@ -25,7 +25,7 @@ head(dataset)
 
 ## Seleccionando Columnas en una Base de Datos
 
-El código de arriba nos muestra las respuestas de los primeros 6 sujetos de nuestra base de datos. Podemos fácilmente ver que la salida o *output* que nos da R es relativamente extensa. Sería muy ineficiente siempre estar imprimiendo bases de datos de forma completa. Por esta razón, es mucho mejor trabajar viendo un número limitado de variables al mismo tiempo. Empecemos con el caso más simple de explorar solo una variable. A continuación, vamos a mostrar como utilizar el símbolo dólar `$`, el cual nos permite seleccionar una columna o variable de la base de datos. Para proseguir con el ejemplo, nos centraremos en la variable `calificacion_1`. De este modo, primero escribimos el nombre de la base de datos, seguido del signo dólar y, luego, seleccionar o escribir el nombre de la variables deseada. 
+El código de arriba nos muestra las respuestas de los primeros 6 sujetos de nuestra base de datos. Podemos fácilmente ver que la salida o *output* que nos da R es relativamente extensa. Sería muy ineficiente siempre estar imprimiendo bases de datos de forma completa. Por esta razón, es mucho mejor trabajar viendo un número limitado de variables al mismo tiempo. Empecemos con el caso más simple de explorar solo una variable. A continuación, vamos a mostrar cómo utilizar el símbolo dólar `$`, el cual nos permite seleccionar una columna o variable de la base de datos. Para proseguir con el ejemplo, nos centraremos en la variable `calificacion_1`. De este modo, primero escribimos el nombre de la base de datos, seguido del signo dólar y, luego, seleccionar o escribir el nombre de la variables deseada (nótese que seguimos utilizando la función `head()` con el objetivo de tener solo 6 filas en la salida de R). 
 
 ```{r}
 head(dataset$calificacion_1)
@@ -36,16 +36,19 @@ La salida de R nos muestra las primeras 6 filas de la `variable calificacion_1`.
 ```{r}
 head(dataset[5:9]) 
 ```
-
-Podemos inferir del código escrito arriba que R le asigna un número a cada una de las columnas de la base de datos y lo que le estamos solicitado al interior del paréntesis cuadrado es que seleccione desde la columna 5 hasta la columna 9 y nos muestre sólo éstas. De este modo, muestras los valores para las variables `calificacion_1` hasta `calificacion_5`.
+Podemos inferir del código escrito arriba que R le asigna un número a cada una de las columnas de la base de datos empezando desde 1.  Al interior del paréntesis cuadrado, le pedimos a R que seleccione desde la columna 5 hasta la columna 9 y que nos muestre sólo estas columnas o variables. De este modo, R muestra los valores desde la variable `calificacion_1` hasta `calificacion_5`.
 
 ## Limpiando Valores en una Base de Datos
 
-Volviendo al caso que estábamos desarrollando anteriormente, como podemos ver en las primeras 6 filas de la variable ` calificacion_1`, los participantes de este estudio escribieron sus calificaciones para un curso determinado. Podemos apreciar que ellos escribieron sus respuestas de diferentes formas. Escribiendo solo la calificación como en el primer caso, o incluso escribiendo el nombre del curso de manera completa y luego la calificación, en algunos casos con un `.` como en fila [1], con una `,` como en la fila [3] o simplemente sin punto ni coma como en la fila [6]. Esto constituiría un primer problema para el analista de datos debido a que no tenemos los valores ordenados y formateados de manera estándar (por ejemplo, tener solo números dos números separados por un `.`) al interior de la variable. Justamente en este tipo de situaciones es cuando R muestra todo su poder. 
+Volviendo al caso, como podemos ver en las primeras 6 filas de la variable ` calificacion_1`, a los participantes se les pidió escribir sus calificaciones para un curso determinado. Podemos observar que ellos escribieron sus respuestas de diferentes formas. Por ejemplo, escribiendo solo la calificación como en el primer caso, o incluso escribiendo el nombre del curso de manera completa y luego la calificación, en otros casos con un `.` como en la fila [1], con una `,` como en la fila [3] o simplemente sin punto ni coma como en la fila [6]. Esto constituiría un primer problema para el analista de datos debido a que no tenemos los valores ordenados y formateados de manera estándar (por ejemplo, tener solo números dos números separados por un `.`) al interior de la variable. Justamente en este tipo de situaciones es cuando R muestra todo su poder y utilidad. 
+
+Como en cada respuesta o celda de la columna tenemos una combinación de texto y números, voy a aplicar una función en R para que transforme todo lo que haya en sus celdas a un tipo de formato llamado `character` o carácter, el cual se refiere a que la información dentro de cada celda es simplemente texto (en R hay diferentes tipos de datos como los numéricos o `numeric`). Esto lo hago principalmente para proceder de manera ordenada y evitar posibles errores en el futuro al ejecutar código.  
 
 ```{r}
-dataset[5:9] <- lapply(dataset[5:9], as.character) # primero tuve que transformar los datos a caracteres
+dataset[5:9] <- lapply(dataset[5:9], as.character) # transformar los datos a caracteres
 ```
+
+De forma muy resumida, el código de arriba lo que hizo fue aplicar una función que transforme el tipo de datos de cada celda a caracteres a un set de columnas definida desde `[5:9]` (es decir, desde `calificacion_1` a ` calificacion_5`) de la base de datos `dataset`. Nótese que en la segunda parte del código hay un signo hashtag `#`, el cual le dice a R que todo lo que está después de dicho símbolo no debe ser ejecutado. 
 
 ```{r}
 #sel <- grepl("calificacion_",names(dataset))
@@ -57,7 +60,8 @@ dataset$calificacion_5 <- gsub("[^0-9]", "", dataset$calificacion_5)
 ```
 
 ```{r}
-dataset[5:9] <- lapply(dataset[5:9], as.character) # primero tuve que transformar los datos a caracteres
+head(dataset$calificacion_1)
+#dataset[5:9] <- lapply(dataset[5:9], as.character) # primero tuve que transformar los datos a caracteres
 ```
 
 ```{r}
