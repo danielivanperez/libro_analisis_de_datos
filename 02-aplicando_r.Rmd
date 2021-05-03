@@ -106,8 +106,7 @@ Al fin hemos obtenido el valor promedio para esa columna el cual corresponde a 4
 summary(dataset$calificacion_1)
 ```
 
-La salida de R muestra siete valores: el puntaje mínimo, el puntaje del primer cuartil, la mediana, la media aritmética, el puntaje del tercer cuartil y el número de celdas con valores perdidos o NA’s (o *Not Available*).
-
+La salida de R muestra siete valores: el puntaje mínimo, el puntaje del primer cuartil, la mediana, la media aritmética, el puntaje del tercer cuartil, el puntaje máximo de la columna y el número de celdas con valores perdidos o NA’s (o *Not Available*).  
 
 ## Creación de Variables a partir de Otras
 

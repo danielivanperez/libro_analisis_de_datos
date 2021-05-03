@@ -347,7 +347,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="r-en-acción-analizando-un-ejemplo.html#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(dataset<span class="sc">$</span>calificacion_1)</span></code></pre></div>
 <pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA&#39;s 
 ##   1.000   3.400   4.400   4.382   5.400   7.000      12</code></pre>
-<p>La salida de R muestra siete valores: el puntaje mínimo, el puntaje del primer cuartil, la mediana, la media aritmética, el puntaje del tercer cuartil y el número de celdas con valores perdidos o NA’s (o <em>Not Available</em>).</p>
+<p>La salida de R muestra siete valores: el puntaje mínimo, el puntaje del primer cuartil, la mediana, la media aritmética, el puntaje del tercer cuartil, el puntaje máximo de la columna y el número de celdas con valores perdidos o NA’s (o <em>Not Available</em>).</p>
 </div>
 <div id="creación-de-variables-a-partir-de-otras" class="section level2" number="2.4">
 <h2><span class="header-section-number">2.4</span> Creación de Variables a partir de Otras</h2>
@@ -359,9 +359,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="graficando-datos" class="section level2" number="2.5">
 <h2><span class="header-section-number">2.5</span> Graficando Datos</h2>
 <div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="r-en-acción-analizando-un-ejemplo.html#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(<span class="fu">table</span>(dataset<span class="sc">$</span>emociones_positivas)) <span class="co">#both columns need to be integer</span></span></code></pre></div>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-20-1.png" width="672" /></p>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-18-1.png" width="672" /></p>
 <div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="r-en-acción-analizando-un-ejemplo.html#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(dataset<span class="sc">$</span>emociones_positivas, dataset<span class="sc">$</span>promedio) <span class="co">#both columns need to be integer</span></span></code></pre></div>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-21-1.png" width="672" /></p>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-19-1.png" width="672" /></p>
 <div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="r-en-acción-analizando-un-ejemplo.html#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(stats)</span>
 <span id="cb30-2"><a href="r-en-acción-analizando-un-ejemplo.html#cb30-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb30-3"><a href="r-en-acción-analizando-un-ejemplo.html#cb30-3" aria-hidden="true" tabindex="-1"></a>reg<span class="ot">&lt;-</span><span class="fu">lm</span>(dataset<span class="sc">$</span>promedio <span class="sc">~</span> dataset<span class="sc">$</span>emociones_positivas, <span class="at">data =</span> dataset)</span>
@@ -369,7 +369,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb30-5"><a href="r-en-acción-analizando-un-ejemplo.html#cb30-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(dataset<span class="sc">$</span>emociones_positivas, dataset<span class="sc">$</span>promedio)</span>
 <span id="cb30-6"><a href="r-en-acción-analizando-un-ejemplo.html#cb30-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb30-7"><a href="r-en-acción-analizando-un-ejemplo.html#cb30-7" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(reg, <span class="at">col =</span> <span class="st">&quot;green&quot;</span>)</span></code></pre></div>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-22-1.png" width="672" /></p>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-20-1.png" width="672" /></p>
 <div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="r-en-acción-analizando-un-ejemplo.html#cb31-1" aria-hidden="true" tabindex="-1"></a>reg</span></code></pre></div>
 <pre><code>## 
 ## Call:
@@ -386,7 +386,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb33-5"><a href="r-en-acción-analizando-un-ejemplo.html#cb33-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(dataset<span class="sc">$</span>emociones_negativas, dataset<span class="sc">$</span>promedio)</span>
 <span id="cb33-6"><a href="r-en-acción-analizando-un-ejemplo.html#cb33-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb33-7"><a href="r-en-acción-analizando-un-ejemplo.html#cb33-7" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(reg_1, <span class="at">col =</span> <span class="st">&quot;red&quot;</span>)</span></code></pre></div>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-23-1.png" width="672" /></p>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-21-1.png" width="672" /></p>
 <div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="r-en-acción-analizando-un-ejemplo.html#cb34-1" aria-hidden="true" tabindex="-1"></a>reg_1</span></code></pre></div>
 <pre><code>## 
 ## Call:
