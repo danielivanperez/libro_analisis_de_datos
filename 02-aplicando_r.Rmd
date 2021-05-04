@@ -1,6 +1,6 @@
 # R en Acción: Analizando un Estudio Empírico Real
 
-R es una herramienta de análisis muy poderosa. El propósito de este capítulo es principalmente mostrar algunas de las cosas que puede hacer R, especialmente cómo cargar un base de datos desde una pagina web, describir algunas funciones básicas, cómo limpiar una base de datos (esto es particularmente crítico ya que se estima que el 80% del tiempo dedicado al análisis de datos es para limpiar y producir una base de datos que sea analizable) y cómo graficar. Si bien explico los objetivos del análisis de datos para cada parte junto con el código utilizado, la idea principal es ilustrar algunas de sus funcionalidades y no explicar el código de forma extensa. Para eso, está el resto de las secciones del libro. 
+R es una herramienta de análisis muy poderosa. El propósito de este capítulo es principalmente mostrar algunas de las cosas que puede hacer R, especialmente cómo cargar un base de datos desde una pagina web, describir algunas funciones básicas, cómo limpiar una base de datos (esto es particularmente crítico ya que se estima que el 80% del tiempo dedicado al análisis de datos es para limpiar y producir una base de datos que sea analizable) y cómo graficar. Si bien explico los objetivos del análisis de datos para cada parte junto con el código utilizado, la idea principal es ilustrar algunas de sus funcionalidades y no explicar el código de forma extensa. Para eso, está el resto de las secciones del libro. Al final del capítulo, el lector podrá poner en práctica lo aprendido a través un conjunto de ejercicios. 
 
 ## Cargando una Base de Datos desde la Web
 
@@ -22,6 +22,17 @@ La salida nos dice que hay 137 filas (participantes en nuestro caso) y 22 column
 ```{r}
 head(dataset)
 ```
+Además de la función `head()`, también tenemos la función `tail()`, que nos muestra por defecto las últimas seis de filas o participantes de la base de datos. Veamos un ejemplo abajo: 
+
+```{r}
+tail(dataset)
+```
+Finalmente, terminar diciendo que si queremos ver un número determinado de observaciones de la base de datos usando la función `head()` o `tail()`, podemos escribir el número de filas después de `dataset` en nuestro caso, separado por una coma. A continuación, muestro un ejemplo para ver las primeras 10 filas de la base de datos: 
+
+```{r}
+head(dataset, 3)
+```
+
 
 ## Seleccionando Columnas en una Base de Datos
 
