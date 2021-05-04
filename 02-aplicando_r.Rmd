@@ -188,5 +188,5 @@ abline(reg_1, col = "red")
 reg_1
 ```
  
-
+## Ejercicios
 
