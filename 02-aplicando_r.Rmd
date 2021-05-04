@@ -27,7 +27,7 @@ Además de la función `head()`, también tenemos la función `tail()`, que nos 
 ```{r}
 tail(dataset)
 ```
-Finalmente, terminar diciendo que si queremos ver un número determinado de observaciones de la base de datos usando la función `head()` o `tail()`, podemos escribir el número de filas después de `dataset` en nuestro caso, separado por una coma. A continuación, muestro un ejemplo para ver las primeras 10 filas de la base de datos: 
+En el *output* de arriba, podemos observar las ultimas filas de la base de datos, que van desde la fila 132 a 137. Finalmente, terminar diciendo que si queremos ver un número determinado de observaciones de la base de datos usando la función `head()` o `tail()`, podemos escribir el número de filas después de `dataset` en nuestro caso, separado por una coma. A continuación, muestro un ejemplo para ver las primeras 3 filas de la base de datos:  
 
 ```{r}
 head(dataset, 3)
