@@ -57,7 +57,7 @@ Ahora que ya tenemos R en nuestro computador es bueno recordar que R es un lengu
 Figura 3. Página web de inicio de RStudio. 
 </p>
 ```
-Si bajas un poco a lo largo de la página web de RStudio, te encontrarás con las opciones que aparecen en la imagen de abajo. En este caso, aparece la opción de descarga de RStudio para el sistema operativo de Mac porque la página web de RStudio genera automáticamente el link que cada usuario necesita. Si tienes *Windows*, aparecerá un link para tu sistema operativo.  
+Si bajas un poco a lo largo de la página web de RStudio, te encontrarás con las opciones que aparecen en la imagen de la figura 4. En este caso, aparece la opción de descarga de RStudio para el sistema operativo de Mac porque la página web de RStudio genera automáticamente el link que cada usuario necesita. Si tienes *Windows*, aparecerá un link para tu sistema operativo.  
 
 ```{=html}
 <p align="center">
