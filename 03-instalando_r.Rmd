@@ -19,7 +19,7 @@ Para esto debemos ir a la siguiente website:
 
 ```{=html}
 <p align="center">
-  <img width="400" height="400" src="images/r_cran.png">
+  <img width="800" height="400" src="images/r_cran.png">
 </p>
 <p align="center">
 Figura 1. Ilustración de la comunidad de R interactuando en el mundo virtual.
