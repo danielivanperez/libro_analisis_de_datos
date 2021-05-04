@@ -152,17 +152,28 @@ Lo que haremos a continuación es construir dos variables: `emociones_positivas`
 En este caso, introduciremos una nueva forma de seleccionar variables. Usaremos como siempre el nombre de la base de datos `dataset` y los paréntesis cuadrados `[]` para seleccionar las filas y el nombre o etiqueta de todas las variables deseadas entre comillas. Vamos a ejecutar este comando en la consola para examinar el resultado y explicarlo a continuación. 
 
 ```{r}
-head(dataset[ , c("emo_aca_1","emo_aca_3","emo_aca_5","emo_aca_7","emo_aca_9","emo_aca_11")])
+head(dataset[1:137, c("emo_aca_1","emo_aca_3","emo_aca_5","emo_aca_7","emo_aca_9","emo_aca_11")])
 ```
+Como se pueden dar cuenta, llamamos a la base de datos `dataset` y dentro del paréntesis cuadrado hay espacio para especificar el número de filas que queremos. Tomando en cuenta el ejemplo de arriba, señalamos explícitamente `1:137`, lo cual considera a la muestra completa de participantes. Luego de la `,` lo que hacemos es usar la función `c` que es una abreviación para la función `combine` o combinar, lo cual significa que combinará una serie de valores al interior de un paréntesis circular. Hacemos esto para referirnos explícitamente al nombre de las variables que forman la variable emociones positivas académicas. Nótese que el nombre de las variables al interior del paréntesis circular están entre comillas `”` debido a que son texto o caracteres. Sino escribiéramos las comillas, R nos daría un mensaje de error. 
 
-
-
+Ahora que explicamos el código de arriba, vamos a proceder a crear una variable llamada `emociones_positivas`, la cual será agregada a la base de datos con la media aritmética (a través de la funcion `rowMeans()`) de las seis emociones de la base de datos (emo_aca_1, 3, 5, 7, 9 y 11). 
 
 ```{r}
-dataset$emociones_positivas <- rowMeans(dataset[,c("emo_aca_1","emo_aca_3","emo_aca_5","emo_aca_7", "emo_aca_9","emo_aca_11")], na.rm=TRUE)
-
-dataset$emociones_negativas <- rowMeans(dataset[,c("emo_aca_2","emo_aca_4","emo_aca_6","emo_aca_8", "emo_aca_10","emo_aca_12")], na.rm=TRUE)
+dataset$emociones_positivas <- rowMeans(dataset[1:137,c("emo_aca_1","emo_aca_3","emo_aca_5","emo_aca_7", "emo_aca_9","emo_aca_11")], na.rm=TRUE)
 ```
+
+Aprovechando el impulso, como ya habíamos adelantado, en R se puede llegar al mismo resultado de diferentes maneras. Ahora, en vez de utilizar el nombre de las variables de la base de datos, vamos a usar los números que hacen referencia a dichas columnas para imprimir en la consola de R las variables de todas las emociones negativas. 
+
+```{r}
+head(dataset[ ,c(12,14,16,18,20,22)])
+```
+
+Póngase especial atención a el espacio anterior de la coma `,` al interior del paréntesis cuadrado. ¿Recuerdan a qué corresponde esta posición? Así es !!! A las filas o participantes de nuestra base de datos. ¿Qué hemos hecho? Hemos eliminado `1:137` y la hemos dejado en blanco o sin ningún valor numérico. R automáticamente interpreta esto como si nosotros quisiéramos seleccionar todas las filas de nuestra base de datos. De este modo, podemos utilizar diferentes formas para seleccionar valores en una base de datos. Finalmente, vamos a crear la columna `emociones_negativas` en la base de datos usando la función `rowMeans()` con la última forma de seleccionar filas y columnas en la base de datos.  
+
+```{r}
+dataset$emociones_negativas <- rowMeans(dataset[ ,c(12,14,16,18,20,22)])
+```
+
 
 ## Graficando Datos 
 
