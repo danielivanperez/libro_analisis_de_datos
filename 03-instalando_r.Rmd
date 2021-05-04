@@ -17,6 +17,15 @@ Para esto debemos ir a la siguiente website:
 [Sitio web de R](http://cran.r-project.org/){target="_blank"}
 ```
 
+```{=html}
+<p align="center">
+  <img width="400" height="400" src="images/r_cran.png">
+</p>
+<p align="center">
+Figura 1. Ilustración de la comunidad de R interactuando en el mundo virtual.
+</p>
+```
+
 
 En la parte superior, aparecerá un cuadro con tres opciones diferentes de descarga según el sistema operativo que use tu computador (i.e., Windows, OS X o Linux). Dale clic a la opción que corresponda a tu caso. 
 
