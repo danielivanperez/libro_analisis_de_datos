@@ -495,7 +495,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## 4         3         2         2         3         3          3
 ## 5         3         4         4         4         4          4
 ## 6         3         3         4         3         3          2</code></pre>
-<p>Como se pueden dar cuenta, llamamos a la base de datos <code>dataset</code> y dentro del paréntesis cuadrado hay espacio para especificar el número de filas que queremos. Tomando en cuenta el ejemplo de arriba, señalamos explícitamente <code>1:137</code>, lo cual considera a la muestra completa de participantes. Luego de la <code>,</code> lo que hacemos es usar la función <code>c</code> que es una abreviación para la función <code>combine</code> o combinar, lo cual significa que combinará una serie de valores al interior de un paréntesis circular. Hacemos esto para referirnos explícitamente al nombre de las variables que forman la variable emociones positivas académicas. Nótese que el nombre de las variables al interior del paréntesis circular están entre comillas <code>”</code> debido a que son texto o caracteres. Sino escribiéramos las comillas, R nos daría un mensaje de error.</p>
+<p>Como se pueden dar cuenta, llamamos a la base de datos <code>dataset</code> y dentro del paréntesis cuadrado hay espacio para especificar el número de filas que queremos. Tomando en cuenta el ejemplo de arriba, señalamos explícitamente <code>1:137</code>, lo cual considera a la muestra completa de participantes. Luego de la <code>,</code> lo que hacemos es usar la función <code>c</code> que es una abreviación para la función <code>combine</code> o combinar, lo cual significa que combinará una serie de valores al interior de un paréntesis circular.<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a> Hacemos esto para referirnos explícitamente al nombre de las variables que forman la variable emociones positivas académicas. Nótese que el nombre de las variables al interior del paréntesis circular están entre comillas <code>""</code> debido a que son texto o caracteres. Sino escribiéramos las comillas, R nos daría un mensaje de error.</p>
 <p>Ahora que explicamos el código de arriba, vamos a proceder a crear una variable llamada <code>emociones_positivas</code>, la cual será agregada a la base de datos con la media aritmética (a través de la funcion <code>rowMeans()</code>) de las seis emociones de la base de datos (emo_aca_1, 3, 5, 7, 9 y 11).</p>
 <div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb35-1" aria-hidden="true" tabindex="-1"></a>dataset<span class="sc">$</span>emociones_positivas <span class="ot">&lt;-</span> <span class="fu">rowMeans</span>(dataset[<span class="dv">1</span><span class="sc">:</span><span class="dv">137</span>,<span class="fu">c</span>(<span class="st">&quot;emo_aca_1&quot;</span>,<span class="st">&quot;emo_aca_3&quot;</span>,<span class="st">&quot;emo_aca_5&quot;</span>,<span class="st">&quot;emo_aca_7&quot;</span>, <span class="st">&quot;emo_aca_9&quot;</span>,<span class="st">&quot;emo_aca_11&quot;</span>)], <span class="at">na.rm=</span><span class="cn">TRUE</span>)</span></code></pre></div>
 <p>Aprovechando el impulso, como ya habíamos adelantado, en R se puede llegar al mismo resultado de diferentes maneras. Ahora, en vez de utilizar el nombre de las variables de la base de datos, vamos a usar los números que hacen referencia a dichas columnas para imprimir en la consola de R las variables de todas las emociones negativas.</p>
@@ -513,9 +513,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="graficando-datos" class="section level2" number="2.5">
 <h2><span class="header-section-number">2.5</span> Graficando Datos</h2>
 <div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(<span class="fu">table</span>(dataset<span class="sc">$</span>emociones_positivas)) <span class="co">#both columns need to be integer</span></span></code></pre></div>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-28-1.png" width="672" /></p>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-23-1.png" width="672" /></p>
 <div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(dataset<span class="sc">$</span>emociones_positivas, dataset<span class="sc">$</span>promedio) <span class="co">#both columns need to be integer</span></span></code></pre></div>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-29-1.png" width="672" /></p>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-24-1.png" width="672" /></p>
 <div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(stats)</span>
 <span id="cb41-2"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb41-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb41-3"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb41-3" aria-hidden="true" tabindex="-1"></a>reg<span class="ot">&lt;-</span><span class="fu">lm</span>(dataset<span class="sc">$</span>promedio <span class="sc">~</span> dataset<span class="sc">$</span>emociones_positivas, <span class="at">data =</span> dataset)</span>
@@ -523,7 +523,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb41-5"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb41-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(dataset<span class="sc">$</span>emociones_positivas, dataset<span class="sc">$</span>promedio)</span>
 <span id="cb41-6"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb41-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb41-7"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb41-7" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(reg, <span class="at">col =</span> <span class="st">&quot;green&quot;</span>)</span></code></pre></div>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-30-1.png" width="672" /></p>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-25-1.png" width="672" /></p>
 <div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb42-1" aria-hidden="true" tabindex="-1"></a>reg</span></code></pre></div>
 <pre><code>## 
 ## Call:
@@ -540,7 +540,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb44-5"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb44-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(dataset<span class="sc">$</span>emociones_negativas, dataset<span class="sc">$</span>promedio)</span>
 <span id="cb44-6"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb44-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb44-7"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb44-7" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(reg_1, <span class="at">col =</span> <span class="st">&quot;red&quot;</span>)</span></code></pre></div>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-31-1.png" width="672" /></p>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-26-1.png" width="672" /></p>
 <div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb45-1" aria-hidden="true" tabindex="-1"></a>reg_1</span></code></pre></div>
 <pre><code>## 
 ## Call:
@@ -560,6 +560,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <hr />
 <ol start="1">
 <li id="fn1"><p>Si estuviéramos siguiendo los pasos tradicionales en el análisis de datos, probablemente antes de realizar la sumatoria de las columnas, en esta etapa deberíamos ejecutar un análisis de confiabilidad para determinar la consistencia interna de la dimensión.<a href="r-en-acción-analizando-un-estudio-empírico-real.html#fnref1" class="footnote-back">↩︎</a></p></li>
+<li id="fn2"><p>Por lo general en los recursos de R, a esto se suele referir como vectores, los cuales son simplemente una secuencia de valores reunidos en una variable.<a href="r-en-acción-analizando-un-estudio-empírico-real.html#fnref2" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>
