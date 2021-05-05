@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Capítulo 3 ¿Qué es R? Instalando R y RStudio | Introducción al Análisis de Datos en Psicología usando R</title>
+  <title>Capítulo 5 Instalando Librerías en R | Introducción al Análisis de Datos en Psicología usando R</title>
   <meta name="description" content="Este curso tiene como objetivo enseñar R para análisis de datos en psicología." />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Capítulo 3 ¿Qué es R? Instalando R y RStudio | Introducción al Análisis de Datos en Psicología usando R" />
+  <meta property="og:title" content="Capítulo 5 Instalando Librerías en R | Introducción al Análisis de Datos en Psicología usando R" />
   <meta property="og:type" content="book" />
   
   <meta property="og:image" content="simp_dan.png" />
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Capítulo 3 ¿Qué es R? Instalando R y RStudio | Introducción al Análisis de Datos en Psicología usando R" />
+  <meta name="twitter:title" content="Capítulo 5 Instalando Librerías en R | Introducción al Análisis de Datos en Psicología usando R" />
   
   <meta name="twitter:description" content="Este curso tiene como objetivo enseñar R para análisis de datos en psicología." />
   <meta name="twitter:image" content="simp_dan.png" />
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="images/simp_dan.ico" type="image/x-icon" />
-<link rel="prev" href="r-en-acción-analizando-un-estudio-empírico-real.html"/>
-<link rel="next" href="comandos-básicos-en-r.html"/>
+<link rel="prev" href="comandos-básicos-en-r.html"/>
+<link rel="next" href="tidyverse-librería-de-análisis-de-datos.html"/>
 <script src="libs/header-attrs-2.7/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -206,73 +206,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="qué-es-r-instalando-r-y-rstudio" class="section level1" number="3">
-<h1><span class="header-section-number">Capítulo  3</span> ¿Qué es R? Instalando R y RStudio</h1>
-<div id="definiendo-r" class="section level2" number="3.1">
-<h2><span class="header-section-number">3.1</span> Definiendo R</h2>
-<p>R es un lenguaje de programación que fue lanzado de manera estable el año 2000 por Robert Gentleman y Ross Ihaka (1993) del Departamento de Estadística de la Universidad de Auckland (Nueva Zelanda). Para esto, ellos se basaron en el lenguaje de programación S desarrollado en los laboratorios Bell de Estados Unidos en 1970. R fue diseñado con el fin exclusivo de construir un lenguaje para el análisis estadístico. De acuerdo al <em>TIOBE programming community index</em> (marzo de 2021), R ocupa el puesto 11 entre los lenguajes de programación más populares, toda una sorpresa para una herramienta que fue pensada solo para propósitos estadísticos.</p>
-<p>R es un lenguaje de programación orientado a objetos. ¿Pero qué quiere decir esto? Para mantener las cosas simples, diremos que este tipo de lenguajes permite definir tipos de datos y, al mismo tiempo, definir operaciones que se aplican a estos mismos tipos de datos. Por ejemplo, desde un punto de vista estadístico, podemos definir un objeto como una variable <code>x = 16</code> y cada vez que ejecutemos <code>x</code>, R imprimirá <code>16</code>. También podremos ejecutar algunas funciones sobre la variable o el objeto que acabamos de crear. Por ejemplo, si escribimos en R <code>sqrt(x)</code>, nos devolverá la raíz cuadrada de 16 que es <code>4</code>, y cuyo valor está almacenado en <code>x</code>. <code>sqrt()</code> es una función base (es decir, que ya existe) en R que entrega la raíz cuadrada de un valor o variable que esté dentro del paréntesis. De este modo, no tenemos que estar escribiendo de maneras engorrosas la raíz cuadrada y podemos aplicar estas funciones en las variables ya definidas. ¡R lo hace mas fácil para nosotros!</p>
-<p>Habiendo definido brevemente R, ahora nos enfocaremos en instalar R en nuestro computador. Luego de esto, utilizaremos la consola de R como una común y vulgar calculadora para escribir las primeras instrucciones y hacernos una idea muy general de cómo funciona y cuáles son los símbolos de algunas operaciones matemáticas básicas. Sin embargo, pasaremos rápidamente a la descarga de RStudio, el cual es el entorno de desarrollo integrado más popular y casi por definición para interactuar con R y el que usaremos a lo largo de este curso. Por ahora vamos a instalar R.</p>
-</div>
-<div id="instalando-r" class="section level2" number="3.2">
-<h2><span class="header-section-number">3.2</span> Instalando R</h2>
-<p>Para esto debemos ir a la siguiente website:</p>
-<div class="FOO">
-<p>
-<a href="http://cran.r-project.org/" target="_blank">Sitio web de R</a>
-</p>
-</div>
-<p align="center">
-  <img width="800" height="400" src="images/r_cran.png">
-</p>
-<p align="center">
-Figura 2. Página web de inicio de R. 
-</p>
-<p>En la parte superior, aparecerá un cuadro con tres opciones diferentes de descarga según el sistema operativo que use tu computador (i.e., Windows, OS X o Linux). Dale clic a la opción que corresponda a tu caso.</p>
-<div id="r-para-windows" class="section level3" number="3.2.1">
-<h3><span class="header-section-number">3.2.1</span> R para Windows</h3>
-<p>A pesar de que la página de R no es particularmente “estética”, puedes fácilmente visualizar y clicar la opción de descarga para Windows. Una vez hayas seleccionado este enlace, dale clic a “install R for the first time”. Esto te llevará finalmente a la página de descarga donde tienes que clicar el enlace que dice “Download R 4.0.5 for Windows (85 megabytes, 32/64 bit)” (o cual sea la versión que veas al momento de descargar R). Esto iniciará la descarga de un archivo, el cual tardará unos pocos minutos dependiendo de tu conexión a internet y otras variables. Ya descargado, haz doble clic para instalarlo y responde apropiadamente las preguntas que haga Windows para su instalación y ubicación. Seguir las opciones por defecto por lo general es una buena idea. Ahora ya teniendo instalado R en tu computador, puedes ir al menú de inicio y abrirlo.</p>
-</div>
-<div id="r-para-mac" class="section level3" number="3.2.2">
-<h3><span class="header-section-number">3.2.2</span> R para Mac</h3>
-<p>Si tienes un ordenador Mac, dale clic al enlace correspondiente a Mac OS X. Esto te llevará a una página donde aparece la opción “R for Mac OS X”. Bajo el subtítulo “Latest release:”, encontrarás un enlace con la versión que necesitas (al momento de escribir este texto, yo vi el siguiente link: “R-4.0.5.pkg (notarized and signed)”). Como resultado tu empezarás a descargar el instalador que en mi caso decía “R-4.0.5.pkg”. Sigue el proceso normal de instalación de Mac para instalar R.</p>
-</div>
-<div id="r-para-linux" class="section level3" number="3.2.3">
-<h3><span class="header-section-number">3.2.3</span> R para Linux</h3>
-<p>Para este caso, debo decir que nunca he instalado un programa en Linux, por lo que no soy de mucha ayuda aquí (sorry guys!) y voy a dar una explicación que he encontrado en la web. Deberías darle clic en el enlace “Download R for Linux”. En esa página, tu encontrarás directorios para Debian, Red Hat, Suse y Ubuntu cada una con sus respectivas instrucciones. Una vez que tengas instalado R, puedes correrlo desde la línea de comando tan solo escribiendo <code>R</code>.</p>
-</div>
-</div>
-<div id="instalando-rstudio" class="section level2" number="3.3">
-<h2><span class="header-section-number">3.3</span> Instalando RStudio</h2>
-<p>Ahora que ya tenemos R en nuestro computador es bueno recordar que R es un lenguaje de programación. Digo esto porque nosotros podemos interactuar con R de diferentes maneras. Una forma es interactuar con R a través de la consola que está instalada en nuestros laptops. Y para serles brutamente honesto, esta no es la manera más eficiente de hacerlo. En cambio, lo que les propongo es usar un <em>software</em> libre para dicho propósito. Es aquí cuando empezamos a hablar de RStudio, el cual es un programa diseñado para hacer nuestras vidas más fáciles cuando interactuemos con R. Si bien hay diferentes herramientas para comunicarse con R, RStudio es por masacre la manera más popular de hacerlo y que, prácticamente, se ha convertido en LA forma de hacer análisis de datos. RStudio es lo que se conoce como un entorno de desarrollo integrado (<em>Integrated Development Environment</em>, IDE). Para seguir con las explicaciones simples y que nos permitan seguir avanzando sin mayores problemas con nuestro curso, diremos que un IDE es un software especializado que ha sido pensado para proporcionar las herramientas necesarias para un desarrollo ágil y que cuenta con elementos como un editor, una consola, funciones de autocompletado y resaltado de sintaxis, entre otras funciones. Si bien esto aun puede parecer algo complicado, no se preocupen, en la medida que vayamos avanzando en este curso iremos ilustrando los puntos de la definición. Por ahora lo que haremos es descargar RStudio en nuestro computador. Para esto, utilizaremos el siguiente enlace:</p>
-<div class="FOO">
-<p>
-<a href="https://www.rstudio.com/products/rstudio/download/#download" target="_blank">Sitio web de RStudio</a>
-</p>
-</div>
-<p align="center">
-  <img width="600" height="400" src="images/r_studio_webpage.png">
-</p>
-<p align="center">
-Figura 3. Página web de inicio de RStudio. 
-</p>
-<p>Si bajas un poco a lo largo de la página web de RStudio, te encontrarás con las opciones que aparecen en la imagen de abajo. En este caso, aparece la opción de descarga de RStudio para el sistema operativo de Mac (en el cuadro azul a la izquierda de la imagen <em>Download RStudio for Mac</em>) porque la página web de RStudio genera automáticamente el link que cada usuario necesita. Si tienes <em>Windows</em>, aparecerá un link para tu sistema operativo.</p>
-<p align="center">
-  <img width="600" height="400" src="images/r_studio_download.png">
-</p>
-<p align="center">
-Figura 4. Links de descarga de RStudio para tu sistema operativo. 
-</p>
+<div id="instalando-librerías-en-r" class="section level1" number="5">
+<h1><span class="header-section-number">Capítulo  5</span> Instalando Librerías en R</h1>
 
-</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="r-en-acción-analizando-un-estudio-empírico-real.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="comandos-básicos-en-r.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="comandos-básicos-en-r.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="tidyverse-librería-de-análisis-de-datos.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -303,7 +247,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/danielivanperez/libro_analisis_de_datos/edit/master/03-instalando_r.Rmd",
+"link": "https://github.com/danielivanperez/libro_analisis_de_datos/edit/master/05-instalando_paquetes.Rmd",
 "text": "Edit"
 },
 "history": {
@@ -311,7 +255,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/danielivanperez/libro_analisis_de_datos/blob/master/03-instalando_r.Rmd",
+"link": "https://github.com/danielivanperez/libro_analisis_de_datos/blob/master/05-instalando_paquetes.Rmd",
 "text": null
 },
 "download": null,

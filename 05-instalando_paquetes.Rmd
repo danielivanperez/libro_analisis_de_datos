@@ -1,2 +1,2 @@
-# Instalando Paquetes en R
+# Instalando Librerías en R
 
