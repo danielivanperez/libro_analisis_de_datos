@@ -24,7 +24,7 @@
 <meta name="author" content="Daniel Pérez Zapata" />
 
 
-<meta name="date" content="2021-05-04" />
+<meta name="date" content="2021-05-05" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -181,7 +181,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.5.1" data-path="comandos-básicos-en-r.html"><a href="comandos-básicos-en-r.html#argumentos-sus-nombres-y-valores-por-defecto-en-las-funciones"><i class="fa fa-check"></i><b>4.5.1</b> Argumentos, sus Nombres y Valores por Defecto en las Funciones</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="tidyverse-librería-de-análisis-de-datos.html"><a href="tidyverse-librería-de-análisis-de-datos.html"><i class="fa fa-check"></i><b>5</b> Tidyverse: Librería de Análisis de Datos</a></li>
+<li class="chapter" data-level="5" data-path="instalando-paquetes-en-r.html"><a href="instalando-paquetes-en-r.html"><i class="fa fa-check"></i><b>5</b> Instalando Paquetes en R</a></li>
+<li class="chapter" data-level="6" data-path="tidyverse-librería-de-análisis-de-datos.html"><a href="tidyverse-librería-de-análisis-de-datos.html"><i class="fa fa-check"></i><b>6</b> Tidyverse: Librería de Análisis de Datos</a></li>
 <li class="chapter" data-level="" data-path="anexo-1-más-comandos-básicos.html"><a href="anexo-1-más-comandos-básicos.html"><i class="fa fa-check"></i>Anexo 1: Más Comandos Básicos</a></li>
 <li class="chapter" data-level="" data-path="breve-biografía.html"><a href="breve-biografía.html"><i class="fa fa-check"></i>Breve Biografía</a></li>
 <li class="divider"></li>
@@ -510,7 +511,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Póngase especial atención a el espacio anterior de la coma <code>,</code> al interior del paréntesis cuadrado. ¿Recuerdan a qué corresponde esta posición? Así es !!! A las filas o participantes de nuestra base de datos. ¿Qué hemos hecho? Hemos eliminado <code>1:137</code> y la hemos dejado en blanco o sin ningún valor numérico. R automáticamente interpreta esto como si nosotros quisiéramos seleccionar todas las filas de nuestra base de datos. De este modo, podemos utilizar diferentes formas para seleccionar valores en una base de datos. Finalmente, vamos a crear la columna <code>emociones_negativas</code> en la base de datos usando la función <code>rowMeans()</code> con la última forma de seleccionar filas y columnas en la base de datos.</p>
 <div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb38-1" aria-hidden="true" tabindex="-1"></a>dataset<span class="sc">$</span>emociones_negativas <span class="ot">&lt;-</span> <span class="fu">rowMeans</span>(dataset[ ,<span class="fu">c</span>(<span class="dv">12</span>,<span class="dv">14</span>,<span class="dv">16</span>,<span class="dv">18</span>,<span class="dv">20</span>,<span class="dv">22</span>)])</span></code></pre></div>
 <p>Finalmente, mostraremos las primeras 10 filas de las variables recién creadas con el siguiente código:</p>
-<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb39-1" aria-hidden="true" tabindex="-1"></a>dataset[<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span> ,<span class="fu">c</span>(<span class="dv">23</span>,<span class="dv">24</span>)]</span></code></pre></div>
+<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb39-1" aria-hidden="true" tabindex="-1"></a>dataset[<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>,<span class="fu">c</span>(<span class="dv">23</span>,<span class="dv">24</span>)]</span></code></pre></div>
 <pre><code>##    emociones_positivas emociones_negativas
 ## 1             3.333333            2.166667
 ## 2             3.333333            2.166667
@@ -526,9 +527,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="graficando-datos" class="section level2" number="2.5">
 <h2><span class="header-section-number">2.5</span> Graficando Datos</h2>
 <div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(<span class="fu">table</span>(dataset<span class="sc">$</span>emociones_positivas)) <span class="co">#both columns need to be integer</span></span></code></pre></div>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-25-1.png" width="672" /></p>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-24-1.png" width="672" /></p>
 <div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(dataset<span class="sc">$</span>emociones_positivas, dataset<span class="sc">$</span>promedio) <span class="co">#both columns need to be integer</span></span></code></pre></div>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-26-1.png" width="672" /></p>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-25-1.png" width="672" /></p>
 <div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(stats)</span>
 <span id="cb43-2"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb43-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb43-3"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb43-3" aria-hidden="true" tabindex="-1"></a>reg<span class="ot">&lt;-</span><span class="fu">lm</span>(dataset<span class="sc">$</span>promedio <span class="sc">~</span> dataset<span class="sc">$</span>emociones_positivas, <span class="at">data =</span> dataset)</span>
@@ -536,7 +537,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb43-5"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb43-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(dataset<span class="sc">$</span>emociones_positivas, dataset<span class="sc">$</span>promedio)</span>
 <span id="cb43-6"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb43-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb43-7"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb43-7" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(reg, <span class="at">col =</span> <span class="st">&quot;green&quot;</span>)</span></code></pre></div>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-27-1.png" width="672" /></p>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-26-1.png" width="672" /></p>
 <div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb44-1" aria-hidden="true" tabindex="-1"></a>reg</span></code></pre></div>
 <pre><code>## 
 ## Call:
@@ -553,7 +554,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb46-5"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb46-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(dataset<span class="sc">$</span>emociones_negativas, dataset<span class="sc">$</span>promedio)</span>
 <span id="cb46-6"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb46-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb46-7"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb46-7" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(reg_1, <span class="at">col =</span> <span class="st">&quot;red&quot;</span>)</span></code></pre></div>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-28-1.png" width="672" /></p>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-27-1.png" width="672" /></p>
 <div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb47-1" aria-hidden="true" tabindex="-1"></a>reg_1</span></code></pre></div>
 <pre><code>## 
 ## Call:

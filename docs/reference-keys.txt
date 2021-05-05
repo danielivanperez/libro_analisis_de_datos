@@ -28,4 +28,5 @@ convenciones-informales-para-nombrar-variables
 errores-de-escritura-o-typos-en-r
 funciones-en-r
 argumentos-sus-nombres-y-valores-por-defecto-en-las-funciones
+instalando-paquetes-en-r
 tidyverse-librería-de-análisis-de-datos

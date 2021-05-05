@@ -177,7 +177,7 @@ dataset$emociones_negativas <- rowMeans(dataset[ ,c(12,14,16,18,20,22)])
 Finalmente, mostraremos las primeras 10 filas de las variables recién creadas con el siguiente código: 
 
 ```{r}
-dataset[1:10 ,c(23,24)]
+dataset[1:10,c(23,24)]
 ```
 
 
