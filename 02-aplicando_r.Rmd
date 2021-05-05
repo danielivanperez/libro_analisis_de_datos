@@ -180,13 +180,41 @@ Finalmente, mostraremos las primeras 10 filas de las variables recién creadas c
 dataset[1:10,c(23,24)]
 ```
 
-
 ## Graficando Datos 
 
+A continuación, exploraremos brevemente algunas variables de la base de datos con el fin de presentar algunas funciones para construir tablas, gráficos de barra y dispersión para formarnos una idea de los datos que disponemos. Nos enfocaremos en la variable `sexo` en la primera parte de esta sección. Vamos a imprimirla en la consola en el bloque de código de abajo.  
+
 ```{r}
-barplot(table(dataset$emociones_positivas)) #both columns need to be integer
+dataset$sexo
+```
+Oh wait! Al parecer tenemos un problema en la forma en que están etiquetados los valores: `femenino` y `masculino` corresponden al género de los participantes. Sería mejor modificar ahora las etiquetas a `mujer` y `hombre`, respectivamente.  Para esto vamos a usar la librería `stringr`, la cual forma parte de la famosa librería `tidyverse`(ver capítulo 6 para más detalles sobre esta librería y cómo instalarla). Corramos la función y, luego, procederemos a describir lo que hay allí. 
+
+```{r}
+library(stringr)
+str_replace_all(dataset$sexo, c("Femenino" = "Mujer", "Masculino" = "Hombre"))
+```
+Primero hemos llamado a la librería `stringr` (esto se suele hacer solamente una vez) para luego utilizar la función `str_replace_all ()`. Al interior del paréntesis, primero tenemos que escribir la columna de la base de datos, la cual deseamos modificar. Posteriormente, usamos la función `c` para combinar los elementos al interior del vector y poder aplicar los reemplazos. Para esto, debemos primero escribir entre `“”` el término a remplazar, en nuestro caso, “Femenino” seguido por el signo `=`, seguido del nuevo término, `Mujer`. Para poder realizar múltiples reemplazos debemos separar con una `,` y escribir el término a reemplazar y luego el nuevo término: `"Masculino" = "Hombre"`. Finalmente, procederemos a ejecutar este cambio en la base datos con el código de abajo. 
+
+```{r}
+dataset$sexo <- str_replace_all(dataset$sexo, c("Femenino" = "Mujer", "Masculino" = "Hombre"))
 ```
 
+Habiendo modificado los valores de la variable sexo ahora procederemos a describir la función `table()`, la cual crea resultados tabulares de variables categóricas. Apliquemos dicha función a la variable sexo para saber cuántos hombres y mujeres hay en nuestra base de datos.
+
+
+```{r}
+table(dataset$sexo) #both columns need to be integer
+#barplot(table(dataset$sexo)) 
+```
+Con esta simple instrucción, la salida nos dice que hay 98 mujeres y 39 hombres. Ahora para visualizar el resultado de la tabla, usaremos la función `barplot()` con la instrucción arriba escrita.  
+
+```{r}
+barplot(table(dataset$sexo)) #both columns need to be integer
+```
+```{r}
+library(stringr)
+str_replace_all(dataset$sexo, c("Femenino" = "Mujer", "Masculino" = "Hombre"))
+```
 
 ```{r}
 plot(dataset$emociones_positivas, dataset$promedio) #both columns need to be integer
