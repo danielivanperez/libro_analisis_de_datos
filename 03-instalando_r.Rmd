@@ -69,4 +69,14 @@ Figura 4. Links de descarga de RStudio para tu sistema operativo.
 </p>
 ```
 
+### Paneles de RStudio 
+
+```{=html}
+<p align="center">
+  <img width="800" height="400" src="images/rstudio_panels.png">
+</p>
+<p align="center">
+Figura 5. Paneles principales de RStudio. 
+</p>
+```
 
