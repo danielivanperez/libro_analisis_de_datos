@@ -86,9 +86,9 @@ Figura 6. Paneles principales de RStudio.
 
 En la figura 6, hay cuatros rectángulos de diferentes colores, los cuales describen los siguientes paneles:
 
-*Panel 1: Panel de Código (*Script*)
-*Panel 2: Panel de Consola (*Console*)
-*Panel 3: Panel de Entorno (*Environment*)
-*Panel 4: Panel de Archivos (*Files*)
+* Panel 1: Panel de Código (*Script*)
+* Panel 2: Panel de Consola (*Console*)
+* Panel 3: Panel de Entorno (*Environment*)
+* Panel 4: Panel de Archivos (*Files*)
 
 
