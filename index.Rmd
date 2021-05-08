@@ -12,7 +12,7 @@ favicon: "images/simp_dan.ico"
 
 ```{=html}
 <p align="center">
-  <img width="150" height="200" src="images/rsz_dani_r.png"> 
+  <img width="223" height="260" src="images/dani_r.png"> 
 ```
 
 ## Presentación 
