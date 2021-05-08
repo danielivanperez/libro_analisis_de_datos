@@ -74,10 +74,10 @@ En estos tres ejemplos, podemos ver la versatilidad y sencillez de R para ejecut
 
 ```{=html}
 <p align="center">
-  <img width="280" height="200" src="monkey.gif">
+  <img width="280" height="200" src="images/monkey.gif">
 </p>
 <p align="center">
-Figura 2. Usuario inicial de R imaginando las posibilidades.
+Figura 7. Usuario inicial de R imaginando las posibilidades.
 </p>
 ```
 

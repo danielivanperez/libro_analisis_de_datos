@@ -13,7 +13,7 @@ Antes de seguir adelante, quizás la primera pregunta que deberíamos responder 
 
 ```{=html}
 <p align="center">
-  <img width="280" height="200" src="mundo_mejor.jpg">
+  <img width="280" height="200" src="images/mundo_mejor.jpg">
 </p>
 <p align="center">
 Figura 1. Ilustración de la comunidad de R interactuando en el mundo virtual.
@@ -24,7 +24,7 @@ Otra razón para utilizar R obedece al espíritu de nuestro tiempo, específicam
 
 ```{=html}
 <p align="center">
-  <img width="300" height="300" src="data_science_figure.png">
+  <img width="300" height="300" src="images/data_science_figure.png">
 </p>
 <p align="center">
 Figura 2. Diagrama de Venn ilustrando los dominios de solapamaniento de la ciencia de datos.
