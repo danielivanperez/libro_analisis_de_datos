@@ -22,7 +22,7 @@ Para esto debemos ir a la siguiente website:
   <img width="800" height="400" src="images/r_cran.png">
 </p>
 <p align="center">
-Figura 2. Página web de inicio de R. 
+Figura 3. Página web de inicio de R. 
 </p>
 ```
 
@@ -54,18 +54,18 @@ Ahora que ya tenemos R en nuestro computador es bueno recordar que R es un lengu
   <img width="600" height="400" src="images/r_studio_webpage.png">
 </p>
 <p align="center">
-Figura 3. Página web de inicio de RStudio. 
+Figura 4. Página web de inicio de RStudio. 
 </p>
 ```
 
-Si bajas un poco a lo largo de la página web de RStudio, te encontrarás con las opciones que aparecen en la imagen de abajo. En este caso, aparece la opción de descarga de RStudio para el sistema operativo de Mac (en el cuadro azul a la izquierda de la imagen *Download RStudio for Mac*) porque la página web de RStudio genera automáticamente el link que cada usuario necesita. Si tienes *Windows*, aparecerá un link para tu sistema operativo. 
+Si bajas un poco a lo largo de la página web de RStudio, te encontrarás con las opciones que aparecen en la figura 5. En este caso, aparece la opción de descarga de RStudio para el sistema operativo de Mac (en el cuadro azul a la izquierda de la imagen *Download RStudio for Mac*) porque la página web de RStudio genera automáticamente el link que cada usuario necesita. Si tienes *Windows*, aparecerá un link para tu sistema operativo. 
 
 ```{=html}
 <p align="center">
   <img width="600" height="400" src="images/r_studio_download.png">
 </p>
 <p align="center">
-Figura 4. Links de descarga de RStudio para tu sistema operativo. 
+Figura 5. Links de descarga de RStudio para tu sistema operativo. 
 </p>
 ```
 
@@ -73,14 +73,14 @@ Figura 4. Links de descarga de RStudio para tu sistema operativo.
 
 Haciendo un breve resumen de lo que hemos hecho en este capítulo, acabamos de descargar dos cosas: el lenguaje de programación R y RStudio. Recalco esto porque algunos usuarios nóveles tienden a descargar solo uno de ellos y no lo dos. Para este curso es necesario tener ambos. 
 
-OK, una vez descargado RStudio en nuestro computador, procederemos a seleccionarlo y abrirlo. Una vez abierto, deberían ver una pantalla similar a la que se muestra en la figura 5. En ella, aprovecharemos de describir los principales 4 paneles que allí se observan (en algunas ocasiones es necesario hacer aparecer el panel [1] *script*, para esto dar clic en la parte superior izquierda en *File* →*New file* → *RScript*).   
+OK, una vez descargado RStudio en nuestro computador, procederemos a seleccionarlo y abrirlo. Una vez abierto, deberían ver una pantalla similar a la que se muestra en la figura 6. En ella, aprovecharemos de describir los principales 4 paneles que allí se observan (en algunas ocasiones es necesario hacer aparecer el panel [1] *script*, para esto dar clic en la parte superior izquierda en *File* →*New file* → *RScript*).   
 
 ```{=html}
 <p align="center">
   <img width="800" height="500" src="images/rstudio_panels.png">
 </p>
 <p align="center">
-Figura 5. Paneles principales de RStudio. 
+Figura 6. Paneles principales de RStudio. 
 </p>
 ```
 
