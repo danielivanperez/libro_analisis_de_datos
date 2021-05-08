@@ -18,7 +18,7 @@ r-para-windows
 r-para-mac
 r-para-linux
 instalando-rstudio
-paneles-de-rstudio
+explorando-rstudio
 comandos-básicos-en-r
 r-como-una-simple-calculadora
 orden-de-operaciones-matemáticas-en-r
