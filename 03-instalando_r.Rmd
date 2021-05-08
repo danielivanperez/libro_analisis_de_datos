@@ -19,7 +19,7 @@ Para esto debemos ir a la siguiente website:
 
 ```{=html}
 <p align="center">
-  <img width="800" height="400" src="images/r_cran.png">
+  <img width="600" height="300" src="images/r_cran.png">
 </p>
 <p align="center">
 Figura 3. Página web de inicio de R. 
@@ -51,7 +51,7 @@ Ahora que ya tenemos R en nuestro computador es bueno recordar que R es un lengu
 
 ```{=html}
 <p align="center">
-  <img width="600" height="400" src="images/r_studio_webpage.png">
+  <img width="600" height="300" src="images/r_studio_webpage.png">
 </p>
 <p align="center">
 Figura 4. Página web de inicio de RStudio. 
@@ -62,7 +62,7 @@ Si bajas un poco a lo largo de la página web de RStudio, te encontrarás con la
 
 ```{=html}
 <p align="center">
-  <img width="600" height="400" src="images/r_studio_download.png">
+  <img width="600" height="300" src="images/r_studio_download.png">
 </p>
 <p align="center">
 Figura 5. Links de descarga de RStudio para tu sistema operativo. 
@@ -77,7 +77,7 @@ OK, una vez descargado RStudio en nuestro computador, procederemos a seleccionar
 
 ```{=html}
 <p align="center">
-  <img width="800" height="500" src="images/rstudio_panels.png">
+  <img width="600" height="300" src="images/rstudio_panels.png">
 </p>
 <p align="center">
 Figura 6. Paneles principales de RStudio. 
