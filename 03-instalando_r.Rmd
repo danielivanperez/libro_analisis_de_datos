@@ -1,4 +1,4 @@
-# ¿Qué es R? Instalando R y RStudio
+# ¿Qué es R? Instalando R y RStudio {#chapter_3}
 
 ## Definiendo R
 R es un lenguaje de programación que fue lanzado de manera estable el año 2000 por Robert Gentleman y Ross Ihaka (1993) del Departamento de Estadística de la Universidad de Auckland (Nueva Zelanda). Para esto, ellos se basaron en el lenguaje de programación S desarrollado en los laboratorios Bell de Estados Unidos en 1970. R fue diseñado con el fin exclusivo de construir un lenguaje para el análisis estadístico. De acuerdo al *TIOBE programming community index* (marzo de 2021), R ocupa el puesto 11 entre los lenguajes de programación más populares, toda una sorpresa para una herramienta que fue pensada solo para propósitos estadísticos. 

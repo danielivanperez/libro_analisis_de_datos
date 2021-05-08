@@ -11,7 +11,7 @@ limpiando-valores-en-una-base-de-datos
 creación-de-variables-a-partir-de-otras-columnas
 graficando-datos
 ejercicios
-qué-es-r-instalando-r-y-rstudio
+chapter_3
 definiendo-r
 instalando-r
 r-para-windows
