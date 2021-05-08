@@ -12,7 +12,7 @@ favicon: "images/simp_dan.ico"
 
 ```{=html}
 <p align="center">
-  <img width="200" height="300" src="images/simp_dan.png">
+  <img width="200" height="300" src="images/rsz_dani_r.png"> 
 </p>
 ```
 
@@ -30,3 +30,4 @@ Este curso tiene como principal objetivo enseñar el lenguaje de programación R
 &nbsp;  
 
 Este recurso se encuentra en desarrollo, por lo que si encuentras algún problema o error y te gustaría informármelo, envíame un correo a daniel.perez.zapata[at]gmail.com. 
+
