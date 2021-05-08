@@ -19,7 +19,7 @@ Para esto debemos ir a la siguiente website:
 
 ```{=html}
 <p align="center">
-  <img width="600" height="300" src="images/r_cran.png">
+  <img width="700" height="350" src="images/r_cran.png">
 </p>
 <p align="center">
 Figura 3. Página web de inicio de R. 
@@ -77,7 +77,7 @@ OK, una vez descargado RStudio en nuestro computador, procederemos a seleccionar
 
 ```{=html}
 <p align="center">
-  <img width="700" height="350" src="images/rstudio_panels.png">
+  <img width="750" height="380" src="images/rstudio_panels.png">
 </p>
 <p align="center">
 Figura 6. Paneles principales de RStudio. 
