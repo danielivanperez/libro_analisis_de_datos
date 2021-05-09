@@ -24,7 +24,7 @@ chapter_4
 r-como-una-simple-calculadora
 orden-de-operaciones-matemáticas-en-r
 variables-en-r
-construyendo-variables-en-r
+chapter_4.3.1
 reglas-para-nombrar-variables
 convenciones-informales-para-nombrar-variables
 errores-de-escritura-o-typos-en-r

@@ -47,7 +47,7 @@ Al igual que el ejemplo de arriba, la operación que está dentro del paréntesi
 
 Una de las principales ventajas de usar R es que podemos crear variables con el fin de almacenar información en ellas. Una manera bastante simple de entender el rol de las variables en R es que nosotros asignamos una etiqueta o un nombre a un conjunto de información determinada. La gracia de R en este caso es bastante grande: para realizar análisis de datos se necesita poder usar variables y R nos permite hacerlo de manera bastante sencilla. 
 
-### Construyendo Variables en R
+### Construyendo Variables en R {#chapter_4.3.1}
 
 Para crear una variable, debemos utilizar el operador de asignación `<-`. Veamos un ejemplo. 
 
