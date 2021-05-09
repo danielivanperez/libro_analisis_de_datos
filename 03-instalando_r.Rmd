@@ -112,3 +112,25 @@ Figura 7. Instrucciones en la consola de R.
 
 Una de las ventajas de usar la consola es que ingresamos un *input* y de forma instantánea obtenemos un *output* en la consola.  Este modo de trabajo se denomina *programación interactiva* y es una forma de programación que hace que el usuario pueda observar los resultados del código que va desarrollando en la medida que lo va creando. En términos de aprendizaje, es bastante útil porque el usuario produce resultados en R, percibe cierto control del proceso de programación y se genera un ciclo de refuerzo continuo que podría incrementar su motivación y subir su percepción de autoeficacia (al menos cuando las instrucciones funcionan).
 
+Sin embargo, si bien la consola es un buen lugar para empezar nuestra aventura a través de la programación por los recovecos de R, al poco andar no será la forma más eficiente de interactuar con R. Por ejemplo, si quisiéramos editar más de dos líneas de código en la consola, el proceso sería algo más engorroso. Para hacer esto (y mucho más), tenemos a nuestra disposición el panel de código. En la figura 8 abajo, hay un ejemplo con tres líneas de código. En la línea 1, recordando lo ya dicho en el capítulo 2, el signo gato o `hashgtag` marca el inicio de los comentarios que queramos escribir para describir lo que hace el código. Pero de forma más importante, todo lo que esté escrito en la parte derecha del `#` será ignorado por R y no será ejecutado, por lo que la línea 1 del ejemplo no es ejecutada. En la línea 2, hemos creado la variable `r` (ver capítulo 4, subsección 4.3 para más detalles) y en la línea 3 hemos dividido la variable `r` por 2. 
+
+```{=html}
+<p align="center">
+  <img width="600" height="300" src="images/ejemplo_script_1.png">
+</p>
+<p align="center">
+Figura 8. Ejemplo de instrucciones en el panel de código de R. 
+</p>
+```
+Un elemento importante del ejemplo de la figura 8 es que la línea 2 ha sido seleccionada (marcando el texto deseado como en el ejemplo, o simplemente dejando el cursor al inicio de la línea de código que se desea ejecutar), y posteriormente, ejecutada. La ejecución de una línea de código se puede hacer al menos de dos maneras: `Ctrl + Enter` (en Windows), `Cmd + Enter` (en Mac) o dando clic en “Run”→ “Run Selected line(s)”. El resultado se observa en la parte inferior, en el panel de la consola "r <- 5 * 4 # Creacion de la variable 'r'".  Lo que es importante notar de este ejemplo es que es necesario seleccionar la línea o líneas de código que se desean correr en R. Arriba solo se corrió la línea 2. Ahora bien, si queremos correr la línea 2 y línea 3 del panel de código, debemos seleccionar ambas líneas y luego ejecutarlas, como lo muestra la figura 9.  
+
+```{=html}
+<p align="center">
+  <img width="600" height="300" src="images/ejemplo_script_2.png">
+</p>
+<p align="center">
+Figura 8. Segundo ejemplo de instrucciones en el panel de código de R. 
+</p>
+```
+
+
