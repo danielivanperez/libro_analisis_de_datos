@@ -235,13 +235,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## 4            4   20 Femenino   201 Metodologia de la investigación en psicología 38
 ## 5            5   24 Femenino   302                       Psicología educacional 5.0
 ## 6            6   19 Femenino   201                               neuropsicología 37
-##                                     calificacion_2                                      calificacion_3
-## 1                                              3.4                                                 4.6
-## 2                       Psicología Comunitaria 4.0                           Teoría Psicoanalítica 3.2
-## 3                           Teorias cognitivas 4,9                  Metodologia de investigacion  4,8 
-## 4         Teoria del desarrollo infanto juvenil 53                               Teorias cognitivas 48
-## 5                         Tecnicas proyectivas 6.5 Gestion de personas y desarrollo organizacional 6.3
-## 6 metodología de la investigacion en psicologia 30                                  infanto juvenil 47
+##                                     calificacion_2
+## 1                                              3.4
+## 2                       Psicología Comunitaria 4.0
+## 3                           Teorias cognitivas 4,9
+## 4         Teoria del desarrollo infanto juvenil 53
+## 5                         Tecnicas proyectivas 6.5
+## 6 metodología de la investigacion en psicologia 30
+##                                        calificacion_3
+## 1                                                 4.6
+## 2                           Teoría Psicoanalítica 3.2
+## 3                  Metodologia de investigacion  4,8 
+## 4                               Teorias cognitivas 48
+## 5 Gestion de personas y desarrollo organizacional 6.3
+## 6                                  infanto juvenil 47
 ##                                             calificacion_4
 ## 1                                                      3.8
 ## 2                                   Teorías cognitivas 3.2
@@ -249,20 +256,27 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## 4                               Psicología  comunitaria 33
 ## 5 Construcción de pruebas e instrumentos de evaluación 5.6
 ## 6                                psicología comunitaria 52
-##                                    calificacion_5 promedio emo_aca_1 emo_aca_2 emo_aca_3 emo_aca_4
-## 1                                             3.6       NA         4         2         3         2
-## 2 Metodologías de investigación en psicología 3.3       NA         4         1         3         3
-## 3                        Teoria psicoanalitica no       NA         4         3         3         4
-## 4                               Psicoanalítica 38       NA         3         3         2         3
-## 5              psicopatologia infanto juvenil 5.0       NA         3         1         4         4
-## 6                                psicoanalisis 37       NA         3         1         3         4
-##   emo_aca_5 emo_aca_6 emo_aca_7 emo_aca_8 emo_aca_9 emo_aca_10 emo_aca_11 emo_aca_12
-## 1         3         2         4         2         3          2          3          3
-## 2         4         1         2         3         4          1          3          4
-## 3         3         3         4         2         3          4          3          3
-## 4         2         4         3         3         3          2          3          4
-## 5         4         1         4         1         4          2          4          4
-## 6         4         1         3         2         3          1          2          5</code></pre>
+##                                    calificacion_5 promedio emo_aca_1 emo_aca_2 emo_aca_3
+## 1                                             3.6       NA         4         2         3
+## 2 Metodologías de investigación en psicología 3.3       NA         4         1         3
+## 3                        Teoria psicoanalitica no       NA         4         3         3
+## 4                               Psicoanalítica 38       NA         3         3         2
+## 5              psicopatologia infanto juvenil 5.0       NA         3         1         4
+## 6                                psicoanalisis 37       NA         3         1         3
+##   emo_aca_4 emo_aca_5 emo_aca_6 emo_aca_7 emo_aca_8 emo_aca_9 emo_aca_10 emo_aca_11
+## 1         2         3         2         4         2         3          2          3
+## 2         3         4         1         2         3         4          1          3
+## 3         4         3         3         4         2         3          4          3
+## 4         3         2         4         3         3         3          2          3
+## 5         4         4         1         4         1         4          2          4
+## 6         4         4         1         3         2         3          1          2
+##   emo_aca_12
+## 1          3
+## 2          4
+## 3          3
+## 4          4
+## 5          4
+## 6          5</code></pre>
 <p>Además de la función <code>head()</code>, también tenemos la función <code>tail()</code>, que nos muestra por defecto las últimas seis de filas o participantes de la base de datos. Veamos un ejemplo abajo:</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tail</span>(dataset)</span></code></pre></div>
 <pre><code>##     participante edad      sexo Nivel                   calificacion_1
@@ -279,27 +293,27 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## 135   taller desarrollo personal . 7.0                    bases biologicas . 4.9
 ## 136 PSICOPATOLOGÍA INFANTO-JUVENIL 4.5 PROBLEMÁTICAS PSICOSOCIALES COMPLEJAS 5.3
 ## 137                      ingles III 46                     Teorias cognitivas 41
-##                    calificacion_4                               calificacion_5 promedio emo_aca_1
-## 132  evaluación psicométrica  54                  psicologia organizacional 59       NA         3
-## 133 Taller de desarrollo personal        Problemáticas psicosociales complejas       NA         3
-## 134                            No                                           NO       NA         4
-## 135  psicologia comunitaria . 4.9                                 ingles . 5.0       NA         4
-## 136   EVALUACIÓN PSICOMÉTRICA 6.5  PSICOLOGÍA ORGANIZACIONAL Y DEL TRABAJO 6.2       NA         4
-## 137     psicología comunitaria 47 PSICOLOGÍA DEL DESARROLLO INFANTO-JUVENIL 45       NA         4
-##     emo_aca_2 emo_aca_3 emo_aca_4 emo_aca_5 emo_aca_6 emo_aca_7 emo_aca_8 emo_aca_9 emo_aca_10
-## 132         2         3         3         3         2         3         3         3          1
-## 133         2         3         2         3         2         3         2         3          1
-## 134         4         3         2         5         1         4         3         3          1
-## 135         2         4         4         4         2         3         2         4          2
-## 136         1         2         2         2         1         2         3         3          1
-## 137         1         4         2         4         1         3         2         3          1
-##     emo_aca_11 emo_aca_12
-## 132          3          3
-## 133          3          4
-## 134          3          4
-## 135          4          3
-## 136          3          5
-## 137          3          3</code></pre>
+##                    calificacion_4                               calificacion_5 promedio
+## 132  evaluación psicométrica  54                  psicologia organizacional 59       NA
+## 133 Taller de desarrollo personal        Problemáticas psicosociales complejas       NA
+## 134                            No                                           NO       NA
+## 135  psicologia comunitaria . 4.9                                 ingles . 5.0       NA
+## 136   EVALUACIÓN PSICOMÉTRICA 6.5  PSICOLOGÍA ORGANIZACIONAL Y DEL TRABAJO 6.2       NA
+## 137     psicología comunitaria 47 PSICOLOGÍA DEL DESARROLLO INFANTO-JUVENIL 45       NA
+##     emo_aca_1 emo_aca_2 emo_aca_3 emo_aca_4 emo_aca_5 emo_aca_6 emo_aca_7 emo_aca_8
+## 132         3         2         3         3         3         2         3         3
+## 133         3         2         3         2         3         2         3         2
+## 134         4         4         3         2         5         1         4         3
+## 135         4         2         4         4         4         2         3         2
+## 136         4         1         2         2         2         1         2         3
+## 137         4         1         4         2         4         1         3         2
+##     emo_aca_9 emo_aca_10 emo_aca_11 emo_aca_12
+## 132         3          1          3          3
+## 133         3          1          3          4
+## 134         3          1          3          4
+## 135         4          2          4          3
+## 136         3          1          3          5
+## 137         3          1          3          3</code></pre>
 <p>En el <em>output</em> de arriba, podemos observar las ultimas filas de la base de datos, que van desde la fila 132 a 137. Finalmente, terminar diciendo que si queremos ver un número determinado de observaciones de la base de datos usando la función <code>head()</code> o <code>tail()</code>, podemos escribir el número de filas después de <code>dataset</code> en nuestro caso, separado por una coma. A continuación, muestro un ejemplo para ver las primeras 3 filas de la base de datos:</p>
 <div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(dataset, <span class="dv">3</span>)</span></code></pre></div>
 <pre><code>##   participante edad     sexo Nivel                                 calificacion_1
@@ -310,31 +324,45 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## 1                        3.4                                4.6                        3.8
 ## 2 Psicología Comunitaria 4.0          Teoría Psicoanalítica 3.2     Teorías cognitivas 3.2
 ## 3     Teorias cognitivas 4,9 Metodologia de investigacion  4,8  Psicología comunitaria 4,1
-##                                    calificacion_5 promedio emo_aca_1 emo_aca_2 emo_aca_3 emo_aca_4
-## 1                                             3.6       NA         4         2         3         2
-## 2 Metodologías de investigación en psicología 3.3       NA         4         1         3         3
-## 3                        Teoria psicoanalitica no       NA         4         3         3         4
-##   emo_aca_5 emo_aca_6 emo_aca_7 emo_aca_8 emo_aca_9 emo_aca_10 emo_aca_11 emo_aca_12
-## 1         3         2         4         2         3          2          3          3
-## 2         4         1         2         3         4          1          3          4
-## 3         3         3         4         2         3          4          3          3</code></pre>
+##                                    calificacion_5 promedio emo_aca_1 emo_aca_2 emo_aca_3
+## 1                                             3.6       NA         4         2         3
+## 2 Metodologías de investigación en psicología 3.3       NA         4         1         3
+## 3                        Teoria psicoanalitica no       NA         4         3         3
+##   emo_aca_4 emo_aca_5 emo_aca_6 emo_aca_7 emo_aca_8 emo_aca_9 emo_aca_10 emo_aca_11
+## 1         2         3         2         4         2         3          2          3
+## 2         3         4         1         2         3         4          1          3
+## 3         4         3         3         4         2         3          4          3
+##   emo_aca_12
+## 1          3
+## 2          4
+## 3          3</code></pre>
 </div>
 <div id="seleccionando-columnas-en-una-base-de-datos" class="section level2" number="2.2">
 <h2><span class="header-section-number">2.2</span> Seleccionando Columnas en una Base de Datos</h2>
 <p>El código de arriba nos muestra las respuestas de los primeros 6 sujetos de nuestra base de datos. Podemos fácilmente ver que la salida o <em>output</em> que nos da R es relativamente extensa. Sería muy ineficiente siempre estar imprimiendo bases de datos de forma completa. Por esta razón, es mucho mejor trabajar viendo un número limitado de variables al mismo tiempo. Empecemos con el caso más simple de explorar solo una variable. A continuación, vamos a mostrar cómo utilizar el símbolo dólar <code>$</code>, el cual nos permite seleccionar una columna o variable de la base de datos. Para proseguir con el ejemplo, nos centraremos en la variable <code>calificacion_1</code>. De este modo, primero escribimos el nombre de la base de datos, seguido del signo dólar y, luego, seleccionar o escribir el nombre de la variables deseada (nótese que seguimos utilizando la función <code>head()</code> con el objetivo de tener solo 6 filas en la salida de R).</p>
 <div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(dataset<span class="sc">$</span>calificacion_1)</span></code></pre></div>
-<pre><code>## [1] &quot;4.8&quot;                                              &quot;Psicología del desarrollo infanto juvenil 4.7 &quot;  
-## [3] &quot;Desarrollo infanto-juvenil 3,9&quot;                   &quot;Metodologia de la investigación en psicología 38&quot;
-## [5] &quot;Psicología educacional 5.0&quot;                       &quot;neuropsicología 37&quot;</code></pre>
+<pre><code>## [1] &quot;4.8&quot;                                             
+## [2] &quot;Psicología del desarrollo infanto juvenil 4.7 &quot;  
+## [3] &quot;Desarrollo infanto-juvenil 3,9&quot;                  
+## [4] &quot;Metodologia de la investigación en psicología 38&quot;
+## [5] &quot;Psicología educacional 5.0&quot;                      
+## [6] &quot;neuropsicología 37&quot;</code></pre>
 <p>La salida de R nos muestra las primeras 6 filas de la <code>variable calificacion_1</code>. Para mencionar otra forma útil de selección de columnas que usaremos más abajo, está elegir un rango de columnas como por ejemplo:</p>
 <div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(dataset[<span class="dv">5</span><span class="sc">:</span><span class="dv">9</span>]) </span></code></pre></div>
-<pre><code>##                                     calificacion_1                                   calificacion_2
-## 1                                              4.8                                              3.4
-## 2   Psicología del desarrollo infanto juvenil 4.7                        Psicología Comunitaria 4.0
-## 3                   Desarrollo infanto-juvenil 3,9                           Teorias cognitivas 4,9
-## 4 Metodologia de la investigación en psicología 38         Teoria del desarrollo infanto juvenil 53
-## 5                       Psicología educacional 5.0                         Tecnicas proyectivas 6.5
-## 6                               neuropsicología 37 metodología de la investigacion en psicologia 30
+<pre><code>##                                     calificacion_1
+## 1                                              4.8
+## 2   Psicología del desarrollo infanto juvenil 4.7 
+## 3                   Desarrollo infanto-juvenil 3,9
+## 4 Metodologia de la investigación en psicología 38
+## 5                       Psicología educacional 5.0
+## 6                               neuropsicología 37
+##                                     calificacion_2
+## 1                                              3.4
+## 2                       Psicología Comunitaria 4.0
+## 3                           Teorias cognitivas 4,9
+## 4         Teoria del desarrollo infanto juvenil 53
+## 5                         Tecnicas proyectivas 6.5
+## 6 metodología de la investigacion en psicologia 30
 ##                                        calificacion_3
 ## 1                                                 4.6
 ## 2                           Teoría Psicoanalítica 3.2
@@ -397,8 +425,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Genial, ahora cada una de las calificaciones tiene un punto que separa ambos valores. Solo con algunas líneas de código nos hemos ahorrado, por ejemplo, hacer este procedimiento de forma manual. Es decir, escribiendo un punto para cada valor en las celdas de las variables multiplicado por 137 participantes. Probablemente esto nos hubiera dejado de muy mal humor y habiendo gastado mucho tiempo y con posibles errores en nuestra base de datos 🥲.</p>
 <p>Pero aún queda un problema más por resolver: cambiar el contenido de la celda de carácter a número. Para ilustrar de forma más clara el problema, imaginemos que queremos saber la media aritmética de la variable <code>calificacion_1</code>:</p>
 <div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(dataset<span class="sc">$</span>calificacion_1, <span class="at">na.rm =</span> <span class="cn">TRUE</span>) <span class="co"># na.rm = True descarta las celdas sin valores </span></span></code></pre></div>
-<pre><code>## Warning in mean.default(dataset$calificacion_1, na.rm = TRUE): argument is not numeric or logical:
-## returning NA</code></pre>
+<pre><code>## Warning in mean.default(dataset$calificacion_1, na.rm = TRUE): argument is not numeric or
+## logical: returning NA</code></pre>
 <pre><code>## [1] NA</code></pre>
 <p>El mensaje de error dice lo siguiente: “argument is not numeric or logical: returning NA[1] NA”. Básicamente lo que está sucediendo aquí es que R no puede aplicar una operación matemática a texto o caracteres. Para solucionar esto, solo debemos ejecutar el siguiente código que transformará el texto a números.</p>
 <div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb25-1" aria-hidden="true" tabindex="-1"></a>dataset[<span class="dv">5</span><span class="sc">:</span><span class="dv">9</span>] <span class="ot">&lt;-</span> <span class="fu">lapply</span>(dataset[<span class="dv">5</span><span class="sc">:</span><span class="dv">9</span>], as.numeric) <span class="co"># Convertir columnas de 5 a 9 a numeros</span></span></code></pre></div>
@@ -537,19 +565,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Oh wait! Al parecer tenemos un problema en la forma en que están etiquetados los valores: <code>femenino</code> y <code>masculino</code> corresponden al género de los participantes. Sería mejor modificar ahora las etiquetas a <code>mujer</code> y <code>hombre</code>, respectivamente. Para esto vamos a usar la librería <code>stringr</code>, la cual forma parte de la famosa librería <code>tidyverse</code>(ver capítulo 6 para más detalles sobre esta librería y cómo instalarla). Corramos la función y, luego, procederemos a describir lo que hay allí.</p>
 <div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stringr)</span>
 <span id="cb43-2"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb43-2" aria-hidden="true" tabindex="-1"></a><span class="fu">str_replace_all</span>(dataset<span class="sc">$</span>sexo, <span class="fu">c</span>(<span class="st">&quot;Femenino&quot;</span> <span class="ot">=</span> <span class="st">&quot;Mujer&quot;</span>, <span class="st">&quot;Masculino&quot;</span> <span class="ot">=</span> <span class="st">&quot;Hombre&quot;</span>))</span></code></pre></div>
-<pre><code>##   [1] &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Hombre&quot;
-##  [12] &quot;Hombre&quot; &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Hombre&quot; &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Mujer&quot; 
-##  [23] &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Hombre&quot; &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Hombre&quot;
-##  [34] &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Hombre&quot; &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Hombre&quot; &quot;Mujer&quot;  &quot;Hombre&quot; &quot;Mujer&quot; 
-##  [45] &quot;Mujer&quot;  &quot;Hombre&quot; &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Hombre&quot; &quot;Mujer&quot;  &quot;Hombre&quot; &quot;Hombre&quot; &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Mujer&quot; 
-##  [56] &quot;Mujer&quot;  &quot;Hombre&quot; &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Hombre&quot;
-##  [67] &quot;Mujer&quot;  &quot;Hombre&quot; &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Hombre&quot; &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Hombre&quot; &quot;Mujer&quot; 
-##  [78] &quot;Mujer&quot;  &quot;Hombre&quot; &quot;Mujer&quot;  &quot;Hombre&quot; &quot;Mujer&quot;  &quot;Hombre&quot; &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Mujer&quot; 
-##  [89] &quot;Hombre&quot; &quot;Mujer&quot;  &quot;Hombre&quot; &quot;Hombre&quot; &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Hombre&quot; &quot;Hombre&quot;
-## [100] &quot;Hombre&quot; &quot;Hombre&quot; &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Hombre&quot; &quot;Hombre&quot; &quot;Hombre&quot; &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Mujer&quot; 
-## [111] &quot;Hombre&quot; &quot;Hombre&quot; &quot;Mujer&quot;  &quot;Hombre&quot; &quot;Hombre&quot; &quot;Hombre&quot; &quot;Mujer&quot;  &quot;Hombre&quot; &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Mujer&quot; 
-## [122] &quot;Mujer&quot;  &quot;Hombre&quot; &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Hombre&quot; &quot;Mujer&quot;  &quot;Hombre&quot;
-## [133] &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Mujer&quot;</code></pre>
+<pre><code>##   [1] &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Mujer&quot; 
+##  [10] &quot;Mujer&quot;  &quot;Hombre&quot; &quot;Hombre&quot; &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Hombre&quot;
+##  [19] &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Hombre&quot; &quot;Mujer&quot;  &quot;Mujer&quot; 
+##  [28] &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Hombre&quot; &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Hombre&quot;
+##  [37] &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Hombre&quot; &quot;Mujer&quot;  &quot;Hombre&quot; &quot;Mujer&quot;  &quot;Mujer&quot; 
+##  [46] &quot;Hombre&quot; &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Hombre&quot; &quot;Mujer&quot;  &quot;Hombre&quot; &quot;Hombre&quot; &quot;Mujer&quot;  &quot;Mujer&quot; 
+##  [55] &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Hombre&quot; &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Mujer&quot; 
+##  [64] &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Hombre&quot; &quot;Mujer&quot;  &quot;Hombre&quot; &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Hombre&quot;
+##  [73] &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Hombre&quot; &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Hombre&quot; &quot;Mujer&quot;  &quot;Hombre&quot;
+##  [82] &quot;Mujer&quot;  &quot;Hombre&quot; &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Hombre&quot; &quot;Mujer&quot; 
+##  [91] &quot;Hombre&quot; &quot;Hombre&quot; &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Hombre&quot; &quot;Hombre&quot;
+## [100] &quot;Hombre&quot; &quot;Hombre&quot; &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Hombre&quot; &quot;Hombre&quot; &quot;Hombre&quot; &quot;Mujer&quot; 
+## [109] &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Hombre&quot; &quot;Hombre&quot; &quot;Mujer&quot;  &quot;Hombre&quot; &quot;Hombre&quot; &quot;Hombre&quot; &quot;Mujer&quot; 
+## [118] &quot;Hombre&quot; &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Hombre&quot; &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Mujer&quot; 
+## [127] &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Hombre&quot; &quot;Mujer&quot;  &quot;Hombre&quot; &quot;Mujer&quot;  &quot;Mujer&quot;  &quot;Mujer&quot; 
+## [136] &quot;Mujer&quot;  &quot;Mujer&quot;</code></pre>
 <p>Primero hemos llamado a la librería <code>stringr</code> (esto se suele hacer solamente una vez) para luego utilizar la función <code>str_replace_all()</code>. Al interior del paréntesis, primero tenemos que escribir la columna de la base de datos, la cual deseamos modificar. Posteriormente, usamos la función <code>c</code> para combinar los elementos al interior del vector y poder aplicar los reemplazos. Para esto, debemos primero escribir entre <code>“”</code> el término a remplazar, en nuestro caso, “Femenino” seguido por el signo <code>=</code>, seguido del nuevo término, “Mujer”. Para poder realizar múltiples reemplazos debemos separar con una <code>,</code> y escribir el término a reemplazar y luego el nuevo término: “Masculino” = “Hombre”. Finalmente, procederemos a ejecutar este cambio en la base datos con el código de abajo.</p>
 <div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb45-1" aria-hidden="true" tabindex="-1"></a>dataset<span class="sc">$</span>sexo <span class="ot">&lt;-</span> <span class="fu">str_replace_all</span>(dataset<span class="sc">$</span>sexo, <span class="fu">c</span>(<span class="st">&quot;Femenino&quot;</span> <span class="ot">=</span> <span class="st">&quot;Mujer&quot;</span>, <span class="st">&quot;Masculino&quot;</span> <span class="ot">=</span> <span class="st">&quot;Hombre&quot;</span>))</span>
 <span id="cb45-2"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb45-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(dataset<span class="sc">$</span>sexo)</span></code></pre></div>
