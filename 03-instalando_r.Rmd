@@ -95,6 +95,4 @@ A continuación, describiremos de forma muy general estos paneles y en la medida
 
 En la consola [2] podemos interactuar o escribir directamente instrucciones para comunicarnos con R, y éste nos entrega de forma inmediata las salidas o resultados del código. También imprime las instrucciones ejecutadas en el panel de *script*. 
 
-En el panel [3] o de entorno existen un número de pestañas con diferentes funcionalidades. Por ahora, diremos que en este panel podemos encontrar las variables creadas en algunos de los otros dos paneles descritos o revisar el histórico de instrucciones ejecutadas en R. El panel de archivos de R [4], básicamente funciona como un explorador de carpetas, de este modo podemos crear, eliminar capetas o archivos sin la necesidad de salir de R.
-
-
+En el panel [3] o de entorno existen un número de pestañas con diferentes funcionalidades. Por ahora, diremos que en este panel podemos encontrar las variables creadas en algunos de los otros dos paneles descritos o revisar el histórico de instrucciones ejecutadas en R. El panel de archivos de R [4], básicamente funciona como un explorador de carpetas, de este modo podemos crear, modificar, eliminar capetas o archivos sin la necesidad de salir de R.
