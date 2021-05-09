@@ -101,7 +101,7 @@ Ilustraremos brevemente el uso del panel de código o *script* y la consola de R
 
 ```{=html}
 <p align="center">
-  <img width="500" height="100" src="images/ejemplo_consola.png">
+  <img width="550" height="100" src="images/ejemplo_consola.png">
 </p>
 <p align="center">
 Figura 7. Instrucciones en la consola de R. 
