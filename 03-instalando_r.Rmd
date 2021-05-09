@@ -97,6 +97,8 @@ En la consola [2] podemos interactuar o escribir directamente instrucciones para
 
 En el panel [3] o de entorno existen un número de pestañas con diferentes funcionalidades. Por ahora, diremos que en este panel podemos encontrar las variables creadas en algunos de los otros dos paneles descritos o revisar el histórico de instrucciones ejecutadas en R. El panel de archivos de R [4], básicamente funciona como un explorador de carpetas, de este modo podemos crear, modificar, eliminar capetas o archivos sin la necesidad de salir de R.
 
+### La Consola y el Panel de Código (*script*)
+
 Ilustraremos brevemente el uso del panel de código o *script* y la consola de R. Primero partiremos con la consola, ya que es más intuitivo e interactivo su uso. En la figura 7, hay una captura de una operación simple en la consola: aparece la instrucción o *input* `2 + 12`, a la cual simplemente le damos *enter*, y obtenemos el resultado `14`. 
 
 ```{=html}
