@@ -116,7 +116,7 @@ Sin embargo, si bien la consola es un buen lugar para empezar nuestra aventura a
 
 ```{=html}
 <p align="center">
-  <img width="600" height="300" src="images/ejemplo_script_1.png">
+  <img width="700" height="400" src="images/ejemplo_script_1.png">
 </p>
 <p align="center">
 Figura 8. Ejemplo de instrucciones en el panel de código de R. 
@@ -126,10 +126,10 @@ Un elemento importante del ejemplo de la figura 8 es que la línea 2 ha sido sel
 
 ```{=html}
 <p align="center">
-  <img width="600" height="300" src="images/ejemplo_script_2.png">
+  <img width="700" height="400" src="images/ejemplo_script_2.png">
 </p>
 <p align="center">
-Figura 8. Segundo ejemplo de instrucciones en el panel de código de R. 
+Figura 9. Segundo ejemplo de instrucciones en el panel de código de R. 
 </p>
 ```
 
