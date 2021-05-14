@@ -210,6 +210,7 @@ Con esta simple instrucción, la salida nos dice que hay 98 mujeres y 39 hombres
 ```{r}
 barplot(table(dataset$sexo)) #both columns need to be integer
 ```
+
 Una vez más, con una breve instrucción usando la función `table()` hemos podido construir un gráfico de barras de manera muy simple. Ahora pasaremos a ilustrar cómo construir gráficos de dispersión usando las variables continuas: `promedio`, `emociones_positivas` y `emociones_negativas`. 
 
 Para esto, usaremos la función `plot()` para crear un sencillo gráfico de dispersión con las variables `emociones_positivas` y `promedio`. De este modo, podremos comenzar a explorar si existe alguna relación entre ellas:
@@ -218,21 +219,27 @@ Para esto, usaremos la función `plot()` para crear un sencillo gráfico de disp
 plot(dataset$emociones_positivas, dataset$promedio)
 ```
 
+El primer argumento al interior de la función `plot()` corresponde al eje X a graficar (aquí `emociones_positivas`) y el segundo argumento separado por una coma corresponde al eje Y del gráfico (en este caso `promedio`). Habiendo ya “ploteado” estas dos variables, imaginemos que queremos saber el grado de asociación entre ambas a partir de un modelo lineal. Para esto, utilizaremos la librería `stats` y la función `lm()` (abreviación de “*linear model*” o “modelo lineal”). Podemos hacer esto, escribiendo al interior las dos variables que deseamos comparar separada por el símbolo tilde o `~`, luego agregamos una coma y escribimos el nombre de nuestra base de datos en data, es decir, `data = dataset`. A continuación se muestra el código para esto:
+
 ```{r}
-plot(dataset$emociones_positivas, dataset$promedio) #both columns need to be integer
+library(stats)
+
+lm(dataset$promedio ~ dataset$emociones_positivas, data = dataset)
 ```
 
 ```{r}
-require(stats)
+library(stats)
 
-reg<-lm(dataset$promedio ~ dataset$emociones_positivas, data = dataset)
+#reg<-
+lm(dataset$promedio ~ dataset$emociones_positivas, data = dataset)
 
-plot(dataset$emociones_positivas, dataset$promedio)
+#plot(dataset$emociones_positivas, dataset$promedio)
 
-abline(reg, col = "green")
+#abline(reg, col = "green")
 
-reg
+#reg
 ```
+
 
 ```{r}
 require(stats)
