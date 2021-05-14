@@ -227,14 +227,14 @@ Habiendo ya “ploteado” estas dos variables, imaginemos que queremos saber el
 library(stats)
 lm(dataset$promedio ~ dataset$emociones_positivas, data = dataset)
 ```
-En la salida de R, vemos impresa la línea de código escrita arriba y debajo de ésta aparece la leyenda *coefficient* con dos valores: el *intercept* cuyo valor es de 3.8581 y el grado de relación entre ambas variables, 0.1914. Ahora supongamos que queremos agregar una línea recta que refleje el grado de ajuste entre ambas variables. Esto se puede hacer utilizando la función `abline()`. Para facilitar la aplicación de ésta, construiremos una variable para los resultados del modelo lineal. En nuestro ejemplo la llamaremos simplemente `reg`. Nótese que estamos dando las instrucciones para crear un grafico de dispersión abajo. Luego usaremos esta variable al interior de la función `abline()` y luego agregaremos una coma para colorear la línea de color verde. Este código aparece a continuación:
+En la salida de R, vemos impresa la línea de código escrita arriba y debajo de ésta aparece la leyenda *coefficient* con dos valores: el *intercept* cuyo valor es de 3.8581 y el grado de relación entre ambas variables, 0.1914. Ahora supongamos que queremos agregar una línea recta que refleje el grado de ajuste entre ambas variables. Esto se puede hacer utilizando la función `abline()`. Para facilitar la aplicación de ésta, construiremos una variable para los resultados del modelo lineal. En nuestro ejemplo la llamaremos simplemente `reg`. Nótese que estamos dando las instrucciones para crear un gráfico de dispersión abajo. Usaremos esta variable al interior de la función `abline()` y luego agregaremos una coma para colorear la línea de color verde. Este código aparece a continuación:
 
 ```{r}
 reg <- lm(dataset$promedio ~ dataset$emociones_positivas, data = dataset)
 plot(dataset$emociones_positivas, dataset$promedio)
 abline(reg, col = "green")
 ```
-
+Como se puede observar, la línea recta de color verde corta el eje Y en el valor del *intercept* (3.8581), cuyo valor está almacenado en la variable `reg`. Abajo he escrito un ejemplo maas con las variables `emociones_negativas` y `promedio`. Basicamente, sigue la misma lógica de las variables escritas arriba, solo modificando el nombre de la variable `reg_1` para este caso y modifiqué el color de la línea a color rojo. ¿Qué tipo de relación hay entre estas dos variables?
 
 ```{r}
 require(stats)
