@@ -230,15 +230,9 @@ lm(dataset$promedio ~ dataset$emociones_positivas, data = dataset)
 En la salida de R, vemos impresa la línea de código escrita arriba y debajo de ésta aparece la leyenda *coefficient* con dos valores: el *intercept* cuyo valor es de 3.8581 y el grado de relación entre ambas variables, 0.1914. Ahora supongamos que queremos agregar una línea recta que refleje el grado de ajuste entre ambas variables. Esto se puede hacer utilizando la función `abline()`. Para facilitar la aplicación de ésta, construiremos una variable para los resultados del modelo lineal. En nuestro ejemplo la llamaremos simplemente `reg`. Nótese que estamos dando las instrucciones para crear un grafico de dispersión abajo. Luego usaremos esta variable al interior de la función `abline()` y luego agregaremos una coma para colorear la línea de color verde. Este código aparece a continuación:
 
 ```{r}
-library(stats)
-
 reg <- lm(dataset$promedio ~ dataset$emociones_positivas, data = dataset)
-
 plot(dataset$emociones_positivas, dataset$promedio)
-
 abline(reg, col = "green")
-
-reg
 ```
 
 

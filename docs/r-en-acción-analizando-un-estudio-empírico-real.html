@@ -593,11 +593,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ##     39     98</code></pre>
 <p>Con esta simple instrucción, la salida nos dice que hay 98 mujeres y 39 hombres. Ahora para visualizar el resultado de la tabla, usaremos la función <code>barplot()</code> con la instrucción arriba escrita.</p>
 <div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(<span class="fu">table</span>(dataset<span class="sc">$</span>sexo)) <span class="co">#both columns need to be integer</span></span></code></pre></div>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-27-1.png" width="672" /></p>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-29-1.png" width="672" /></p>
 <p>Una vez más, con una breve instrucción usando la función <code>table()</code> hemos podido construir un gráfico de barras de manera muy simple. Ahora pasaremos a ilustrar cómo construir gráficos de dispersión usando las variables continuas: <code>promedio</code>, <code>emociones_positivas</code> y <code>emociones_negativas</code>.</p>
 <p>Para esto, usaremos la función <code>plot()</code> para crear un sencillo gráfico de dispersión con las variables <code>emociones_positivas</code> y <code>promedio</code>. De este modo, podremos comenzar a explorar si existe alguna relación entre ellas:</p>
 <div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(dataset<span class="sc">$</span>emociones_positivas, dataset<span class="sc">$</span>promedio)</span></code></pre></div>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-28-1.png" width="672" /></p>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-30-1.png" width="672" /></p>
 <p>El primer argumento al interior de la función <code>plot()</code> corresponde al eje X a graficar (aquí <code>emociones_positivas</code>) y el segundo argumento separado por una coma corresponde al eje Y del gráfico (en este caso <code>promedio</code>).</p>
 <p>Habiendo ya “ploteado” estas dos variables, imaginemos que queremos saber el grado de asociación entre ambas a partir de un modelo lineal. Para esto, utilizaremos la librería <code>stats</code> y la función <code>lm()</code> (abreviación de “<em>linear model</em>” o “modelo lineal”). Podemos hacer esto, escribiendo al interior del paréntesis las dos variables que deseamos comparar separada por el símbolo tilde o <code>~</code>, luego agregamos una coma y escribimos el nombre de nuestra base de datos en data, es decir, <code>data = dataset</code>. A continuación se muestra el código para esto:</p>
 <div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stats)</span>
@@ -611,32 +611,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ##                 (Intercept)  dataset$emociones_positivas  
 ##                      3.8581                       0.1914</code></pre>
 <p>En la salida de R, vemos impresa la línea de código escrita arriba y debajo de ésta aparece la leyenda <em>coefficient</em> con dos valores: el <em>intercept</em> cuyo valor es de 3.8581 y el grado de relación entre ambas variables, 0.1914. Ahora supongamos que queremos agregar una línea recta que refleje el grado de ajuste entre ambas variables. Esto se puede hacer utilizando la función <code>abline()</code>. Para facilitar la aplicación de ésta, construiremos una variable para los resultados del modelo lineal. En nuestro ejemplo la llamaremos simplemente <code>reg</code>. Nótese que estamos dando las instrucciones para crear un grafico de dispersión abajo. Luego usaremos esta variable al interior de la función <code>abline()</code> y luego agregaremos una coma para colorear la línea de color verde. Este código aparece a continuación:</p>
-<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stats)</span>
-<span id="cb53-2"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb53-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb53-3"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb53-3" aria-hidden="true" tabindex="-1"></a>reg <span class="ot">&lt;-</span> <span class="fu">lm</span>(dataset<span class="sc">$</span>promedio <span class="sc">~</span> dataset<span class="sc">$</span>emociones_positivas, <span class="at">data =</span> dataset)</span>
-<span id="cb53-4"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb53-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb53-5"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb53-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(dataset<span class="sc">$</span>emociones_positivas, dataset<span class="sc">$</span>promedio)</span>
-<span id="cb53-6"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb53-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb53-7"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb53-7" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(reg, <span class="at">col =</span> <span class="st">&quot;green&quot;</span>)</span></code></pre></div>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-30-1.png" width="672" /></p>
-<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb54-1" aria-hidden="true" tabindex="-1"></a>reg</span></code></pre></div>
-<pre><code>## 
-## Call:
-## lm(formula = dataset$promedio ~ dataset$emociones_positivas, 
-##     data = dataset)
-## 
-## Coefficients:
-##                 (Intercept)  dataset$emociones_positivas  
-##                      3.8581                       0.1914</code></pre>
-<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(stats)</span>
-<span id="cb56-2"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb56-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb56-3"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb56-3" aria-hidden="true" tabindex="-1"></a>reg_1<span class="ot">&lt;-</span><span class="fu">lm</span>(dataset<span class="sc">$</span>promedio <span class="sc">~</span> dataset<span class="sc">$</span>emociones_negativas, <span class="at">data =</span> dataset)</span>
-<span id="cb56-4"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb56-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb56-5"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb56-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(dataset<span class="sc">$</span>emociones_negativas, dataset<span class="sc">$</span>promedio)</span>
-<span id="cb56-6"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb56-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb56-7"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb56-7" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(reg_1, <span class="at">col =</span> <span class="st">&quot;red&quot;</span>)</span></code></pre></div>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-31-1.png" width="672" /></p>
-<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb57-1" aria-hidden="true" tabindex="-1"></a>reg_1</span></code></pre></div>
+<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb53-1" aria-hidden="true" tabindex="-1"></a>reg <span class="ot">&lt;-</span> <span class="fu">lm</span>(dataset<span class="sc">$</span>promedio <span class="sc">~</span> dataset<span class="sc">$</span>emociones_positivas, <span class="at">data =</span> dataset)</span>
+<span id="cb53-2"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb53-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(dataset<span class="sc">$</span>emociones_positivas, dataset<span class="sc">$</span>promedio)</span>
+<span id="cb53-3"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb53-3" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(reg, <span class="at">col =</span> <span class="st">&quot;green&quot;</span>)</span></code></pre></div>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-32-1.png" width="672" /></p>
+<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(stats)</span>
+<span id="cb54-2"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb54-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-3"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb54-3" aria-hidden="true" tabindex="-1"></a>reg_1<span class="ot">&lt;-</span><span class="fu">lm</span>(dataset<span class="sc">$</span>promedio <span class="sc">~</span> dataset<span class="sc">$</span>emociones_negativas, <span class="at">data =</span> dataset)</span>
+<span id="cb54-4"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb54-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-5"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb54-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(dataset<span class="sc">$</span>emociones_negativas, dataset<span class="sc">$</span>promedio)</span>
+<span id="cb54-6"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb54-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-7"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb54-7" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(reg_1, <span class="at">col =</span> <span class="st">&quot;red&quot;</span>)</span></code></pre></div>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-33-1.png" width="672" /></p>
+<div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb55-1" aria-hidden="true" tabindex="-1"></a>reg_1</span></code></pre></div>
 <pre><code>## 
 ## Call:
 ## lm(formula = dataset$promedio ~ dataset$emociones_negativas, 
