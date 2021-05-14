@@ -219,7 +219,9 @@ Para esto, usaremos la función `plot()` para crear un sencillo gráfico de disp
 plot(dataset$emociones_positivas, dataset$promedio)
 ```
 
-El primer argumento al interior de la función `plot()` corresponde al eje X a graficar (aquí `emociones_positivas`) y el segundo argumento separado por una coma corresponde al eje Y del gráfico (en este caso `promedio`). Habiendo ya “ploteado” estas dos variables, imaginemos que queremos saber el grado de asociación entre ambas a partir de un modelo lineal. Para esto, utilizaremos la librería `stats` y la función `lm()` (abreviación de “*linear model*” o “modelo lineal”). Podemos hacer esto, escribiendo al interior del paréntesis las dos variables que deseamos comparar separada por el símbolo tilde o `~`, luego agregamos una coma y escribimos el nombre de nuestra base de datos en data, es decir, `data = dataset`. A continuación se muestra el código para esto:
+El primer argumento al interior de la función `plot()` corresponde al eje X a graficar (aquí `emociones_positivas`) y el segundo argumento separado por una coma corresponde al eje Y del gráfico (en este caso `promedio`). 
+
+Habiendo ya “ploteado” estas dos variables, imaginemos que queremos saber el grado de asociación entre ambas a partir de un modelo lineal. Para esto, utilizaremos la librería `stats` y la función `lm()` (abreviación de “*linear model*” o “modelo lineal”). Podemos hacer esto, escribiendo al interior del paréntesis las dos variables que deseamos comparar separada por el símbolo tilde o `~`, luego agregamos una coma y escribimos el nombre de nuestra base de datos en data, es decir, `data = dataset`. A continuación se muestra el código para esto:
 
 ```{r}
 library(stats)
