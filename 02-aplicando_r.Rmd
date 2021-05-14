@@ -210,7 +210,13 @@ Con esta simple instrucción, la salida nos dice que hay 98 mujeres y 39 hombres
 ```{r}
 barplot(table(dataset$sexo)) #both columns need to be integer
 ```
+Una vez más, con una breve instrucción usando la función `table()` hemos podido construir un gráfico de barras de manera muy simple. Ahora pasaremos a ilustrar cómo construir gráficos de dispersión usando las variables continuas: `promedio`, `emociones_positivas` y `emociones_negativas`. 
 
+Para esto, usaremos la función `plot()` para crear un sencillo gráfico de dispersión con las variables `emociones_positivas` y `promedio`. De este modo, podremos comenzar a explorar si existe alguna relación entre ellas:
+
+```{r}
+plot(dataset$emociones_positivas, dataset$promedio)
+```
 
 ```{r}
 plot(dataset$emociones_positivas, dataset$promedio) #both columns need to be integer
