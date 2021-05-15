@@ -133,4 +133,4 @@ Figura 9. Segundo ejemplo de instrucciones en el panel de código de R.
 </p>
 ```
 
-
+## Presentando R Notebook
