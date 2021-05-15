@@ -21,6 +21,7 @@ r-para-linux
 instalando-rstudio
 explorando-rstudio
 la-consola-y-el-panel-de-código-script
+presentando-r-notebook
 chapter_4
 r-como-una-simple-calculadora
 orden-de-operaciones-matemáticas-en-r
