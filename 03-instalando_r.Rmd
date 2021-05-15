@@ -69,7 +69,7 @@ Figura 5. Links de descarga de RStudio para tu sistema operativo.
 </p>
 ```
 
-### Explorando RStudio 
+## Explorando RStudio 
 
 Haciendo un breve resumen de lo que hemos hecho en este capítulo, acabamos de descargar dos cosas: el lenguaje de programación R y RStudio. Recalco esto porque algunos usuarios nóveles tienden a descargar solo uno de ellos y no lo dos. Para este curso es necesario tener ambos. 
 
