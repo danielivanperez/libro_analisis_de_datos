@@ -373,130 +373,39 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="seleccionando-filas-en-una-base-de-datos" class="section level2" number="2.3">
 <h2><span class="header-section-number">2.3</span> Seleccionando Filas en una Base de Datos</h2>
 <p>Además de poder seleccionar columnas o variables en una base de datos, podemos seleccionar a conveniencia las filas o participantes (para este ejemplo) que queramos. Imaginemos que queremos elegir solo aclos mayores de 20 años de nuestra base de datos. Para esto vamos a utilizar la función <code>subset()</code> que nos permite seleccionar un subconjunto de filas de una base de datos determinada. Procederemos a ejecutar un pequeño ejemplo abajo.</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(<span class="fu">subset</span>(dataset, edad <span class="sc">&gt;</span> <span class="dv">20</span>),<span class="dv">10</span>) </span></code></pre></div>
-<pre><code>##    participante edad      sexo Nivel                                    calificacion_1
-## 5             5   24  Femenino   302                        Psicología educacional 5.0
-## 7             7   27  Femenino   201                               Neuropsicología 5.5
-## 8             8   21  Femenino   202                            Teorias humanistas 1.0
-## 9             9   23  Femenino   301                             Teorías cognitivas 34
-## 12           12   22 Masculino   201 Metodología de la investigación en psicología  64
-## 17           17   23  Femenino   301                             Teorias cognitivas 30
-## 18           18   21 Masculino   201                               Neuropsicologia 2,7
-## 20           20   21  Femenino   301                             Teorías cognitivas 33
-## 22           22   23  Femenino   201                                Neuropsicología 54
-## 24           24   22  Femenino   301                            teorias cognitivas 2,8
-##                                               calificacion_2
-## 5                                   Tecnicas proyectivas 6.5
-## 7            Metodologías de Investigación en Psicología 3.5
-## 8                                     Teorias Sistemicas 5.7
-## 9  Psicología del desarrollo adulto -inserte adulto mayor 53
-## 12                                        Infanto juvenil 57
-## 17                         Psicopatologia infanto juvenil 34
-## 18                                         Psicoanálisis 3,6
-## 20                                   Análisis cualitativo 43
-## 22                        Metodología de la investigación 45
-## 24                            teorias de la personalidad 3,7
-##                                         calificacion_3
-## 5  Gestion de personas y desarrollo organizacional 6.3
-## 7        Psicología del Desarrollo Infanto Juvenil 5.8
-## 8                                  Neuropsicologia 3.2
-## 9                             Mediación comunitaria 68
-## 12                           Psicología comunitaria 51
-## 17                        Psicologia Organizacional 52
-## 18                                 Infanto juvenil 3,9
-## 20                 Psicopatología infantil- juvenil 26
-## 22                           Psicología comunitaria 45
-## 24                          análisis cuantitativo 4,8 
-##                                              calificacion_4
-## 5  Construcción de pruebas e instrumentos de evaluación 5.6
-## 7                                Psicología Comunitaria 3.9
-## 8                                 Analisis Cuantitativo 4.0
-## 9                                 Psicología comunitaria 42
-## 12                                                Inglés 67
-## 17                                  Analisis cualitativo 38
-## 18                               Psicología comunitaria 3,0
-## 20                              Evaluación psicometrica 50 
-## 22                                       Infanto juvenil 40
-## 24                    psicopatologia del infantojuvenil 3,0
-##                                calificacion_5 promedio emo_aca_1 emo_aca_2 emo_aca_3 emo_aca_4
-## 5          psicopatologia infanto juvenil 5.0       NA         3         1         4         4
-## 7                   Teoría Psicoanalítica 4.0       NA         5         1         4         2
-## 8                   Teoria Psicoanalitica 3.5       NA         3         2         2         5
-## 9   Bases biológicas de la conducta humana 38       NA         2         1         2         4
-## 12           Taller de desarrollo personal 67       NA         4         3         4         2
-## 17                 Evaluacion psicometrica 55       NA         3         4         2         5
-## 18        Metodología de la investigación 2,7       NA         4         1         2         1
-## 20 Psicología organizacional y del trabajo 53       NA         3         1         3         4
-## 22                                  Inglés 42       NA         5         2         4         3
-## 24              psicología organizacional 3,9       NA         3         2         2         4
-##    emo_aca_5 emo_aca_6 emo_aca_7 emo_aca_8 emo_aca_9 emo_aca_10 emo_aca_11 emo_aca_12
-## 5          4         1         4         1         4          2          4          4
-## 7          4         1         4         1         4          1          4          2
-## 8          3         2         2         2         3          3          3          4
-## 9          4         1         5         3         3          2          2          5
-## 12         3         3         4         3         4          2          4          5
-## 17         2         4         3         4         3          3          2          5
-## 18         3         1         2         1         3          1          3          5
-## 20         4         1         4         1         3          1          4          4
-## 22         4         2         3         1         4          1          4          3
-## 24         2         1         3         4         2          3          4          4</code></pre>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(<span class="fu">subset</span>(dataset, edad <span class="sc">&gt;</span> <span class="dv">20</span>),<span class="dv">2</span>) </span></code></pre></div>
+<pre><code>##   participante edad     sexo Nivel             calificacion_1
+## 5            5   24 Femenino   302 Psicología educacional 5.0
+## 7            7   27 Femenino   201        Neuropsicología 5.5
+##                                    calificacion_2
+## 5                        Tecnicas proyectivas 6.5
+## 7 Metodologías de Investigación en Psicología 3.5
+##                                        calificacion_3
+## 5 Gestion de personas y desarrollo organizacional 6.3
+## 7       Psicología del Desarrollo Infanto Juvenil 5.8
+##                                             calificacion_4                     calificacion_5
+## 5 Construcción de pruebas e instrumentos de evaluación 5.6 psicopatologia infanto juvenil 5.0
+## 7                               Psicología Comunitaria 3.9          Teoría Psicoanalítica 4.0
+##   promedio emo_aca_1 emo_aca_2 emo_aca_3 emo_aca_4 emo_aca_5 emo_aca_6 emo_aca_7 emo_aca_8 emo_aca_9
+## 5       NA         3         1         4         4         4         1         4         1         4
+## 7       NA         5         1         4         2         4         1         4         1         4
+##   emo_aca_10 emo_aca_11 emo_aca_12
+## 5          2          4          4
+## 7          1          4          2</code></pre>
 <p>Al explorar la salida de R arriba, podemos observar que hay 50 participantes que cumplen con la condición de edad. También podemos usar la función <code>dim()</code> para examinar la dimensionalidad o tamaño de la base de datos. En la línea de código de arriba, hemos escrito al interior de la función <code>subset()</code> primero el nombre de la base de datos a usar, y luego la operación lógica que deseamos ejecutar sobre una columna en particular. Ahora supongamos que deseamos elegir a los mayores de 20 años <strong>y</strong>, al mismo tiempo, a aquellos estudiantes que tienen 18 años. Para esto, usaremos el operador lógico de disyunción <code>|</code>:</p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tail</span>(<span class="fu">subset</span>(dataset, edad <span class="sc">&gt;</span> <span class="dv">20</span> <span class="sc">|</span> edad <span class="sc">==</span> <span class="dv">18</span>), <span class="dv">10</span>)</span></code></pre></div>
-<pre><code>##     participante edad      sexo Nivel                           calificacion_1
-## 117          117   21  Femenino   101                   psicología general 3.1
-## 118          118   18 Masculino   101        EPISTEMOLOGIA DE LAS CIENCIAS 4,3
-## 119          119   22  Femenino   201                Teoria del aprendizaje 52
-## 120          120   21  Femenino   102 Bases biologica de la conducta humana 51
-## 126          126   21  Femenino   302                Análisis cualitativo: 5,2
-## 127          127   21  Femenino   302                 Análisis Cualitativo 4,6
-## 129          129   23  Femenino   302                  Analisis Cualitativo 48
-## 135          135   23  Femenino   202         desarrollo infanto juvenil . 5.4
-## 136          136   24  Femenino   302                 ANÁLISIS CUALITATIVO 5.4
-## 137          137   21  Femenino   202                      bases biologicas 42
-##                                     calificacion_2                               calificacion_3
-## 117                          bases biológicas 1.3                Teorías de la comunicación 6.5
-## 118     BASES BIOLOGICAS DE LA CONDUCTA HUMANA 3.0                      SOCIO- ANTROPOLOGÍA 4.6
-## 119                            Bases biologicas 40                                Ingles III 56
-## 120 Metodologias de investigacion en psicologia 41 psicologia del desarrollo infanto juvenil 54
-## 126           Psicopatología  Infanto Juvenil: 4,9             Problemáticas psicosociales: 5,2
-## 127             Psicopatología Infanto-Juvenil 4,6    Problemáticas Psicosociales Complejas 5,3
-## 129              Psicopatologia Infanto Juvenil 40     Problematicas Psicosociales Complejas 49
-## 135               taller desarrollo personal . 7.0                       bases biologicas . 4.9
-## 136             PSICOPATOLOGÍA INFANTO-JUVENIL 4.5    PROBLEMÁTICAS PSICOSOCIALES COMPLEJAS 5.3
-## 137                                  ingles III 46                        Teorias cognitivas 41
-##                   calificacion_4                               calificacion_5 promedio emo_aca_1
-## 117                           no                                           no       NA         3
-## 118        PSICOLOGIA GENERAL3.4         TEORIA DE LA COMUNICACIÓN HUMANA 5,4       NA         4
-## 119           Infanto juvenil 40                                           No       NA         4
-## 120    Psicologia comunitaria 50                     teoria psicoanalitica 46       NA         3
-## 126 Evaluación psicometrica: 5,4               Psicología organizacional: 5,4       NA         3
-## 127  Evaluación Psicométrica 6,0 Psicología Organizacional y del Trabajo 5,6        NA         3
-## 129   Evaluacion Psicometrica 58   Psicologia Organizacional y del Trabajo 57       NA         4
-## 135 psicologia comunitaria . 4.9                                 ingles . 5.0       NA         4
-## 136  EVALUACIÓN PSICOMÉTRICA 6.5  PSICOLOGÍA ORGANIZACIONAL Y DEL TRABAJO 6.2       NA         4
-## 137    psicología comunitaria 47 PSICOLOGÍA DEL DESARROLLO INFANTO-JUVENIL 45       NA         4
-##     emo_aca_2 emo_aca_3 emo_aca_4 emo_aca_5 emo_aca_6 emo_aca_7 emo_aca_8 emo_aca_9 emo_aca_10
-## 117         1         3         2         3         2         3         3         3          2
-## 118         5         2         5         2         5         4         3         3          3
-## 119         2         4         4         4         1         4         1         3          1
-## 120         2         3         2         3         1         3         2         4          2
-## 126         2         3         1         3         1         4         2         2          1
-## 127         2         2         2         2         2         2         2         3          2
-## 129         1         4         2         3         2         3         3         3          3
-## 135         2         4         4         4         2         3         2         4          2
-## 136         1         2         2         2         1         2         3         3          1
-## 137         1         4         2         4         1         3         2         3          1
-##     emo_aca_11 emo_aca_12
-## 117          3          4
-## 118          2          5
-## 119          4          4
-## 120          4          2
-## 126          4          2
-## 127          3          3
-## 129          4          3
-## 135          4          3
-## 136          3          5
-## 137          3          3</code></pre>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tail</span>(<span class="fu">subset</span>(dataset, edad <span class="sc">&gt;</span> <span class="dv">20</span> <span class="sc">|</span> edad <span class="sc">==</span> <span class="dv">18</span>), <span class="dv">2</span>)</span></code></pre></div>
+<pre><code>##     participante edad     sexo Nivel           calificacion_1                     calificacion_2
+## 136          136   24 Femenino   302 ANÁLISIS CUALITATIVO 5.4 PSICOPATOLOGÍA INFANTO-JUVENIL 4.5
+## 137          137   21 Femenino   202      bases biologicas 42                      ingles III 46
+##                                calificacion_3              calificacion_4
+## 136 PROBLEMÁTICAS PSICOSOCIALES COMPLEJAS 5.3 EVALUACIÓN PSICOMÉTRICA 6.5
+## 137                     Teorias cognitivas 41   psicología comunitaria 47
+##                                   calificacion_5 promedio emo_aca_1 emo_aca_2 emo_aca_3 emo_aca_4
+## 136  PSICOLOGÍA ORGANIZACIONAL Y DEL TRABAJO 6.2       NA         4         1         2         2
+## 137 PSICOLOGÍA DEL DESARROLLO INFANTO-JUVENIL 45       NA         4         1         4         2
+##     emo_aca_5 emo_aca_6 emo_aca_7 emo_aca_8 emo_aca_9 emo_aca_10 emo_aca_11 emo_aca_12
+## 136         2         1         2         3         3          1          3          5
+## 137         4         1         3         2         3          1          3          3</code></pre>
 <p>El operador lógico de disyunción <code>|</code> lo hemos puesto entre <code>edad &gt; 20</code> y <code>edad == 18</code>, el cual le dice básicamente a R que encuentre las filas que cumplan ambas condiciones. Ahora apliquemos la función <code>dim()</code> para ver el numero de filas o participantes que cumplan ambas condiciones en nuestra base de datos.</p>
 <div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(<span class="fu">subset</span>(dataset, edad <span class="sc">&gt;</span> <span class="dv">20</span> <span class="sc">|</span> edad <span class="sc">==</span> <span class="dv">18</span>))</span></code></pre></div>
 <pre><code>## [1] 71 22</code></pre>

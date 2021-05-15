@@ -54,12 +54,12 @@ Podemos inferir del código escrito arriba que R le asigna un número a cada una
 Además de poder seleccionar columnas o variables en una base de datos, podemos seleccionar a conveniencia las filas o participantes (para este ejemplo) que queramos. Imaginemos que queremos elegir solo aclos mayores de 20 años de nuestra base de datos. Para esto vamos a utilizar la función `subset()` que nos permite seleccionar un subconjunto de filas de una base de datos determinada. Procederemos a ejecutar un pequeño ejemplo abajo. 
 
 ```{r}
-head(subset(dataset, edad > 20),10) 
+head(subset(dataset, edad > 20),2) 
 ```
 Al explorar la salida de R arriba, podemos observar que hay 50 participantes que cumplen con la condición de edad. También podemos usar la función `dim()` para examinar la dimensionalidad o tamaño de la base de datos.  En la línea de código de arriba, hemos escrito al interior de la función `subset()` primero el nombre de la base de datos a usar, y luego la operación lógica que deseamos ejecutar sobre una columna en particular. Ahora supongamos que deseamos elegir a los mayores de 20 años **y**, al mismo tiempo, a aquellos estudiantes que tienen 18 años. Para esto, usaremos el operador lógico de disyunción `|`: 
 
 ```{r}
-tail(subset(dataset, edad > 20 | edad == 18), 10)
+tail(subset(dataset, edad > 20 | edad == 18), 2)
 ```
 El operador lógico de disyunción `|` lo hemos puesto entre `edad > 20` y `edad == 18`, el cual le dice básicamente a R que encuentre las filas que cumplan ambas condiciones. Ahora apliquemos la función `dim()` para ver el numero de filas o participantes que cumplan ambas condiciones en nuestra base de datos. 
 
