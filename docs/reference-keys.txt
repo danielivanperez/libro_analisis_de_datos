@@ -10,7 +10,7 @@ seleccionando-columnas-en-una-base-de-datos
 limpiando-valores-en-una-base-de-datos
 creación-de-variables-a-partir-de-otras-columnas
 graficando-datos-y-otras-funcionalidades
-ejercicios
+resumen-y-ejercicios
 chapter_3
 definiendo-r
 instalando-r
