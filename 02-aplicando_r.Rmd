@@ -146,7 +146,7 @@ Ahora que ya tenemos las columnas de las calificaciones formateadas apropiadamen
 dataset$promedio <- rowMeans(dataset[,5:9], na.rm=TRUE)
 head(dataset$promedio) # codigo para ver las primeras 6 calificaciones. 
 ```
-A diferencia de la variable `promedio` para las calificaciones de los estudiantes, ahora nos centraremos en un constructo llamado “emociones académicas”, la cual se enfoca en consultar a los estudiantes por una variedad de emociones tanto positivas como negativas que son sentidas en una variedad de situaciones académicas. Las respuestas posibles están dispuestas en una escala Likert donde el valor mínimo es 1(“nunca”) y el valor máximo es 5 (“siempre”). Los 12 ítems son resumidos en la Tabla 1.
+A diferencia de la variable `promedio` para las calificaciones de los estudiantes, ahora nos centraremos en un constructo llamado “emociones académicas”, la cual se enfoca en consultar a los estudiantes por una variedad de emociones tanto positivas como negativas que son sentidas durante clases. Las respuestas posibles están dispuestas en una escala Likert donde el valor mínimo es 1(“nunca”) y el valor máximo es 5 (“siempre”). Los 12 ítems son resumidos en la Tabla 1.
 
                         Tabla 1
 | Numero |                  Reactivo a contestar                 | Nombre en la Base de Datos |
