@@ -49,6 +49,25 @@ head(dataset[5:9])
 ```
 Podemos inferir del código escrito arriba que R le asigna un número a cada una de las columnas de la base de datos empezando desde 1.  Al interior del paréntesis cuadrado, le pedimos a R que seleccione desde la columna 5 hasta la columna 9 y que nos muestre sólo estas columnas o variables. De este modo, R muestra los valores desde la variable `calificacion_1` hasta `calificacion_5`.
 
+## Seleccionando Filas en una Base de Datos
+
+Además de poder seleccionar columnas o variables en una base de datos, podemos seleccionar a conveniencia las filas o participantes (para este ejemplo) que queramos. Imaginemos que queremos elegir solo las mayores de 20 años de nuestra base de datos. Para esto vamos a utilizar la función `subset()` que nos permite seleccionar un subconjunto de filas de una base de datos determinada. Procederemos a ejecutar un pequeño ejemplo abajo. 
+
+```{r}
+subset(dataset, edad > 20) 
+```
+Al explorar la salida de R arriba, podemos observar que hay 50 participantes que cumplen con la condición de edad. También podemos usar la función `dim()` para examinar la dimensionalidad o tamaño de la base de datos.  En la línea de código de arriba, hemos escrito al interior de la función `subset()` primero el nombre de la base de datos a usar, y luego la operación lógica que deseamos ejecutar sobre una columna en particular. Ahora supongamos que deseamos elegir a los mayores de 20 años **y**, al mismo tiempo, a aquellos estudiantes que tienen 18 años. Para esto, usaremos el operador lógico de disyunción `|`: 
+
+```{r}
+subset(dataset, edad > 20 | edad == 18)
+```
+El operador lógico de disyunción `|` lo hemos puesto entre `edad > 20` y `edad == 18`, el cual le dice básicamente a R que encuentre las filas que cumplan ambas condiciones. Ahora apliquemos la función `dim()` para ver el numero de filas o participantes que cumplan ambas condiciones en nuestra base de datos. 
+
+```{r}
+dim(subset(dataset, edad > 20 | edad == 18))
+```
+El output nos dice que son 71 estudiantes. 
+
 ## Limpiando Valores en una Base de Datos
 
 Volviendo al caso, como podemos ver en las primeras 6 filas de la variable ` calificacion_1`, a los participantes se les pidió escribir sus calificaciones para un curso determinado. Podemos observar que ellos escribieron sus respuestas de diferentes formas. Por ejemplo, escribiendo solo la calificación como en el primer caso, o incluso escribiendo el nombre del curso de manera completa y luego la calificación, en otros casos con un `.` como en la fila [1], con una `,` como en la fila [3] o simplemente sin punto ni coma como en la fila [6]. Esto constituiría un primer problema para el analista de datos debido a que no tenemos los valores ordenados y formateados de manera estándar (por ejemplo, tener solo números dos números separados por un `.`) al interior de la variable. Justamente en este tipo de situaciones es cuando R muestra todo su poder y utilidad. 
@@ -239,7 +258,6 @@ abline(reg, col = "green")
 Como se puede observar, la línea recta de color verde corta el eje Y en el valor del *intercept* (3.8581), cuyo valor está almacenado en la variable `reg`. Abajo he escrito un ejemplo más con las variables `emociones_negativas` y `promedio`. Básicamente, sigue la misma lógica de las variables escritas arriba, solo modificando el nombre de la variable `reg_1` y cambiando el color de la línea a color rojo. ¿Qué tipo de relación hay entre estas dos variables? 
 
 ```{r}
-library(stats)
 reg_1<-lm(dataset$promedio ~ dataset$emociones_negativas, data = dataset)
 plot(dataset$emociones_negativas, dataset$promedio)
 abline(reg_1, col = "red")
@@ -254,4 +272,4 @@ reg_1
 
 El objetivo de este capítulo fue mostrar de manera breve algunas de las funcionalidades de R, qué tipo de cosas podemos hacer en él y que con breves líneas de código podemos manipular nuestra base de datos a conveniencia. En R se puede construir prácticamente cualquier procedimiento que el analista de datos desee y se pueden ajustar varias opciones de diferentes procesos del análisis de datos (por ejemplo, ajustar las etiquetas de los gráficos o que las salidas de los análisis de datos muestren más información). 
 
-A continuación, dejo algunos ejercicios para aquellos que quieran poner en práctica lo descrito aquí. Para esto, deberán haber cargado la base de datos desde la web y haber corrido completamente las instrucciones de este capítulo. Si experimentan algún error, probablemente será porque alguna línea de código no ha sido ejecutada apropiadamente (o algún error de escritura). Además, se asume que ustedes ya instalaron el lenguaje de programación R y RStudio (Para más información ir al [Capítulo 3](#chapter_3). 
+A continuación, dejo algunos ejercicios para aquellos que quieran poner en práctica lo descrito aquí. Para esto, deberán haber cargado la base de datos desde la web y haber corrido completamente las instrucciones de este capítulo. Si experimentan algún error, probablemente será porque alguna línea de código no ha sido ejecutada apropiadamente (o algún error de escritura). Además, se asume que ustedes ya instalaron el lenguaje de programación R y RStudio (Para más información ir al [Capítulo 3](#chapter_3)). 
