@@ -51,7 +51,7 @@ Podemos inferir del código escrito arriba que R le asigna un número a cada una
 
 ## Seleccionando Filas en una Base de Datos
 
-Además de poder seleccionar columnas o variables en una base de datos, podemos seleccionar a conveniencia las filas o participantes (para este ejemplo) que queramos. Imaginemos que queremos elegir solo aclos mayores de 20 años de nuestra base de datos. Para esto vamos a utilizar la función `subset()` que nos permite seleccionar un subconjunto de filas de una base de datos determinada. Procederemos a ejecutar un pequeño ejemplo abajo. 
+Además de poder seleccionar columnas o variables en una base de datos, podemos seleccionar a conveniencia las filas o participantes (para este ejemplo) que queramos. Imaginemos que queremos elegir solo a los mayores de 20 años de nuestra base de datos. Para esto vamos a utilizar la función `subset()` que nos permite seleccionar un subconjunto de filas de una base de datos determinada. Procederemos a ejecutar un pequeño ejemplo abajo. 
 
 ```{r}
 head(subset(dataset, edad > 20),2) 

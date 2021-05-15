@@ -372,7 +372,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="seleccionando-filas-en-una-base-de-datos" class="section level2" number="2.3">
 <h2><span class="header-section-number">2.3</span> Seleccionando Filas en una Base de Datos</h2>
-<p>Además de poder seleccionar columnas o variables en una base de datos, podemos seleccionar a conveniencia las filas o participantes (para este ejemplo) que queramos. Imaginemos que queremos elegir solo aclos mayores de 20 años de nuestra base de datos. Para esto vamos a utilizar la función <code>subset()</code> que nos permite seleccionar un subconjunto de filas de una base de datos determinada. Procederemos a ejecutar un pequeño ejemplo abajo.</p>
+<p>Además de poder seleccionar columnas o variables en una base de datos, podemos seleccionar a conveniencia las filas o participantes (para este ejemplo) que queramos. Imaginemos que queremos elegir solo a los mayores de 20 años de nuestra base de datos. Para esto vamos a utilizar la función <code>subset()</code> que nos permite seleccionar un subconjunto de filas de una base de datos determinada. Procederemos a ejecutar un pequeño ejemplo abajo.</p>
 <div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="r-en-acción-analizando-un-estudio-empírico-real.html#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(<span class="fu">subset</span>(dataset, edad <span class="sc">&gt;</span> <span class="dv">20</span>),<span class="dv">2</span>) </span></code></pre></div>
 <pre><code>##   participante edad     sexo Nivel             calificacion_1
 ## 5            5   24 Femenino   302 Psicología educacional 5.0
