@@ -180,7 +180,7 @@ Finalmente, mostraremos las primeras 10 filas de las variables recién creadas c
 dataset[1:10,c(23,24)]
 ```
 
-## Graficando Datos 
+## Graficando Datos y otras Funcionalidades
 
 A continuación, exploraremos brevemente algunas variables de la base de datos con el fin de presentar algunas funciones para construir tablas, gráficos de barra y dispersión para formarnos una idea de los datos que disponemos. Nos enfocaremos en la variable `sexo` en la primera parte de esta sección. Vamos a imprimirla en la consola en el bloque de código de abajo.  
 
@@ -205,7 +205,7 @@ Habiendo modificado los valores de la variable sexo ahora procederemos a describ
 ```{r}
 table(dataset$sexo)
 ```
-Con esta simple instrucción, la salida nos dice que hay 98 mujeres y 39 hombres. Ahora para visualizar el resultado de la tabla, usaremos la función `barplot()` con la instrucción arriba escrita.  
+Con esta simple instrucción, la salida nos dice que hay 39 hombres y 98 mujeres. Ahora para visualizar el resultado de la tabla, usaremos la función `barplot()` con la instrucción arriba escrita.  
 
 ```{r}
 barplot(table(dataset$sexo)) #both columns need to be integer
@@ -227,6 +227,7 @@ Habiendo ya “ploteado” estas dos variables, imaginemos que queremos saber el
 library(stats)
 lm(dataset$promedio ~ dataset$emociones_positivas, data = dataset)
 ```
+
 En la salida de R, vemos impresa la línea de código escrita arriba y debajo de ésta aparece la leyenda *coefficient* con dos valores: el *intercept* cuyo valor es de 3.8581 y el grado de relación entre ambas variables, 0.1914. Ahora supongamos que queremos agregar una línea recta que refleje el grado de ajuste entre ambas variables. Esto se puede hacer utilizando la función `abline()`. Para facilitar la aplicación de ésta, construiremos una variable para los resultados del modelo lineal. En nuestro ejemplo la llamaremos simplemente `reg`. Nótese que estamos dando las instrucciones para crear un gráfico de dispersión abajo. Usaremos esta variable al interior de la función `abline()` y luego agregaremos una coma para colorear la línea de color verde. Este código aparece a continuación:
 
 ```{r}
@@ -234,19 +235,21 @@ reg <- lm(dataset$promedio ~ dataset$emociones_positivas, data = dataset)
 plot(dataset$emociones_positivas, dataset$promedio)
 abline(reg, col = "green")
 ```
-Como se puede observar, la línea recta de color verde corta el eje Y en el valor del *intercept* (3.8581), cuyo valor está almacenado en la variable `reg`. Abajo he escrito un ejemplo maas con las variables `emociones_negativas` y `promedio`. Basicamente, sigue la misma lógica de las variables escritas arriba, solo modificando el nombre de la variable `reg_1` para este caso y modifiqué el color de la línea a color rojo. ¿Qué tipo de relación hay entre estas dos variables?
+
+Como se puede observar, la línea recta de color verde corta el eje Y en el valor del *intercept* (3.8581), cuyo valor está almacenado en la variable `reg`. Abajo he escrito un ejemplo más con las variables `emociones_negativas` y `promedio`. Básicamente, sigue la misma lógica de las variables escritas arriba, solo modificando el nombre de la variable `reg_1` y cambiando el color de la línea a color rojo. ¿Qué tipo de relación hay entre estas dos variables? 
 
 ```{r}
-require(stats)
-
+library(stats)
 reg_1<-lm(dataset$promedio ~ dataset$emociones_negativas, data = dataset)
-
 plot(dataset$emociones_negativas, dataset$promedio)
-
 abline(reg_1, col = "red")
-
-reg_1
 ```
  
+Finalmente, en el código de abajo vamos a correr la variable `reg_1` en la cual está almacenada el valor del *intercept* y el coeficiente de asociación entre el `promedio` y las `emociones_negativas`.  
+ 
+```{r}
+reg_1 
+```
 ## Ejercicios
 
+El objetivo de este capítulo fue mostrar de manera breve algunas de las funcionalidades de R, qué tipo de cosas podemos hacer en él y que con breves líneas de código podemos manipular nuestra base de datos a conveniencia. A continuación, dejo algunos ejercicios para aquellos que quieran poner en práctica lo descrito aquí. Para esto, deberán haber cargado la base de datos desde la web y haber corrido completamente las instrucciones. Si experimentan algún error, probablemente será a porque no corrieron apropiadamente los comandos aquí mostrados (o algún error de escritura). Ademas, se asume que ustedes ya instalaron el lenguaje de programación R y RStudio (Para más información ir al [Capítulo 3](#chapter_3).

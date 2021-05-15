@@ -9,7 +9,7 @@ cargando-una-base-de-datos-desde-la-web
 seleccionando-columnas-en-una-base-de-datos
 limpiando-valores-en-una-base-de-datos
 creación-de-variables-a-partir-de-otras-columnas
-graficando-datos
+graficando-datos-y-otras-funcionalidades
 ejercicios
 chapter_3
 definiendo-r
