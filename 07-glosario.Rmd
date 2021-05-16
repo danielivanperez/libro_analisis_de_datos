@@ -16,7 +16,7 @@
 
 **Listas.** Las listas son un tipo especial de vector que pueden contener objetos de diferentes clases. Las listas son una estructura de datos muy importante y ampliamente utilizada.
 
-**Matrices.**Las matrices son vectores con un atributo denominado dimension. Este atributo que nos proporciona la dimensión de la matriz es en sí mismo un vector de tipo entero de longitud 2 (número de filas, número de columnas).
+**Matrices.** Las matrices son vectores con un atributo denominado dimension. Este atributo que nos proporciona la dimensión de la matriz es en sí mismo un vector de tipo entero de longitud 2 (número de filas, número de columnas).
 
 **Metadatos.** Los metadatos, literalmente *sobre datos*, son datos que describen otros datos. En general, un grupo de metadatos se refiere a un grupo de datos que describen el contenido informativo de un objeto al que se denomina recurso. El concepto de metadatos es análogo al uso de índices para localizar objetos en vez de datos. Por ejemplo, en una biblioteca se usan fichas que especifican autores, títulos, casas editoriales y lugares para buscar libros. Así, los metadatos ayudan a ubicar datos.
 
