@@ -1,5 +1,5 @@
 ---
-title: "Introducción al Análisis de Datos en Psicología usando R"
+title: "Introducción a R para el Análisis de Datos en Psicología"
 author: "Daniel Pérez Zapata"
 date: "`r Sys.Date()`"
 cover-image: "images/dani_r.png"
