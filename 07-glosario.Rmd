@@ -17,9 +17,7 @@
 **Metadatos.** Los metadatos, literalmente *sobre datos*, son datos que describen otros datos. En general, un grupo de metadatos se refiere a un grupo de datos que describen el contenido informativo de un objeto al que se denomina recurso. El concepto de metadatos es análogo al uso de índices para localizar objetos en vez de datos. Por ejemplo, en una biblioteca se usan fichas que especifican autores, títulos, casas editoriales y lugares para buscar libros. Así, los metadatos ayudan a ubicar datos.
 
 **Objetos en R.** R tiene cinco tipos básicos de objetos: character, numeric (número real), integer
-complex, logical (True/False). El objeto más básico en R es un vector. Podemos crear vectores vacíos con la función `vector()`. Existe únicamente sólo una regla sobre los vectores en R, que es que un vector sólo puede contener objetos de la misma clase.
-
-Pero obviamente, como en cualquier buena regla, existe una excepción, esta és con los objetos de la clase lista. Una lista es representada como un vector pero puede contener objetos de diferentes clases. Es por esto, que nosotros utilizaremos con mayor frecuéncia este tipo de objeto.
+complex, logical (True/False). El objeto más básico en R es un vector. Podemos crear vectores vacíos con la función `vector()`. Existe únicamente sólo una regla sobre los vectores en R, que es que un vector sólo puede contener objetos de la misma clase.Pero , como en cualquier buena regla, existe una excepción: las listas. Una lista es representada como un vector pero puede contener objetos de diferentes clases. 
 
 **Programación Orientada a Objetos.**La programación Orientada a Objetos (POO) se define como un paradigma de la programación, una manera de programar específica, donde se organiza el código en unidades denominadas clases, de las cuales se crean objetos que se relacionan entre sí para conseguir los objetivos de las aplicaciones.La POO es una forma especial de programar, más cercana a como expresaríamos las cosas en la vida real que otros tipos de programación.
 
