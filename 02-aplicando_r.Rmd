@@ -292,4 +292,4 @@ A continuación, dejo algunos ejercicios para aquellos que quieran poner en prá
 14.	Agregue una línea recta de ajuste y de color azul para la variable `grafico`. 
 15.	Calcule un modelo lineal para las variables `emociones_positivas` y `emociones_negativas`. 
 
-Las respuesta de todos los ejercicios se encuentrane en el [Anexo 2](#anexo_2)).
+**Las respuestas a todos los ejercicios se encuentran en el [Anexo 2](#anexo_2).**
