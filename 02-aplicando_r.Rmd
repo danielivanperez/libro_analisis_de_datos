@@ -273,3 +273,22 @@ reg_1
 El objetivo de este capítulo fue mostrar de manera breve algunas de las funcionalidades de R, qué tipo de cosas podemos hacer en él y que con breves líneas de código podemos manipular nuestra base de datos a conveniencia. En R se puede construir prácticamente cualquier procedimiento que el analista de datos desee y se pueden ajustar varias opciones de diferentes procesos del análisis de datos (por ejemplo, ajustar las etiquetas de los gráficos o que las salidas de los análisis de datos muestren más información). 
 
 A continuación, dejo algunos ejercicios para aquellos que quieran poner en práctica lo descrito aquí. Para esto, deberán haber cargado la base de datos desde la web y haber corrido completamente las instrucciones de este capítulo. Si experimentan algún error, probablemente será porque alguna línea de código no ha sido ejecutada apropiadamente (o algún error de escritura). Además, se asume que ustedes ya instalaron el lenguaje de programación R y RStudio (Para más información ir al [Capítulo 3](#chapter_3)). 
+
+### Ejercicios
+
+1.	Seleccione los primeros 20 participantes de la base de datos `dataset`.  
+2.	Seleccione los últimos 15 participantes de la base de datos `dataset`. 
+3.	Seleccione la variable `Nivel` de la base de datos `dataset`. 
+4.	Seleccione a los participantes desde la fila 50 a la fila 95 junto con las variables `edad` y `calificación_5`. 
+5.	Ahora proceda a crear una nueva base de datos llamada `ejercicio_4` con las filas y columnas que aparecen en el ejercicio de arriba. 
+6.	¿Cuántas filas y columnas (o cuál es la dimensión) de la base de datos `ejercicio_4`?
+7.	Seleccione a los estudiantes pertenecientes al `Nivel` `301`. 
+8.	Seleccione a los estudiantes pertenecientes al `Nivel` `101` y `201`
+9.	Presente un resumen general de la variable `promedio`. 
+10.	Construya una variable llamada `promedio_preg_10` que sea el promedio entre las variables: `calificacion_1`, `calificacion_2` y `calificacion_3`. 
+11.	Construya una tabla con la variable `Nivel`. 
+12.	Construya un gráfico de barras con la variable `Nivel`. 
+13.	Construya un gráfico de dispersión entre las variables `emociones_positivas` y `emociones_negativas` en la variable `grafico`. 
+14.	Agregue una línea recta de ajuste y de color azul para la variable `grafico`. 
+15.	Calcule un modelo lineal para las variables `emociones_positivas` y `emociones_negativas`. 
+

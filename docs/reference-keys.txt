@@ -12,6 +12,7 @@ limpiando-valores-en-una-base-de-datos
 creación-de-variables-a-partir-de-otras-columnas
 graficando-datos-y-otras-funcionalidades
 resumen-y-ejercicios
+ejercicios
 chapter_3
 definiendo-r
 instalando-r
