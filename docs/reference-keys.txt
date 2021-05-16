@@ -36,3 +36,4 @@ argumentos-sus-nombres-y-valores-por-defecto-en-las-funciones
 instalando-librerías-en-r
 tidyverse-librería-de-análisis-de-datos
 glosario
+respuestas-de-ejercicios-de-la-subsección-2.7.1
