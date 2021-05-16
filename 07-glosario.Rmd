@@ -10,6 +10,8 @@
 
 **Factores**. Los factores son utilizados para representar categorías y pueden estar ordenadas o desordenadas. Podemos pensar en los factores como un vector de enteros en el que cada entero representa una etiqueta. Los factores son importantes en modelos estadísticos y se utilizan especialmente para modelar junto a funciones como `lm()` y `glm()`.
 
+**Función.** Las funciones reúnen una secuencia de operaciones como un todo, almacenándola para su uso continuo. Las funciones proveen: (1) un nombre que podemos recordar y usar para invocarla; (2) una solución para la necesidad de recordar operaciones individuales; (3) un conjunto definido de *inputs* y *outputs* esperados. 
+
 **Lenguaje de Programación R.** R es un entorno y lenguaje de programación con un enfoque al análisis estadístico. Se trata de uno de los lenguajes de programación más utilizados en investigación científica, siendo además muy popular en los campos de aprendizaje automático (*machine learning*), minería de datos, investigación biomédica, bioinformática y matemáticas financieras. A esto contribuye la posibilidad de cargar diferentes bibliotecas o paquetes con funcionalidades de cálculo y graficación.
 
 **Listas.** Las listas son un tipo especial de vector que pueden contener objetos de diferentes clases. Las listas son una estructura de datos muy importante y ampliamente utilizada.
