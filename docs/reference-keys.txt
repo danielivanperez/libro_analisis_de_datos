@@ -2,6 +2,7 @@ presentación
 licencia
 introducción
 por-qué-programar-en-r
+estructura-del-presente-curso
 obstáculos-en-el-aprendizaje-de-r
 consideraciones-finales
 r-en-acción-analizando-un-estudio-empírico-real
