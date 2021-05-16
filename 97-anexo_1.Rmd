@@ -38,6 +38,10 @@ dim(ejercicio_4)
 
 Ejercicio 7
 
+```{r eval=FALSE}
+dim(ejercicio_4) #eliminar codigo 
+```
+
 Ejercicio 8
 
 Ejercicio 9
