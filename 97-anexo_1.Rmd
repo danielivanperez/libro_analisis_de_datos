@@ -1,6 +1,6 @@
 # Anexo 2: Respuesta a Ejercicios {- #anexo_2}
 
-## Respuestas de Ejercicios de la Subsección 2.7.1 {#anexo_2_1}
+## Respuestas de Ejercicios de la Subsección 2.7.1 {-}
 
 Ejercicio 1
 
