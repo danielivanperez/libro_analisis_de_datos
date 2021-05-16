@@ -27,7 +27,7 @@ dataset[50:95, c(`edad`, `calificación_5`)]
 Ejercicio 5
 
 ```{r eval=FALSE}
-ejercicio_4 <- dataset[50:95, c(`edad`, `calificación_5`)]
+ejercicio_4 <- dataset[50:95, c("edad", "calificacion_5")]
 ```
 
 Ejercicio 6
