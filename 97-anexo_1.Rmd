@@ -24,10 +24,17 @@ Ejercicio 4
 dataset[50:95, c(`edad`, `calificación_5`)]
 ```
 
-
 Ejercicio 5
 
+```{r eval=FALSE}
+ejercicio_4 <- dataset[50:95, c(`edad`, `calificación_5`)]
+```
+
 Ejercicio 6
+
+```{r eval=FALSE}
+dim(ejercicio_4)
+```
 
 Ejercicio 7
 
