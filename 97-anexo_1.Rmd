@@ -21,7 +21,7 @@ dataset$Nivel
 Ejercicio 4
 
 ```{r eval=FALSE}
-dataset[50:95, c(`edad`, `calificación_5`)]
+dataset[50:95, c("edad", "calificacion_5")]
 ```
 
 Ejercicio 5
