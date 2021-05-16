@@ -39,22 +39,54 @@ dim(ejercicio_4)
 Ejercicio 7
 
 ```{r eval=FALSE}
-dim(ejercicio_4) #eliminar codigo 
+subset(dataset, Nivel == 301 )
 ```
 
 Ejercicio 8
 
+```{r eval=FALSE}
+subset(dataset, Nivel == 101 | Nivel == 201 | Nivel == 202)
+```
+
 Ejercicio 9
+
+```{r eval=FALSE}
+summary(dataset$promedio, na.rm = TRUE)
+```
 
 Ejercicio 10
 
+```{r eval=FALSE}
+promedio_preg_10 <- rowMeans(dataset[,5:7], na.rm=TRUE)
+```
+
 Ejercicio 11
+
+```{r eval=FALSE}
+table(dataset$Nivel)
+```
 
 Ejercicio 12
 
+```{r eval=FALSE}
+barplot(table(dataset$Nivel))
+```
+
 Ejercicio 13
+
+```{r eval=FALSE}
+plot(dataset$emociones_positivas, dataset$emociones_negativas)
+```
 
 Ejercicio 14
 
-Ejercicio 15
+```{r eval=FALSE}
+modelo_lineal <- lm(dataset$emociones_negativas ~ dataset$emociones_positivas, data = dataset)
+plot(dataset$emociones_negativas, dataset$emociones_positivas)
+abline(modelo_lineal, col = "blue")
+```
 
+Ejercicio 15
+```{r eval=FALSE}
+modelo_lineal 
+```

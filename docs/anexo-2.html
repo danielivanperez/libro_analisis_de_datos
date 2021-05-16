@@ -233,15 +233,25 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Ejercicio 6</p>
 <div class="sourceCode" id="cb104"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb104-1"><a href="anexo-2.html#cb104-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(ejercicio_4)</span></code></pre></div>
 <p>Ejercicio 7</p>
-<div class="sourceCode" id="cb105"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb105-1"><a href="anexo-2.html#cb105-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(ejercicio_4) <span class="co">#eliminar codigo </span></span></code></pre></div>
+<div class="sourceCode" id="cb105"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb105-1"><a href="anexo-2.html#cb105-1" aria-hidden="true" tabindex="-1"></a><span class="fu">subset</span>(dataset, Nivel <span class="sc">==</span> <span class="dv">301</span> )</span></code></pre></div>
 <p>Ejercicio 8</p>
+<div class="sourceCode" id="cb106"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb106-1"><a href="anexo-2.html#cb106-1" aria-hidden="true" tabindex="-1"></a><span class="fu">subset</span>(dataset, Nivel <span class="sc">==</span> <span class="dv">101</span> <span class="sc">|</span> Nivel <span class="sc">==</span> <span class="dv">201</span> <span class="sc">|</span> Nivel <span class="sc">==</span> <span class="dv">202</span>)</span></code></pre></div>
 <p>Ejercicio 9</p>
+<div class="sourceCode" id="cb107"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb107-1"><a href="anexo-2.html#cb107-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(dataset<span class="sc">$</span>promedio, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
 <p>Ejercicio 10</p>
+<div class="sourceCode" id="cb108"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb108-1"><a href="anexo-2.html#cb108-1" aria-hidden="true" tabindex="-1"></a>promedio_preg_10 <span class="ot">&lt;-</span> <span class="fu">rowMeans</span>(dataset[,<span class="dv">5</span><span class="sc">:</span><span class="dv">7</span>], <span class="at">na.rm=</span><span class="cn">TRUE</span>)</span></code></pre></div>
 <p>Ejercicio 11</p>
+<div class="sourceCode" id="cb109"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb109-1"><a href="anexo-2.html#cb109-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(dataset<span class="sc">$</span>Nivel)</span></code></pre></div>
 <p>Ejercicio 12</p>
+<div class="sourceCode" id="cb110"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb110-1"><a href="anexo-2.html#cb110-1" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(<span class="fu">table</span>(dataset<span class="sc">$</span>Nivel))</span></code></pre></div>
 <p>Ejercicio 13</p>
+<div class="sourceCode" id="cb111"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb111-1"><a href="anexo-2.html#cb111-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(dataset<span class="sc">$</span>emociones_positivas, dataset<span class="sc">$</span>emociones_negativas)</span></code></pre></div>
 <p>Ejercicio 14</p>
+<div class="sourceCode" id="cb112"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb112-1"><a href="anexo-2.html#cb112-1" aria-hidden="true" tabindex="-1"></a>modelo_lineal <span class="ot">&lt;-</span> <span class="fu">lm</span>(dataset<span class="sc">$</span>emociones_negativas <span class="sc">~</span> dataset<span class="sc">$</span>emociones_positivas, <span class="at">data =</span> dataset)</span>
+<span id="cb112-2"><a href="anexo-2.html#cb112-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(dataset<span class="sc">$</span>emociones_negativas, dataset<span class="sc">$</span>emociones_positivas)</span>
+<span id="cb112-3"><a href="anexo-2.html#cb112-3" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(modelo_lineal, <span class="at">col =</span> <span class="st">&quot;blue&quot;</span>)</span></code></pre></div>
 <p>Ejercicio 15</p>
+<div class="sourceCode" id="cb113"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb113-1"><a href="anexo-2.html#cb113-1" aria-hidden="true" tabindex="-1"></a>modelo_lineal </span></code></pre></div>
 
 </div>
 </div>
