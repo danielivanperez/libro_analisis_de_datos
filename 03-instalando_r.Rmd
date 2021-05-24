@@ -135,7 +135,7 @@ Figura 9. Segundo ejemplo de instrucciones en el panel de código de R.
 
 ## Presentando R Notebook
 
-Ahora me gustaría hablar de otra forma de realizar análisis de datos y que ha ganado mucha fuerza durante el último tiempo, más allá del uso de la consola o del *script*. Esta forma de interactuar con R se llama *R Notebook*. R Notebook es un documento de *R Markdown* (es decir, un tipo de formato de documentos dinámicos en R) con porciones de código que pueden ser ejecutados independiente e interactivamente, con una salida que se observa inmediatamente debajo del código ejecutado o entrada. En la Figura 9 aparece un ejemplo de R Markdown.
+Ahora me gustaría hablar de otra forma de realizar análisis de datos y que ha ganado mucha fuerza durante el último tiempo, más allá del uso de la consola o del *script*. Esta forma de interactuar con R se llama *R Notebook*. R Notebook es un documento de *R Markdown* (es decir, un tipo de formato de documentos dinámicos en R), en el cual puedes digitar texto normal e insertar porciones de código que pueden ser ejecutados independiente e interactivamente, con una salida que se observa inmediatamente debajo del código ejecutado o entrada. En la Figura 9 aparece un ejemplo de R Markdown. 
 
 ```{=html}
 <p align="center">
@@ -150,7 +150,11 @@ Hay dos maneras de crear un R Notebook. La forma más sencilla de crear uno es i
 
 ```{r eval=FALSE}
 ---
-title: "My Notebook"
+title: "R Notebook"
 output: html_notebook
 ---
 ```
+
+### Insertando Porciones de Código
+
+Las porciones de código pueden ser insertadas usando los atajos del teclado según el sistema operativo que tengas. Si estas usando macOS, debes usar `Cmd + Option + I`; y si estas usando Windows, utiliza `Ctrl + Alt + I`. Asimismo, también puedes usar la opción `Insert a new code chunk` para agregar pedazos de código en el R Markdown. 
