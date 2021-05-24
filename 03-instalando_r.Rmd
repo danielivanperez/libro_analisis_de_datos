@@ -157,7 +157,7 @@ output: html_notebook
 
 ### Insertando y Ejecutando Porciones de Código
 
-Las porciones de código pueden ser insertadas usando los atajos del teclado según el sistema operativo que tengas. Si estas usando macOS, debes usar `Cmd + Option + I`; y si estas usando Windows, utiliza `Ctrl + Alt + I`. Asimismo, también puedes usar la opción `Insert a new code chunk` para agregar pedazos de código en el R Markdown. La figura 10 muestra un ejemplo de un trozo o pedazo de código abajo:
+Las porciones de código pueden ser insertadas usando los atajos del teclado según el sistema operativo que tengas. Si estas usando macOS, debes usar `Cmd + Option + I`; y si estas usando Windows, utiliza `Ctrl + Alt + I`. Asimismo, también puedes usar la opción `Insert a new code chunk` para agregar pedazos de código en el R Markdown. La figura 10 muestra un ejemplo de un trozo o pedazo de código desde la línea 9 a la 11, que al ser ejecutado da como resultado `100`:
 
 ```{=html}
 <p align="center">
