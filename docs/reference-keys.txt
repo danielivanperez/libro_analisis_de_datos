@@ -24,7 +24,7 @@ instalando-rstudio
 explorando-rstudio
 la-consola-y-el-panel-de-código-script
 presentando-r-notebook
-insertando-porciones-de-código
+insertando-y-ejecutando-porciones-de-código
 chapter_4
 r-como-una-simple-calculadora
 orden-de-operaciones-matemáticas-en-r
