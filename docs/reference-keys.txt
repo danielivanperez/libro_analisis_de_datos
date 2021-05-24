@@ -25,6 +25,7 @@ explorando-rstudio
 la-consola-y-el-panel-de-código-script
 presentando-r-notebook
 insertando-y-ejecutando-porciones-de-código
+resumen
 chapter_4
 r-como-una-simple-calculadora
 orden-de-operaciones-matemáticas-en-r
