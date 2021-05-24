@@ -135,18 +135,18 @@ Figura 9. Segundo ejemplo de instrucciones en el panel de código de R.
 
 ## Presentando R Notebook
 
-Ahora me gustaría hablar de otra forma de realizar análisis de datos y que ha ganado mucha fuerza durante el último tiempo, más allá del uso de la consola o del *script*. Esta forma de interactuar con R se llama *R Notebook*. R Notebook es un documento de *R Markdown* (es decir, un tipo de formato de documentos dinámicos en R), en el cual puedes digitar texto normal e insertar porciones de código que pueden ser ejecutados independiente e interactivamente, con una salida que se observa inmediatamente debajo del código ejecutado o entrada. En la Figura 9 aparece un ejemplo de R Markdown. 
+Ahora me gustaría hablar de otra forma de realizar análisis de datos y que ha ganado mucha fuerza durante el último tiempo, más allá del uso de la consola o del *script*. Esta forma de interactuar con R se llama *R Notebook*. R Notebook es un documento de *R Markdown* (es decir, un tipo de formato de documentos dinámicos en R), en el cual puedes digitar texto normal e insertar porciones de código que pueden ser ejecutados independiente e interactivamente, con una salida que se observa inmediatamente debajo del código ejecutado o entrada. En la Figura 10 aparece un ejemplo de R Markdown. 
 
 ```{=html}
 <p align="center">
   <img width="950" height="600" src="images/r_notebook.png">
 </p>
 <p align="center">
-Figura 9. Ejemplo de un R Notebook. 
+Figura 10. Ejemplo de un R Notebook. 
 </p>
 ```
 
-Hay dos maneras de crear un R Notebook. La forma más sencilla de crear uno es ir y dar clic en *File* →*New file* → *R Notebook* (El producto de esta acción se muestra en la Figura 9); la segunda es algo un “poco” más elaborada, es decir, usando una salida de notebook de html. En las líneas 1 a 4 de la figura 9, muestra un ejemplo de cómo generar un notebook con un tipo de escritura en html, al igual que el código que aparece abajo (nótese que éste debe estar escrito al inicio del *script*):
+Hay dos maneras de crear un R Notebook. La forma más sencilla de crear uno es ir y dar clic en *File* →*New file* → *R Notebook* (El producto de esta acción se muestra en la Figura 10); la segunda es algo un “poco” más elaborada, es decir, usando una salida de notebook de html. En las líneas 1 a 4 de la figura 9, muestra un ejemplo de cómo generar un notebook con un tipo de escritura en html, al igual que el código que aparece abajo (nótese que éste debe estar escrito al inicio del *script*):
 
 ```{r eval=FALSE}
 ---
@@ -157,14 +157,14 @@ output: html_notebook
 
 ### Insertando y Ejecutando Porciones de Código
 
-Las porciones de código pueden ser insertadas usando los atajos del teclado según el sistema operativo que tengas. Si estas usando macOS, debes usar `Cmd + Option + I`; y si estas usando Windows, utiliza `Ctrl + Alt + I`. Asimismo, también puedes usar la opción `Insert a new code chunk` para agregar pedazos de código en el R Markdown. La figura 10 muestra un ejemplo de un trozo o pedazo de código desde la línea 9 a la 11, que al ser ejecutado da como resultado `100`:
+Las porciones de código pueden ser insertadas usando los atajos del teclado según el sistema operativo que tengas. Si estas usando macOS, debes usar `Cmd + Option + I`; y si estas usando Windows, utiliza `Ctrl + Alt + I`. Asimismo, también puedes usar la opción `Insert a new code chunk` para agregar pedazos de código en el R Markdown. La figura 11 muestra un ejemplo de un trozo o pedazo de código desde la línea 9 a la 11, que al ser ejecutado da como resultado `100`:
 
 ```{=html}
 <p align="center">
   <img width="1038" height="366" src="images/r_chunk.png">
 </p>
 <p align="center">
-Figura 10. R Chunk o pedazo de código en R. 
+Figura 11. R Chunk o pedazo de código en R. 
 </p>
 ```
 
