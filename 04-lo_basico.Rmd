@@ -244,7 +244,7 @@ En progreso.
 
 ## Resumen y Ejercicios
 
-En este capítulo hemos revisado algunos comandos básicos en R, desde cómo usar R como una simple calculadora, revisando los operadores matemáticos básicos y pasando por la construcción de variables y la utilización de funciones, hasta como crear vectores numéricos, de texto y lógicos. No hemos revisado otras funcionalidades como el *flujo de control*, el cual está asociado al uso de bucles. Estos conceptos pueden ser encontrados en el [Anexo 1]{#anexo_1}.  
+En este capítulo hemos revisado algunos comandos básicos en R, desde cómo usar R como una simple calculadora, revisando los operadores matemáticos básicos y pasando por la construcción de variables y la utilización de funciones, hasta como crear vectores numéricos, de texto y lógicos. No hemos revisado otras funcionalidades como el *flujo de control*, el cual está asociado al uso de bucles. Estos conceptos pueden ser encontrados en el [Anexo 1](#anexo_1).  
 
 ### Ejercicios
 
