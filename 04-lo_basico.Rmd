@@ -240,7 +240,10 @@ Ténganse en mente que la variable `saludo` arrojo la siguiente salida: `[1] 4 8
 
 ## Almacenando Valores Lógicos en Variables
 
-En progreso. 
+R también trabaja sobre *valores lógicos*. Básicamente, un valor lógico es una aserción sobre si algo es verdadero o falso. La implementación de dichos valores en R son TRUE y FALSE respectivamente. 
+
+### Evaluando Verdades Matemáticas
+ 
 
 ## Resumen y Ejercicios
 

@@ -41,6 +41,7 @@ almacenando-números-o-vectores-en-variables
 modificando-los-valores-de-un-vector
 almacenando-texto-en-variables
 almacenando-valores-lógicos-en-variables
+evaluando-verdades-matemáticas
 resumen-y-ejercicios-2
 ejercicios-2
 instalando-librerías-en-r
