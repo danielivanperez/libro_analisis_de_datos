@@ -90,3 +90,5 @@ Ejercicio 15
 ```{r eval=FALSE}
 modelo_lineal 
 ```
+
+## Respuestas de Ejercicios de la Subsección 3.7.1 {- #anexo_3_7_1}
