@@ -90,17 +90,28 @@ Ejercicio 15
 ```{r eval=FALSE}
 modelo_lineal 
 ```
-
 ## Respuestas de Ejercicios de la Subsección 3.7.1 {- #anexo_3_7_1}
 
 Ejercicio 1
 
-```{r eval=FALSE}
-*File* →*New file* → *R Notebook* → "guardar como" `ejercicio_1`
-```
+*File* →*New file* → *R Notebook* → *save current document* → *ejercicio_1*
 
 Ejercicio 2
 
-```{r eval=FALSE}
-Lo que debería pasar es que los colores del texto han cambiado de color a lo largo del R Notebook. Esto significa que R no esta interpretando correctamente donde termina dicho trozo de código. Debido a esto, no es una buena idea agregar o eliminar guiones en esta parte del script porque va a estropear todo el formato del código escrito abajo. A todo esto, no olviden agregar nuevamente el guión al inicio del script (deben ser tres guiones). 
-```
+Lo que debería pasar es que los colores del código han cambiado de color a lo largo del R Notebook. Esto significa que R no esta interpretando correctamente donde termina dicho trozo de código. Debido a esto, no es una buena idea agregar o eliminar guiones en esta parte del script porque va a estropear todo el formato del código escrito abajo. A todo esto, no olviden agregar nuevamente el guión al inicio del script (deben ser tres guiones). 
+
+Ejercicio 3. 
+
+Simplemente remuevan el texto que aparece en la línea 14 a 18. No debería ocurrir ningún error para correr el código en este R Notebook. 
+
+Ejercicio 4. 
+
+Al ejecutar el trozo de código deberían ver un gráfico. Recuerden que esto se hace presionando el botón con la flecha verde `Run Current Chunk`. Alternativamente, podemos usar el siguiente atajo con el teclado en Windows `Ctrl + Shift * Enter ` o el siguiente `Cmd + Shift + Enter ` si estamos usando macOS.
+
+Ejercicio 5. 
+
+Si estas usando macOS, debes usar `Cmd + Option + I`; y si estas usando Windows, utiliza `Ctrl + Alt + I`. Asimismo, también puedes usar la opción `Insert a new code chunk` para agregar pedazos de código en el R Markdown.
+
+Ejercicio 6. 
+
+[1] 64.4
