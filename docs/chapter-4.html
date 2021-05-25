@@ -422,6 +422,13 @@ Figura 7. Usuario inicial de R imaginando las posibilidades.
 <div class="sourceCode" id="cb114"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb114-1"><a href="chapter-4.html#cb114-1" aria-hidden="true" tabindex="-1"></a>saludo[<span class="dv">4</span>] <span class="ot">&lt;-</span> <span class="st">&#39;hasta la vista baby&#39;</span></span>
 <span id="cb114-2"><a href="chapter-4.html#cb114-2" aria-hidden="true" tabindex="-1"></a>saludo</span></code></pre></div>
 <pre><code>## [1] &quot;hola&quot;                &quot;buen dia&quot;            &quot;buenas tardes&quot;       &quot;hasta la vista baby&quot;</code></pre>
+<p>Solamente para terminar con esta subsección, me gustaría indicar que a las variables con caracteres no se le pueden aplicar las clásicas funciones cuantitativas ya revisadas como <code>sqrt()</code>, o <code>round()</code>. Para contar el número de caracteres que contiene una palabra usamos la función <code>nchar()</code>. Veamos el siguiente ejemplo:</p>
+<div class="sourceCode" id="cb116"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb116-1"><a href="chapter-4.html#cb116-1" aria-hidden="true" tabindex="-1"></a><span class="fu">nchar</span>(<span class="st">&#39;murcielago&#39;</span>)</span></code></pre></div>
+<pre><code>## [1] 10</code></pre>
+<p>Por último, apliquemos esta función a la variable arriba creada:</p>
+<div class="sourceCode" id="cb118"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb118-1"><a href="chapter-4.html#cb118-1" aria-hidden="true" tabindex="-1"></a><span class="fu">nchar</span>(saludo)</span></code></pre></div>
+<pre><code>## [1]  4  8 13 19</code></pre>
+<p>Ténganse en mente que la variable <code>saludo</code> arrojo la siguiente salida: <code>[1] 4 8 13 19</code>. Estos valores se corresponden con las palabras “hola” = 4; “buen día” = 8 (aqui esta contando el espacio como caracter), etc.</p>
 </div>
 <div id="almacenando-valores-lógicos-en-variables" class="section level2" number="4.8">
 <h2><span class="header-section-number">4.8</span> Almacenando Valores Lógicos en Variables</h2>

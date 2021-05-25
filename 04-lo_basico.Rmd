@@ -225,6 +225,18 @@ De forma similar a la descrita más arriba, podemos modificar entradas específi
 saludo[4] <- 'hasta la vista baby'
 saludo
 ```
+Solamente para terminar con esta subsección, me gustaría indicar que a las variables con caracteres no se le pueden aplicar las clásicas funciones cuantitativas ya revisadas como `sqrt()`, o `round()`. Para contar el número de caracteres que contiene una palabra usamos la función `nchar()`.  Veamos el siguiente ejemplo: 
+
+```{r}
+nchar('murcielago')
+```
+
+Por último, apliquemos esta función a la variable arriba creada: 
+
+```{r}
+nchar(saludo)
+```
+Ténganse en mente que la variable `saludo` arrojo la siguiente salida: `[1] 4 8 13 19`. Estos valores se corresponden con las palabras “hola” = 4; “buen día” = 8 (aqui esta contando el espacio como caracter), etc. 
 
 ## Almacenando Valores Lógicos en Variables
 
