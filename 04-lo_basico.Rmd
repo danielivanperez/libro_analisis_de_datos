@@ -176,3 +176,9 @@ ejemplo_vector <- c(20, 10, 8, 34, 64, 100,78, 3, 52, 91)
 ejemplo_vector
 ```
 
+El vector `c(20, 10, 8, 34, 64, 100,78, 3, 52, 91)` almacenado en la variable `ejemplo_vector` posee 10 elementos. Al mismo tiempo, es muy útil saber cómo obtener información de los elementos de un vector. Si quisiéramos saber el quinto valor de la variable `ejemplo_vector`, el cual es `64`, vamos a escribir [5] y aplicarla a la variable. Por ejemplo: 
+
+```{r}
+ejemplo_vector[5]
+```
+
