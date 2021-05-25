@@ -404,7 +404,13 @@ Figura 7. Usuario inicial de R imaginando las posibilidades.
 </div>
 <div id="almacenando-texto-en-variables" class="section level2" number="4.7">
 <h2><span class="header-section-number">4.7</span> Almacenando Texto en Variables</h2>
-<p>En progreso.</p>
+<p>No solo podemos almacenar información numérica en variables, sino también podemos almacenar texto, caracteres (o también conocidos como <em>strings</em>) en las variables. Véase el ejemplo del código debajo y obsérvese que el texto está entre comillas (aunque éstas no forman parte de la variable, pero son necesarias para ingresar texto); luego, la hemos ingresado al final para que nos de su resultado:</p>
+<div class="sourceCode" id="cb106"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb106-1"><a href="chapter-4.html#cb106-1" aria-hidden="true" tabindex="-1"></a>saludo <span class="ot">&lt;-</span> <span class="st">&#39;hola&#39;</span></span>
+<span id="cb106-2"><a href="chapter-4.html#cb106-2" aria-hidden="true" tabindex="-1"></a>saludo</span></code></pre></div>
+<pre><code>## [1] &quot;hola&quot;</code></pre>
+<p>Es importante mencionar para las variables de texto o caracteres que R las almacena como un elemento singular o particular (a diferencia de los valores numéricos en un vector). Esto se puede apreciar en el siguiente código:</p>
+<div class="sourceCode" id="cb108"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb108-1"><a href="chapter-4.html#cb108-1" aria-hidden="true" tabindex="-1"></a>saludo[<span class="dv">1</span>]</span></code></pre></div>
+<pre><code>## [1] &quot;hola&quot;</code></pre>
 </div>
 <div id="almacenando-valores-lógicos-en-variables" class="section level2" number="4.8">
 <h2><span class="header-section-number">4.8</span> Almacenando Valores Lógicos en Variables</h2>
