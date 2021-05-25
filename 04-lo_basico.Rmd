@@ -211,13 +211,10 @@ De este modo, nos podemos percatar que la variable `saludo` no es un vector con 
 saludo <- c("hola","buen dia","buenas tardes","buenas noches")
 saludo
 ```
-
 Asimismo, para acceder al, por ejemplo, segundo valor de la variable `saludo` podemos usar la siguiente instrucción: 
-
 ```{r}
 saludo[2]
 ```
-
 ## Almacenando Valores Lógicos en Variables
 
 En progreso. 
