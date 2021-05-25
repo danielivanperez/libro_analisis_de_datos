@@ -193,7 +193,7 @@ ejemplo_vector
 
 ## Almacenando Texto en Variables
 
-No solo podemos almacenar información numérica en variables, sino también podemos almacenar texto, caracteres (o también conocidos como *strings*) en las variables. Véase el ejemplo del código debajo y obsérvese que el texto está entre comillas (aunque éstas no forman parte de la variable, pero son necesarias para ingresar texto); luego, la hemos ingresado al final para que nos de su resultado:
+No solo podemos almacenar información numérica en variables, sino también podemos almacenar texto, caracteres (o también conocidos como *strings*) en las variables. Véase el ejemplo del código debajo y obsérvese que el texto está entre comillas (aunque éstas no forman parte de la variable, pero son necesarias para ingresar texto); luego, hemos ingresado la variable al final para que nos de su resultado:
 
 ```{r}
 saludo <- 'hola'
@@ -205,16 +205,20 @@ Es importante mencionar para las variables de texto o caracteres que R las almac
 ```{r}
 saludo[1]
 ```
+
 De este modo, nos podemos percatar que la variable `saludo` no es un vector con 4 letras, sino que contiene un solo elemento. No obstante estas aclaraciones, esto no impide que podamos almacenar en un mismo vector más entradas de texto en ella. A este tipo de vector se le llama vector de caracteres. Esto se hace con la función `c` como lo muestra el siguiente ejemplo:
 
 ```{r}
 saludo <- c("hola","buen dia","buenas tardes","buenas noches")
 saludo
 ```
+
 Asimismo, para acceder al, por ejemplo, segundo valor de la variable `saludo` podemos usar la siguiente instrucción: 
+
 ```{r}
 saludo[2]
 ```
+
 ## Almacenando Valores Lógicos en Variables
 
 En progreso. 
