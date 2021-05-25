@@ -219,6 +219,13 @@ Asimismo, para acceder al, por ejemplo, segundo valor de la variable `saludo` po
 saludo[2]
 ```
 
+De forma similar a la descrita más arriba, podemos modificar entradas específicas en el vector de texto `saludo`. Veamos el siguiente ejemplo: 
+
+```{r}
+saludo[4] <- 'hasta la vista baby'
+saludo
+```
+
 ## Almacenando Valores Lógicos en Variables
 
 En progreso. 
