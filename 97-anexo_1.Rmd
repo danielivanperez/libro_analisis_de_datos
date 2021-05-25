@@ -92,3 +92,15 @@ modelo_lineal
 ```
 
 ## Respuestas de Ejercicios de la Subsección 3.7.1 {- #anexo_3_7_1}
+
+Ejercicio 1
+
+```{r eval=FALSE}
+*File* →*New file* → *R Notebook* → "guardar como" `ejercicio_1`
+```
+
+Ejercicio 2
+
+```{r eval=FALSE}
+Lo que debería pasar es que los colores del texto han cambiado de color a lo largo del R Notebook. Esto significa que R no esta interpretando correctamente donde termina dicho trozo de código. Debido a esto, no es una buena idea agregar o eliminar guiones en esta parte del script porque va a estropear todo el formato del código escrito abajo. A todo esto, no olviden agregar nuevamente el guión al inicio del script (deben ser tres guiones). 
+```
