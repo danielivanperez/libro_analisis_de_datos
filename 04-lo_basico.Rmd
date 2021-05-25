@@ -166,3 +166,13 @@ round(digits = 2, x = 3.141592)
 ```
 
 Pero vale la pena recalcar que si no utilizamos los nombres de los argumentos al interior de la función, debemos respetar en qué posición son asignados los valores como lo vimos en los ejemplos de más arriba (en el caso de la función `round`, primero se debe poner el valor a redonderar, luego coma y el valor de los decimales a redondear). 
+
+### Almacenando Números (o Vectores) en Variables 
+
+Una de las funcionalidades más importantes que nos entrega R es la posibilidad de almacenar valores numéricos a partir de la función `c` que es una abreviación para la función `combine` o combinar. Esto ya fue brevemente mencionado en el capítulo 2 cuando estábamos seleccionando columnas en un *data frame*. A continuación, mostramos un ejemplo donde almacenaremos un conjunto de valores numéricos en la variable `ejemplo_vector` y luego lo ejecutaremos: 
+
+```{r}
+ejemplo_vector <- c(20, 10, 8, 34, 64, 100,78, 3, 52, 91)
+ejemplo_vector
+```
+

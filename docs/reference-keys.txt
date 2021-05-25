@@ -37,6 +37,7 @@ convenciones-informales-para-nombrar-variables
 errores-de-escritura-o-typos-en-r
 funciones-en-r
 argumentos-sus-nombres-y-valores-por-defecto-en-las-funciones
+almacenando-números-o-vectores-en-variables
 instalando-librerías-en-r
 tidyverse-librería-de-análisis-de-datos
 glosario
