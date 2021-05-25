@@ -187,6 +187,6 @@ ejemplo_vector[5]
 Otra función sumamente útil de R es poder alterar o modificar los valores dentro de un vector particular. Para realizar esto, simplemente debemos utilizar la misma idea expresada en la línea de código de arriba y asignar un nuevo valor numérico al elemento a modificar. Por ejemplo, vamos a modificar el valor `64` por `0`, y luego imprimiremos la variable con la modificación del valor del vector abajo:  
 
 ```{r}
-ejemplo_vector[5] <- 0
+ejemplo_vector[5] <- 9999
 ejemplo_vector
 ```
