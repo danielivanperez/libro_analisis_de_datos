@@ -28,5 +28,4 @@ Este curso tiene como principal objetivo enseñar el lenguaje de programación R
 
 &nbsp;  
 
-Este recurso se encuentra en desarrollo, por lo que si encuentras algún problema o error y te gustaría informármelo, envíame un correo a daniel.perez.zapata[at]gmail.com. 
-
+Este recurso se encuentra en desarrollo, por lo que si encuentras algún problema o error y te gustaría informármelo, envíame un correo a daniel.perez.zapata[at]gmail.com.
