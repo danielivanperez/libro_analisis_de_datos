@@ -202,8 +202,20 @@ saludo
 
 Es importante mencionar para las variables de texto o caracteres que R las almacena como un elemento singular o particular (a diferencia de los valores numéricos en un vector). Esto se puede apreciar en el siguiente código: 
 
- ```{r}
+```{r}
 saludo[1]
+```
+De este modo, nos podemos percatar que la variable `saludo` no es un vector con 4 letras, sino que contiene un solo elemento. No obstante estas aclaraciones, esto no impide que podamos almacenar en un mismo vector más entradas de texto en ella. A este tipo de vector se le llama vector de caracteres. Esto se hace con la función `c` como lo muestra el siguiente ejemplo:
+
+```{r}
+saludo <- c("hola","buen dia","buenas tardes","buenas noches")
+saludo
+```
+
+Asimismo, para acceder al, por ejemplo, segundo valor de la variable `saludo` podemos usar la siguiente instrucción: 
+
+```{r}
+saludo[2]
 ```
 
 ## Almacenando Valores Lógicos en Variables

@@ -411,6 +411,13 @@ Figura 7. Usuario inicial de R imaginando las posibilidades.
 <p>Es importante mencionar para las variables de texto o caracteres que R las almacena como un elemento singular o particular (a diferencia de los valores numéricos en un vector). Esto se puede apreciar en el siguiente código:</p>
 <div class="sourceCode" id="cb108"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb108-1"><a href="chapter-4.html#cb108-1" aria-hidden="true" tabindex="-1"></a>saludo[<span class="dv">1</span>]</span></code></pre></div>
 <pre><code>## [1] &quot;hola&quot;</code></pre>
+<p>De este modo, nos podemos percatar que la variable <code>saludo</code> no es un vector con 4 letras, sino que contiene un solo elemento. No obstante estas aclaraciones, esto no impide que podamos almacenar en un mismo vector más entradas de texto en ella. A este tipo de vector se le llama vector de caracteres. Esto se hace con la función <code>c</code> como lo muestra el siguiente ejemplo:</p>
+<div class="sourceCode" id="cb110"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb110-1"><a href="chapter-4.html#cb110-1" aria-hidden="true" tabindex="-1"></a>saludo <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;hola&quot;</span>,<span class="st">&quot;buen dia&quot;</span>,<span class="st">&quot;buenas tardes&quot;</span>,<span class="st">&quot;buenas noches&quot;</span>)</span>
+<span id="cb110-2"><a href="chapter-4.html#cb110-2" aria-hidden="true" tabindex="-1"></a>saludo</span></code></pre></div>
+<pre><code>## [1] &quot;hola&quot;          &quot;buen dia&quot;      &quot;buenas tardes&quot; &quot;buenas noches&quot;</code></pre>
+<p>Asimismo, para acceder al, por ejemplo, segundo valor de la variable <code>saludo</code> podemos usar la siguiente instrucción:</p>
+<div class="sourceCode" id="cb112"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb112-1"><a href="chapter-4.html#cb112-1" aria-hidden="true" tabindex="-1"></a>saludo[<span class="dv">2</span>]</span></code></pre></div>
+<pre><code>## [1] &quot;buen dia&quot;</code></pre>
 </div>
 <div id="almacenando-valores-lógicos-en-variables" class="section level2" number="4.8">
 <h2><span class="header-section-number">4.8</span> Almacenando Valores Lógicos en Variables</h2>
