@@ -304,6 +304,16 @@ Sigamos examinando unos pocos ejemplos más para ver cómo R utiliza estos opera
 42 >= 2 * 21
 ```
 
+Finalizaremos el resumen de las operaciones lógicas con la tabla 4.2, en donde aparecen los operadores de negación, disyunción y conjunción.  
+
+                       Tabla 4.2
+
+| Número |  Operación | Operador |        Ejemplo       | Respuesta |
+|:------:|:----------:|:--------:|:--------------------:|:---------:|
+|    1   |  Negación  |     !    |       !(8 == 8)      |   Falso   |
+|    2   | Disyunción |    \|    | (1 == 1) \| (2 == 3) | Verdadero |
+|    3   | Conjunción |     &    |  (1 == 1) & (2 == 3) |   Falso   |
+
 ## Resumen y Ejercicios
 
 En este capítulo hemos revisado algunos comandos básicos en R, desde cómo usar R como una simple calculadora, revisando los operadores matemáticos básicos y pasando por la construcción de variables y la utilización de funciones, hasta como crear vectores numéricos, de texto y lógicos. No hemos revisado otras funcionalidades como el *flujo de control*, el cual está asociado al uso de bucles. Estos conceptos pueden ser encontrados en el [Anexo 1](#anexo_1).  
