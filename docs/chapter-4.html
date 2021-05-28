@@ -203,6 +203,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.8" data-path="chapter-4.html"><a href="chapter-4.html#almacenando-valores-lógicos-en-variables"><i class="fa fa-check"></i><b>4.8</b> Almacenando Valores Lógicos en Variables</a>
 <ul>
 <li class="chapter" data-level="4.8.1" data-path="chapter-4.html"><a href="chapter-4.html#evaluando-verdades-matemáticas"><i class="fa fa-check"></i><b>4.8.1</b> Evaluando Verdades Matemáticas</a></li>
+<li class="chapter" data-level="4.8.2" data-path="chapter-4.html"><a href="chapter-4.html#más-operadores-lógicos"><i class="fa fa-check"></i><b>4.8.2</b> Más Operadores Lógicos</a></li>
 </ul></li>
 <li class="chapter" data-level="4.9" data-path="chapter-4.html"><a href="chapter-4.html#resumen-y-ejercicios-2"><i class="fa fa-check"></i><b>4.9</b> Resumen y Ejercicios</a>
 <ul>
@@ -444,10 +445,26 @@ Figura 7. Usuario inicial de R imaginando las posibilidades.
 <p>Ahora podemos respirar tranquilos, al menos 2 + 2 es 4. Pero ahora supongamos que queremos R evalúe si una proposición es verdadera o no.</p>
 <div class="sourceCode" id="cb122"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb122-1"><a href="chapter-4.html#cb122-1" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span> <span class="sc">+</span> <span class="dv">2</span> <span class="sc">==</span> <span class="dv">4</span></span></code></pre></div>
 <pre><code>## [1] TRUE</code></pre>
-<p>Arriba hemos utilizado el operador de igualdad <code>==</code>, para que R nos si un proposición es verdadera o falsa (en este caso verdadera). Veamos quee piensa del slogan del partido totalitario.</p>
+<p>Arriba hemos utilizado el operador de igualdad <code>==</code>, para que R nos diga si una proposición es verdadera o falsa (en este caso verdadera). Veamos qué piensa del slogan del partido totalitario.</p>
 <div class="sourceCode" id="cb124"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb124-1"><a href="chapter-4.html#cb124-1" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span> <span class="sc">+</span> <span class="dv">2</span> <span class="sc">==</span> <span class="dv">5</span></span></code></pre></div>
 <pre><code>## [1] FALSE</code></pre>
-<p>Aún hay esperanzas en el reino de R señoras y señores. 2 + 2 == 5 es una proposición falsa.</p>
+<p>Aún hay esperanzas en el reino de R señoras y señores. 2 + 2 == 5 es una proposición falsa!</p>
+</div>
+<div id="más-operadores-lógicos" class="section level3" number="4.8.2">
+<h3><span class="header-section-number">4.8.2</span> Más Operadores Lógicos</h3>
+<p>Habiendo introducido los operadores lógicos más básicos arriba, aprovecharemos la oportunidad para mostrar que podemos combinarlos y resumiremos en la tabla 1 más operadores lógicos. Veamos un ejemplo de cómo combinar operadores lógicos:</p>
+<div class="sourceCode" id="cb126"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb126-1"><a href="chapter-4.html#cb126-1" aria-hidden="true" tabindex="-1"></a><span class="dv">10</span><span class="sc">*</span><span class="dv">2</span> <span class="sc">+</span> (<span class="dv">4</span> <span class="sc">*</span> <span class="dv">4</span>) <span class="sc">==</span> <span class="dv">6</span> <span class="sc">*</span> <span class="dv">6</span></span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<p>En la expresión numérica de arriba, hemos combinado valores y aplicado una función lógica con un resultado de <code>TRUE</code>. De este modo, es posible utilizar R para la evaluación de expresiones lógicas. Pero su potencial va más allá de determinar si una proposición dada es verdadera o falsa, sino que a través de la utilización de estas expresiones podemos filtrar bases de datos como lo vimos en el capítulo 2 al usar la función <code>subset()</code>.</p>
+<p>Tabla 1
+| Número | Operación | Operador | Ejemplo | Respuesta|
+|:——:|:——————-:|:——–:|:——-:|:——-:|
+| 1 | Menor que | &lt; | 1 &lt; 5 | Verdadero|
+| 2 | Menor que o igual a | &lt;= | 3 &lt;= 3 | Verdadero|
+| 3 | Mayor que | &gt; | 5 &gt; 7 | Falso|
+| 4 | Mayor que o igual a | &gt;= | 4 &gt;= 2 | Verdadero|
+| 5 | Igual a | == | 10 == 2 | Falso|
+| 6 | No igual a | != | 10 == 2 | Verdadero|</p>
 </div>
 </div>
 <div id="resumen-y-ejercicios-2" class="section level2" number="4.9">

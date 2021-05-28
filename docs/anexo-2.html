@@ -203,6 +203,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.8" data-path="chapter-4.html"><a href="chapter-4.html#almacenando-valores-lógicos-en-variables"><i class="fa fa-check"></i><b>4.8</b> Almacenando Valores Lógicos en Variables</a>
 <ul>
 <li class="chapter" data-level="4.8.1" data-path="chapter-4.html"><a href="chapter-4.html#evaluando-verdades-matemáticas"><i class="fa fa-check"></i><b>4.8.1</b> Evaluando Verdades Matemáticas</a></li>
+<li class="chapter" data-level="4.8.2" data-path="chapter-4.html"><a href="chapter-4.html#más-operadores-lógicos"><i class="fa fa-check"></i><b>4.8.2</b> Más Operadores Lógicos</a></li>
 </ul></li>
 <li class="chapter" data-level="4.9" data-path="chapter-4.html"><a href="chapter-4.html#resumen-y-ejercicios-2"><i class="fa fa-check"></i><b>4.9</b> Resumen y Ejercicios</a>
 <ul>
@@ -243,37 +244,37 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="respuestas-de-ejercicios-de-la-subsección-2.7.1" class="section level2 unnumbered">
 <h2>Respuestas de Ejercicios de la Subsección 2.7.1</h2>
 <p>Ejercicio 1</p>
-<div class="sourceCode" id="cb126"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb126-1"><a href="anexo-2.html#cb126-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(dataset, <span class="dv">20</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb128"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb128-1"><a href="anexo-2.html#cb128-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(dataset, <span class="dv">20</span>)</span></code></pre></div>
 <p>Ejercicio 2</p>
-<div class="sourceCode" id="cb127"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb127-1"><a href="anexo-2.html#cb127-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tail</span>(dataset, <span class="dv">15</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb129"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb129-1"><a href="anexo-2.html#cb129-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tail</span>(dataset, <span class="dv">15</span>)</span></code></pre></div>
 <p>Ejercicio 3</p>
-<div class="sourceCode" id="cb128"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb128-1"><a href="anexo-2.html#cb128-1" aria-hidden="true" tabindex="-1"></a>dataset<span class="sc">$</span>Nivel</span></code></pre></div>
+<div class="sourceCode" id="cb130"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb130-1"><a href="anexo-2.html#cb130-1" aria-hidden="true" tabindex="-1"></a>dataset<span class="sc">$</span>Nivel</span></code></pre></div>
 <p>Ejercicio 4</p>
-<div class="sourceCode" id="cb129"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb129-1"><a href="anexo-2.html#cb129-1" aria-hidden="true" tabindex="-1"></a>dataset[<span class="dv">50</span><span class="sc">:</span><span class="dv">95</span>, <span class="fu">c</span>(<span class="st">&quot;edad&quot;</span>, <span class="st">&quot;calificacion_5&quot;</span>)]</span></code></pre></div>
+<div class="sourceCode" id="cb131"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb131-1"><a href="anexo-2.html#cb131-1" aria-hidden="true" tabindex="-1"></a>dataset[<span class="dv">50</span><span class="sc">:</span><span class="dv">95</span>, <span class="fu">c</span>(<span class="st">&quot;edad&quot;</span>, <span class="st">&quot;calificacion_5&quot;</span>)]</span></code></pre></div>
 <p>Ejercicio 5</p>
-<div class="sourceCode" id="cb130"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb130-1"><a href="anexo-2.html#cb130-1" aria-hidden="true" tabindex="-1"></a>ejercicio_4 <span class="ot">&lt;-</span> dataset[<span class="dv">50</span><span class="sc">:</span><span class="dv">95</span>, <span class="fu">c</span>(<span class="st">&quot;edad&quot;</span>, <span class="st">&quot;calificacion_5&quot;</span>)]</span></code></pre></div>
+<div class="sourceCode" id="cb132"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb132-1"><a href="anexo-2.html#cb132-1" aria-hidden="true" tabindex="-1"></a>ejercicio_4 <span class="ot">&lt;-</span> dataset[<span class="dv">50</span><span class="sc">:</span><span class="dv">95</span>, <span class="fu">c</span>(<span class="st">&quot;edad&quot;</span>, <span class="st">&quot;calificacion_5&quot;</span>)]</span></code></pre></div>
 <p>Ejercicio 6</p>
-<div class="sourceCode" id="cb131"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb131-1"><a href="anexo-2.html#cb131-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(ejercicio_4)</span></code></pre></div>
+<div class="sourceCode" id="cb133"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb133-1"><a href="anexo-2.html#cb133-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(ejercicio_4)</span></code></pre></div>
 <p>Ejercicio 7</p>
-<div class="sourceCode" id="cb132"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb132-1"><a href="anexo-2.html#cb132-1" aria-hidden="true" tabindex="-1"></a><span class="fu">subset</span>(dataset, Nivel <span class="sc">==</span> <span class="dv">301</span> )</span></code></pre></div>
+<div class="sourceCode" id="cb134"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb134-1"><a href="anexo-2.html#cb134-1" aria-hidden="true" tabindex="-1"></a><span class="fu">subset</span>(dataset, Nivel <span class="sc">==</span> <span class="dv">301</span> )</span></code></pre></div>
 <p>Ejercicio 8</p>
-<div class="sourceCode" id="cb133"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb133-1"><a href="anexo-2.html#cb133-1" aria-hidden="true" tabindex="-1"></a><span class="fu">subset</span>(dataset, Nivel <span class="sc">==</span> <span class="dv">101</span> <span class="sc">|</span> Nivel <span class="sc">==</span> <span class="dv">201</span> <span class="sc">|</span> Nivel <span class="sc">==</span> <span class="dv">202</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb135"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb135-1"><a href="anexo-2.html#cb135-1" aria-hidden="true" tabindex="-1"></a><span class="fu">subset</span>(dataset, Nivel <span class="sc">==</span> <span class="dv">101</span> <span class="sc">|</span> Nivel <span class="sc">==</span> <span class="dv">201</span> <span class="sc">|</span> Nivel <span class="sc">==</span> <span class="dv">202</span>)</span></code></pre></div>
 <p>Ejercicio 9</p>
-<div class="sourceCode" id="cb134"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb134-1"><a href="anexo-2.html#cb134-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(dataset<span class="sc">$</span>promedio, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb136"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb136-1"><a href="anexo-2.html#cb136-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(dataset<span class="sc">$</span>promedio, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span></code></pre></div>
 <p>Ejercicio 10</p>
-<div class="sourceCode" id="cb135"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb135-1"><a href="anexo-2.html#cb135-1" aria-hidden="true" tabindex="-1"></a>promedio_preg_10 <span class="ot">&lt;-</span> <span class="fu">rowMeans</span>(dataset[,<span class="dv">5</span><span class="sc">:</span><span class="dv">7</span>], <span class="at">na.rm=</span><span class="cn">TRUE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb137"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb137-1"><a href="anexo-2.html#cb137-1" aria-hidden="true" tabindex="-1"></a>promedio_preg_10 <span class="ot">&lt;-</span> <span class="fu">rowMeans</span>(dataset[,<span class="dv">5</span><span class="sc">:</span><span class="dv">7</span>], <span class="at">na.rm=</span><span class="cn">TRUE</span>)</span></code></pre></div>
 <p>Ejercicio 11</p>
-<div class="sourceCode" id="cb136"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb136-1"><a href="anexo-2.html#cb136-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(dataset<span class="sc">$</span>Nivel)</span></code></pre></div>
+<div class="sourceCode" id="cb138"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb138-1"><a href="anexo-2.html#cb138-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(dataset<span class="sc">$</span>Nivel)</span></code></pre></div>
 <p>Ejercicio 12</p>
-<div class="sourceCode" id="cb137"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb137-1"><a href="anexo-2.html#cb137-1" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(<span class="fu">table</span>(dataset<span class="sc">$</span>Nivel))</span></code></pre></div>
+<div class="sourceCode" id="cb139"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb139-1"><a href="anexo-2.html#cb139-1" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(<span class="fu">table</span>(dataset<span class="sc">$</span>Nivel))</span></code></pre></div>
 <p>Ejercicio 13</p>
-<div class="sourceCode" id="cb138"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb138-1"><a href="anexo-2.html#cb138-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(dataset<span class="sc">$</span>emociones_positivas, dataset<span class="sc">$</span>emociones_negativas)</span></code></pre></div>
+<div class="sourceCode" id="cb140"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb140-1"><a href="anexo-2.html#cb140-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(dataset<span class="sc">$</span>emociones_positivas, dataset<span class="sc">$</span>emociones_negativas)</span></code></pre></div>
 <p>Ejercicio 14</p>
-<div class="sourceCode" id="cb139"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb139-1"><a href="anexo-2.html#cb139-1" aria-hidden="true" tabindex="-1"></a>modelo_lineal <span class="ot">&lt;-</span> <span class="fu">lm</span>(dataset<span class="sc">$</span>emociones_negativas <span class="sc">~</span> dataset<span class="sc">$</span>emociones_positivas, <span class="at">data =</span> dataset)</span>
-<span id="cb139-2"><a href="anexo-2.html#cb139-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(dataset<span class="sc">$</span>emociones_negativas, dataset<span class="sc">$</span>emociones_positivas)</span>
-<span id="cb139-3"><a href="anexo-2.html#cb139-3" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(modelo_lineal, <span class="at">col =</span> <span class="st">&quot;blue&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb141"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb141-1"><a href="anexo-2.html#cb141-1" aria-hidden="true" tabindex="-1"></a>modelo_lineal <span class="ot">&lt;-</span> <span class="fu">lm</span>(dataset<span class="sc">$</span>emociones_negativas <span class="sc">~</span> dataset<span class="sc">$</span>emociones_positivas, <span class="at">data =</span> dataset)</span>
+<span id="cb141-2"><a href="anexo-2.html#cb141-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(dataset<span class="sc">$</span>emociones_negativas, dataset<span class="sc">$</span>emociones_positivas)</span>
+<span id="cb141-3"><a href="anexo-2.html#cb141-3" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(modelo_lineal, <span class="at">col =</span> <span class="st">&quot;blue&quot;</span>)</span></code></pre></div>
 <p>Ejercicio 15</p>
-<div class="sourceCode" id="cb140"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb140-1"><a href="anexo-2.html#cb140-1" aria-hidden="true" tabindex="-1"></a>modelo_lineal </span></code></pre></div>
+<div class="sourceCode" id="cb142"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb142-1"><a href="anexo-2.html#cb142-1" aria-hidden="true" tabindex="-1"></a>modelo_lineal </span></code></pre></div>
 </div>
 <div id="anexo_3_7_1" class="section level2 unnumbered">
 <h2>Respuestas de Ejercicios de la Subsección 3.7.1</h2>

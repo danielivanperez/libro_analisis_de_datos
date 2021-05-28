@@ -242,7 +242,7 @@ Ténganse en mente que la variable `saludo` arrojo la siguiente salida: `[1] 4 8
 
 R también trabaja sobre *valores lógicos*. Básicamente, un valor lógico es una aserción sobre si algo es verdadero o falso. La implementación de dichos valores en R son TRUE y FALSE respectivamente. 
 
-### Evaluando Verdades Matemáticas
+### Evaluando Verdades Matemáticas 
 
 Como comienza refiriéndose Danielle Navarro en su libro *Learning Statistics with R*, en el ya clásico libro de George Orwell 1984, uno de los eslóganes utilizados por el partido totalitario era “dos más dos es igual cinco”. La idea contempla que la dominación política de la libertad humana se vuelve completa cuando es posible subvertir incluso las más básicas verdades, en este caso, verdades matemáticas formales. Introducimos esta analogía solamente para examinar cómo R utiliza los operadores lógicos booleanos descritos arriba y comprobar que R no se somete a los dictámenes del partido totalitario. Por ejemplo:
 
@@ -255,12 +255,32 @@ Ahora podemos respirar tranquilos, al menos 2 + 2 es 4. Pero ahora supongamos qu
 ```{r}
 2 + 2 == 4
 ```
-Arriba hemos utilizado el operador de igualdad `==`, para que R nos si un proposición es verdadera o falsa (en este caso verdadera). Veamos quee piensa del slogan del partido totalitario. 
+Arriba hemos utilizado el operador de igualdad `==`, para que R nos diga si una proposición es verdadera o falsa (en este caso verdadera). Veamos qué piensa del slogan del partido totalitario. 
 
 ```{r}
 2 + 2 == 5
 ```
-Aún hay esperanzas en el reino de R señoras y señores. 2 + 2 == 5 es una proposición falsa.
+Aún hay esperanzas en el reino de R señoras y señores. 2 + 2 == 5 es una proposición falsa!
+
+### Más Operadores Lógicos 
+
+Habiendo introducido los operadores lógicos más básicos arriba, aprovecharemos la oportunidad para mostrar que podemos combinarlos y resumiremos en la tabla 1 más operadores lógicos. Veamos un ejemplo de cómo combinar operadores lógicos:  
+
+```{r}
+10*2 + (4 * 4) == 6 * 6
+```
+En la expresión numérica de arriba, hemos combinado valores y aplicado una función lógica con un resultado de `TRUE`. De este modo, es posible utilizar R para la evaluación de expresiones lógicas. Pero su potencial va más allá de determinar si una proposición dada es verdadera o falsa, sino que a través de la utilización de estas expresiones podemos filtrar bases de datos como lo vimos en el capítulo 2 al usar la función `subset()`.
+
+Tabla 1
+| Número |      Operación      | Operador | Ejemplo | Respuesta|
+|:------:|:-------------------:|:--------:|:-------:|:-------:|
+|    1   |      Menor que      |     <    |  1 < 5  | Verdadero|
+|    2   | Menor que o igual a |    <=    |  3 <= 3 | Verdadero|
+|    3   |      Mayor que      |     >    |  5 > 7  | Falso|
+|    4   | Mayor que o igual a |    >=    |  4 >= 2 | Verdadero|
+|    5   |       Igual a       |    ==    | 10 == 2 | Falso|
+|    6   |      No igual a     |    !=    | 10 == 2 | Verdadero|
+
 
  
 ## Resumen y Ejercicios
