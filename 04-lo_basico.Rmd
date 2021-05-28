@@ -271,7 +271,7 @@ Habiendo introducido los operadores lógicos más básicos arriba, aprovecharemo
 ```
 En la expresión numérica de arriba, hemos combinado valores y aplicado una función lógica con un resultado de `TRUE`. De este modo, es posible utilizar R para la evaluación de expresiones lógicas. Pero su potencial va más allá de determinar si una proposición dada es verdadera o falsa, sino que a través de la utilización de estas expresiones podemos filtrar bases de datos como lo vimos en el capítulo 2 al usar la función `subset()`.
 
-Tabla 1
+                              Tabla 4.1
 
 | Número |      Operación      | Operador | Ejemplo | Respuesta|
 |:------:|:-------------------:|:--------:|:-------:|:-------:|
@@ -281,6 +281,28 @@ Tabla 1
 |    4   | Mayor que o igual a |    >=    |  4 >= 2 | Verdadero|
 |    5   |       Igual a       |    ==    | 10 == 2 | Falso|
 |    6   |      No igual a     |    !=    | 10 != 2 | Verdadero|
+
+Veamos unos pocos ejemplos para ver cómo R utiliza estos operadores lógicos. Se recomienda que las y los lectores sigan probando y jugando con el uso de los diferentes operador para comprender de mejor manera su funcionamiento. 
+
+```{r}
+20 < 30
+```
+
+```{r}
+30 <= 20
+```
+
+```{r}
+1000.010 > 1000.090
+```
+
+```{r}
+1000 > 1000
+```
+
+```{r}
+42 >= 2 * 21
+```
 
 ## Resumen y Ejercicios
 
