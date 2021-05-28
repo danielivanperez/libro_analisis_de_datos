@@ -272,6 +272,7 @@ Habiendo introducido los operadores lógicos más básicos arriba, aprovecharemo
 En la expresión numérica de arriba, hemos combinado valores y aplicado una función lógica con un resultado de `TRUE`. De este modo, es posible utilizar R para la evaluación de expresiones lógicas. Pero su potencial va más allá de determinar si una proposición dada es verdadera o falsa, sino que a través de la utilización de estas expresiones podemos filtrar bases de datos como lo vimos en el capítulo 2 al usar la función `subset()`.
 
 Tabla 1
+
 | Número |      Operación      | Operador | Ejemplo | Respuesta|
 |:------:|:-------------------:|:--------:|:-------:|:-------:|
 |    1   |      Menor que      |     <    |  1 < 5  | Verdadero|
@@ -281,8 +282,6 @@ Tabla 1
 |    5   |       Igual a       |    ==    | 10 == 2 | Falso|
 |    6   |      No igual a     |    !=    | 10 != 2 | Verdadero|
 
-
- 
 ## Resumen y Ejercicios
 
 En este capítulo hemos revisado algunos comandos básicos en R, desde cómo usar R como una simple calculadora, revisando los operadores matemáticos básicos y pasando por la construcción de variables y la utilización de funciones, hasta como crear vectores numéricos, de texto y lógicos. No hemos revisado otras funcionalidades como el *flujo de control*, el cual está asociado al uso de bucles. Estos conceptos pueden ser encontrados en el [Anexo 1](#anexo_1).  
