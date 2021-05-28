@@ -243,8 +243,26 @@ Ténganse en mente que la variable `saludo` arrojo la siguiente salida: `[1] 4 8
 R también trabaja sobre *valores lógicos*. Básicamente, un valor lógico es una aserción sobre si algo es verdadero o falso. La implementación de dichos valores en R son TRUE y FALSE respectivamente. 
 
 ### Evaluando Verdades Matemáticas
- 
 
+Como comienza refiriéndose Danielle Navarro en su libro *Learning Statistics with R*, en el ya clásico libro de George Orwell 1984, uno de los eslóganes utilizados por el partido totalitario era “dos más dos es igual cinco”. La idea contempla que la dominación política de la libertad humana se vuelve completa cuando es posible subvertir incluso las más básicas verdades, en este caso, verdades matemáticas formales. Introducimos esta analogía solamente para examinar cómo R utiliza los operadores lógicos booleanos descritos arriba y comprobar que R no se somete a los dictámenes del partido totalitario. Por ejemplo:
+
+```{r}
+2 + 2
+```
+
+Ahora podemos respirar tranquilos, al menos 2 + 2 es 4. Pero ahora supongamos que queremos R evalúe si una proposición es verdadera o no. 
+
+```{r}
+2 + 2 == 4
+```
+Arriba hemos utilizado el operador de igualdad `==`, para que R nos si un proposición es verdadera o falsa (en este caso verdadera). Veamos quee piensa del slogan del partido totalitario. 
+
+```{r}
+2 + 2 == 5
+```
+Aún hay esperanzas en el reino de R señoras y señores. 2 + 2 == 5 es una proposición falsa.
+
+ 
 ## Resumen y Ejercicios
 
 En este capítulo hemos revisado algunos comandos básicos en R, desde cómo usar R como una simple calculadora, revisando los operadores matemáticos básicos y pasando por la construcción de variables y la utilización de funciones, hasta como crear vectores numéricos, de texto y lógicos. No hemos revisado otras funcionalidades como el *flujo de control*, el cual está asociado al uso de bucles. Estos conceptos pueden ser encontrados en el [Anexo 1](#anexo_1).  
