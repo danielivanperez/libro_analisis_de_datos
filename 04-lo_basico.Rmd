@@ -335,18 +335,21 @@ Ahora que ya hemos revisado algunos elementos básicos de las funciones lógicas
 
 ```{r}
 mi_primera_variable_logica <- 2 + 2 ==5
+mi_primera_variable_logica
 ```
 
 Sin embargo, también podemos ingresar el valor lógico directamente:
 
 ```{r}
 mi_primera_variable_logica <- FALSE
+mi_primera_variable_logica
 ```
 
 Incluso R nos permite asignar solamente la primera letra mayúscula como valor lógico, es decir, T o F (aunque no reconoce para esta operación letras minúsculas):
 
 ```{r}
 mi_primera_variable_logica <- F
+mi_primera_variable_logica
 ```
 
 ### Vectores Lógicos

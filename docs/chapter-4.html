@@ -572,23 +572,29 @@ Figura 7. Usuario inicial de R imaginando las posibilidades.
 <div id="almacenando-datos-lógicos-en-variables-al-fin" class="section level3" number="4.8.3">
 <h3><span class="header-section-number">4.8.3</span> Almacenando Datos Lógicos en Variables (Al fin!)</h3>
 <p>Ahora que ya hemos revisado algunos elementos básicos de las funciones lógicas en R, al fin podemos decir que, al igual que en el caso de los datos numéricos y de texto, es posible almacenar en variables datos lógicos. Veamos el siguiente ejemplo:</p>
-<div class="sourceCode" id="cb146"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb146-1"><a href="chapter-4.html#cb146-1" aria-hidden="true" tabindex="-1"></a>mi_primera_variable_logica <span class="ot">&lt;-</span> <span class="dv">2</span> <span class="sc">+</span> <span class="dv">2</span> <span class="sc">==</span><span class="dv">5</span></span></code></pre></div>
+<div class="sourceCode" id="cb146"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb146-1"><a href="chapter-4.html#cb146-1" aria-hidden="true" tabindex="-1"></a>mi_primera_variable_logica <span class="ot">&lt;-</span> <span class="dv">2</span> <span class="sc">+</span> <span class="dv">2</span> <span class="sc">==</span><span class="dv">5</span></span>
+<span id="cb146-2"><a href="chapter-4.html#cb146-2" aria-hidden="true" tabindex="-1"></a>mi_primera_variable_logica</span></code></pre></div>
+<pre><code>## [1] FALSE</code></pre>
 <p>Sin embargo, también podemos ingresar el valor lógico directamente:</p>
-<div class="sourceCode" id="cb147"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb147-1"><a href="chapter-4.html#cb147-1" aria-hidden="true" tabindex="-1"></a>mi_primera_variable_logica <span class="ot">&lt;-</span> <span class="cn">FALSE</span></span></code></pre></div>
+<div class="sourceCode" id="cb148"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb148-1"><a href="chapter-4.html#cb148-1" aria-hidden="true" tabindex="-1"></a>mi_primera_variable_logica <span class="ot">&lt;-</span> <span class="cn">FALSE</span></span>
+<span id="cb148-2"><a href="chapter-4.html#cb148-2" aria-hidden="true" tabindex="-1"></a>mi_primera_variable_logica</span></code></pre></div>
+<pre><code>## [1] FALSE</code></pre>
 <p>Incluso R nos permite asignar solamente la primera letra mayúscula como valor lógico, es decir, T o F (aunque no reconoce para esta operación letras minúsculas):</p>
-<div class="sourceCode" id="cb148"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb148-1"><a href="chapter-4.html#cb148-1" aria-hidden="true" tabindex="-1"></a>mi_primera_variable_logica <span class="ot">&lt;-</span> F</span></code></pre></div>
+<div class="sourceCode" id="cb150"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb150-1"><a href="chapter-4.html#cb150-1" aria-hidden="true" tabindex="-1"></a>mi_primera_variable_logica <span class="ot">&lt;-</span> F</span>
+<span id="cb150-2"><a href="chapter-4.html#cb150-2" aria-hidden="true" tabindex="-1"></a>mi_primera_variable_logica</span></code></pre></div>
+<pre><code>## [1] FALSE</code></pre>
 </div>
 <div id="vectores-lógicos" class="section level3" number="4.8.4">
 <h3><span class="header-section-number">4.8.4</span> Vectores Lógicos</h3>
 <p>Al igual que los casos anteriores de vectores, podemos concatenar o combinar valores lógicos en un vector, veamos un ejemplo asignando un conjunto de valores lógicos a una variable dada:</p>
-<div class="sourceCode" id="cb149"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb149-1"><a href="chapter-4.html#cb149-1" aria-hidden="true" tabindex="-1"></a>mi_segunda_variable_logica <span class="ot">&lt;-</span> <span class="fu">c</span>(F, T, F, F, T)</span>
-<span id="cb149-2"><a href="chapter-4.html#cb149-2" aria-hidden="true" tabindex="-1"></a>mi_segunda_variable_logica</span></code></pre></div>
+<div class="sourceCode" id="cb152"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb152-1"><a href="chapter-4.html#cb152-1" aria-hidden="true" tabindex="-1"></a>mi_segunda_variable_logica <span class="ot">&lt;-</span> <span class="fu">c</span>(F, T, F, F, T)</span>
+<span id="cb152-2"><a href="chapter-4.html#cb152-2" aria-hidden="true" tabindex="-1"></a>mi_segunda_variable_logica</span></code></pre></div>
 <pre><code>## [1] FALSE  TRUE FALSE FALSE  TRUE</code></pre>
-<div class="sourceCode" id="cb151"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb151-1"><a href="chapter-4.html#cb151-1" aria-hidden="true" tabindex="-1"></a><span class="sc">!</span>mi_segunda_variable_logica</span></code></pre></div>
+<div class="sourceCode" id="cb154"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb154-1"><a href="chapter-4.html#cb154-1" aria-hidden="true" tabindex="-1"></a><span class="sc">!</span>mi_segunda_variable_logica</span></code></pre></div>
 <pre><code>## [1]  TRUE FALSE  TRUE  TRUE FALSE</code></pre>
 <p>Para finalizar con los vectores lógicos, crearemos una variable con números desde el 1 al 10 y evaluaremos lógicamente cada uno de los valores para ver lo que hace R en este caso:</p>
-<div class="sourceCode" id="cb153"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb153-1"><a href="chapter-4.html#cb153-1" aria-hidden="true" tabindex="-1"></a>numeros <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>, <span class="dv">10</span>)</span>
-<span id="cb153-2"><a href="chapter-4.html#cb153-2" aria-hidden="true" tabindex="-1"></a>numeros <span class="sc">&gt;=</span> <span class="dv">5</span></span></code></pre></div>
+<div class="sourceCode" id="cb156"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb156-1"><a href="chapter-4.html#cb156-1" aria-hidden="true" tabindex="-1"></a>numeros <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>, <span class="dv">10</span>)</span>
+<span id="cb156-2"><a href="chapter-4.html#cb156-2" aria-hidden="true" tabindex="-1"></a>numeros <span class="sc">&gt;=</span> <span class="dv">5</span></span></code></pre></div>
 <pre><code>##  [1] FALSE FALSE FALSE FALSE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE</code></pre>
 </div>
 </div>
