@@ -1,5 +1,9 @@
 # Comandos Básicos en R {#chapter_4}
 
+En este capítulo revisaremos cómo interactuar con R de forma muy básica y sencilla. Empezaremos usando R como si fuera una calculadora común y corriente, lo cual nos ayudará a obtener exitosamente nuestros primeros resultados de manera exitosa (aumentando así nuestra confianza en nuestras propias capacidades como futuros analistas de datos 👊). Posteriormente, echaremos un vistazo a cómo construir asignar valores a variables, una de las funcionalidades más útiles de R. Luego, pasaremos a describir algunos de los tipos de datos con los cuales trabaja R: números, texto y valores lógico, ilustrando para cada uno de ellos la posibilidad de construir vectores. Al final del capítulo terminaremos con algunos ejercicios como ya es costumbre. 
+
+Se asume a esta altura que la y el lector ya han instalado R y RStudio en su computador. En cuanto a la forma de escribir código, el usuario puede utilizar la consola de R, el panel de script o R Notebooks (ver [Capítulo 3](#capiulo3_4) para más detalles), siendo esta última la forma recomendada para proceder, pero no hay problema con usar las otras opciones.  
+
 ## R como una Simple Calculadora^[ Para estructurar los contenidos de este capítulo, me he basado en el libro *Learning Statistics with R* escrito por Danielle Navarro.]
 
 Una de las primeras cosas que podemos hacer para comenzar a familiarizarnos con R es usarla como si fuera una simple calculadora. De esta manera, escribiremos los primeros comandos o instrucciones y obtendremos resultados conocidos a partir de nuestra experiencia con cálculos matemáticos adquiridos durante nuestra educación primaria. Nada intimidante la verdad. En la consola de R, podemos escribir `2 + 5` y luego apretar “*enter*”. Cuando escribimos `2 + 5` lo que hicimos fue escribir un **comando** y R ejecutará dicho comando. Lo que tu vas a ver en la consola de R corresponde a: 

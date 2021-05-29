@@ -21,7 +21,7 @@ r-para-windows
 r-para-mac
 r-para-linux
 instalando-rstudio
-explorando-rstudio
+capiulo3_4
 la-consola-y-el-panel-de-código-script
 presentando-r-notebook
 insertando-y-ejecutando-porciones-de-código
