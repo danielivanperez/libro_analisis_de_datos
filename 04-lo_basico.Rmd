@@ -1,6 +1,6 @@
 # Comandos Básicos en R {#chapter_4}
 
-En este capítulo revisaremos cómo interactuar con R de forma muy básica y sencilla. Empezaremos usando R como si fuera una calculadora común y corriente, lo cual nos ayudará a obtener nuestros primeros resultados de manera exitosa (aumentando así nuestra confianza en nuestras propias capacidades como futuros analistas de datos 👊). Posteriormente, echaremos un vistazo a cómo construir y asignar valores a variables, una de las funcionalidades más útiles de R. Luego, pasaremos a describir algunos de los tipos de datos con los cuales trabaja R: números, texto y valores lógico, ilustrando para cada uno de ellos la posibilidad de construir vectores. Al final del capítulo terminaremos con algunos ejercicios como ya es costumbre. 
+En este capítulo revisaremos cómo interactuar con R de forma muy básica y sencilla. Empezaremos usando R como si fuera una calculadora común y corriente, lo cual nos ayudará a obtener nuestros primeros resultados de manera exitosa (aumentando así nuestra confianza en nuestras propias capacidades como futuros analistas de datos 👊). Posteriormente, echaremos un vistazo a cómo construir y asignar valores a variables, una de las funcionalidades más útiles de R. Luego, pasaremos a describir algunos de los tipos de datos con los cuales trabaja R: números, texto y valores lógicos, ilustrando para cada uno de ellos la posibilidad de construir vectores. Al final del capítulo terminaremos con algunos ejercicios como ya es costumbre. 
 
 Se asume que a esta altura que la y el lector ya ha instalado R y RStudio en su computador. En cuanto a la forma de escribir código, el usuario puede utilizar la consola de R, el panel de script o R Notebooks (ver [Capítulo 3](#capiulo3_4) para más detalles), siendo esta última la forma recomendada para proceder, pero no hay problema con usar las otras opciones.  
 
@@ -14,10 +14,10 @@ Una de las primeras cosas que podemos hacer para comenzar a familiarizarnos con 
 
 Ahora bien, este simple ejemplo nos servirá para explicar algunas cosas muy simples de R. El primer bloque de arriba (es decir, `2 + 5`) corresponde al comando o instrucciones que escribimos y el bloque de abajo es el *output* o salida de R, el cual nos muestra el resultado de la suma. En este bloque, aparecen dos *hashtags* o “*signos gatos*” (como le decimos en Chile), al lado `[1] `, el cual señala el número del output producido por R (y que por cierto nosotros no escribimos, sino fue producido por R) y al lado, finalmente, aparece el resultado de la sumatoria, es decir, `7`. *So far, so good!* (¡hasta ahora todo bien!).
 
-En la tabla 1, puedes encontrar un resumen de algunas operaciones matemáticas básicas en R. 
+En la tabla 4.1, puedes encontrar un resumen de algunas operaciones matemáticas básicas en R. 
 
 ```{=html}    
-                              <center> <h3>Tabla 1 </h3> </center>
+                              <center> <h3>Tabla 4.1 </h3> </center>
 ```
               
 | Operación      | Símbolo u operador | Ejemplo  | Resultado |
@@ -268,14 +268,16 @@ Aún hay esperanzas en el reino de R señoras y señores. 2 + 2 == 5 es una prop
 
 ### Más Operadores Lógicos 
 
-Habiendo introducido los operadores lógicos más básicos arriba, aprovecharemos la oportunidad para mostrar que podemos combinarlos y resumiremos en la tabla 1 más operadores lógicos. Veamos un ejemplo de cómo combinar operadores lógicos:  
+Habiendo introducido los operadores lógicos más básicos arriba, aprovecharemos la oportunidad para mostrar que podemos combinarlos y resumiremos en la tabla 4.2 más operadores lógicos. Veamos un ejemplo de cómo combinar operadores lógicos:  
 
 ```{r}
 10*2 + (4 * 4) == 6 * 6
 ```
 En la expresión numérica de arriba, hemos combinado valores y aplicado una función lógica con un resultado de `TRUE`. De este modo, es posible utilizar R para la evaluación de expresiones lógicas. Pero su potencial va más allá de determinar si una proposición dada es verdadera o falsa, sino que a través de la utilización de estas expresiones podemos filtrar bases de datos como lo vimos en el capítulo 2 al usar la función `subset()`.
 
-                              Tabla 4.1
+```{=html}    
+                              <center> <h3>Tabla 4.2 </h3> </center>
+```
 
 | Número |      Operación      | Operador | Ejemplo | Respuesta|
 |:------:|:-------------------:|:--------:|:-------:|:-------:|
@@ -308,9 +310,11 @@ Sigamos examinando unos pocos ejemplos más para ver cómo R utiliza estos opera
 42 >= 2 * 21
 ```
 
-Finalizaremos el resumen de las operaciones lógicas con la tabla 4.2, en donde aparecen los operadores de negación, disyunción y conjunción.  
+Finalizaremos el resumen de las operaciones lógicas con la tabla 4.3, en donde aparecen los operadores de negación, disyunción y conjunción.  
 
-                       Tabla 4.2
+```{=html}    
+                              <center> <h3>Tabla 4.3 </h3> </center>
+```
 
 | Número |  Operación | Operador |        Ejemplo       | Respuesta |
 |:------:|:----------:|:--------:|:--------------------:|:---------:|
@@ -319,7 +323,7 @@ Finalizaremos el resumen de las operaciones lógicas con la tabla 4.2, en donde 
 |    3   | Conjunción |     &    |  (1 == 1) & (2 == 3) |   Falso   |
 
 
-Abajo aparecen algunos ejemplos para ilustrar las operaciones de la tabla 4.2 y revisar los resultados de dichos procedimientos. Nótese que para la disyunción basta con que una de las expresiones sea verdadera para que el resultado final sea verdadero; en cambio, para la conjunción ambas expresiones deben ser verdaderas. Por último, para ejemplificar la negación, hemos escrito el símbolo al lado de `FALSE`, una de las expresiones reservadas de R.  
+Abajo aparecen algunos ejemplos para ilustrar las operaciones de la tabla 4.3 y revisar los resultados de dichos procedimientos. Nótese que para la disyunción basta con que una de las expresiones sea verdadera para que el resultado final sea verdadero; en cambio, para la conjunción ambas expresiones deben ser verdaderas. Por último, para ejemplificar la negación, hemos escrito el símbolo al lado de `FALSE`, una de las expresiones reservadas de R.  
 
 ```{r}
 (1 + 1 == 2) | (3 + 3 == 10)
