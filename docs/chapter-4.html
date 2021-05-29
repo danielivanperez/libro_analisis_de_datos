@@ -24,7 +24,7 @@
 <meta name="author" content="Daniel Pérez Zapata" />
 
 
-<meta name="date" content="2021-05-28" />
+<meta name="date" content="2021-05-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -204,6 +204,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="4.8.1" data-path="chapter-4.html"><a href="chapter-4.html#evaluando-verdades-matemáticas"><i class="fa fa-check"></i><b>4.8.1</b> Evaluando Verdades Matemáticas</a></li>
 <li class="chapter" data-level="4.8.2" data-path="chapter-4.html"><a href="chapter-4.html#más-operadores-lógicos"><i class="fa fa-check"></i><b>4.8.2</b> Más Operadores Lógicos</a></li>
+<li class="chapter" data-level="4.8.3" data-path="chapter-4.html"><a href="chapter-4.html#almacenando-datos-lógicos-en-variables-al-fin"><i class="fa fa-check"></i><b>4.8.3</b> Almacenando Datos Lógicos en Variables (Al fin!)</a></li>
+<li class="chapter" data-level="4.8.4" data-path="chapter-4.html"><a href="chapter-4.html#vectores-lógicos"><i class="fa fa-check"></i><b>4.8.4</b> Vectores Lógicos</a></li>
 </ul></li>
 <li class="chapter" data-level="4.9" data-path="chapter-4.html"><a href="chapter-4.html#resumen-y-ejercicios-2"><i class="fa fa-check"></i><b>4.9</b> Resumen y Ejercicios</a>
 <ul>
@@ -559,11 +561,40 @@ Figura 7. Usuario inicial de R imaginando las posibilidades.
 </tr>
 </tbody>
 </table>
+<p>Abajo aparecen algunos ejemplos para ilustrar las operaciones de la tabla 4.2 y revisar los resultados de dichos procedimientos. Nótese que para la disyunción basta con que una de las expresiones sea verdadera para que el resultado final sea verdadero; en cambio, para la conjunción ambas expresiones deben ser verdaderas. Por último, para ejemplificar la negación, hemos escrito el símbolo al lado de <code>FALSE</code>, una de las expresiones reservadas de R.</p>
+<div class="sourceCode" id="cb140"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb140-1"><a href="chapter-4.html#cb140-1" aria-hidden="true" tabindex="-1"></a>(<span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span> <span class="sc">==</span> <span class="dv">2</span>) <span class="sc">|</span> (<span class="dv">3</span> <span class="sc">+</span> <span class="dv">3</span> <span class="sc">==</span> <span class="dv">10</span>)</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode" id="cb142"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb142-1"><a href="chapter-4.html#cb142-1" aria-hidden="true" tabindex="-1"></a>(<span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span> <span class="sc">==</span> <span class="dv">2</span>) <span class="sc">|</span> (<span class="dv">3</span> <span class="sc">+</span> <span class="dv">3</span> <span class="sc">==</span> <span class="dv">10</span>)</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode" id="cb144"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb144-1"><a href="chapter-4.html#cb144-1" aria-hidden="true" tabindex="-1"></a><span class="sc">!</span><span class="cn">FALSE</span></span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+</div>
+<div id="almacenando-datos-lógicos-en-variables-al-fin" class="section level3" number="4.8.3">
+<h3><span class="header-section-number">4.8.3</span> Almacenando Datos Lógicos en Variables (Al fin!)</h3>
+<p>Ahora que ya hemos revisado algunos elementos básicos de las funciones lógicas en R, al fin podemos decir que, al igual que en el caso de los datos numéricos y de texto, es posible almacenar en variables datos lógicos. Veamos el siguiente ejemplo:</p>
+<div class="sourceCode" id="cb146"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb146-1"><a href="chapter-4.html#cb146-1" aria-hidden="true" tabindex="-1"></a>mi_primera_variable_logica <span class="ot">&lt;-</span> <span class="dv">2</span> <span class="sc">+</span> <span class="dv">2</span> <span class="sc">==</span><span class="dv">5</span></span></code></pre></div>
+<p>Sin embargo, también podemos ingresar el valor lógico directamente:</p>
+<div class="sourceCode" id="cb147"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb147-1"><a href="chapter-4.html#cb147-1" aria-hidden="true" tabindex="-1"></a>mi_primera_variable_logica <span class="ot">&lt;-</span> <span class="cn">FALSE</span></span></code></pre></div>
+<p>Incluso R nos permite asignar solamente la primera letra mayúscula como valor lógico, es decir, T o F (aunque no reconoce para esta operación letras minúsculas):</p>
+<div class="sourceCode" id="cb148"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb148-1"><a href="chapter-4.html#cb148-1" aria-hidden="true" tabindex="-1"></a>mi_primera_variable_logica <span class="ot">&lt;-</span> F</span></code></pre></div>
+</div>
+<div id="vectores-lógicos" class="section level3" number="4.8.4">
+<h3><span class="header-section-number">4.8.4</span> Vectores Lógicos</h3>
+<p>Al igual que los casos anteriores de vectores, podemos concatenar o combinar valores lógicos en un vector, veamos un ejemplo asignando un conjunto de valores lógicos a una variable dada:</p>
+<div class="sourceCode" id="cb149"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb149-1"><a href="chapter-4.html#cb149-1" aria-hidden="true" tabindex="-1"></a>mi_segunda_variable_logica <span class="ot">&lt;-</span> <span class="fu">c</span>(F, T, F, F, T)</span>
+<span id="cb149-2"><a href="chapter-4.html#cb149-2" aria-hidden="true" tabindex="-1"></a>mi_segunda_variable_logica</span></code></pre></div>
+<pre><code>## [1] FALSE  TRUE FALSE FALSE  TRUE</code></pre>
+<div class="sourceCode" id="cb151"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb151-1"><a href="chapter-4.html#cb151-1" aria-hidden="true" tabindex="-1"></a><span class="sc">!</span>mi_segunda_variable_logica</span></code></pre></div>
+<pre><code>## [1]  TRUE FALSE  TRUE  TRUE FALSE</code></pre>
+<p>Para finalizar con los vectores lógicos, crearemos una variable con números desde el 1 al 10 y evaluaremos lógicamente cada uno de los valores para ver lo que hace R en este caso:</p>
+<div class="sourceCode" id="cb153"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb153-1"><a href="chapter-4.html#cb153-1" aria-hidden="true" tabindex="-1"></a>numeros <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>, <span class="dv">10</span>)</span>
+<span id="cb153-2"><a href="chapter-4.html#cb153-2" aria-hidden="true" tabindex="-1"></a>numeros <span class="sc">&gt;=</span> <span class="dv">5</span></span></code></pre></div>
+<pre><code>##  [1] FALSE FALSE FALSE FALSE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE</code></pre>
 </div>
 </div>
 <div id="resumen-y-ejercicios-2" class="section level2" number="4.9">
 <h2><span class="header-section-number">4.9</span> Resumen y Ejercicios</h2>
-<p>En este capítulo hemos revisado algunos comandos básicos en R, desde cómo usar R como una simple calculadora, revisando los operadores matemáticos básicos y pasando por la construcción de variables y la utilización de funciones, hasta como crear vectores numéricos, de texto y lógicos. No hemos revisado otras funcionalidades como el <em>flujo de control</em>, el cual está asociado al uso de bucles. Estos conceptos pueden ser encontrados en el <a href="anexo-1.html#anexo_1">Anexo 1</a>.</p>
+<p>En este capítulo hemos revisado algunos comandos básicos en R, desde cómo usar R como una simple calculadora, revisando los operadores matemáticos básicos y pasando por la construcción de variables y la utilización de funciones, hasta como crear vectores numéricos, de texto y lógicos. No hemos revisado otras funcionalidades como el <em>flujo de control</em>, el cual está asociado al uso de bucles o <em>loops</em>. Estos conceptos pueden ser encontrados en el <a href="anexo-1.html#anexo_1">Anexo 1</a>.</p>
 <div id="ejercicios-2" class="section level3" number="4.9.1">
 <h3><span class="header-section-number">4.9.1</span> Ejercicios</h3>
 <p>En progreso.</p>

@@ -314,9 +314,62 @@ Finalizaremos el resumen de las operaciones lógicas con la tabla 4.2, en donde 
 |    2   | Disyunción |     \|    | (1 == 1)  \| (2 == 3) | Verdadero |
 |    3   | Conjunción |     &    |  (1 == 1) & (2 == 3) |   Falso   |
 
+
+Abajo aparecen algunos ejemplos para ilustrar las operaciones de la tabla 4.2 y revisar los resultados de dichos procedimientos. Nótese que para la disyunción basta con que una de las expresiones sea verdadera para que el resultado final sea verdadero; en cambio, para la conjunción ambas expresiones deben ser verdaderas. Por último, para ejemplificar la negación, hemos escrito el símbolo al lado de `FALSE`, una de las expresiones reservadas de R.  
+
+```{r}
+(1 + 1 == 2) | (3 + 3 == 10)
+```
+
+```{r}
+(1 + 1 == 2) | (3 + 3 == 10)
+```
+
+```{r}
+!FALSE
+```
+
+### Almacenando Datos Lógicos en Variables (Al fin!)
+
+Ahora que ya hemos revisado algunos elementos básicos de las funciones lógicas en R, al fin podemos decir que, al igual que en el caso de los datos numéricos y de texto, es posible almacenar en variables datos lógicos. Veamos el siguiente ejemplo: 
+
+```{r}
+mi_primera_variable_logica <- 2 + 2 ==5
+```
+
+Sin embargo, también podemos ingresar el valor lógico directamente:
+
+```{r}
+mi_primera_variable_logica <- FALSE
+```
+
+Incluso R nos permite asignar solamente la primera letra mayúscula como valor lógico, es decir, T o F (aunque no reconoce para esta operación letras minúsculas):
+
+```{r}
+mi_primera_variable_logica <- F
+```
+
+### Vectores Lógicos
+
+Al igual que los casos anteriores de vectores, podemos concatenar o combinar valores lógicos en un vector, veamos un ejemplo asignando un conjunto de valores lógicos a una variable dada: 
+
+```{r}
+mi_segunda_variable_logica <- c(F, T, F, F, T)
+mi_segunda_variable_logica
+```
+```{r}
+!mi_segunda_variable_logica
+```
+Para finalizar con los vectores lógicos, crearemos una variable con números desde el 1 al 10 y evaluaremos lógicamente cada uno de los valores para ver lo que hace R en este caso: 
+
+```{r}
+numeros <- c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+numeros >= 5
+```
+
 ## Resumen y Ejercicios
 
-En este capítulo hemos revisado algunos comandos básicos en R, desde cómo usar R como una simple calculadora, revisando los operadores matemáticos básicos y pasando por la construcción de variables y la utilización de funciones, hasta como crear vectores numéricos, de texto y lógicos. No hemos revisado otras funcionalidades como el *flujo de control*, el cual está asociado al uso de bucles. Estos conceptos pueden ser encontrados en el [Anexo 1](#anexo_1).  
+En este capítulo hemos revisado algunos comandos básicos en R, desde cómo usar R como una simple calculadora, revisando los operadores matemáticos básicos y pasando por la construcción de variables y la utilización de funciones, hasta como crear vectores numéricos, de texto y lógicos. No hemos revisado otras funcionalidades como el *flujo de control*, el cual está asociado al uso de bucles o *loops*. Estos conceptos pueden ser encontrados en el [Anexo 1](#anexo_1).  
 
 ### Ejercicios
 
