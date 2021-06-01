@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Anexo 1: Más Comandos Básicos | Introducción a R para el Análisis de Datos en Psicología</title>
+  <title>Capítulo 7 Análisis Factorial Exploratorio (AFE) | Introducción a R para el Análisis de Datos en Psicología</title>
   <meta name="description" content="Este curso tiene como objetivo enseñar R para análisis de datos en psicología." />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Anexo 1: Más Comandos Básicos | Introducción a R para el Análisis de Datos en Psicología" />
+  <meta property="og:title" content="Capítulo 7 Análisis Factorial Exploratorio (AFE) | Introducción a R para el Análisis de Datos en Psicología" />
   <meta property="og:type" content="book" />
   
   <meta property="og:image" content="images/dani_r.png" />
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Anexo 1: Más Comandos Básicos | Introducción a R para el Análisis de Datos en Psicología" />
+  <meta name="twitter:title" content="Capítulo 7 Análisis Factorial Exploratorio (AFE) | Introducción a R para el Análisis de Datos en Psicología" />
   
   <meta name="twitter:description" content="Este curso tiene como objetivo enseñar R para análisis de datos en psicología." />
   <meta name="twitter:image" content="images/dani_r.png" />
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   <link rel="shortcut icon" href="images/simp_dan.ico" type="image/x-icon" />
-<link rel="prev" href="glosario.html"/>
-<link rel="next" href="anexo-2.html"/>
+<link rel="prev" href="tidyverse-librería-de-análisis-de-datos.html"/>
+<link rel="next" href="análisis-factorial-confirmatorio.html"/>
 <script src="libs/header-attrs-2.7/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -246,18 +246,67 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="anexo_1" class="section level1 unnumbered">
-<h1>Anexo 1: Más Comandos Básicos</h1>
-<p>Anexo en construcción.</p>
+<div id="análisis-factorial-exploratorio-afe" class="section level1" number="7">
+<h1><span class="header-section-number">Capítulo  7</span> Análisis Factorial Exploratorio (AFE)</h1>
+<p><strong>[Capítulo en construcción.]</strong></p>
+<p>El análisis factorial es una de las técnicas estadísticas más usadas en psicología. Sin embargo, uno de los problemas prácticos que muchos psicólogos y psicólogas enfrentan es que los programas como <em>SPSS</em> no entregan muchas funcionalidades para obtener el mayor grado de información para tomar decisiones, por ejemplo, en la construcción o validación de escalas. La herramienta de <em>reducción de datos</em> en <em>SPSS</em> solo permite llevar a cabo análisis factoriales exploratorios sin poder implementar análisis factoriales confirmatorios. El objetivo de este capítulo es describir cómo realizar análisis factoriales exploratorios en R, interpretando la salida que entregan las librerías o paquetes específicos. Si bien se explica, de forma muy general, qué es un análisis factorial exploratorio y otros elementos importantes asociados a esta técnica, este capítulo no reemplaza, de ningún modo, textos teóricos acerca del tema. De esta manera, se recomienda que las personas interesadas en indagar en los aspectos más teóricos de estas técnicas profundicen en dichos textos.</p>
+<div id="implementando-el-afe-en-r" class="section level2" number="7.1">
+<h2><span class="header-section-number">7.1</span> Implementando el AFE en R</h2>
+<p>Instalacion de paquete para poder leer el archivo del segundo pedazo de codigo mas abajo.</p>
+<div class="sourceCode" id="cb156"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb156-1"><a href="análisis-factorial-exploratorio-afe.html#cb156-1" aria-hidden="true" tabindex="-1"></a><span class="co">#install.packages(&quot;readr&quot;)</span></span></code></pre></div>
+<p>Cargando la libreria y abriendo el archivo csv desde la web.</p>
+<div class="sourceCode" id="cb157"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb157-1"><a href="análisis-factorial-exploratorio-afe.html#cb157-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
+<span id="cb157-2"><a href="análisis-factorial-exploratorio-afe.html#cb157-2" aria-hidden="true" tabindex="-1"></a>goal_scale<span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;https://raw.githubusercontent.com/chrischizinski/SNR_R_Group/master/data/goal_scale.csv&quot;</span>)</span>
+<span id="cb157-3"><a href="análisis-factorial-exploratorio-afe.html#cb157-3" aria-hidden="true" tabindex="-1"></a>agoal.efa<span class="ot">&lt;-</span><span class="fu">factanal</span>(<span class="sc">~</span>ags1<span class="sc">+</span>ags2<span class="sc">+</span>ags3<span class="sc">+</span>ags4<span class="sc">+</span>ags5<span class="sc">+</span>ags6<span class="sc">+</span>ags7<span class="sc">+</span>ags8<span class="sc">+</span>ags9<span class="sc">+</span>ags10<span class="sc">+</span>ags11<span class="sc">+</span>ags12, <span class="at">factors=</span><span class="dv">4</span>,<span class="at">rotation=</span><span class="st">&quot;promax&quot;</span>,<span class="at">data =</span> goal_scale)</span>
+<span id="cb157-4"><a href="análisis-factorial-exploratorio-afe.html#cb157-4" aria-hidden="true" tabindex="-1"></a>agoal.efa</span></code></pre></div>
+<pre><code>## 
+## Call:
+## factanal(x = ~ags1 + ags2 + ags3 + ags4 + ags5 + ags6 + ags7 +     ags8 + ags9 + ags10 + ags11 + ags12, factors = 4, data = goal_scale,     rotation = &quot;promax&quot;)
+## 
+## Uniquenesses:
+##  ags1  ags2  ags3  ags4  ags5  ags6  ags7  ags8  ags9 ags10 ags11 ags12 
+## 0.487 0.335 0.279 0.342 0.557 0.388 0.104 0.005 0.231 0.201 0.300 0.306 
+## 
+## Loadings:
+##       Factor1 Factor2 Factor3 Factor4
+## ags1           0.667                 
+## ags2                   0.844         
+## ags3   0.864                         
+## ags4   0.793           0.104  -0.116 
+## ags5           0.565   0.123         
+## ags6           0.764                 
+## ags7           1.023  -0.120         
+## ags8   0.756                   0.583 
+## ags9   0.884                         
+## ags10  0.866                   0.143 
+## ags11  0.799                   0.195 
+## ags12                  0.833         
+## 
+##                Factor1 Factor2 Factor3 Factor4
+## SS loadings      4.122   2.404   1.461   0.426
+## Proportion Var   0.344   0.200   0.122   0.036
+## Cumulative Var   0.344   0.544   0.666   0.701
+## 
+## Factor Correlations:
+##         Factor1 Factor2  Factor3  Factor4
+## Factor1  1.0000  0.0919 -0.08477  0.20174
+## Factor2  0.0919  1.0000  0.18936  0.66077
+## Factor3 -0.0848  0.1894  1.00000 -0.00277
+## Factor4  0.2017  0.6608 -0.00277  1.00000
+## 
+## Test of the hypothesis that 4 factors are sufficient.
+## The chi square statistic is 77.4 on 24 degrees of freedom.
+## The p-value is 1.57e-07</code></pre>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="glosario.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="anexo-2.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="tidyverse-librería-de-análisis-de-datos.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="análisis-factorial-confirmatorio.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
