@@ -50,3 +50,4 @@ ejercicios-2
 instalando-librerías-en-r
 tidyverse-librería-de-análisis-de-datos
 glosario
+análisis-factorial-exploratorio

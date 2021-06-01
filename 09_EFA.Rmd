@@ -1,0 +1,18 @@
+# Análisis Factorial Exploratorio 
+
+**[Capítulo en construcción.]**
+
+Instalacion de paquete para poder leer el archivo del segundo pedazo de codigo mas abajo. 
+
+```{r}
+#install.packages("readr")
+```
+
+Cargando la libreria y abriendo el archivo csv desde la web. 
+
+```{r}
+library(readr)
+goal_scale<- read.csv("https://raw.githubusercontent.com/chrischizinski/SNR_R_Group/master/data/goal_scale.csv")
+agoal.efa<-factanal(~ags1+ags2+ags3+ags4+ags5+ags6+ags7+ags8+ags9+ags10+ags11+ags12, factors=4,rotation="promax",data = goal_scale)
+agoal.efa
+```
