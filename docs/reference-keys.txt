@@ -51,5 +51,5 @@ instalando-librerías-en-r
 tidyverse-librería-de-análisis-de-datos
 análisis-factorial-exploratorio-afe
 implementando-el-afe-en-r
-análisis-factorial-confirmatorio
+análisis-factorial-confirmatorio-afc
 glosario
