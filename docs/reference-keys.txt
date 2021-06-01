@@ -50,6 +50,7 @@ ejercicios-2
 instalando-librerías-en-r
 tidyverse-librería-de-análisis-de-datos
 análisis-factorial-exploratorio-afe
+sobre-el-análisis-factorial
 implementando-el-afe-en-r
 análisis-factorial-confirmatorio-afc
 glosario
