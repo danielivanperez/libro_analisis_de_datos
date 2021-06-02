@@ -14,7 +14,7 @@ Otro elemento relevante para el uso de ambas técnicas estadísticas tiene que v
 
 ## Implementando el AFE en R
 
-Para desarrollar e implementar un AFE, utilizaremos una base de datos que reside en la web sobre orientación al logro académico, la que tiene 12 ítems en formato Likert y que se llama “escala de orientación al logro” o en inglés *achievement goal scale (AGS)*. Cada uno de los ítems posee siete opciones, cuyos rangos van desde “en lo absoluto para mi” a “Muy cierto para mi”.
+Para desarrollar e implementar un AFE, utilizaremos una base de datos que reside en la web sobre orientación al logro académico, la que tiene 12 ítems en formato Likert y que se llama “escala de orientación al logro” o en inglés *achievement goal scale (AGS)*. Cada uno de los ítems posee siete opciones de respuestas, cuyos rangos van desde “en lo absoluto para mi” a “muy cierto para mi”.
 
 
 | Código |                                               Item                                              | Subdimensión |
@@ -31,6 +31,10 @@ Para desarrollar e implementar un AFE, utilizaremos una base de datos que reside
 |  AGS10 | Es importante para mi evitar rendir pobremente comparado a otros estudiantes.                   |      PAV     |
 |  AGS11 | Mi objetivo es rendir mejor que otros estudiantes.                                              |      PAP     |
 |  AGS12 | Mi objetivo es evitar aprender menos de lo que posiblemente podría.                             |      MAV     |
+
+Para este caso particular, la o el investigador desea investigar la estructura latente de la escala de orientación al logro (AGS), usando las respuestas entregadas por 430 estudiantes universitarios a los 12 ítems. Como ya hemos mencionado más arriba, el analista siempre tiene alguna idea de la posible estructura factorial de sus instrumentos. No es diferente para este caso. La teoría subyacente a AGS nos dice que hay cuatro rasgos latentes distintivos: orientación al logro de dominio (MAP), dominio evitativo (MAV), aproximación de rendimiento (PAP), y rendimiento evitativo (PAV). De manera muy general, procederemos a definir cada una de estas subdimensiones: la orientación al logro de dominio (MAP) significa que un individuo está interesado en aprender nuevo material por el nuevo material en sí mismo, mientras que el dominio evitativo (MAV) se centra en que un individuo está interesado en aprender el nuevo material basado en cómo su aprendizaje lo hará aparecer a otros y, muy marcadamente, en no perder ninguna oportunidad de aprendizaje. Por otro lado, los estudiantes con puntajes altos en PAP desearán aprender nuevo material para parecer inteligentes a sus padres, amigos, y profesores, en cambio aquellos con puntajes altos en PAV desearán aprender nuevo material para evitar parecer menos inteligentes que personas significativas en sus vidas.
+
+Desde la perspectiva de los creadores de la escala (AGS), éstos asumieron que la estructura factorial de cuatro dimensiones era apropiada, sin embargo, hay datos inconsistentes al respecto. De hecho, otros investigadores han propuesto que en realidad la orientación al logro consiste de tres variables latentes: dominio (MAV y MAP combinadas en una sola subdimensión), PAP y PAV. Mientras que otros sugieren que quizás solo hayan dos dimensiones: dominio (MAV y MAP) y rendimiento (PAP y PAV juntas). Hay poca evidencia empírica en está área que claramente esté apoyando una teoría sobre las otras. En este caso, el o la analista podría elegir analizar los datos seleccionando un EFA (y descartar un AFC por el momento), lo cual le ayudaría a empezar a entender la estructura latente subyacente.  
 
 
 Instalacion de paquete para poder leer el archivo del segundo pedazo de codigo mas abajo. 
