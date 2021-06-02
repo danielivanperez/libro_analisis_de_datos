@@ -14,6 +14,25 @@ Otro elemento relevante para el uso de ambas técnicas estadísticas tiene que v
 
 ## Implementando el AFE en R
 
+Para desarrollar e implementar un AFE, utilizaremos una base de datos que reside en la web sobre orientación al logro académico, la que tiene 12 ítems en formato Likert y que se llama “escala de orientación al logro” o en inglés *achievement goal scale (AGS)*. Cada uno de los ítems posee siete opciones, cuyos rangos van desde “en lo absoluto para mi” a “Muy cierto para mi”.
+
+
+| Código |                                               Item                                              | Subdimensión |
+|:------:|:-----------------------------------------------------------------------------------------------:|:------------:|
+|  AGS1  | Mi objetivo es dominar completamente el material presentado en mi clase.                        |      MAP     |
+|  AGS2  | Me gusta evitar aprender menos de lo que es posible aprender.                                   |      MAV     |
+|  AGS3  | Es importante para mi hacerlo mejor que otros estudiantes.                                      |      PAP     |
+|  AGS4  | Quiero evitar rendir pobremente comparado a otros.                                              |      PAV     |
+|  AGS5  | Quiero aprender tanto como sea posible.                                                         |      MAP     |
+|  AGS6  | Es importante para mi evitar comprender de forma incompleta el material del curso.              |      MAV     |
+|  AGS7  | Es importante para mi entender el material del curso de manera completa tanto como sea posible. |      MAP     |
+|  AGS8  | Mi objetivo es evitar rendir de peor manera en comparación a otros estudiantes.                 |      PAV     |
+|  AGS9  | Me gusta rendir bien comparado a otros estudiantes.                                             |      PAP     |
+|  AGS10 | Es importante para mi evitar rendir pobremente comparado a otros estudiantes.                   |      PAV     |
+|  AGS11 | Mi objetivo es rendir mejor que otros estudiantes.                                              |      PAP     |
+|  AGS12 | Mi objetivo es evitar aprender menos de lo que posiblemente podría.                             |      MAV     |
+
+
 Instalacion de paquete para poder leer el archivo del segundo pedazo de codigo mas abajo. 
 
 ```{r}

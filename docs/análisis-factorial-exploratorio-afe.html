@@ -24,7 +24,7 @@
 <meta name="author" content="Daniel Pérez Zapata" />
 
 
-<meta name="date" content="2021-06-01" />
+<meta name="date" content="2021-06-02" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -259,6 +259,83 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="implementando-el-afe-en-r" class="section level2" number="7.2">
 <h2><span class="header-section-number">7.2</span> Implementando el AFE en R</h2>
+<p>Para desarrollar e implementar un AFE, utilizaremos una base de datos que reside en la web sobre orientación al logro académico, la que tiene 12 ítems en formato Likert y que se llama “escala de orientación al logro” o en inglés <em>achievement goal scale (AGS)</em>. Cada uno de los ítems posee siete opciones, cuyos rangos van desde “en lo absoluto para mi” a “Muy cierto para mi”.</p>
+<table>
+<colgroup>
+<col width="6%" />
+<col width="81%" />
+<col width="11%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Código</th>
+<th align="center">Item</th>
+<th align="center">Subdimensión</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">AGS1</td>
+<td align="center">Mi objetivo es dominar completamente el material presentado en mi clase.</td>
+<td align="center">MAP</td>
+</tr>
+<tr class="even">
+<td align="center">AGS2</td>
+<td align="center">Me gusta evitar aprender menos de lo que es posible aprender.</td>
+<td align="center">MAV</td>
+</tr>
+<tr class="odd">
+<td align="center">AGS3</td>
+<td align="center">Es importante para mi hacerlo mejor que otros estudiantes.</td>
+<td align="center">PAP</td>
+</tr>
+<tr class="even">
+<td align="center">AGS4</td>
+<td align="center">Quiero evitar rendir pobremente comparado a otros.</td>
+<td align="center">PAV</td>
+</tr>
+<tr class="odd">
+<td align="center">AGS5</td>
+<td align="center">Quiero aprender tanto como sea posible.</td>
+<td align="center">MAP</td>
+</tr>
+<tr class="even">
+<td align="center">AGS6</td>
+<td align="center">Es importante para mi evitar comprender de forma incompleta el material del curso.</td>
+<td align="center">MAV</td>
+</tr>
+<tr class="odd">
+<td align="center">AGS7</td>
+<td align="center">Es importante para mi entender el material del curso de manera completa tanto como sea posible.</td>
+<td align="center">MAP</td>
+</tr>
+<tr class="even">
+<td align="center">AGS8</td>
+<td align="center">Mi objetivo es evitar rendir de peor manera en comparación a otros estudiantes.</td>
+<td align="center">PAV</td>
+</tr>
+<tr class="odd">
+<td align="center">AGS9</td>
+<td align="center">Me gusta rendir bien comparado a otros estudiantes.</td>
+<td align="center">PAP</td>
+</tr>
+<tr class="even">
+<td align="center">AGS10</td>
+<td align="center">Es importante para mi evitar rendir pobremente comparado a otros estudiantes.</td>
+<td align="center">PAV</td>
+</tr>
+<tr class="odd">
+<td align="center">AGS11</td>
+<td align="center">Mi objetivo es rendir mejor que otros estudiantes.</td>
+<td align="center">PAP</td>
+</tr>
+<tr class="even">
+<td align="center">AGS12</td>
+<td align="center">Mi objetivo es evitar aprender menos de lo que posiblemente podría.</td>
+<td align="center">MAV</td>
+</tr>
+</tbody>
+</table>
 <p>Instalacion de paquete para poder leer el archivo del segundo pedazo de codigo mas abajo.</p>
 <div class="sourceCode" id="cb156"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb156-1"><a href="análisis-factorial-exploratorio-afe.html#cb156-1" aria-hidden="true" tabindex="-1"></a><span class="co">#install.packages(&quot;readr&quot;)</span></span></code></pre></div>
 <p>Cargando la libreria y abriendo el archivo csv desde la web.</p>
