@@ -52,5 +52,7 @@ tidyverse-librería-de-análisis-de-datos
 análisis-factorial-exploratorio-afe
 sobre-el-análisis-factorial
 implementando-el-afe-en-r
+extracción-de-factores
+rotación-de-factores
 análisis-factorial-confirmatorio-afc
 glosario
