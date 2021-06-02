@@ -1,3 +1,3 @@
-# Análisis Factorial Confirmatorio (AFC)^[ Al igual que el capítulo anterior, para escribir estructurar los contenidos de este capítulo, me he basado en el libro *Latent Variable Modeling with R* escrito por Holmes Finch and Brian French.]
+# Análisis Factorial Confirmatorio (AFC)^[ Al igual que el capítulo anterior, para escribir y estructurar los contenidos de este capítulo, me he basado en el libro *Latent Variable Modeling with R* escrito por Holmes Finch and Brian French.]
 
 **[Capítulo en construcción.]**
