@@ -51,7 +51,7 @@ instalando-librerías-en-r
 tidyverse-librería-de-análisis-de-datos
 análisis-factorial-exploratorio-afe
 sobre-el-análisis-factorial
-implementando-el-afe-en-r
+presentando-el-caso-de-estudio-de-este-capítulo
 extracción-de-factores
 rotación-de-factores
 análisis-factorial-confirmatorio-afc
