@@ -54,5 +54,6 @@ sobre-el-análisis-factorial
 presentando-el-caso-de-estudio-de-este-capítulo
 extracción-de-factores
 rotación-de-factores
+análisis-factorial-exploratorio-a-través-de-r
 análisis-factorial-confirmatorio-afc
 glosario
